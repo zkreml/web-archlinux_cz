@@ -15,9 +15,16 @@ paginate = 10
   [params.author]
     name = "archos"
     email = "archos@arch-linux.cz"
+    avatar = "logo.png"
+    intro = "Arch Linux CZ"
+    description = "Návody, novinky a podpora pro uživatele Arch Linuxu v češtině."
 
   [params.footer]
     copyright = "© 2024–2026 Arch Linux CZ"
+
+  [params.logo]
+    img = "/logo.png"
+    alt = "Arch Linux CZ"
 
 [[params.socialIcons]]
   name = "mastodon"
@@ -70,7 +77,3 @@ paginate = 10
   name = "Podpořte nás"
   pageRef = "/podporte-nas"
   weight = 8
-
-[params.logo]
-  img = "/logo.png"
-  alt = "Arch Linux CZ"
