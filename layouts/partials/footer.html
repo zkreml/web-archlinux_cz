@@ -1,0 +1,16 @@
+<footer id="site-footer" class="py-10 print:hidden">
+  <div class="flex items-center justify-center">
+    <p class="text-sm text-neutral-500 dark:text-neutral-400 text-center">
+      &copy; {{ now.Format "2006" }} {{ .Site.Params.Author.name | markdownify }}
+      &middot;
+      {{ $hugo := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>` }}
+      {{ $blowfish := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>` }}
+      Postaveno na {{ $hugo | safeHTML }} &amp; {{ $blowfish | safeHTML }}
+      &middot;
+      <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500 inline-flex items-center" href="https://git.arch-linux.cz/ArchlinuxCz/web-archlinux_cz" target="_blank" rel="noopener noreferrer">
+        {{ partial "icon.html" "gitea" }}
+        <span class="ml-1">Repo</span>
+      </a>
+    </p>
+  </div>
+</footer>
