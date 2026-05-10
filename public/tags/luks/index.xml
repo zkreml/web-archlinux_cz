@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/tags/luks/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Tue, 06 Dec 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/luks/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Arch Linux průvodce instalací základního šifrování celého disku</title>
+      <link>http://localhost:1313/posts/arch-linux-pruvodce-instalaci-zakladniho-sifrovani-celeho-disku/</link>
+      <pubDate>Tue, 06 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/arch-linux-pruvodce-instalaci-zakladniho-sifrovani-celeho-disku/</guid>
+      <description>&lt;p&gt;Tato příručka obsahuje pokyny pro instalaci Arch Linuxu se šifrováním celého disku pomocí BTRFS na LUKS a šifrovaným spouštěcím oddílem (GRUB) pro systémy UEFI.&lt;/p&gt;
+&lt;p&gt;Po hlavní instalaci následují další pokyny, jak se bránit útokům Evil Maid prostřednictvím vlastní registrace klíče UEFI Secure Boot, jádra a bootloaderu s vlastním podpisem.&lt;/p&gt;
+&lt;h3 id=&#34;předmluva&#34;&gt;Předmluva&lt;/h3&gt;
+&lt;p&gt;Většinu těchto informací najdete na &lt;a href=&#34;https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#Encrypted_boot_partition_(GRUB)&#34;&gt;Arch Wiki&lt;/a&gt; a dalších zdrojů na ně odkazovaných v dolní části článku.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Poznámka:&lt;/em&gt;  Návod popisuje instalaci na moderní NVMe SSD disk. Pokud používáte jiný typ disků, proveďte všude v návodu substituci &lt;code&gt;/dev/nvme0nX&lt;/code&gt; na &lt;code&gt;/dev/sdX&lt;/code&gt;, popř. jiný typ zařízení podle potřeby. Video návod používá  &lt;code&gt;/dev/sdX&lt;/code&gt;, který je standardním nastavením ve Virtualboxu.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Archinstall skript pro LUKS a BTRFS Arch Linux instalaci</title>
+      <link>http://localhost:1313/posts/archinstall-skript-pro-luks-a-btrfs-arch-linux-instalaci/</link>
+      <pubDate>Sun, 04 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/archinstall-skript-pro-luks-a-btrfs-arch-linux-instalaci/</guid>
+      <description>&lt;p&gt;Velmi rychlá Arch Linux instalace s &lt;code&gt;archinstall&lt;/code&gt; skriptem. Průvodce arch instalací základního šifrování celého disku LUKS a Btrfs (B-tree file system) copy-on-write souborový systém pro GNU/Linux. Rychlé a okamžité použití pro laptopy a systémy s vysokým stupněm zabezpečení a zálohovacím mechanismem.&lt;/p&gt;
+&lt;p&gt;Video návod začíná přípravou Virtualboxu pro Arch instalaci. Po úspěšném nabootování Arch systému z ISO souboru návod pokračuje instalací pomocí &lt;code&gt;archinstall&lt;/code&gt; skriptu, který je již standardizovanou součástí instalačního média. Archinstall skript představuje rychlou a jednoduchou možnost instalace čistého Arch systému se zvoleným profilem pro další pokračování post-instalačních kroků. Uvedený video návod postupně prochází jednotlivé kroky instalace a popisuje důležité části a význam instalačního procesu. Návod je primárně soustředěn na Btrfs souborový systém s enkryptováním disku, avšak je samozřejmě možné jej použít i pro zjednodušené varianty instalačních kroků.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

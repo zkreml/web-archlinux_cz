@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/tags/dwm/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Sat, 05 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/dwm/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Instalace Xorg a window manageru DWM</title>
+      <link>http://localhost:1313/posts/instalace-xorg-a-window-manageru-dwm/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/instalace-xorg-a-window-manageru-dwm/</guid>
+      <description>&lt;p&gt;Další díl seriálu o Arch Linuxu od&lt;a href=&#34;https://github.com/raven2cz&#34;&gt; Tondy Fischera&lt;/a&gt;. Tento 4. díl pojednává o instalaci Xorg a dynamického tiling window manageru DWM. Provede Vás postupně základní instalací v OS Arch Linux a seznámí se základním ovládáním prostředí. Ve finále budete mít systém nachystán pro svou běžnou práci a budete se moci pustit do studia systému&lt;/p&gt;
+&lt;h1 id=&#34;instalace-xorg-a-vysvětlení-xinitrc&#34;&gt;Instalace Xorg a vysvětlení .xinitrc&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -S xorg xorg-xinit xterm
+startx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Zobrazí se 3x xterms, vlevo je hlavní xterm. Pokud jej ukončíte zkratkou &lt;code&gt;ctrl+d&lt;/code&gt;, dojde k ukončení celého xorg.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

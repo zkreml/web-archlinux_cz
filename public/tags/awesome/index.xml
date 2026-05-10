@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/tags/awesome/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Sun, 17 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/awesome/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>￼AwesomeWM Basics</title>
+      <link>http://localhost:1313/posts/%ef%bf%bcawesomewm-basics/</link>
+      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/%ef%bf%bcawesomewm-basics/</guid>
+      <description>&lt;p&gt;AwesomeWM patří k nejlepším window managerům s podporou vyššího programovacího jazyka Lua. Ukážeme si, proč tento WM má takový význam a jeho nesporné výhody. Naučíme se jej nainstalovat, nastavit základní témata a testovat svá nastavení v testovacím prostředí. Nakonec vyzkoušíme základní ovládání a nápovědu klávesových zkratek. Součástí nahrávky je rovněž velmi jemný úvod do programovacího jazyka Lua. Další díl seriálu &lt;a href=&#34;https://github.com/raven2cz&#34;&gt;Tondy Fischera.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://arch-linux.cz/wp-content/uploads/2022/04/awesomewm-1-1024x576.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://arch-linux.cz/wp-content/uploads/2022/04/awesomewm-2-1024x576.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;awesome-window-manager&#34;&gt;&lt;a href=&#34;https://github.com/raven2cz/tux/tree/main/211205-awesome-basics#awesome-window-manager&#34;&gt;&lt;/a&gt;Awesome Window Manager&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Awesome&lt;/code&gt; je vysoce konfigurovatelný správce oken nové generace pro Xorg. Je velmi rychlý a rozšiřitelný pomocí perfektně zdokumentovaného API. Primárně se zaměřuje na pokročilé uživatele, vývojáře a všechny lidi, kteří se zabývají každodenními složitějšími úkoly a chtějí mít plnou kontrolu nad ovládáním jejich &lt;strong&gt;vlastního grafického prostředí&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

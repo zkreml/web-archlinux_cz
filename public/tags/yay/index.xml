@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/tags/yay/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Sat, 29 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/yay/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Jak nainstalovat  AUR pomocníka yay</title>
+      <link>http://localhost:1313/posts/jak-nainstalovat-aur-pomocnika-yay/</link>
+      <pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/jak-nainstalovat-aur-pomocnika-yay/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Upozornění: Instalace balíčků z AUR není podporována Arch Linuxem. Instalace z něj může způsobit selhání systému.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;co-je--aur&#34;&gt;Co je  AUR&lt;/h3&gt;
+&lt;p&gt;Arch User Repository (AUR) je komunitou řízené úložiště pro uživatele Arch Linuxu. Obsahuje popisy balíčků ( &lt;a href=&#34;https://wiki.archlinux.org/title/PKGBUILD&#34;&gt;PKGBUILDs&lt;/a&gt; ), které vám umožňují sestavit balíček ze zdrojového kódu pomocí &lt;a href=&#34;https://wiki.archlinux.org/title/Makepkg&#34;&gt;makepkg&lt;/a&gt; a poté jej nainstalovat přes &lt;a href=&#34;https://wiki.archlinux.org/title/Pacman#Additional_commands&#34;&gt;pacman&lt;/a&gt; . AUR byl vytvořen, aby organizoval a sdílel nové balíčky z komunity a pomohl urychlit začlenění oblíbených balíčků do &lt;a href=&#34;https://wiki.archlinux.org/title/Community_repository&#34;&gt;komunitního úložiště&lt;/a&gt; .&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

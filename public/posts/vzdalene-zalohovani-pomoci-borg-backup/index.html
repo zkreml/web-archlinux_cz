@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="cs"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Vzdálené zálohování pomocí Borg Backup | Arch Linux CZ</title>
+<meta property="og:title" content="Vzdálené zálohování pomocí Borg Backup | Arch Linux CZ" />
+<meta name="twitter:title" content="Vzdálené zálohování pomocí Borg Backup | Arch Linux CZ" />
+<meta itemprop="name" content="Vzdálené zálohování pomocí Borg Backup | Arch Linux CZ" />
+<meta name="application-name" content="Vzdálené zálohování pomocí Borg Backup | Arch Linux CZ" />
+<meta property="og:site_name" content="Arch Linux CZ" />
+
+<meta name="description" content="Česká komunita Arch Linuxu">
+<meta itemprop="description" content="Česká komunita Arch Linuxu" />
+<meta property="og:description" content="Česká komunita Arch Linuxu" />
+<meta name="twitter:description" content="Česká komunita Arch Linuxu" />
+
+<meta property="og:locale" content="cs" />
+<meta name="language" content="cs" />
+
+  <link rel="alternate" hreflang="en" href="http://localhost:1313/posts/vzdalene-zalohovani-pomoci-borg-backup/" title="" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2023-04-08T00:00:00Z />
+    <meta property="article:published_time" content=2023-04-08T00:00:00Z />
+    <meta property="og:url" content="http://localhost:1313/posts/vzdalene-zalohovani-pomoci-borg-backup/" />
+
+    
+    <meta property="og:article:author" content="archos" />
+    <meta property="article:author" content="archos" />
+    <meta name="author" content="archos" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Vzdálené zálohování pomocí Borg Backup",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2023-04-08",
+        "description": "",
+        "wordCount":  971 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2023-04-08",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Arch Linux CZ"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.161.1">
+
+    
+    <meta property="og:url" content="http://localhost:1313/posts/vzdalene-zalohovani-pomoci-borg-backup/">
+  <meta property="og:site_name" content="Arch Linux CZ">
+  <meta property="og:title" content="Vzdálené zálohování pomocí Borg Backup">
+  <meta property="og:description" content="V tomto návodu se budeme zaměřovat na vzdálené zálohování pomocí Borg Backup na Arch Linuxu.
+Instalace Borg Backup Instalaci Borga jsme si ukázali v minulém díle. Stačí jen příkaz
+sudo pacman -S borgbackup Příprava cílového server Na cílovém serveru je potřeba nainstalovat Borg Backup a vytvořit uživatele, který bude mít práva pro ukládání záloh. Pokud máte server s Ubuntu/Debianem, můžete nainstalovat Borg Backup pomocí příkazu:
+sudo apt install borgbackup Dále vytvořte uživatele s názvem “borg”, který bude mít práva pro ukládání záloh. To lze provést pomocí následujícího příkazu:">
+  <meta property="og:locale" content="cs">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-04-08T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-04-08T00:00:00+00:00">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Vzdálené zálohování pomocí Borg Backup">
+  <meta name="twitter:description" content="V tomto návodu se budeme zaměřovat na vzdálené zálohování pomocí Borg Backup na Arch Linuxu.
+Instalace Borg Backup Instalaci Borga jsme si ukázali v minulém díle. Stačí jen příkaz
+sudo pacman -S borgbackup Příprava cílového server Na cílovém serveru je potřeba nainstalovat Borg Backup a vytvořit uživatele, který bude mít práva pro ukládání záloh. Pokud máte server s Ubuntu/Debianem, můžete nainstalovat Borg Backup pomocí příkazu:
+sudo apt install borgbackup Dále vytvořte uživatele s názvem “borg”, který bude mít práva pro ukládání záloh. To lze provést pomocí následujícího příkazu:">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/vzdalene-zalohovani-pomoci-borg-backup/">
+    <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+    <meta name="color-scheme" content="light dark">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    
+</head>
+<body data-theme = "" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <img src="/logo.png" alt="Arch Linux CZ" height="50">
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Domů
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/categories/n%C3%A1vody/">
+                        Návody
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/categories/zrp%C3%A1vy/">
+                        Zprávy
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/o-arch-linuxu/">
+                        O Arch Linuxu
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="https://wiki.arch-linux.cz/shelves/arch-linux-cz">
+                        Wiki
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="https://forum.arch-linux.cz/">
+                        Fórum
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/komunita/">
+                        Komunita
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/podporte-nas/">
+                        Podpořte nás
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Vzdálené zálohování pomocí Borg Backup</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-04-08T00:00:00&#43;00:00" itemprop="datePublished"> 8. 4. 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <p>V tomto návodu se budeme zaměřovat na vzdálené zálohování pomocí<a href="https://www.borgbackup.org/"> Borg Backup</a> na Arch Linuxu.</p>
+<h3 id="instalace-borg-backup">Instalace Borg Backup</h3>
+<p>Instalaci Borga jsme si ukázali v minulém <a href="https://arch-linux.cz/jak-zalohovat-pomoci-borgbackup/">díle</a>. Stačí jen příkaz</p>
+<pre tabindex="0"><code>sudo pacman -S borgbackup
+</code></pre><h3 id="příprava-cílového-server">Příprava cílového server</h3>
+<p>Na cílovém serveru je potřeba nainstalovat Borg Backup a vytvořit uživatele, který bude mít práva pro ukládání záloh. Pokud máte server s Ubuntu/Debianem, můžete nainstalovat Borg Backup pomocí příkazu:</p>
+<pre tabindex="0"><code>sudo apt install borgbackup
+</code></pre><p>Dále vytvořte uživatele s názvem &ldquo;borg&rdquo;, který bude mít práva pro ukládání záloh. To lze provést pomocí následujícího příkazu:</p>
+<pre tabindex="0"><code>sudo adduser borg
+</code></pre><p>Poté je třeba nastavit heslo pro uživatele borg a vytvořit adresář pro ukládání záloh. Vytvořte například adresář &ldquo;/home/borg/backup&rdquo;.</p>
+<pre tabindex="0"><code>mkdir /home/borg/backup
+</code></pre><h4 id="vytvoření-klíče-pro-přihlášení">Vytvoření klíče pro přihlášení</h4>
+<p>Pro přístup k cílovému serveru potřebujeme klíč pro přihlášení. Můžeme použít buď heslo nebo SSH klíč. V tomto tutoriálu se budeme zaměřovat na SSH klíč.</p>
+<p>Na stroji, který bude provádět zálohy, vygenerujeme SSH klíč pro uživatele, který bude zálohu provádět. To můžete provést pomocí následujícího příkazu:</p>
+<h4></h4>
+<pre tabindex="0"><code>ssh-keygen -t rsa
+</code></pre><p>Tento příkaz vygeneruje ve vašem domovském adresáři klíče pro SSH připojení - soubor <code>id_rsa</code> a soubor <code>id_rsa.pub</code>.</p>
+<p>Nyní nahrajem SSH klíče na server.</p>
+<pre tabindex="0"><code>cat ~/.ssh/id_rsa.pub | ssh borg@ip-adresa &#34;mkdir -p ~/.ssh &amp;&amp; touch ~/.ssh/authorized_keys &amp;&amp; chmod -R go= ~/.ssh &amp;&amp; cat &gt;&gt; ~/.ssh/authorized_keys&#34;
+</code></pre><p>Může se zobrazit následující zpráva:</p>
+<pre tabindex="0"><code>Output
+The authenticity of host &#39;ip_dadresa&#39; can&#39;t be established.
+ECDSA key fingerprint is fd:fd:d4:f9:77:fe:73:84:e1:55:00:ad:d6:6d:22:fe.
+Are you sure you want to continue connecting (yes/no)? yes
+</code></pre><p>To znamená, že váš místní počítač nerozpozná vzdáleného hostitele. K tomu dojde při prvním připojení k novému hostiteli. Typ <code>yes</code>a stiskněte <code>ENTER</code>pokračovat.</p>
+<p>Poté byste měli být vyzváni k zadání hesla vzdáleného uživatelského účtu:</p>
+<pre tabindex="0"><code>Output 
+borg@ip_adresa&#39;s password:
+</code></pre><h4 id="otestujte-přihlášení">Otestujte přihlášení</h4>
+<ul>
+<li>
+<p>Odhlaste se ze serveru příkazem <code>exit</code></p>
+</li>
+<li>
+<p>Zkuste se přihlásit na server pomocí SSH opět příkazem <code>ssh borg@ip_adresa</code></p>
+</li>
+<li>
+<p>Pokud se úspěšně přihlásíte bez zadávání hesla, pak jste správně nahráli klíče SSH na server.</p>
+</li>
+</ul>
+<p>Pokud jste se mohli přihlásit ke svému účtu pomocí SSH bez hesla, úspěšně jste nakonfigurovali ověřování na základě klíče SSH pro váš účet. Váš mechanismus ověřování na základě hesla je však stále aktivní, což znamená, že váš server je stále vystaven útokům hrubou silou.</p>
+<p>Na tomto serveru nakonfigurováno ověřování na základě klíče SSH. <strong>Před dokončením kroků v této části se ujistěte, že máte pro účet root</strong> , nebo pokud možno, že máte na tomto serveru nakonfigurované ověřování na základě klíče SSH pro účet bez oprávnění root. server s <code>sudo</code> privilegia. Tento krok uzamkne přihlášení založená na heslech, takže je zásadní zajistit, že stále budete moci získat přístup pro správce.</p>
+<p>Jakmile potvrdíte, že váš vzdálený účet má oprávnění správce, přihlaste se ke vzdálenému serveru pomocí klíčů SSH, buď jako <strong>root</strong> nebo pomocí účtu s <code>sudo</code>privilegia. Poté otevřete konfigurační soubor démona SSH:</p>
+<pre tabindex="0"><code>sudo nano /etc/ssh/sshd_config
+</code></pre><p>Odkomentujte řádek odstraněním <code>#</code>a nastavte hodnotu na <code>no</code>. Tím zakážete možnost přihlášení přes SSH pomocí hesel účtů:</p>
+<pre tabindex="0"><code>. . .
+PasswordAuthentication no
+. . .
+</code></pre><p>Po dokončení uložte a zavřete soubor stisknutím tlačítka <code>CTRL+X</code>, pak <code>Y</code>pro potvrzení uložení souboru a nakonec <code>ENTER</code>pro ukončení nano. Abychom skutečně aktivovali tyto změny, musíme restartovat <code>sshd</code>servis:</p>
+<pre tabindex="0"><code>sudo systemctl restart ssh
+</code></pre><h3 id="vytvořte-repozitář">Vytvořte repozitář</h3>
+<p>Předtím, než můžete vytvářet zálohy, musíte vytvořit repozitář, což je úložiště pro vaše zálohy. To můžete udělat pomocí následujícího příkazu:</p>
+<pre tabindex="0"><code>borg init -e repokey-blake2 ssh borg@ip_adresa:/home/borg/backup
+</code></pre><h3 id="vytváření-záloh">Vytváření záloh</h3>
+<ul>
+<li>Poté, co jste vytvořili repozitář, můžete začít vytvářet zálohy. Borg Backup umožňuje vytvářet inkrementální zálohy, což znamená, že při každém zálohování se zálohuje pouze změna oproti poslední záloze. To výrazně snižuje velikost záloh a rychlost zálohování.</li>
+</ul>
+<p>Pro vytvoření zálohy použijte následující příkaz:</p>
+<pre tabindex="0"><code>borg create username@remote-server:/path/to/repo::backup-name /path/to/directory
+</code></pre><p>Kde <code>username</code> je vaše uživatelské jméno na vzdáleném serveru, <code>remote-server</code> je adresa vzdáleného serveru, <code>/path/to/repo</code> je cesta k repozitáři na vzdáleném serveru, <code>backup-name</code> je jméno zálohy a <code>/path/to/directory</code> je cesta ke složce, kterou chcete zálohovat.</p>
+<h4 id="obnova-zálohy">Obnova zálohy</h4>
+<pre tabindex="0"><code>borg extract user@remote:/path/to/repo::backup-name /path/to/restore/folder
+</code></pre><h4 id="výpis-záloh">Výpis záloh</h4>
+<pre tabindex="0"><code>borg list username@remote-server:/path/to/repo
+</code></pre><p>Tento příkaz vypíše seznam všech záloh uložených v repozitáři.</p>
+<h3 id="vytvoření-skriptu-pro-zálohování">Vytvoření skriptu pro zálohování</h3>
+<p>Nyní musíme vytvořit skript pro zálohování, který bude spouštět BorgBackup a ukládat zálohy do záložního repozitáře.</p>
+<p>Vytvořte soubor s názvem &ldquo;backup.sh&rdquo; a vložte do něj následující kód:</p>
+<pre tabindex="0"><code>#!/bin/bash
+
+# Nastavení proměnných
+SOURCE=&#34;/cesta/k/souborum/k/zalohovani&#34;
+REPO=&#34;/cesta/k/repozitari&#34;
+DATE=`date +%Y-%m-%d`
+
+# Spuštění zálohování
+borg create $REPO::$DATE $SOURCE
+</code></pre><p>Tento skript spustí BorgBackup a uloží zálohu do repozitáře s aktuálním datem jako název zálohy.</p>
+<h3 id="skript-na-automatické-zálohy-i-sprořezáváním">Skript na automatické zálohy i sprořezáváním</h3>
+<pre tabindex="0"><code>#!/bin/sh
+
+# Setting this, so the repo does not need to be given on the commandline:
+export BORG_REPO=ssh://username@example.com:2022/~/backup/main
+
+# See the section &#34;Passphrase notes&#34; for more infos.
+export BORG_PASSPHRASE=&#39;XYZl0ngandsecurepa_55_phrasea&amp;&amp;123&#39;
+
+# some helpers and error handling:
+info() { printf &#34;\n%s %s\n\n&#34; &#34;$( date )&#34; &#34;$*&#34; &gt;&amp;2; }
+trap &#39;echo $( date ) Backup interrupted &gt;&amp;2; exit 2&#39; INT TERM
+
+info &#34;Starting backup&#34;
+
+# Backup the most important directories into an archive named after
+# the machine this script is currently running on:
+
+borg create                         \
+    --verbose                       \
+    --filter AME                    \
+    --list                          \
+    --stats                         \
+    --show-rc                       \
+    --compression lz4               \
+    --exclude-caches                \
+    --exclude &#39;home/*/.cache/*&#39;     \
+    --exclude &#39;var/tmp/*&#39;           \
+                                    \
+    ::&#39;{hostname}-{now}&#39;            \
+    /etc                            \
+    /home                           \
+    /root                           \
+    /var
+
+backup_exit=$?
+
+info &#34;Pruning repository&#34;
+
+# Use the `prune` subcommand to maintain 7 daily, 4 weekly and 6 monthly
+# archives of THIS machine. The &#39;{hostname}-*&#39; matching is very important to
+# limit prune&#39;s operation to this machine&#39;s archives and not apply to
+# other machines&#39; archives also:
+
+borg prune                          \
+    --list                          \
+    --glob-archives &#39;{hostname}-*&#39;  \
+    --show-rc                       \
+    --keep-daily    7               \
+    --keep-weekly   4               \
+    --keep-monthly  6
+
+prune_exit=$?
+
+# actually free repo disk space by compacting segments
+
+info &#34;Compacting repository&#34;
+
+borg compact
+
+compact_exit=$?
+
+# use highest exit code as global exit code
+global_exit=$(( backup_exit &gt; prune_exit ? backup_exit : prune_exit ))
+global_exit=$(( compact_exit &gt; global_exit ? compact_exit : global_exit ))
+
+if [ ${global_exit} -eq 0 ]; then
+    info &#34;Backup, Prune, and Compact finished successfully&#34;
+elif [ ${global_exit} -eq 1 ]; then
+    info &#34;Backup, Prune, and/or Compact finished with warnings&#34;
+else
+    info &#34;Backup, Prune, and/or Compact finished with errors&#34;
+fi
+
+exit ${global_exit}
+</code></pre><h4 id="odkazy">Odkazy:</h4>
+<p><strong><a href="https://www.borgbackup.org/">Borg Backup</a></strong></p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://mastodon.arch-linux.cz/@archlinux" target="_blank" rel="noopener noreferrer me"
+    title="Mastodon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M21.58 13.913c-.29 1.469-2.592 3.121-5.238 3.396-1.379.184-2.737.368-4.185.276-2.368-.092-4.237-.551-4.237-.551 0 .184.014.459.043.643.308 2.294 2.317 2.478 4.22 2.57 1.922 0 3.633-.46 3.633-.46l.079 1.653s-1.344.734-3.738.918c-1.32.091-2.96-.092-4.869-.551-4.14-1.102-4.853-5.507-4.961-10.005-.034-1.285-.013-2.57-.013-3.58 0-4.589 3-5.966 3-5.966 1.513-.734 4.11-1.01 6.808-1.01h.067c2.699 0 5.296.276 6.81 1.01 0 0 3 1.377 3 5.967 0 0 .037 3.304-.419 5.69"
+        stroke="currentColor" />
+    <path
+        d="M17.832 8.633v5h-1.978V8.78c0-1.023-.43-1.542-1.29-1.542-.95 0-1.427.616-1.427 1.834v2.655H11.17V9.072c0-1.218-.476-1.834-1.427-1.834-.86 0-1.29.52-1.29 1.542v4.852H6.475V8.633c0-1.022.26-1.834.782-2.434.538-.6 1.243-.909 2.118-.909 1.012 0 1.779.39 2.286 1.169l.492.827.493-.827c.507-.78 1.274-1.169 2.286-1.169.875 0 1.58.308 2.118.909.522.6.782 1.412.782 2.434"
+        fill="currentColor" stroke="none" />
+</svg>
+</a>
+<a href="https://matrix.to/#/#archlinuxcz:matrix.org" target="_blank" rel="noopener noreferrer me"
+    title="Matrix">
+    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+    <path
+        d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.481.314.448.208.785.582 1.02 1.108.254-.374.6-.706 1.034-.992.434-.287.95-.43 1.546-.43.453 0 .872.056 1.26.167.388.11.716.286.993.53.276.245.489.559.646.951.152.392.23.863.23 1.417v5.728h-2.349V11.52c0-.286-.01-.559-.032-.812a1.755 1.755 0 0 0-.18-.66 1.106 1.106 0 0 0-.438-.448c-.194-.11-.457-.166-.785-.166-.332 0-.6.064-.803.189a1.38 1.38 0 0 0-.48.499 1.946 1.946 0 0 0-.231.696 5.56 5.56 0 0 0-.06.785v4.768h-2.35v-4.8c0-.254-.004-.503-.018-.752a2.074 2.074 0 0 0-.143-.688 1.052 1.052 0 0 0-.415-.503c-.194-.125-.476-.19-.854-.19-.111 0-.259.024-.439.074-.18.051-.36.143-.53.282-.171.138-.319.337-.439.595-.12.259-.18.6-.18 1.02v4.966H5.46V7.81zm15.693 15.64V.55H21.72V0H24v24h-2.28v-.55z" />
+</svg>
+</a>
+<a href="/index.xml" target="_blank" rel="noopener noreferrer me"
+    title="Rss">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024–2026 Arch Linux CZ
+        
+    </small>
+</footer><a href="#" title="" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

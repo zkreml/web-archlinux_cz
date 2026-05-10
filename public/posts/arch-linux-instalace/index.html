@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="cs"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Arch Linux Instalace | Arch Linux CZ</title>
+<meta property="og:title" content="Arch Linux Instalace | Arch Linux CZ" />
+<meta name="twitter:title" content="Arch Linux Instalace | Arch Linux CZ" />
+<meta itemprop="name" content="Arch Linux Instalace | Arch Linux CZ" />
+<meta name="application-name" content="Arch Linux Instalace | Arch Linux CZ" />
+<meta property="og:site_name" content="Arch Linux CZ" />
+
+<meta name="description" content="Česká komunita Arch Linuxu">
+<meta itemprop="description" content="Česká komunita Arch Linuxu" />
+<meta property="og:description" content="Česká komunita Arch Linuxu" />
+<meta name="twitter:description" content="Česká komunita Arch Linuxu" />
+
+<meta property="og:locale" content="cs" />
+<meta name="language" content="cs" />
+
+  <link rel="alternate" hreflang="en" href="http://localhost:1313/posts/arch-linux-instalace/" title="" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2021-12-30T00:00:00Z />
+    <meta property="article:published_time" content=2021-12-30T00:00:00Z />
+    <meta property="og:url" content="http://localhost:1313/posts/arch-linux-instalace/" />
+
+    
+    <meta property="og:article:author" content="archos" />
+    <meta property="article:author" content="archos" />
+    <meta name="author" content="archos" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Arch Linux Instalace",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2021-12-30",
+        "description": "",
+        "wordCount":  1211 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2021-12-30",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Arch Linux CZ"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.161.1">
+
+    
+    <meta property="og:url" content="http://localhost:1313/posts/arch-linux-instalace/">
+  <meta property="og:site_name" content="Arch Linux CZ">
+  <meta property="og:title" content="Arch Linux Instalace">
+  <meta property="og:description" content="Velké poděkování patří uživateli raven2cz, který připravil tento skvělý návod včetně videa. Video je již nahráno na našem PeerTube kanále.
+Příprava zařízení pro instalaci Stažení ISO a vytvoření BOOT USB disku Stažení ArchLinux ISO, ve Win použít Rufus software (portable) na flash disk. V Linuxu použít dd command.
+Příprava partitions na cílovém disku Zjistit disky a souborové systémy fdisk -l, pak cfdisk /dev/, zkontroluj kterou partition přesně použít pro umístění root adresáře, popř. domácího adresáře; např. pro nvmeXn1 bude nvmeXn1p2 nebo p3 apod. Pro EFI partition použít alespoň &#43;256M parameter; nastav pro ni partition type to EFI System (type 1), pro root partition / nastavit Linux system.">
+  <meta property="og:locale" content="cs">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-12-30T00:00:00+00:00">
+    <meta property="article:modified_time" content="2021-12-30T00:00:00+00:00">
+    <meta property="article:tag" content="Instalace">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Arch Linux Instalace">
+  <meta name="twitter:description" content="Velké poděkování patří uživateli raven2cz, který připravil tento skvělý návod včetně videa. Video je již nahráno na našem PeerTube kanále.
+Příprava zařízení pro instalaci Stažení ISO a vytvoření BOOT USB disku Stažení ArchLinux ISO, ve Win použít Rufus software (portable) na flash disk. V Linuxu použít dd command.
+Příprava partitions na cílovém disku Zjistit disky a souborové systémy fdisk -l, pak cfdisk /dev/, zkontroluj kterou partition přesně použít pro umístění root adresáře, popř. domácího adresáře; např. pro nvmeXn1 bude nvmeXn1p2 nebo p3 apod. Pro EFI partition použít alespoň &#43;256M parameter; nastav pro ni partition type to EFI System (type 1), pro root partition / nastavit Linux system.">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/arch-linux-instalace/">
+    <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+    <meta name="color-scheme" content="light dark">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    
+</head>
+<body data-theme = "" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <img src="/logo.png" alt="Arch Linux CZ" height="50">
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Domů
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/categories/n%C3%A1vody/">
+                        Návody
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/categories/zrp%C3%A1vy/">
+                        Zprávy
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/o-arch-linuxu/">
+                        O Arch Linuxu
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="https://wiki.arch-linux.cz/shelves/arch-linux-cz">
+                        Wiki
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="https://forum.arch-linux.cz/">
+                        Fórum
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/komunita/">
+                        Komunita
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/podporte-nas/">
+                        Podpořte nás
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Arch Linux Instalace</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2021-12-30T00:00:00&#43;00:00" itemprop="datePublished"> 30. 12. 2021 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <p>Velké poděkování patří uživateli <a href="https://github.com/raven2cz">raven2cz</a>, který připravil tento skvělý návod včetně videa. Video je již nahráno na našem <a href="https://peertube.arch-linux.cz/c/videa_archlinuxcz/videos?s=1">PeerTube kanále</a>.</p>
+<h3 id="příprava-zařízení-pro-instalaci">Příprava zařízení pro instalaci</h3>
+<h4 id="stažení-iso-a-vytvoření-boot-usb-disku">Stažení ISO a vytvoření BOOT USB disku</h4>
+<p><strong><a href="https://arch-linux.cz/jak-stahnout/">Stažení ArchLinux ISO</a></strong>, ve Win použít Rufus software (portable) na flash disk. V Linuxu použít <code>dd</code> command.</p>
+<h3 id="příprava-partitions-na-cílovém-disku">Příprava partitions na cílovém disku</h3>
+<p>Zjistit disky a souborové systémy <code>fdisk -l</code>, pak <code>cfdisk /dev/</code>, zkontroluj kterou partition přesně použít pro umístění root adresáře, popř. domácího adresáře; např. pro nvmeXn1 bude nvmeXn1p2 nebo p3 apod. Pro EFI partition použít alespoň <code>+256M</code> parameter; nastav pro ni partition type to <code>EFI System (type 1)</code>, pro root partition <code>/</code> nastavit <code>Linux system</code>.</p>
+<p><strong>DŮLEŽITÉ:</strong> Návod používá dnes již standardní UEFI. Pokud testuje Arch dle tohoto seriálu v VirtualBox. Je nutné na záložce Systém VM <strong>označit checkbox EFI</strong>. Aby bylo možné používat EFI pro boot systému, jinak nepůjde instalovat bootloader.</p>
+<h2 id="vytvoření-souborových-systémů"><a href="https://github.com/raven2cz/tux/tree/main/210906-arch-instalace#vytvo%C5%99en%C3%AD-souborov%C3%BDch-syst%C3%A9m%C5%AF"></a>Vytvoření souborových systémů</h2>
+<h4 id="formát-diskových-oddílů">Formát diskových oddílů</h4>
+<p>Zvolení formátu pro diskové oddíly: <code>MBR</code> nebo <code>GPT</code>. Pro <code>GPT</code> nutno UEFI a 64bit OS. Již pro nové stanice s novým HW doporučuji <code>GPT</code> a to s dual boot pro Win10/11 + Linux.</p>
+<h4 id="formátování-diskových-oddílů">Formátování diskových oddílů</h4>
+<p>Formátování EFI partition <code>fat</code>, root partition formátuji <code>ext4</code>.</p>
+<pre tabindex="0"><code>mkfs.fat -F32 /dev/sda1
+mkfs.ext4 /dev/sda2
+
+mkswap /dev/sdxY
+swapon /dev/sdxY
+</code></pre><h3 id="internetové-připojení">Internetové připojení</h3>
+<h4 id="wifi">Wifi</h4>
+<p>Podívejte se na <a href="https://wiki.archlinux.org/title/Iwd">IWD-iwctl</a>.</p>
+<pre tabindex="0"><code>iwctl
+[iwd]# device list -&gt; opsat si označení svého wifi zařízení
+[iwd]# station  get-networks -&gt; opsat si síť, kterou potřebujete pro připojení
+[iwd]# station  connect  -&gt; připojit se ke zvolené síti a zadat heslo
+
+druha moznost, pokud již informace máte předem zjištěné:
+iwctl --passphrase  station  connect 
+
+ping archlinux.org -&gt; otestovaní připojení
+</code></pre><h3><a href="https://github.com/raven2cz/tux/tree/main/210906-arch-instalace#ethernet"></a></h3>
+<h4 id="ethernet">Ethernet</h4>
+<p>Pouze otestovat připojení, zda internet je k dosažení.</p>
+<pre tabindex="0"><code>ping archlinux.org
+</code></pre><h3 id="výběr-arch-mirrors">Výběr Arch Mirrors</h3>
+<p>Výběr nejbližších a rychlých zrcadel balíčků archu.</p>
+<p>Nejprve update, stažení skriptu <code>reflector</code> a záloha originální konfigurace.</p>
+<pre tabindex="0"><code>pacman -Syy
+pacman -S reflector
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+</code></pre><p>Výběr země k nalezení nejbližších bodů připojení: US, CZ, DE atd.</p>
+<pre tabindex="0"><code>reflector -c &#34;CZ&#34; -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist
+</code></pre><h2><a href="https://github.com/raven2cz/tux/tree/main/210906-arch-instalace#virtualbox-tty-rozli%C5%A1en%C3%AD-p%C5%99i-instalaci"></a></h2>
+<h3 id="virtualbox-tty-rozlišení-při-instalaci">Virtualbox tty rozlišení při instalaci</h3>
+<pre tabindex="0"><code>pacman -S fbset
+fbset -g 2048 1080 2048 1080 32
+</code></pre><h1><a href="https://github.com/raven2cz/tux/tree/main/210906-arch-instalace#instalace-z%C3%A1kladn%C3%ADho-syst%C3%A9mu-base"></a></h1>
+<h2 id="instalace-základního-systému-base">Instalace základního systému (Base)</h2>
+<p>Připojení (mountování) naformátované partition připravené pro root systému</p>
+<pre tabindex="0"><code>mount /dev/sda2 /mnt
+</code></pre><p>Preferuji instalaci aktuálního kernelu (bez speciálních úprav a zen úprav). Bez nutnosti instalace LTS kernelu (Long Term Support). Balík jádra a dalších důležitých souvisejících nástrojů je označen <code>linux</code></p>
+<p>Dále doporučuji nainstalovat vhodný textový editor pro úpravu konfiguračních souborů. V mém případě, co bude prezentováno je textový editor <code>neovim</code>, který spouštíte příkazem <code>nvim</code>.</p>
+<pre tabindex="0"><code>pacstrap /mnt base base-devel linux linux-headers linux-firmware neovim nano
+</code></pre><p>Pro úplnost ještě uvedu instalaci s možností druhého LTS kernelu. Pro základní desktop toto není nutné. V případě problémů je možné kdykoliv doinstalovat, nebo zvolit zen-kernel.</p>
+<pre tabindex="0"><code>pacstrap /mnt base base-devel linux linux-headers linux-firmware linux-lts linux-lts-headers neovim nano
+</code></pre><h3 id="konfigurace-nainstalovaného-arch-systému">Konfigurace nainstalovaného Arch systému</h3>
+<p>Generovat <code>fstab</code> soubor pro připojení diskových oddílů a služeb při spuštění systému. Přepínač <code>-U</code> je vhodný pro ukládání UUID disků, aby bylo možné jednoduše disky přehazovat a přidávat!</p>
+<pre tabindex="0"><code>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</code></pre><h2 id="chroot"><a href="https://github.com/raven2cz/tux/tree/main/210906-arch-instalace#chroot"></a>CHROOT</h2>
+<p>Vstupte do svého nového systému pomocí <code>chroot</code>.</p>
+<p><strong>DÚLEŽITÉ:</strong> Tento příkaz, kterému předchází příkaz <code>mount</code> pro root partition, je velmi užitečný pro opravu systému, reinstalace systému, opravy chyb, popřípadě volání příkazů, které vyžadují odpojený disk. USB klíčenka tak může kdykoliv sloužit pro jednoduché pořešení všech problemů. Systém se tak jednoduše stává nezničitelný.</p>
+<pre tabindex="0"><code>arch-chroot /mnt
+</code></pre><h2 id="nastavení-času-a-timezone"><a href="https://github.com/raven2cz/tux/tree/main/210906-arch-instalace#nastaven%C3%AD-%C4%8Dasu-a-timezone"></a>Nastavení času a timezone</h2>
+<p>Pozor na tento bod. Je potřeba jej udělat pečlivě, dle mého postupu.</p>
+<pre tabindex="0"><code>timedatectl list-timezones
+timedatectl set-timezone Europe/Prague
+ln -sf /usr/share/zoneinfo/Europe/Prague /etc/localtime
+hwclock --systohc    (vygeneruje důležitý /etc/adjtime)
+</code></pre><h2 id="nastavení-lokalizace"><a href="https://github.com/raven2cz/tux/tree/main/210906-arch-instalace#nastaven%C3%AD-lokalizace"></a>Nastavení Lokalizace</h2>
+<p>Doporučuji si ponechat <code>US</code> lokalizaci. V češtině potom používat určité množiny programů a nástrojů, které jsou pro češtinu vhodné. Podobně postupují i programátoři, kteří do kódu určitě nepíší české komentáře. Myšlenkově tedy mějte oddělený jazyk pro konfigurace a jazyk pro GUI.</p>
+<p>Editujte soubor <code>/etc/locale.gen</code> obsahující všechny dostupné lokalizace. odkomentujte potřebné lokalizace. V našem případě odkomentujte <code>en_US.UTF-8 UTF-8</code></p>
+<p>Nyní již můžete generovat lokalizační soubory a nakonfigurovat <code>locale.conf</code> Pokud tento krok uděláte špatně, budete mít velké problémy v mnoha programech a terminálových aplikacích, proto si pečlivě zkontrolujte následující příkazy.</p>
+<pre tabindex="0"><code>locale-gen
+echo LANG=en_US.UTF-8 &gt; /etc/locale.conf
+export LANG=en_US.UTF-8
+</code></pre><h2 id="network-konfigurace"><a href="https://github.com/raven2cz/tux/tree/main/210906-arch-instalace#network-konfigurace"></a>Network konfigurace</h2>
+<p>Zadejte svůj definovaný název počítače do <code>/etc/hostname</code>. V mém případě <code>r7arch</code>. Pozor nesmí obsahovat pomlčky. Dále pak udělejte základní mapování do <code>/etc/hosts</code>.</p>
+<pre tabindex="0"><code>echo r7arch &gt; /etc/hostname
+nvim /etc/hosts (uložte následující řádky)
+127.0.0.1 localhost
+::1 localhost
+127.0.1.1 r7arch
+</code></pre><h2 id="nastavení-root-hesla"><a href="https://github.com/raven2cz/tux/tree/main/210906-arch-instalace#nastaven%C3%AD-root-hesla"></a>Nastavení root hesla</h2>
+<p>Nastavte své root heslo pomocí příkazu <code>passwd</code>.</p>
+<h2 id="instalace-mého-fundamental-software"><a href="https://github.com/raven2cz/tux/tree/main/210906-arch-instalace#instalace-m%C3%A9ho-fundamental-software"></a>Instalace mého Fundamental Software</h2>
+<p>Nyní doporučuji nainstalovat naprosto fundamentální software pro přístup a základní obsluhu systému.</p>
+<pre tabindex="0"><code>pacman -S openssh networkmanager wpa_supplicant netctl
+systemctl enable NetworkManager
+systemctl enable sshd
+
+pacman -S amd-ucode (pro AMD) pacman -S intel-ucode (pro INTEL)
+mkinitcpio -p linux
+</code></pre><h2 id="instalace-ovladačů-a-xorg"><a href="https://github.com/raven2cz/tux/tree/main/210906-arch-instalace#instalace-ovlada%C4%8D%C5%AF-a-xorg"></a>Instalace ovladačů a Xorg</h2>
+<p>Pro desktop je nutné nainstalovat správné grafické ovladače a základní basement pro Xorg grafické rozhraní. Toto doporučiji i v případě, že budete chtít používat Wayland s plasma nebo gnome.</p>
+<h3 id="amd-grafická-karta"><a href="https://github.com/raven2cz/tux/tree/main/210906-arch-instalace#amd-grafick%C3%A1-karta"></a>AMD grafická karta</h3>
+<pre tabindex="0"><code>pacman -S xorg
+pacman -S mesa  (již obsažen v xorg, pouze pro informaci)
+</code></pre><h3 id="nvidia-grafická-karta"><a href="https://github.com/raven2cz/tux/tree/main/210906-arch-instalace#nvidia-grafick%C3%A1-karta"></a>NVIDIA grafická karta</h3>
+<p>Pokud používáte LTS, nezpomeňte zvolit suffix LTS v názvu balíčků.</p>
+<pre tabindex="0"><code>pacman -S xorg
+pacman -S nvidia nvidia-utils
+pacman -S nvidia-lts nvidia-utils-lts (varianta pro LTS kernel)
+</code></pre><h3 id="virtualbox-support"><a href="https://github.com/raven2cz/tux/tree/main/210906-arch-instalace#virtualbox-support"></a>Virtualbox Support</h3>
+<p>Pokud systém testujete v virtualboxu, doporučuji nainstalovat další balíčky.</p>
+<pre tabindex="0"><code>pacman -S virtualbox-guest-utils xf86-video-vmware
+</code></pre><h4 id="nvidia-tty-nespuštění-tty-terminálu-černá-obrazovka"><a href="https://github.com/raven2cz/tux/tree/main/210906-arch-instalace#nvidia-tty-nespu%C5%A1t%C4%9Bn%C3%AD-tty-termin%C3%A1lu-%C4%8Dern%C3%A1-obrazovka"></a>NVIDIA TTY (nespuštění tty terminálu, černá obrazovka)</h4>
+<p>Nvidia kartami občas bývá problém, dlouhé diskuze zde vést nebudu. Doporučuji přidat nvidia do KMS. Tento krok můžete udělat/neudělat kdykoliv bude potřeba, pokud ale máte černou obrazovku po restartu systému, budete toto muset udělat hned.</p>
+<pre tabindex="0"><code>sudo vim /etc/mkinitcpio.conf
+(editovat následující dvě řádky v souboru)
+MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)
+FILES=&#34;/etc/modprobe.d/nvidia.conf
+
+sudo mkinitcpio -P
+nvim /etc/modprobe.d/nvidia.conf
+(přidat tuto řádku do souboru a uložit)
+options nvidia_drm modeset=1
+</code></pre><p>Ještě pro jistotu doporučuji přidat <code>*nvidia-drm.modeset=1</code> do příkazů při spuštění kernelu v <code>grub.cfg</code> (pokud používáte grub). Viz dokument [https://wiki.archlinux.org/index.php/kernel_parameters](<a href="https://wiki.archlinux.org/index.php/kernel_parameters%5D(https://wiki.archlinux.org/index.php/kernel/_parameters%5D(https://wiki.archlinux.org/index.php/kernel_parameters)">https://wiki.archlinux.org/index.php/kernel_parameters](https://wiki.archlinux.org/index.php/kernel/_parameters](https://wiki.archlinux.org/index.php/kernel_parameters)</a></p>
+<p>Později po restartu systému (teď ještě nerestartovat!) ověřit si správné instalovanou nvidia kartu pomocí příkazu</p>
+<pre tabindex="0"><code>lspci -vnn | grep VGA
+</code></pre><h2 id="přidání-uživatele-linuxu"><a href="https://github.com/raven2cz/tux/tree/main/210906-arch-instalace#p%C5%99id%C3%A1n%C3%AD-u%C5%BEivatele-linuxu"></a>Přidání uživatele Linuxu</h2>
+<p>Nyní již můžeme přidat naše uživatele linuxu. Nutno v příkazech zaměnit `` za vaše jméno. Já v ukázkách používám jméno uživatele <code>box</code>.</p>
+<p>Velmi užitečnou výhodou v archu je použití již připravených skupin: <code>storage</code> a <code>power</code>. Umožňují jednoduše používat mountování disků a vypínání/restart systému přímo uživatelem, bez nutnosti dalších berliček.</p>
+<pre tabindex="0"><code>useradd -m -g users -G wheel,storage,power -s /bin/bash 
+passwd 
+pacman -S sudo
+EDITOR=nvim visudo,  (odkomentovat řádku) %wheel ALL=(ALL) ALL
+</code></pre><h2 id="instalace-bootloader-grub2"><a href="https://github.com/raven2cz/tux/tree/main/210906-arch-instalace#instalace-bootloader-grub2"></a>Instalace Bootloader Grub2</h2>
+<p>Instalace bootloaderu pro možnost dual boot s windows, popř. přepínání s dalšími operačními systémy. Rovněž konfigurace dostupných kernelů pro zavedení a spuštění. Zde je celá řada možností. Uvádím zde jedno z nejstarších řešení.</p>
+<pre tabindex="0"><code>pacman -S grub efibootmgr dosfstools os-prober mtools
+</code></pre><p>Vytvoření adresáře kde bude mountována EFI partition:</p>
+<pre tabindex="0"><code>mkdir /boot/efi
+</code></pre><p>Nyní připojíme EFI partition, kterou jsme dříve vytvořili v prvním kroku instalace.</p>
+<pre tabindex="0"><code>mount /dev/sda1 /boot/efi
+</code></pre><p>Instalace grub2 například takto pro UEFI:</p>
+<pre tabindex="0"><code>grub-install --target=x86_64-efi --bootloader-id=ARCH --efi-directory=/boot/efi --recheck
+</code></pre><p>V tomto případě potom budeme mít v biosu v nabídce jméno EFI části <code>ARCH</code> (bootloader-id).</p>
+<p>Nakonec se musí zavolat natažení konfigurace do <code>grub.cfg</code></p>
+<pre tabindex="0"><code>grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre><p>Základní systém je hotov.</p>
+<h2 id="restart-základního-systému-a-jeho-test"><a href="https://github.com/raven2cz/tux/tree/main/210906-arch-instalace#restart-z%C3%A1kladn%C3%ADho-syst%C3%A9mu-a-jeho-test"></a>Restart základního systému a jeho test</h2>
+<p>Nejprve regulerně opustě chroot prostředí pomocí <code>exit</code> příkazu nebo klávesovou zkratkou <code>ctrl+d</code>. Volitelně můžete odpojit mountované disky <code>umount -R /mnt</code>.</p>
+<p>Nakonec zavolejte:</p>
+<pre tabindex="0"><code>reboot
+</code></pre><p>Po restartu systému se spustí grub2 a po správném zavedení systému se objeví tty terminál se zadáním uživatelského jména a zvoleného hesla.</p>
+<p>Po úspěšném přihlášení jste ve svém novém Arch systému! Vítejte doma <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f427.png" alt=""></p>
+<p><a href="https://www.youtube.com/watch?v=gpIFaCIB9Cg&amp;t=1170s">https://www.youtube.com/watch?v=gpIFaCIB9Cg&amp;t=1170s</a></p>
+<h1 id="důležité-odkazy">Důležité odkazy</h1>
+<ul>
+<li>
+<p><a href="https://www.youtube.com/user/tondafischer/featured">Youtube Channel TUX: Svět Linuxu</a></p>
+</li>
+<li>
+<p><a href="https://archlinux.org/">archlinux.org</a></p>
+</li>
+<li>
+<p><a href="https://wiki.archlinux.org/">wiki.achlinux.org</a></p>
+</li>
+<li>
+<p><a href="https://fishlive.org/en/blog-tech-art/arch">fishlive.org/blog</a></p>
+</li>
+<li>
+<p><a href="https://github.com/raven2cz/tux">github/raven2cz/tux</a></p>
+</li>
+<li>
+<p><a href="https://github.com/raven2cz/dotfiles">github/raven2cz/dotfiles</a></p>
+</li>
+</ul>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://mastodon.arch-linux.cz/@archlinux" target="_blank" rel="noopener noreferrer me"
+    title="Mastodon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M21.58 13.913c-.29 1.469-2.592 3.121-5.238 3.396-1.379.184-2.737.368-4.185.276-2.368-.092-4.237-.551-4.237-.551 0 .184.014.459.043.643.308 2.294 2.317 2.478 4.22 2.57 1.922 0 3.633-.46 3.633-.46l.079 1.653s-1.344.734-3.738.918c-1.32.091-2.96-.092-4.869-.551-4.14-1.102-4.853-5.507-4.961-10.005-.034-1.285-.013-2.57-.013-3.58 0-4.589 3-5.966 3-5.966 1.513-.734 4.11-1.01 6.808-1.01h.067c2.699 0 5.296.276 6.81 1.01 0 0 3 1.377 3 5.967 0 0 .037 3.304-.419 5.69"
+        stroke="currentColor" />
+    <path
+        d="M17.832 8.633v5h-1.978V8.78c0-1.023-.43-1.542-1.29-1.542-.95 0-1.427.616-1.427 1.834v2.655H11.17V9.072c0-1.218-.476-1.834-1.427-1.834-.86 0-1.29.52-1.29 1.542v4.852H6.475V8.633c0-1.022.26-1.834.782-2.434.538-.6 1.243-.909 2.118-.909 1.012 0 1.779.39 2.286 1.169l.492.827.493-.827c.507-.78 1.274-1.169 2.286-1.169.875 0 1.58.308 2.118.909.522.6.782 1.412.782 2.434"
+        fill="currentColor" stroke="none" />
+</svg>
+</a>
+<a href="https://matrix.to/#/#archlinuxcz:matrix.org" target="_blank" rel="noopener noreferrer me"
+    title="Matrix">
+    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+    <path
+        d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.481.314.448.208.785.582 1.02 1.108.254-.374.6-.706 1.034-.992.434-.287.95-.43 1.546-.43.453 0 .872.056 1.26.167.388.11.716.286.993.53.276.245.489.559.646.951.152.392.23.863.23 1.417v5.728h-2.349V11.52c0-.286-.01-.559-.032-.812a1.755 1.755 0 0 0-.18-.66 1.106 1.106 0 0 0-.438-.448c-.194-.11-.457-.166-.785-.166-.332 0-.6.064-.803.189a1.38 1.38 0 0 0-.48.499 1.946 1.946 0 0 0-.231.696 5.56 5.56 0 0 0-.06.785v4.768h-2.35v-4.8c0-.254-.004-.503-.018-.752a2.074 2.074 0 0 0-.143-.688 1.052 1.052 0 0 0-.415-.503c-.194-.125-.476-.19-.854-.19-.111 0-.259.024-.439.074-.18.051-.36.143-.53.282-.171.138-.319.337-.439.595-.12.259-.18.6-.18 1.02v4.966H5.46V7.81zm15.693 15.64V.55H21.72V0H24v24h-2.28v-.55z" />
+</svg>
+</a>
+<a href="/index.xml" target="_blank" rel="noopener noreferrer me"
+    title="Rss">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024–2026 Arch Linux CZ
+        
+    </small>
+</footer><a href="#" title="" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

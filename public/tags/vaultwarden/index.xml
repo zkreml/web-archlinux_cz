@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/tags/vaultwarden/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Sun, 13 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/vaultwarden/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Vaultwarden: Bezpečný správce hesel pro každého</title>
+      <link>http://localhost:1313/posts/878-2/</link>
+      <pubDate>Sun, 13 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/878-2/</guid>
+      <description>&lt;p&gt;Správa hesel je v dnešní době nezbytná, ať už používáte internet pro práci, zábavu nebo komunikaci. &lt;strong&gt;Vaultwarden&lt;/strong&gt; je open-source alternativa ke známému správci hesel Bitwarden, ale s výhodou, že běží na vlastním serveru. To znamená, že máte plnou kontrolu nad svými daty, aniž byste se museli spoléhat na cloudové služby třetích stran.&lt;/p&gt;
+&lt;h2 id=&#34;co-je-vaultwarden&#34;&gt;Co je Vaultwarden?&lt;/h2&gt;
+&lt;p&gt;Vaultwarden je odlehčená verze Bitwardenu, která je optimalizovaná pro provoz na menších serverech a zařízeních s nízkými systémovými nároky. Zároveň si zachovává všechny důležité funkce, které znáte z Bitwardenu, včetně:&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/tags/awesomewm/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Sat, 23 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/awesomewm/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AwesomeWM Ricing</title>
+      <link>http://localhost:1313/posts/awesomewm-ricing/</link>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/awesomewm-ricing/</guid>
+      <description>&lt;p&gt;AwesomeWM patří k nejlepším window managerům s podporou vyššího programovacího jazyka Lua. V našem seriálu &lt;a href=&#34;https://github.com/raven2cz&#34;&gt;Tondy Fischera&lt;/a&gt;  již máte dostatek zkušeností pro plný ricing pokročilého prostředí AwesomeWM.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://arch-linux.cz/wp-content/uploads/2022/04/awesomewm-1-1-1024x576.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://arch-linux.cz/wp-content/uploads/2022/04/awesomewm-2-1-1024x576.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=FCxd5id77c4&amp;amp;t=31s&#34;&gt;https://www.youtube.com/watch?v=FCxd5id77c4&amp;amp;t=31s&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;awesome-ricing---pokročilá-konfigurace&#34;&gt;Awesome Ricing - Pokročilá Konfigurace&lt;/h2&gt;
+&lt;p&gt;Nyní již můžeme přikročit k plné a pokročilé konfiguraci AwesomeWM. Cest je nekonečné množství. &lt;strong&gt;Já jsem zvolil cestu pro jednoduchou údržbu, vysokou efektivitu práce a kvalitní grafický design, který nesníží performance systému&lt;/strong&gt;. Podobně jako u xfce v minulých dílech. Zde je navíc možné vše integrovat dohromady, jakoukoliv věc si přizpůsobit svému workflow a propojit WM s vašimi pracovními skripty a nástroji.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

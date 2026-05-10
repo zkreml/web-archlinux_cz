@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/tags/pairdrop/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Fri, 25 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/pairdrop/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Co je Pairdrop a jak funguje na Oscloud?</title>
+      <link>http://localhost:1313/posts/co-je-pairdrop-a-jak-funguje-na-oscloud/</link>
+      <pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/co-je-pairdrop-a-jak-funguje-na-oscloud/</guid>
+      <description>&lt;h1 id=&#34;co-je-pairdrop-a-jak-funguje&#34;&gt;Co je Pairdrop a jak funguje&lt;/h1&gt;
+&lt;p&gt;Pairdrop na serveru &lt;a href=&#34;https://pair.oscloud.cz/&#34;&gt;pair.oscloud.cz&lt;/a&gt; ti umožňuje snadno a rychle sdílet soubory mezi zařízeními. Stačí, když jsou připojena k internetu&lt;/p&gt;
+&lt;p&gt;– není potřeba žádný speciální software, vše probíhá přes webový prohlížeč.&lt;/p&gt;
+&lt;h2 id=&#34;hlavní-výhody&#34;&gt;Hlavní výhody:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Snadné sdílení: Otevři prohlížeč, přejdi na &lt;a href=&#34;https://pair.oscloud.cz/&#34;&gt;pair.oscloud.cz&lt;/a&gt; a začni sdílet soubory s jinými zařízeními.&lt;/li&gt;
+&lt;li&gt;Platformově nezávislé: Funguje na všech operačních systémech – Linux, Windows, macOS, Android a iOS.&lt;/li&gt;
+&lt;li&gt;Lokální i vzdálené použití: Můžeš posílat soubory přes místní síť nebo i na dálku přes internet.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;jak-pairdrop-používat&#34;&gt;Jak Pairdrop používat?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Otevři pair.oscloud.cz v prohlížeči na obou zařízeních.&lt;/li&gt;
+&lt;li&gt;Vyber zařízení: Aplikace automaticky rozpozná další zařízení připojená k síti nebo na stejném serveru.&lt;/li&gt;
+&lt;li&gt;Odešli soubor: Vyber soubor, který chceš odeslat, a přetáhni ho do rozhraní nebo jej nahraj pomocí tlačítka.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Pairdrop&lt;/strong&gt; je ideální pro rychlé sdílení souborů mezi zařízeními, ať už doma, v kanceláři, nebo na cestách!&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

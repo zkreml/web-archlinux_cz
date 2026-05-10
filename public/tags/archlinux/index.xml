@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/tags/archlinux/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Mon, 01 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/archlinux/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Nový Arch Linux ISO s kernelem 6.16</title>
+      <link>http://localhost:1313/posts/novy-arch-linux-iso-s-kernelem-6-16/</link>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/novy-arch-linux-iso-s-kernelem-6-16/</guid>
+      <description>&lt;h1 id=&#34;nový-arch-linux-iso-s-kernelem-616&#34;&gt;Nový Arch Linux ISO s kernelem 6.16&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;1. září 2025&lt;/strong&gt; - Je tu nový Arch Linux ISO snapshot pro září 2025, první který běží na &lt;strong&gt;Linux kernelu 6.16&lt;/strong&gt;. Hlavní novinky:&lt;/p&gt;
+&lt;h2 id=&#34;co-je-nového&#34;&gt;Co je nového&lt;/h2&gt;
+&lt;h3 id=&#34;linux-kernel-616&#34;&gt;Linux Kernel 6.16&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Lepší detekce hardware, zejména na novějších zařízeních&lt;/li&gt;
+&lt;li&gt;Vylepšená podpora i pro starší komponenty, kde předchozí ISO selhávala&lt;/li&gt;
+&lt;li&gt;Obecně stabilnější základ systému&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;archinstall-309&#34;&gt;Archinstall 3.0.9&lt;/h3&gt;
+&lt;p&gt;Nová verze instalátoru přináší několik užitečných funkcí:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;LUKS iteration time&lt;/strong&gt; - možnost změnit čas iterací pro šifrování&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;U2F autentifikace&lt;/strong&gt; - podpora pro hardware klíče&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bluetooth během instalace&lt;/strong&gt; - nastavení BT spojení přímo v instalátoru&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;--skip-boot&lt;/code&gt; parametr&lt;/strong&gt; - přeskočení instalace bootloaderu&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lepší COSMIC podpora&lt;/strong&gt; - vylepšená integrace nového DE&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Btrfs + GRUB combo&lt;/strong&gt; - automatická instalace &lt;code&gt;inotify-tools&lt;/code&gt; a &lt;code&gt;grub-btrfs&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;pro-koho-je-určený&#34;&gt;Pro koho je určený&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Nové instalace&lt;/strong&gt; - pokud chystáš čistou instalaci&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rescue situace&lt;/strong&gt; - pro opravy systému&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hardware testing&lt;/strong&gt; - nový kernel může rozchodit problémové komponenty&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Existující Arch systémy aktualizuješ klasicky:&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Nejnovější vydání Arch Linux ISO přináší jádro Linuxu 6.8, aktualizovaný instalační program</title>
+      <link>http://localhost:1313/posts/nejnovejsi-vydani-arch-linux-iso-prinasi-jadro-linuxu-6-8-aktualizovany-instalacni-program/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/nejnovejsi-vydani-arch-linux-iso-prinasi-jadro-linuxu-6-8-aktualizovany-instalacni-program/</guid>
+      <description>&lt;p&gt;Arch Linux představil novou ISO verzi s Linux jádrem 6.8 a vylepšeným instalačním procesem. Tato aktualizace byla zrychlena kvůli bezpečnostním obavám s balíčkem XZ Utils. Nové jádro nabízí lepší podporu pro nový hardware a instalátor archinstall, nyní ve verzi 2.7.2, zlepšuje práci se sjednocenými obrazy jádra a prostředím KDE Plasma. ISO je ke stažení na &lt;a href=&#34;https://archlinux.org/download/&#34;&gt;oficiálních stránkách&lt;/a&gt; a stávající uživatelé mohou aktualizovat systém příkazem.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -Syu
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

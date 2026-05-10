@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/tags/openbox/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Sat, 21 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/openbox/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Openbox- velikostně malý, rychlý window manager plně v souladu s ICCCM a EWMH</title>
+      <link>http://localhost:1313/posts/openbox-velikostne-maly-rychly-window-manager-plne-v-souladu-s-icccm-a-ewmh/</link>
+      <pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/openbox-velikostne-maly-rychly-window-manager-plne-v-souladu-s-icccm-a-ewmh/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://arch-linux.cz/wp-content/uploads/2022/05/openbox-screen-1024x576.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;openbox---velikostně-malý-rychlý-window-manager-plně-v-souladu-s-icccm-a-ewmh&#34;&gt;Openbox - velikostně malý, rychlý window manager plně v souladu s ICCCM a EWMH&lt;/h4&gt;
+&lt;p&gt;V dalším díle seriálu Tondy Fischera, se podíváme na instalaci a nastavení správce oken Openbox.&lt;/p&gt;
+&lt;p&gt;Openbox je vysoce konfigurovatelný správce oken s rozsáhlou podporou standardů ICCCM a EWMH.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Vizuální styl &lt;code&gt;*box&lt;/code&gt; je dobře známý pro svůj minimalistický vzhled. Openbox používá vizuální styl &lt;code&gt;*box&lt;/code&gt; a zároveň poskytuje větší počet možností pro vývojáře témat než předchozí implementace &lt;code&gt;*box&lt;/code&gt;. Dokumentace k tématu popisuje celou řadu možností, které lze nalézt v Openbox tématech.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

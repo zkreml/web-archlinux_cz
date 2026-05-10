@@ -10,10 +10,10 @@
 <meta name="application-name" content="Arch Linux – Základní příkazy | Arch Linux CZ" />
 <meta property="og:site_name" content="Arch Linux CZ" />
 
-<meta name="description" content="Praktický průvodce základními příkazy v Arch Linuxu">
-<meta itemprop="description" content="Praktický průvodce základními příkazy v Arch Linuxu" />
-<meta property="og:description" content="Praktický průvodce základními příkazy v Arch Linuxu" />
-<meta name="twitter:description" content="Praktický průvodce základními příkazy v Arch Linuxu" />
+<meta name="description" content="Česká komunita Arch Linuxu">
+<meta itemprop="description" content="Česká komunita Arch Linuxu" />
+<meta property="og:description" content="Česká komunita Arch Linuxu" />
+<meta name="twitter:description" content="Česká komunita Arch Linuxu" />
 
 <meta property="og:locale" content="cs" />
 <meta name="language" content="cs" />
@@ -52,8 +52,8 @@
         "name": ""
         },
         "datePublished": "2026-03-26",
-        "description": "Praktický průvodce základními příkazy v Arch Linuxu",
-        "wordCount":  46 ,
+        "description": "",
+        "wordCount":  1313 ,
         "mainEntityOfPage": "True",
         "dateModified": "2026-03-26",
         "image": {
@@ -74,22 +74,23 @@
     <meta property="og:url" content="http://localhost:1313/posts/arch-linux-zakladni-prikazy/">
   <meta property="og:site_name" content="Arch Linux CZ">
   <meta property="og:title" content="Arch Linux – Základní příkazy">
-  <meta property="og:description" content="Praktický průvodce základními příkazy v Arch Linuxu">
+  <meta property="og:description" content="Arch Linux – Základní příkazy Praktický průvodce pro začátečníky a mírně pokročilé uživatele
+1. Úvod Arch Linux je minimalistická rolling-release distribuce – dostaneš čistý systém bez zbytečností a sám si ho postavíš podle sebe. Žádný GUI instalátor, žádné předinstalované haraburdí.
+Proč znát příkazy? Protože na Archu neexistuje klikací záchranný kruh. Když se něco rozbije (a rozbije), terminal je jediná cesta ven. A taky je to prostě rychlejší než jakékoliv GUI.">
   <meta property="og:locale" content="cs">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2026-03-26T00:00:00+00:00">
     <meta property="article:modified_time" content="2026-03-26T00:00:00+00:00">
-    <meta property="article:tag" content="Návody">
-    <meta property="article:tag" content="Arch-Linux">
-    <meta property="article:tag" content="Příkazy">
 
 
     
     
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Arch Linux – Základní příkazy">
-  <meta name="twitter:description" content="Praktický průvodce základními příkazy v Arch Linuxu">
+  <meta name="twitter:description" content="Arch Linux – Základní příkazy Praktický průvodce pro začátečníky a mírně pokročilé uživatele
+1. Úvod Arch Linux je minimalistická rolling-release distribuce – dostaneš čistý systém bez zbytečností a sám si ho postavíš podle sebe. Žádný GUI instalátor, žádné předinstalované haraburdí.
+Proč znát příkazy? Protože na Archu neexistuje klikací záchranný kruh. Když se něco rozbije (a rozbije), terminal je jediná cesta ven. A taky je to prostě rychlejší než jakékoliv GUI.">
 
 
     
@@ -149,14 +150,14 @@
                 </li>
                 
                 <li>
-                    <a class="menu-link " href="/navody/">
+                    <a class="menu-link " href="/categories/n%C3%A1vody/">
                         Návody
                     </a>
                     
                 </li>
                 
                 <li>
-                    <a class="menu-link " href="/zpravy/">
+                    <a class="menu-link " href="/categories/zrp%C3%A1vy/">
                         Zprávy
                     </a>
                     
@@ -228,17 +229,228 @@
             </header>
             
             <div class="page-content">
-                <p>Praktický průvodce pro začátečníky a mírně pokročilé uživatele.</p>
-<h2 id="správa-balíčků">Správa balíčků</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -Syu           <span style="color:#75715e"># aktualizace systému</span>
-</span></span><span style="display:flex;"><span>sudo pacman -Syu balíček   <span style="color:#75715e"># instalace balíčku</span>
-</span></span><span style="display:flex;"><span>sudo pacman -Rns balíček   <span style="color:#75715e"># odebrání balíčku</span>
-</span></span><span style="display:flex;"><span>pacman -Ss balíček         <span style="color:#75715e"># hledání balíčku</span>
-</span></span></code></pre></div><h2 id="systemd">Systemd</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl status služba
-</span></span><span style="display:flex;"><span>systemctl enable --now služba
-</span></span><span style="display:flex;"><span>journalctl -xe
-</span></span></code></pre></div>
+                <h1 id="arch-linux--základní-příkazy">Arch Linux – Základní příkazy</h1>
+<p><em>Praktický průvodce pro začátečníky a mírně pokročilé uživatele</em></p>
+<h2 id="1-úvod">1. Úvod</h2>
+<p>Arch Linux je minimalistická rolling-release distribuce – dostaneš čistý systém bez zbytečností a sám si ho postavíš podle sebe. Žádný GUI instalátor, žádné předinstalované haraburdí.</p>
+<p>Proč znát příkazy? Protože na Archu neexistuje klikací záchranný kruh. Když se něco rozbije (a rozbije), terminal je jediná cesta ven. A taky je to prostě rychlejší než jakékoliv GUI.</p>
+<h2 id="2-práce-se-systémem">2. Práce se systémem</h2>
+<h3 id="uname--a--informace-o-jádře"><code>uname -a</code> — informace o jádře</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uname -a
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Linux mujpc 6.8.1-arch1-1 #1 SMP PREEMPT_DYNAMIC ...</span>
+</span></span></code></pre></div><p>Zobrazí jméno počítače, verzi kernelu a architekturu. Hodí se při hlášení bugů nebo kontrole kernelu po aktualizaci.</p>
+<h3 id="uptime--jak-dlouho-běží-systém"><code>uptime</code> — jak dlouho běží systém</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uptime
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 14:32:01 up 3 days, 2:14, 2 users, load average: 0.45, 0.60, 0.55</span>
+</span></span></code></pre></div><p>Ukazuje dobu běhu + průměrnou zátěž za 1, 5 a 15 minut.</p>
+<h3 id="htop--top--sledování-procesů"><code>htop</code> / <code>top</code> — sledování procesů</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>htop        <span style="color:#75715e"># přehledná TUI verze (doporučeno)</span>
+</span></span><span style="display:flex;"><span>top         <span style="color:#75715e"># základní, vždy dostupný</span>
+</span></span></code></pre></div><p><code>htop</code> umí kill procesu přímo z rozhraní – stiskni <code>F9</code>. Nainstaluj přes <code>sudo pacman -Syu htop</code>, pokud chybí.</p>
+<h2 id="3-správa-balíčků--pacman">3. Správa balíčků – pacman</h2>
+<p>Pacman je správce balíčků Arch Linuxu. Rychlý, jednoduchý, žádná magie.</p>
+<h3 id="aktualizace-celého-systému">Aktualizace celého systému</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -Syu
+</span></span></code></pre></div><p><code>-S</code> = synchronizace, <code>-y</code> = refresh databáze, <code>-u</code> = upgrade. Dělej pravidelně – Arch je rolling release.</p>
+<h3 id="instalace-balíčku">Instalace balíčku</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -Syu firefox
+</span></span><span style="display:flex;"><span>sudo pacman -Syu git neovim htop   <span style="color:#75715e"># více balíčků najednou</span>
+</span></span></code></pre></div><h3 id="odstranění-balíčku-včetně-závislostí-a-config-souborů">Odstranění balíčku (včetně závislostí a config souborů)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -Rns firefox
+</span></span></code></pre></div><p><code>-R</code> = remove, <code>-n</code> = smaž config soubory, <code>-s</code> = smaž osiřelé závislosti. Vždy používej <code>-Rns</code>, ne jen <code>-R</code>.</p>
+<h3 id="hledání-balíčku-v-repozitáři">Hledání balíčku v repozitáři</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pacman -Ss neovim
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># extra/neovim 0.9.5-1</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#     Vim-fork focused on extensibility and usability</span>
+</span></span></code></pre></div><h3 id="hledání-v-nainstalovaných-balíčcích">Hledání v nainstalovaných balíčcích</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pacman -Qs neovim
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># local/neovim 0.9.5-1</span>
+</span></span></code></pre></div><h2 id="4-práce-se-soubory-a-adresáři">4. Práce se soubory a adresáři</h2>
+<h3 id="orientace-v-systému">Orientace v systému</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pwd             <span style="color:#75715e"># kde jsem</span>
+</span></span><span style="display:flex;"><span>ls -lah         <span style="color:#75715e"># výpis adresáře (long, all, human-readable)</span>
+</span></span><span style="display:flex;"><span>cd /etc/nginx   <span style="color:#75715e"># přejít do adresáře</span>
+</span></span><span style="display:flex;"><span>cd ..           <span style="color:#75715e"># o úroveň výš</span>
+</span></span><span style="display:flex;"><span>cd ~            <span style="color:#75715e"># domovský adresář</span>
+</span></span></code></pre></div><h3 id="kopírování-přesun-mazání">Kopírování, přesun, mazání</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp soubor.txt /tmp/soubor_backup.txt     <span style="color:#75715e"># kopírování</span>
+</span></span><span style="display:flex;"><span>cp -r slozka/ /tmp/slozka_backup/        <span style="color:#75715e"># kopírování adresáře</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mv soubor.txt novy_nazev.txt             <span style="color:#75715e"># přejmenování</span>
+</span></span><span style="display:flex;"><span>mv soubor.txt /home/user/dokumenty/      <span style="color:#75715e"># přesun</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rm soubor.txt                            <span style="color:#75715e"># smazání souboru</span>
+</span></span><span style="display:flex;"><span>rm -rf slozka/                           <span style="color:#75715e"># smazání adresáře (POZOR, nevratné)</span>
+</span></span></code></pre></div><blockquote>
+</blockquote>
+<p>⚠️ <code>rm -rf</code> se neptá. Dvakrát zkontroluj cestu.</p>
+<h3 id="vytváření-adresářů">Vytváření adresářů</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir novy_adresar
+</span></span><span style="display:flex;"><span>mkdir -p projekty/web/css    <span style="color:#75715e"># vytvoří celou cestu najednou</span>
+</span></span><span style="display:flex;"><span>rmdir prazdny_adresar        <span style="color:#75715e"># smaže jen prázdný adresář</span>
+</span></span></code></pre></div><h3 id="tree--stromové-zobrazení"><code>tree</code> — stromové zobrazení</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>tree /etc/nginx
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Nainstaluj: sudo pacman -Syu tree</span>
+</span></span></code></pre></div><h2 id="5-práce-s-obsahem-souborů">5. Práce s obsahem souborů</h2>
+<h3 id="zobrazení-obsahu">Zobrazení obsahu</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /etc/hostname                  <span style="color:#75715e"># vypíše celý soubor</span>
+</span></span><span style="display:flex;"><span>less /var/log/pacman.log           <span style="color:#75715e"># stránkování, q = konec</span>
+</span></span><span style="display:flex;"><span>bat /etc/fstab                     <span style="color:#75715e"># zvýrazňování syntaxe (sudo pacman -Syu bat)</span>
+</span></span></code></pre></div><h3 id="editory">Editory</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nano /etc/hosts                    <span style="color:#75715e"># jednoduchý, pro začátečníky</span>
+</span></span><span style="display:flex;"><span>vim /etc/pacman.conf               <span style="color:#75715e"># mocný, strmá učební křivka</span>
+</span></span><span style="display:flex;"><span>nvim ~/.config/nvim/init.lua       <span style="color:#75715e"># neovim – modernější vim</span>
+</span></span></code></pre></div><p>Základní vim survival kit:</p>
+<pre tabindex="0"><code>i         → insert mode (psaní)
+Esc       → zpět do normal mode
+:w        → uložit
+:q        → zavřít
+:wq       → uložit a zavřít
+:q!       → zavřít bez uložení
+</code></pre><h3 id="grep--hledání-v-souborech"><code>grep</code> — hledání v souborech</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>grep <span style="color:#e6db74">&#34;error&#34;</span> /var/log/syslog                  <span style="color:#75715e"># hledá &#34;error&#34; v souboru</span>
+</span></span><span style="display:flex;"><span>grep -r <span style="color:#e6db74">&#34;ServerName&#34;</span> /etc/nginx/              <span style="color:#75715e"># rekurzivně v adresáři</span>
+</span></span><span style="display:flex;"><span>grep -n <span style="color:#e6db74">&#34;Port&#34;</span> /etc/ssh/sshd_config           <span style="color:#75715e"># ukáže číslo řádku</span>
+</span></span><span style="display:flex;"><span>journalctl | grep <span style="color:#e6db74">&#34;failed&#34;</span>                    <span style="color:#75715e"># filtrování výstupu</span>
+</span></span></code></pre></div><h2 id="6-oprávnění-a-vlastnictví">6. Oprávnění a vlastnictví</h2>
+<h3 id="chmod--práva-souborů"><code>chmod</code> — práva souborů</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod +x skript.sh               <span style="color:#75715e"># přidej právo spuštění</span>
+</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">644</span> soubor.txt             <span style="color:#75715e"># rw-r--r--</span>
+</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">755</span> /usr/local/bin/skript  <span style="color:#75715e"># rwxr-xr-x (typické pro spustitelné soubory)</span>
+</span></span><span style="display:flex;"><span>chmod -R <span style="color:#ae81ff">755</span> slozka/             <span style="color:#75715e"># rekurzivně</span>
+</span></span></code></pre></div><p>Orientace v číslech:</p>
+<pre tabindex="0"><code>4 = čtení (r)
+2 = zápis (w)
+1 = spuštění (x)
+
+644 = vlastník rw, skupina r, ostatní r
+755 = vlastník rwx, skupina rx, ostatní rx
+</code></pre><h3 id="chown--změna-vlastníka"><code>chown</code> — změna vlastníka</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chown user:group soubor.txt          <span style="color:#75715e"># změna vlastníka i skupiny</span>
+</span></span><span style="display:flex;"><span>chown -R www-data:www-data /var/www  <span style="color:#75715e"># rekurzivně (typické pro web server)</span>
+</span></span></code></pre></div><h2 id="7-systémové-služby--systemd">7. Systémové služby – systemd</h2>
+<h3 id="stav-služby">Stav služby</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl status nginx
+</span></span><span style="display:flex;"><span>systemctl status sshd
+</span></span></code></pre></div><h3 id="start--stop--restart">Start / stop / restart</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl start nginx
+</span></span><span style="display:flex;"><span>sudo systemctl stop nginx
+</span></span><span style="display:flex;"><span>sudo systemctl restart nginx
+</span></span><span style="display:flex;"><span>sudo systemctl reload nginx     <span style="color:#75715e"># znovu načte config bez restartu</span>
+</span></span></code></pre></div><h3 id="povolení-při-startu-systému">Povolení při startu systému</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl enable nginx          <span style="color:#75715e"># povolí autostart</span>
+</span></span><span style="display:flex;"><span>sudo systemctl enable --now nginx    <span style="color:#75715e"># povolí + hned spustí (doporučeno)</span>
+</span></span><span style="display:flex;"><span>sudo systemctl disable nginx         <span style="color:#75715e"># zakáže autostart</span>
+</span></span></code></pre></div><h3 id="logy--journalctl">Logy – journalctl</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>journalctl -xe                        <span style="color:#75715e"># posledních X záznamů s kontextem chyb</span>
+</span></span><span style="display:flex;"><span>journalctl -u nginx                   <span style="color:#75715e"># logy konkrétní služby</span>
+</span></span><span style="display:flex;"><span>journalctl -u nginx -f                <span style="color:#75715e"># živý výstup (follow)</span>
+</span></span><span style="display:flex;"><span>journalctl --since <span style="color:#e6db74">&#34;1 hour ago&#34;</span>       <span style="color:#75715e"># logy za poslední hodinu</span>
+</span></span><span style="display:flex;"><span>journalctl -p err -b                  <span style="color:#75715e"># jen chyby od posledního bootu</span>
+</span></span></code></pre></div><h2 id="8-síťové-příkazy">8. Síťové příkazy</h2>
+<h3 id="ip-a--zobrazení-síťových-rozhraní"><code>ip a</code> — zobrazení síťových rozhraní</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ip a                    <span style="color:#75715e"># všechna rozhraní + IP adresy</span>
+</span></span><span style="display:flex;"><span>ip a show eth0          <span style="color:#75715e"># konkrétní rozhraní</span>
+</span></span><span style="display:flex;"><span>ip r                    <span style="color:#75715e"># routovací tabulka</span>
+</span></span></code></pre></div><h3 id="ping--test-dostupnosti"><code>ping</code> — test dostupnosti</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ping archlinux.org
+</span></span><span style="display:flex;"><span>ping -c <span style="color:#ae81ff">4</span> 8.8.8.8       <span style="color:#75715e"># pošle jen 4 pakety</span>
+</span></span></code></pre></div><h3 id="curl--http-požadavky"><code>curl</code> — HTTP požadavky</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl https://archlinux.org                    <span style="color:#75715e"># stáhni obsah stránky</span>
+</span></span><span style="display:flex;"><span>curl -I https://archlinux.org                 <span style="color:#75715e"># jen hlavičky (HTTP status atd.)</span>
+</span></span><span style="display:flex;"><span>curl -O https://example.com/soubor.tar.gz     <span style="color:#75715e"># stáhni soubor</span>
+</span></span><span style="display:flex;"><span>curl -s https://api.ipify.org                 <span style="color:#75715e"># zjisti svoji veřejnou IP</span>
+</span></span></code></pre></div><h3 id="ss--síťová-spojení-a-porty"><code>ss</code> — síťová spojení a porty</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ss -tuln                  <span style="color:#75715e"># všechny naslouchající TCP/UDP porty</span>
+</span></span><span style="display:flex;"><span>ss -tulnp                 <span style="color:#75715e"># + zobrazí proces</span>
+</span></span><span style="display:flex;"><span>ss -s                     <span style="color:#75715e"># souhrn statistik</span>
+</span></span></code></pre></div><h2 id="9-užitečné-nástroje">9. Užitečné nástroje</h2>
+<h3 id="yay--správce-aur-balíčků"><code>yay</code> — správce AUR balíčků</h3>
+<p>AUR obsahuje tisíce balíčků mimo oficiální repozitáře.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Instalace yay (jednorázově):</span>
+</span></span><span style="display:flex;"><span>sudo pacman -Syu --needed git base-devel
+</span></span><span style="display:flex;"><span>git clone https://aur.archlinux.org/yay.git
+</span></span><span style="display:flex;"><span>cd yay <span style="color:#f92672">&amp;&amp;</span> makepkg -si
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Použití:</span>
+</span></span><span style="display:flex;"><span>yay -Syu                        <span style="color:#75715e"># aktualizace včetně AUR</span>
+</span></span><span style="display:flex;"><span>yay -S visual-studio-code-bin   <span style="color:#75715e"># instalace z AUR</span>
+</span></span><span style="display:flex;"><span>yay -Ss spotify                 <span style="color:#75715e"># hledání v AUR</span>
+</span></span></code></pre></div><h3 id="rsync--synchronizace-a-zálohy"><code>rsync</code> — synchronizace a zálohy</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rsync -avh ~/dokumenty/ /mnt/backup/dokumenty/         <span style="color:#75715e"># lokální záloha</span>
+</span></span><span style="display:flex;"><span>rsync -avh ~/dokumenty/ user@server:/backup/           <span style="color:#75715e"># na vzdálený server</span>
+</span></span><span style="display:flex;"><span>rsync -avh --delete ~/web/ user@server:/var/www/web/   <span style="color:#75715e"># zrcadlení</span>
+</span></span><span style="display:flex;"><span>rsync -n -avh ~/dokumenty/ /mnt/backup/                <span style="color:#75715e"># dry run</span>
+</span></span></code></pre></div><p><code>-a</code> = archivní mód, <code>-v</code> = verbose, <code>-h</code> = human-readable</p>
+<h3 id="du-a-df--místo-na-disku"><code>du</code> a <code>df</code> — místo na disku</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>df -h                           <span style="color:#75715e"># místo na všech připojených discích</span>
+</span></span><span style="display:flex;"><span>df -h /home                     <span style="color:#75715e"># konkrétní oddíl</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>du -sh ~/dokumenty              <span style="color:#75715e"># velikost adresáře</span>
+</span></span><span style="display:flex;"><span>du -sh /var/cache/pacman/pkg    <span style="color:#75715e"># kolik zabírá cache pacmanu</span>
+</span></span><span style="display:flex;"><span>du -h --max-depth<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> /var        <span style="color:#75715e"># přehled velikostí podadresářů</span>
+</span></span></code></pre></div><h2 id="10-tipy-na-závěr">10. Tipy na závěr</h2>
+<h3 id="aliasy--zkratky-pro-časté-příkazy">Aliasy – zkratky pro časté příkazy</h3>
+<p>Přidej do <code>~/.bashrc</code> nebo <code>~/.zshrc</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>alias update<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;sudo pacman -Syu&#39;</span>
+</span></span><span style="display:flex;"><span>alias ll<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ls -lah&#39;</span>
+</span></span><span style="display:flex;"><span>alias ..<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;cd ..&#39;</span>
+</span></span><span style="display:flex;"><span>alias ...<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;cd ../..&#39;</span>
+</span></span><span style="display:flex;"><span>alias grep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;grep --color=auto&#39;</span>
+</span></span><span style="display:flex;"><span>alias df<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;df -h&#39;</span>
+</span></span><span style="display:flex;"><span>alias du<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;du -h&#39;</span>
+</span></span><span style="display:flex;"><span>alias syslog<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;journalctl -xe&#39;</span>
+</span></span></code></pre></div><p>Po úpravě:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>source ~/.bashrc
+</span></span></code></pre></div><h3 id="historie-příkazů">Historie příkazů</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>history                   <span style="color:#75715e"># zobrazí historii</span>
+</span></span><span style="display:flex;"><span>history | grep pacman     <span style="color:#75715e"># hledej v historii</span>
+</span></span><span style="display:flex;"><span>!!                        <span style="color:#75715e"># zopakuj poslední příkaz</span>
+</span></span><span style="display:flex;"><span>!ssh                      <span style="color:#75715e"># zopakuj poslední příkaz začínající na &#34;ssh&#34;</span>
+</span></span></code></pre></div><p>Klávesové zkratky:</p>
+<pre tabindex="0"><code>Ctrl+R   → interaktivní hledání v historii
+         → piš část příkazu, Enter = spustí, Ctrl+R znovu = starší shoda
+</code></pre><h2 id="cheat-sheet">Cheat Sheet</h2>
+<pre tabindex="0"><code>╔══════════════════════════════════════════════════════════════════╗
+║                   ARCH LINUX — CHEAT SHEET                       ║
+╠══════════════════╦═══════════════════════════════════════════════╣
+║ SYSTÉM           ║ uname -a          → info o kernelu            ║
+║                  ║ uptime            → jak dlouho běží           ║
+║                  ║ htop              → procesy a zátěž           ║
+╠══════════════════╬═══════════════════════════════════════════════╣
+║ PACMAN           ║ pacman -Syu       → aktualizace               ║
+║                  ║ pacman -Syu  → instalace                 ║
+║                  ║ pacman -Rns  → odebrání                  ║
+║                  ║ pacman -Ss   → hledání v repozitáři      ║
+║                  ║ pacman -Qs   → hledání v instalovaných   ║
+╠══════════════════╬═══════════════════════════════════════════════╣
+║ SOUBORY          ║ ls -lah           → výpis adresáře            ║
+║                  ║ cp -r src/ dst/   → kopírování                ║
+║                  ║ mv src dst        → přesun / přejmenování     ║
+║                  ║ rm -rf slozka/    → smazání (POZOR!)          ║
+║                  ║ mkdir -p a/b/c    → vytvoření cesty           ║
+╠══════════════════╬═══════════════════════════════════════════════╣
+║ OBSAH SOUBORŮ    ║ cat soubor        → výpis                     ║
+║                  ║ less soubor       → stránkování               ║
+║                  ║ grep &#34;text&#34; soubor→ hledání                   ║
+╠══════════════════╬═══════════════════════════════════════════════╣
+║ SYSTEMD          ║ systemctl status  → stav služby               ║
+║                  ║ systemctl enable  ║                           ║
+║                  ║   --now      → povol + spusť             ║
+║                  ║ journalctl -xe    → logy s chybami            ║
+║                  ║ journalctl -u svc → logy služby               ║
+╠══════════════════╬═══════════════════════════════════════════════╣
+║ SÍŤ              ║ ip a              → síťová rozhraní           ║
+║                  ║ ss -tuln          → otevřené porty            ║
+║                  ║ curl -s URL       → HTTP požadavek            ║
+╠══════════════════╬═══════════════════════════════════════════════╣
+║ DISK             ║ df -h             → místo na discích          ║
+║                  ║ du -sh /cesta     → velikost adresáře         ║
+╠══════════════════╬═══════════════════════════════════════════════╣
+║ HISTORY          ║ Ctrl+R            → hledání v historii        ║
+║                  ║ !!                → zopakuj poslední příkaz   ║
+╚══════════════════╩═══════════════════════════════════════════════╝
+</code></pre>
             </div>
         </article></main>
 </div>

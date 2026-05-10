@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="cs"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">IVPN: Soukromá VPN služba pro Arch Linux a Android | Arch Linux CZ</title>
+<meta property="og:title" content="IVPN: Soukromá VPN služba pro Arch Linux a Android | Arch Linux CZ" />
+<meta name="twitter:title" content="IVPN: Soukromá VPN služba pro Arch Linux a Android | Arch Linux CZ" />
+<meta itemprop="name" content="IVPN: Soukromá VPN služba pro Arch Linux a Android | Arch Linux CZ" />
+<meta name="application-name" content="IVPN: Soukromá VPN služba pro Arch Linux a Android | Arch Linux CZ" />
+<meta property="og:site_name" content="Arch Linux CZ" />
+
+<meta name="description" content="Česká komunita Arch Linuxu">
+<meta itemprop="description" content="Česká komunita Arch Linuxu" />
+<meta property="og:description" content="Česká komunita Arch Linuxu" />
+<meta name="twitter:description" content="Česká komunita Arch Linuxu" />
+
+<meta property="og:locale" content="cs" />
+<meta name="language" content="cs" />
+
+  <link rel="alternate" hreflang="en" href="http://localhost:1313/posts/ivpn-soukroma-vpn-sluzba-pro-arch-linux-a-android/" title="" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2025-06-07T00:00:00Z />
+    <meta property="article:published_time" content=2025-06-07T00:00:00Z />
+    <meta property="og:url" content="http://localhost:1313/posts/ivpn-soukroma-vpn-sluzba-pro-arch-linux-a-android/" />
+
+    
+    <meta property="og:article:author" content="archos" />
+    <meta property="article:author" content="archos" />
+    <meta name="author" content="archos" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "IVPN: Soukromá VPN služba pro Arch Linux a Android",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2025-06-07",
+        "description": "",
+        "wordCount":  526 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2025-06-07",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Arch Linux CZ"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.161.1">
+
+    
+    <meta property="og:url" content="http://localhost:1313/posts/ivpn-soukroma-vpn-sluzba-pro-arch-linux-a-android/">
+  <meta property="og:site_name" content="Arch Linux CZ">
+  <meta property="og:title" content="IVPN: Soukromá VPN služba pro Arch Linux a Android">
+  <meta property="og:description" content="IVPN patří mezi VPN služby, které berou soukromí vážně. Na rozdíl od většiny komerčních VPN poskytovatelů, IVPN funguje bez logování, podporuje anonymní platby a má otevřený zdrojový kód svých aplikací. Pro uživatele Arch Linuxu a mobilních zařízení nabízí solidní řešení s důrazem na bezpečnost.
+Proč IVPN? Žádné logování: IVPN nemá co logovat - nesbírají IP adresy, DNS dotazy ani metadata o připojení.
+Anonymní registrace: Účet si vygeneruješ bez osobních údajů, e-mail není potřeba. Můžete platit i kryptoměnami nebo hotovostí.">
+  <meta property="og:locale" content="cs">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-06-07T00:00:00+00:00">
+    <meta property="article:tag" content="Opensource">
+    <meta property="article:tag" content="Vpn">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="IVPN: Soukromá VPN služba pro Arch Linux a Android">
+  <meta name="twitter:description" content="IVPN patří mezi VPN služby, které berou soukromí vážně. Na rozdíl od většiny komerčních VPN poskytovatelů, IVPN funguje bez logování, podporuje anonymní platby a má otevřený zdrojový kód svých aplikací. Pro uživatele Arch Linuxu a mobilních zařízení nabízí solidní řešení s důrazem na bezpečnost.
+Proč IVPN? Žádné logování: IVPN nemá co logovat - nesbírají IP adresy, DNS dotazy ani metadata o připojení.
+Anonymní registrace: Účet si vygeneruješ bez osobních údajů, e-mail není potřeba. Můžete platit i kryptoměnami nebo hotovostí.">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/ivpn-soukroma-vpn-sluzba-pro-arch-linux-a-android/">
+    <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+    <meta name="color-scheme" content="light dark">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    
+</head>
+<body data-theme = "" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <img src="/logo.png" alt="Arch Linux CZ" height="50">
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Domů
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/categories/n%C3%A1vody/">
+                        Návody
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/categories/zrp%C3%A1vy/">
+                        Zprávy
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/o-arch-linuxu/">
+                        O Arch Linuxu
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="https://wiki.arch-linux.cz/shelves/arch-linux-cz">
+                        Wiki
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="https://forum.arch-linux.cz/">
+                        Fórum
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/komunita/">
+                        Komunita
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/podporte-nas/">
+                        Podpořte nás
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">IVPN: Soukromá VPN služba pro Arch Linux a Android</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2025-06-07T00:00:00&#43;00:00" itemprop="datePublished"> 7. 6. 2025 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <p>IVPN patří mezi VPN služby, které berou soukromí vážně. Na rozdíl od většiny komerčních VPN poskytovatelů, IVPN funguje bez logování, podporuje anonymní platby a má otevřený zdrojový kód svých aplikací. Pro uživatele Arch Linuxu a mobilních zařízení nabízí solidní řešení s důrazem na bezpečnost.</p>
+<h2 id="proč-ivpn">Proč IVPN?</h2>
+<p><strong>Žádné logování</strong>: IVPN nemá co logovat - nesbírají IP adresy, DNS dotazy ani metadata o připojení.</p>
+<p><strong>Anonymní registrace:</strong> Účet si vygeneruješ bez osobních údajů, e-mail není potřeba. Můžete platit i kryptoměnami nebo hotovostí.</p>
+<p><strong>Open source klienti</strong>: Všechny aplikace mají otevřený zdrojový kód, takže můžete ověřit, co skutečně dělají.</p>
+<p><strong>WireGuard a OpenVPN</strong>: Podporují moderní WireGuard protokol i klasické OpenVPN.</p>
+<p><strong>Multihop</strong>: Možnost směrování přes dva VPN servery pro extra ochranu.</p>
+<h2 id="instalace-na-arch-linux">Instalace na Arch Linux</h2>
+<h3 id="oficiální-aplikace">Oficiální aplikace</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yay -S ivpn-ui
+</span></span></code></pre></div><p>Nebo z AUR ručně:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://aur.archlinux.org/ivpn-ui.git
+</span></span><span style="display:flex;"><span>cd ivpn-ui
+</span></span><span style="display:flex;"><span>makepkg -si
+</span></span></code></pre></div><h3 id="spuštění-a-přihlášení">Spuštění a přihlášení</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Spustit daemon</span>
+</span></span><span style="display:flex;"><span>sudo systemctl enable --now ivpn-daemon
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Spustit GUI</span>
+</span></span><span style="display:flex;"><span>ivpn-ui
+</span></span></code></pre></div><p>V aplikaci se přihlásíte pomocí Account ID, který dostanete po registraci na webu IVPN.</p>
+<h3 id="ruční-konfigurace-wireguard">Ruční konfigurace WireGuard</h3>
+<p>Pokud preferujete čistý WireGuard bez GUI:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Instalace WireGuard</span>
+</span></span><span style="display:flex;"><span>sudo pacman -S wireguard-tools
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Stáhnout konfiguraci z IVPN účtu</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Uložit jako /etc/wireguard/ivpn.conf</span>
+</span></span></code></pre></div><p>Příklad konfigurace:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[Interface]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">PrivateKey</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">YOUR_PRIVATE_KEY</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Address</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">10.0.0.2/32</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">DNS</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">172.16.0.1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[Peer]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">PublicKey</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">SERVER_PUBLIC_KEY</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Endpoint</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">SERVER_IP:2049</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">AllowedIPs</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">0.0.0.0/0</span>
+</span></span></code></pre></div><p>Spuštění:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo wg-quick up ivpn
+</span></span><span style="display:flex;"><span>sudo wg-quick down ivpn
+</span></span></code></pre></div><h3 id="automatické-spuštění">Automatické spuštění</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl enable wg-quick@ivpn
+</span></span></code></pre></div><h2 id="nastavení-na-android">Nastavení na Android</h2>
+<h3 id="instalace-aplikace">Instalace aplikace</h3>
+<p>IVPN aplikaci najdete v Google Play Store nebo F-Droid:</p>
+<pre tabindex="0"><code>F-Droid: https://f-droid.org/packages/net.ivpn.client/
+Google Play: IVPN
+</code></pre><h3 id="konfigurace">Konfigurace</h3>
+<ul>
+<li>Otevřete aplikaci a přihlaste se pomocí Account ID</li>
+<li>Vyberte server (doporučuji nejbližší pro rychlost)</li>
+<li>Zapněte VPN přepínačem</li>
+<li>V nastavení můžete povolit:</li>
+</ul>
+<p>Auto-connect při startu</p>
+<ul>
+<li>Kill switch (přeruší internet při výpadku VPN)</li>
+<li>Custom DNS servery</li>
+</ul>
+<h3 id="wireguard-konfigurace">WireGuard konfigurace</h3>
+<p>Alternativně můžete použít oficiální WireGuard aplikaci:</p>
+<ul>
+<li>Stáhněte si konfigurační soubor z IVPN účtu</li>
+<li>Importujte do WireGuard aplikace</li>
+<li>Aktivujte profil</li>
+</ul>
+<h2 id="tipy-pro-maximální-soukromí">Tipy pro maximální soukromí</h2>
+<h3 id="dns-leak-protection">DNS leak protection</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Ověření DNS úniku</span>
+</span></span><span style="display:flex;"><span>dig +short myip.opendns.com @resolver1.opendns.com
+</span></span></code></pre></div><h3 id="firewall-pravidla">Firewall pravidla</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Blokovat provoz mimo VPN interface</span>
+</span></span><span style="display:flex;"><span>sudo iptables -A OUTPUT ! -o tun0 -m owner --uid-owner <span style="color:#66d9ef">$(</span>id -u<span style="color:#66d9ef">)</span> -j DROP
+</span></span></code></pre></div><h3 id="kill-switch-pro-systemd">Kill switch pro systemd</h3>
+<p>Vytvořte službu, která vypne internet při odpojení VPN:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#75715e"># /etc/systemd/system/vpn-killswitch.service</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[Unit]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Description</span><span style="color:#f92672">=</span><span style="color:#e6db74">VPN Kill Switch</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">After</span><span style="color:#f92672">=</span><span style="color:#e6db74">network.target</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[Service]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Type</span><span style="color:#f92672">=</span><span style="color:#e6db74">oneshot</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">RemainAfterExit</span><span style="color:#f92672">=</span><span style="color:#e6db74">yes</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ExecStart</span><span style="color:#f92672">=</span><span style="color:#e6db74">/usr/local/bin/killswitch-on</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ExecStop</span><span style="color:#f92672">=</span><span style="color:#e6db74">/usr/local/bin/killswitch-off</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[Install]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">WantedBy</span><span style="color:#f92672">=</span><span style="color:#e6db74">multi-user.target</span>
+</span></span></code></pre></div><h2 id="rychlost-a-výkon">Rychlost a výkon</h2>
+<p>IVPN servery jsou obvykle rychlé, ale výkon závisí na:</p>
+<ul>
+<li>Vzdálenosti k serveru</li>
+<li>Vytížení serveru</li>
+<li>Vaší rychlosti internetu</li>
+</ul>
+<p>Pro testování rychlosti:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>speedtest-cli --secure
+</span></span></code></pre></div><p>Nebo pokud nemáš speedtest-cli nainstalovaný:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Instalace</span>
+</span></span><span style="display:flex;"><span>sudo pacman -S speedtest-cli
+</span></span></code></pre></div><h2 id="cena-a-plány">Cena a plány</h2>
+<p>IVPN má dva plány:</p>
+<ul>
+<li><strong>Standard</strong>: $6/měsíc (2 současná zařízení)</li>
+<li><strong>Pro</strong>: $10/měsíc (7 zařízení + multihop)</li>
+</ul>
+<p>Platit můžete kartou, PayPal, kryptoměnami nebo hotovostí poštou.</p>
+<h2 id="alternativy">Alternativy</h2>
+<p>Pokud IVPN nevyhovuje, zvažte:</p>
+<ul>
+<li><strong>Mullvad VPN</strong>: Podobná filozofie, €5/měsíc</li>
+<li><strong>ProtonVPN</strong>: Free tier dostupný, Swiss privacy</li>
+<li><strong>Vlastní VPN</strong>: WireGuard na VPS serveru</li>
+</ul>
+<h2 id="závěr">Závěr</h2>
+<p>IVPN je solidní volba pro uživatele, kteří chtějí skutečné soukromí bez kompromisů. Open source aplikace, žádné logování a možnost anonymní registrace z něj dělají jednu z nejdůvěryhodnějších VPN služeb na trhu.</p>
+<p>Pro Arch Linux uživatele je integrace bezproblémová díky AUR balíčku, a na Androidu funguje spolehlivě s pokročilými funkcemi jako kill switch.</p>
+<p>Jestli bereš soukromí vážně a nechceš řešit složitou konfiguraci vlastního VPN serveru, IVPN stojí za zvážení.</p>
+<h2 id="odkazy">Odkazy</h2>
+<ul>
+<li>🌐 Oficiální web: <a href="https://www.ivpn.net/en/">https://www.ivpn.net/en/</a></li>
+<li>💻 GitHub repozitář: <a href="https://github.com/ivpn">https://github.com/ivpn</a></li>
+</ul>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://mastodon.arch-linux.cz/@archlinux" target="_blank" rel="noopener noreferrer me"
+    title="Mastodon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M21.58 13.913c-.29 1.469-2.592 3.121-5.238 3.396-1.379.184-2.737.368-4.185.276-2.368-.092-4.237-.551-4.237-.551 0 .184.014.459.043.643.308 2.294 2.317 2.478 4.22 2.57 1.922 0 3.633-.46 3.633-.46l.079 1.653s-1.344.734-3.738.918c-1.32.091-2.96-.092-4.869-.551-4.14-1.102-4.853-5.507-4.961-10.005-.034-1.285-.013-2.57-.013-3.58 0-4.589 3-5.966 3-5.966 1.513-.734 4.11-1.01 6.808-1.01h.067c2.699 0 5.296.276 6.81 1.01 0 0 3 1.377 3 5.967 0 0 .037 3.304-.419 5.69"
+        stroke="currentColor" />
+    <path
+        d="M17.832 8.633v5h-1.978V8.78c0-1.023-.43-1.542-1.29-1.542-.95 0-1.427.616-1.427 1.834v2.655H11.17V9.072c0-1.218-.476-1.834-1.427-1.834-.86 0-1.29.52-1.29 1.542v4.852H6.475V8.633c0-1.022.26-1.834.782-2.434.538-.6 1.243-.909 2.118-.909 1.012 0 1.779.39 2.286 1.169l.492.827.493-.827c.507-.78 1.274-1.169 2.286-1.169.875 0 1.58.308 2.118.909.522.6.782 1.412.782 2.434"
+        fill="currentColor" stroke="none" />
+</svg>
+</a>
+<a href="https://matrix.to/#/#archlinuxcz:matrix.org" target="_blank" rel="noopener noreferrer me"
+    title="Matrix">
+    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+    <path
+        d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.481.314.448.208.785.582 1.02 1.108.254-.374.6-.706 1.034-.992.434-.287.95-.43 1.546-.43.453 0 .872.056 1.26.167.388.11.716.286.993.53.276.245.489.559.646.951.152.392.23.863.23 1.417v5.728h-2.349V11.52c0-.286-.01-.559-.032-.812a1.755 1.755 0 0 0-.18-.66 1.106 1.106 0 0 0-.438-.448c-.194-.11-.457-.166-.785-.166-.332 0-.6.064-.803.189a1.38 1.38 0 0 0-.48.499 1.946 1.946 0 0 0-.231.696 5.56 5.56 0 0 0-.06.785v4.768h-2.35v-4.8c0-.254-.004-.503-.018-.752a2.074 2.074 0 0 0-.143-.688 1.052 1.052 0 0 0-.415-.503c-.194-.125-.476-.19-.854-.19-.111 0-.259.024-.439.074-.18.051-.36.143-.53.282-.171.138-.319.337-.439.595-.12.259-.18.6-.18 1.02v4.966H5.46V7.81zm15.693 15.64V.55H21.72V0H24v24h-2.28v-.55z" />
+</svg>
+</a>
+<a href="/index.xml" target="_blank" rel="noopener noreferrer me"
+    title="Rss">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024–2026 Arch Linux CZ
+        
+    </small>
+</footer><a href="#" title="" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="cs"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Arch Linux průvodce instalací základního šifrování celého disku | Arch Linux CZ</title>
+<meta property="og:title" content="Arch Linux průvodce instalací základního šifrování celého disku | Arch Linux CZ" />
+<meta name="twitter:title" content="Arch Linux průvodce instalací základního šifrování celého disku | Arch Linux CZ" />
+<meta itemprop="name" content="Arch Linux průvodce instalací základního šifrování celého disku | Arch Linux CZ" />
+<meta name="application-name" content="Arch Linux průvodce instalací základního šifrování celého disku | Arch Linux CZ" />
+<meta property="og:site_name" content="Arch Linux CZ" />
+
+<meta name="description" content="Česká komunita Arch Linuxu">
+<meta itemprop="description" content="Česká komunita Arch Linuxu" />
+<meta property="og:description" content="Česká komunita Arch Linuxu" />
+<meta name="twitter:description" content="Česká komunita Arch Linuxu" />
+
+<meta property="og:locale" content="cs" />
+<meta name="language" content="cs" />
+
+  <link rel="alternate" hreflang="en" href="http://localhost:1313/posts/arch-linux-pruvodce-instalaci-zakladniho-sifrovani-celeho-disku/" title="" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2022-12-06T00:00:00Z />
+    <meta property="article:published_time" content=2022-12-06T00:00:00Z />
+    <meta property="og:url" content="http://localhost:1313/posts/arch-linux-pruvodce-instalaci-zakladniho-sifrovani-celeho-disku/" />
+
+    
+    <meta property="og:article:author" content="archos" />
+    <meta property="article:author" content="archos" />
+    <meta name="author" content="archos" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Arch Linux průvodce instalací základního šifrování celého disku",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2022-12-06",
+        "description": "",
+        "wordCount":  2149 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2022-12-06",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Arch Linux CZ"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.161.1">
+
+    
+    <meta property="og:url" content="http://localhost:1313/posts/arch-linux-pruvodce-instalaci-zakladniho-sifrovani-celeho-disku/">
+  <meta property="og:site_name" content="Arch Linux CZ">
+  <meta property="og:title" content="Arch Linux průvodce instalací základního šifrování celého disku">
+  <meta property="og:description" content="Tato příručka obsahuje pokyny pro instalaci Arch Linuxu se šifrováním celého disku pomocí BTRFS na LUKS a šifrovaným spouštěcím oddílem (GRUB) pro systémy UEFI.
+Po hlavní instalaci následují další pokyny, jak se bránit útokům Evil Maid prostřednictvím vlastní registrace klíče UEFI Secure Boot, jádra a bootloaderu s vlastním podpisem.
+Předmluva Většinu těchto informací najdete na Arch Wiki a dalších zdrojů na ně odkazovaných v dolní části článku.
+Poznámka: Návod popisuje instalaci na moderní NVMe SSD disk. Pokud používáte jiný typ disků, proveďte všude v návodu substituci /dev/nvme0nX na /dev/sdX, popř. jiný typ zařízení podle potřeby. Video návod používá /dev/sdX, který je standardním nastavením ve Virtualboxu.">
+  <meta property="og:locale" content="cs">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-12-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-12-06T00:00:00+00:00">
+    <meta property="article:tag" content="Instalace">
+    <meta property="article:tag" content="Btrfs">
+    <meta property="article:tag" content="Luks">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Arch Linux průvodce instalací základního šifrování celého disku">
+  <meta name="twitter:description" content="Tato příručka obsahuje pokyny pro instalaci Arch Linuxu se šifrováním celého disku pomocí BTRFS na LUKS a šifrovaným spouštěcím oddílem (GRUB) pro systémy UEFI.
+Po hlavní instalaci následují další pokyny, jak se bránit útokům Evil Maid prostřednictvím vlastní registrace klíče UEFI Secure Boot, jádra a bootloaderu s vlastním podpisem.
+Předmluva Většinu těchto informací najdete na Arch Wiki a dalších zdrojů na ně odkazovaných v dolní části článku.
+Poznámka: Návod popisuje instalaci na moderní NVMe SSD disk. Pokud používáte jiný typ disků, proveďte všude v návodu substituci /dev/nvme0nX na /dev/sdX, popř. jiný typ zařízení podle potřeby. Video návod používá /dev/sdX, který je standardním nastavením ve Virtualboxu.">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/arch-linux-pruvodce-instalaci-zakladniho-sifrovani-celeho-disku/">
+    <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+    <meta name="color-scheme" content="light dark">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    
+</head>
+<body data-theme = "" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <img src="/logo.png" alt="Arch Linux CZ" height="50">
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Domů
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/categories/n%C3%A1vody/">
+                        Návody
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/categories/zrp%C3%A1vy/">
+                        Zprávy
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/o-arch-linuxu/">
+                        O Arch Linuxu
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="https://wiki.arch-linux.cz/shelves/arch-linux-cz">
+                        Wiki
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="https://forum.arch-linux.cz/">
+                        Fórum
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/komunita/">
+                        Komunita
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/podporte-nas/">
+                        Podpořte nás
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Arch Linux průvodce instalací základního šifrování celého disku</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2022-12-06T00:00:00&#43;00:00" itemprop="datePublished"> 6. 12. 2022 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <p>Tato příručka obsahuje pokyny pro instalaci Arch Linuxu se šifrováním celého disku pomocí BTRFS na LUKS a šifrovaným spouštěcím oddílem (GRUB) pro systémy UEFI.</p>
+<p>Po hlavní instalaci následují další pokyny, jak se bránit útokům Evil Maid prostřednictvím vlastní registrace klíče UEFI Secure Boot, jádra a bootloaderu s vlastním podpisem.</p>
+<h3 id="předmluva">Předmluva</h3>
+<p>Většinu těchto informací najdete na <a href="https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#Encrypted_boot_partition_(GRUB)">Arch Wiki</a> a dalších zdrojů na ně odkazovaných v dolní části článku.</p>
+<p><em>Poznámka:</em>  Návod popisuje instalaci na moderní NVMe SSD disk. Pokud používáte jiný typ disků, proveďte všude v návodu substituci <code>/dev/nvme0nX</code> na <code>/dev/sdX</code>, popř. jiný typ zařízení podle potřeby. Video návod používá  <code>/dev/sdX</code>, který je standardním nastavením ve Virtualboxu.</p>
+<h3 id="připojení-k-internetu">Připojení k internetu</h3>
+<p>Zapojte ethernet a pokračujte dál, nebo pro bezdrátové připojení se podívejte na <em>vševědoucí</em>  <a href="https://wiki.archlinux.org/index.php/installation_guide#Connect_to_the_internet">Arch Wiki</a>.</p>
+<h4 id="nastavení-wifi">Nastavení Wifi</h4>
+<pre tabindex="0"><code>iwctl
+[iwd]# device list -&gt; note your device
+[iwd]# station  get-networks
+[iwd]# station  connect 
+
+# second variant
+iwctl --passphrase  station  connect 
+
+# test connection
+ping archlinux.org
+</code></pre><h4 id="aktualizujte-systémové-hodiny">Aktualizujte systémové hodiny</h4>
+<pre tabindex="0"><code>timedatectl set-ntp true
+</code></pre><h4 id="volitelně-aktualizujte-mirrorlist">(Volitelně) Aktualizujte mirrorlist</h4>
+<pre tabindex="0"><code>pacman -Syy
+pacman -S reflector
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+
+reflector --country &#39;Czechia&#39; --age 24 --verbose --sort rate --save /etc/pacman.d/mirrorlist
+# OR
+reflector -c &#34;CZ&#34; -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist
+</code></pre><h4 id="nastavení-rozlišení-virtualbox-tty">Nastavení rozlišení Virtualbox tty</h4>
+<pre tabindex="0"><code>pacman -S fbset terminus-font
+fbset -g 2048 1080 2048 1080 32
+setfont ter-132n
+</code></pre><h3 id="příprava-disku">Příprava disku</h3>
+<h4 id="aktualizujte-btrfs-progs">Aktualizujte btrfs-progs</h4>
+<pre tabindex="0"><code>pacman -Syy btrfs-progs
+</code></pre><h4 id="zobrazení-disků-a-oddílů">Zobrazení disků a oddílů</h4>
+<pre tabindex="0"><code>lsblk
+</code></pre><h4 id="vytvořte-oddíly-efi-system-a-linux-luks"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#create-efi-system-and-linux-luks-partitions"></a>Vytvořte oddíly EFI System a Linux LUKS</h4>
+<p><strong>Number<strong><strong>Start (sector</strong></strong>End (sector)<strong><strong>Size</strong></strong>Code****Name</strong>120481130495256.0 MiBEF00EFI System21130496976773134465.2 GiB8309Linux LUKS</p>
+<pre tabindex="0"><code>gdisk /dev/nvme0n1
+
+# alternative apps
+cfdisk
+fdisk
+</code></pre><pre tabindex="0"><code>o
+n
+[Enter]
+0
++256M
+ef00
+n
+[Enter]
+[Enter]
+[Enter]
+8309
+w
+</code></pre><h4 id="vytvořte-šifrovaný-kontejner-luks1-na-oddílu-linux-luks-grub-nepodporuje-luks2-od-května-2019">Vytvořte šifrovaný kontejner LUKS1 na oddílu Linux LUKS (GRUB nepodporuje LUKS2 od května 2019)</h4>
+<pre tabindex="0"><code>cryptsetup luksFormat --type luks1 --use-random -S 1 -s 512 -h sha512 -i 1000 /dev/nvme0n1p2
+</code></pre><h4 id="otevřete-kontejner-dešifrujte-jej-a-zpřístupněte-na-devmappercryptbtrfs">Otevřete kontejner (dešifrujte jej a zpřístupněte na /dev/mapper/cryptbtrfs)</h4>
+<pre tabindex="0"><code>cryptsetup open /dev/nvme0n1p2 cryptbtrfs
+</code></pre><h3 id="příprava-svazkupodsvazků-btrfs">Příprava svazku/podsvazků BTRFS</h3>
+<h4 id="formátování-btrfs-nyní-již-dešifrovaného-disku">Formátování btrfs, nyní již dešifrovaného disku</h4>
+<pre tabindex="0"><code>mkfs.btrfs -L &#34;Arch Linux&#34; /dev/mapper/cryptbtrfs
+</code></pre><h4 id="připojit-souborový-systém-zatím-bezparametrické">Připojit souborový systém (zatím bezparametrické)</h4>
+<pre tabindex="0"><code>mount /dev/mapper/cryptbtrfs /mnt
+</code></pre><h4 id="vytvoření-podsvazků-subvolumes">Vytvoření podsvazků (subvolumes)</h4>
+<p>Toto schéma lze upravit podle vašich potřeb, navrhoval bych alespoň jeden podsvazek pro root (@) a jeden pro snímky (.@snapshots). varlog a tmp jsou vytvořeny pro snadné zakázání kopírování při zápisu na /var/log a /tmp. pkg subvolume naopak pomáhá v organizaci pacman balíčků s možností jejich zálohy a vrácení se k předchozím verzím. docker subvolume umožňuje efektivní práci s dockrem, který má implementovanou efektivní spolupráci s btrfs souborovým systémem.</p>
+<pre tabindex="0"><code>btrfs sub cr /mnt/@
+btrfs sub cr /mnt/@home
+btrfs sub cr /mnt/@tmp
+btrfs sub cr /mnt/@log
+btrfs sub cr /mnt/@pkg
+btrfs sub cr /mnt/@docker
+btrfs sub cr /mnt/.@snapshots
+</code></pre><h4 id="zakázat-kopírování-při-zápisu-do-varlog-a-tmp">Zakázat kopírování při zápisu do /var/log a /tmp</h4>
+<pre tabindex="0"><code>chattr +C /mnt/@log
+chattr +C /mnt/@tmp  
+umount /mnt
+</code></pre><h4 id="připojení-subolumes-btrfs-nyní-již-s-kompletní-parametrizací-pro-stálé-používání">Připojení subolumes BTRFS, nyní již s kompletní parametrizací pro stálé používání</h4>
+<pre tabindex="0"><code>mount -o defaults,noatime,discard,ssd,subvol=@ /dev/mapper/cryptbtrfs /mnt  
+mkdir -p /mnt/{home,var/log,var/cache/pacman/pkg,var/lib/docker,tmp,.snapshots}
+
+# Discard and ssd options and are for ssd disks only
+mount -o defaults,noatime,discard,ssd,subvol=@home /dev/mapper/cryptbtrfs /mnt/home
+mount -o defaults,noatime,discard,ssd,subvol=@tmp /dev/mapper/cryptbtrfs /mnt/tmp
+mount -o defaults,noatime,discard,ssd,subvol=@log /dev/mapper/cryptbtrfs /mnt/var/log
+mount -o defaults,noatime,discard,ssd,subvol=@pkg /dev/mapper/cryptbtrfs /mnt/var/cache/pacman/pkg/
+mount -o defaults,noatime,discard,ssd,subvol=@docker /dev/mapper/cryptbtrfs /mnt/var/lib/docker
+mount -o defaults,noatime,discard,ssd,subvol=.@snapshots /dev/mapper/cryptbtrfs /mnt/.snapshots
+</code></pre><h3 id="příprava-oddílu-efi">Příprava oddílu EFI</h3>
+<h4 id="vytvořte-souborový-systém-fat32-na-systémovém-oddílu-efi">Vytvořte souborový systém FAT32 na systémovém oddílu EFI</h4>
+<pre tabindex="0"><code>mkfs.fat -F32 /dev/nvme0n1p1
+</code></pre><h4 id="vytvořte-bod-připojení-pro-systémový-oddíl-efi-na-efi-pro-kompatibilitu-s-grub-install-a-připojte-jej">Vytvořte bod připojení pro systémový oddíl EFI na /efi pro kompatibilitu s grub-install a připojte jej</h4>
+<pre tabindex="0"><code>mkdir /mnt/efi
+mount /dev/nvme0n1p1 /mnt/efi
+</code></pre><h3 id="instalace-arch-base">Instalace Arch Base</h3>
+<h4 id="nainstalujte-potřebné-balíčky"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#install-necessary-packages"></a>Nainstalujte potřebné balíčky</h4>
+<pre tabindex="0"><code>pacstrap /mnt/ base base-devel linux linux-headers linux-firmware polkit git btrfs-progs efibootmgr dhcpcd bash-completion sudo neovim nano
+</code></pre><h3 id="nakonfigurujte-systém">Nakonfigurujte systém</h3>
+<h4 id="vygenerujte-soubor-etcfstab">Vygenerujte soubor /etc/fstab</h4>
+<pre tabindex="0"><code>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</code></pre><p>Zkontrolujte, zda <code>fstab</code>je správně vytvořen s definovanými parametry btrfs z předchozí kapitoly s editorem neovim.</p>
+<h4 id="vstupne-do-svého-nového-systému-pomocí-arch-chroot">Vstupne do svého nového systému pomocí arch-chroot</h4>
+<pre tabindex="0"><code>arch-chroot /mnt
+</code></pre><p>V tomto okamžiku byste měli mít následující oddíly a logické svazky:</p>
+<pre tabindex="0"><code>lsblk
+</code></pre><p>NAMEMAJ:MINRMSIZEROTYPEMOUNTPOINTnvme0n1259:00465.8G0disk├─nvme0n1p1259:50256M0part/efi├─nvme0n1p2259:60465.2G0part/.snapshots      └─cryptbtrfs254:00465.2G0crypt/var/lib/docker/var/cache/pacman/pkg/var/log/tmp/home/</p>
+<h4 id="časové-pásmo"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#time-zone"></a>Časové pásmo</h4>
+<p>Nahradit <code>Europe/Prague</code>s vaším příslušným časovým pásmem nalezeným v <code>/usr/share/zoneinfo</code></p>
+<pre tabindex="0"><code>ln -sf /usr/share/zoneinfo/Europe/Prague /etc/localtime
+</code></pre><h4 id="běh-hwclock-vygeneruje-etcadjtime">Běh <code>hwclock</code> vygeneruje <code>/etc/adjtime</code></h4>
+<p>Hardwarové hodiny budou nastaveny na UTC a synchronizovány s aktuálním systémovým časem.</p>
+<pre tabindex="0"><code>hwclock --systohc --utc
+</code></pre><h4 id="lokalizace">Lokalizace</h4>
+<p>Odkomentovat řádku <code>en_US.UTF-8 UTF-8</code> v  <code>/etc/locale.gen</code> a vygenerovat národní prostředí.</p>
+<pre tabindex="0"><code>locale-gen
+</code></pre><h4 id="vytvořit-localeconf-a-nastavte-lang-proměnnou-prostředí">Vytvořit <code>locale.conf</code> a nastavte <code>LANG</code> proměnnou prostředí</h4>
+<pre tabindex="0"><code>echo LANG=en_US.UTF-8 &gt; /etc/locale.conf
+export LANG=en_US.UTF-8
+</code></pre><h3 id="konfigurace-sítě">Konfigurace sítě</h3>
+<h4 id="vytvořte-soubor-etchostname-s-názvem-počítače">Vytvořte soubor /etc/hostname s názvem počítače</h4>
+<pre tabindex="0"><code>echo myhostname &gt; /etc/hostname
+</code></pre><p>Toto je jedinečný název pro identifikaci vašeho zařízení v síti.</p>
+<h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#add-matching-entries-to-hosts"></a></h4>
+<h4 id="přidejte-odpovídající-záznamy-do-etchosts">Přidejte odpovídající záznamy do /etc/hosts</h4>
+<pre tabindex="0"><code>nvim /etc/hosts
+</code></pre><pre tabindex="0"><code>127.0.0.1 localhost
+::1 localhost
+127.0.1.1 myhostname
+</code></pre><h3><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#optional-swap-file-creation"></a></h3>
+<h3 id="volitelné-vytváření-swap-souboru">(Volitelné) Vytváření swap souboru</h3>
+<p>Nyní vytvořte prázdný (s velikostí 0) odkládací soubor. Vytvořte samostatný podsvazek pro odkládací soubor. Tento podsvazek je potřebný k tomu, abyste mohli vytvořit snímek /, což by nebylo možné s žádným souborem v něm s vypnutým CoW!</p>
+<pre tabindex="0"><code>btrfs su create /swap
+chattr +C /swap
+
+# Copy on Write should always be disabled on swap file, so it will be done in the next step
+touch /swap/swapfile
+
+# Check if C attribute is enabled (should be already if created in folder with disabled CoW attribute)
+lsattr /swap/swapfile
+
+# If not then disable CoW for swapfile manually
+chattr +C /swap/swapfile  
+
+# Expanding empty file to 4GiB swap file
+dd if=/dev/zero of=/swap/swapfile bs=1024K count=4096  
+chmod 600 /swap/swapfile
+
+# Format the swap file.
+mkswap /swap/swapfile
+
+# Turn swap file on.
+swapon /swap/swapfile  
+
+# You also need to update /etc/fstab to mount swapfile on boot
+/swap/swapfile none swap sw 0 0
+</code></pre><h3><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#initramfs"></a></h3>
+<h3 id="initramfs">Initramfs<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#add-the-keyboard-encrypt-and-btrfs-hooks-to-etcmkinitcpioconf"></a></h3>
+<h4 id="přidat-encrypt-a-btrfs-háčky-hooks-na-etcmkinitcpioconf">Přidat <code>encrypt</code>, a <code>btrfs</code> háčky (hooks) na <code>/etc/mkinitcpio.conf</code></h4>
+<p><em>Poznámka:</em>  Záleží na pořádí!</p>
+<pre tabindex="0"><code>HOOKS=(base udev autodetect modconf kms keyboard keymap consolefont block encrypt btrfs filesystems fsck)
+
+# Add btrfsck to binaries
+BINARIES=(btrfsck)
+</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#recreate-the-initramfs-image"></a></h4>
+<h4 id="znovu-vytvořte-obraz-initramfs">Znovu vytvořte obraz initramfs</h4>
+<pre tabindex="0"><code>mkinitcpio -P
+</code></pre><h3><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#fundamental-software-installation"></a></h3>
+<h3 id="instalace-základního-softwaru">Instalace základního softwaru</h3>
+<pre tabindex="0"><code>pacman -S openssh networkmanager wpa_supplicant netctl
+systemctl enable NetworkManager
+systemctl enable sshd
+
+pacman -S amd-ucode (for AMD), pacman -S intel-ucode (for INTEL)
+mkinitcpio -p linux
+</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#graphical-drivers-and-xorg"></a></h4>
+<h4 id="grafické-ovladače-a-xorg">Grafické ovladače a Xorg<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#amd-cards"></a></h4>
+<h5 id="karty-amd">Karty AMD</h5>
+<pre tabindex="0"><code>pacman -S xorg xorg-xinit
+pacman -S mesa
+</code></pre><h5><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#nvidia-cards"></a></h5>
+<h5 id="karty-nvidia">Karty Nvidia</h5>
+<pre tabindex="0"><code>pacman -S xorg xorg-xinit
+pacman -S nvidia nvidia-utils
+
+sudo vim /etc/mkinitcpio.conf
+# edit Modules and Files
+MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm ...)
+FILES=&#34;/etc/modprobe.d/nvidia.conf&#34;
+
+sudo mkinitcpio -P
+nvim /etc/modprobe.d/nvidia.conf
+# Add row to the file
+options nvidia_drm modeset=1
+</code></pre><h5><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#virtualbox-support"></a></h5>
+<h5 id="podpora-virtualboxu">Podpora Virtualboxu</h5>
+<pre tabindex="0"><code>pacman -S virtualbox-guest-utils
+</code></pre><h3><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#root-password"></a></h3>
+<h3 id="heslo-uživatele-root">Heslo uživatele root<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#set-the-root-password"></a></h3>
+<h4 id="nastavte-heslo-uživatele-root">Nastavte heslo uživatele root</h4>
+<pre tabindex="0"><code>passwd
+</code></pre><h3 id="přidat-uživatele-linuxu"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#add-linux-user"></a>Přidat uživatele Linuxu</h3>
+<pre tabindex="0"><code>useradd -m -g users -G wheel,storage,power -s /bin/bash 
+passwd 
+pacman -S sudo
+EDITOR=nvim visudo,  (uncomment) %wheel ALL=(ALL:ALL) ALL
+</code></pre><h3><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#boot-loader"></a></h3>
+<h3 id="zavaděč-bootloader">Zavaděč (bootloader)<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#install-grub"></a></h3>
+<h4 id="nainstalujte-grub">Nainstalujte GRUB</h4>
+<pre tabindex="0"><code>pacman -S grub efibootmgr os-prober dosfstools mtools
+</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#configure-grub-to-allow-booting-from-boot-on-a-luks1-encrypted-partition"></a></h4>
+<h4 id="nakonfigurujte-grub-tak-aby-umožňoval-spouštění-z-boot-na-šifrovaném-oddílu-luks1">Nakonfigurujte GRUB tak, aby umožňoval spouštění z /boot na šifrovaném oddílu LUKS1</h4>
+<pre tabindex="0"><code>nvim /etc/default/grub
+</code></pre><pre tabindex="0"><code>GRUB_ENABLE_CRYPTODISK=y
+</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#set-kernel-parameter-to-unlock-the-btrfs-physical-volume-at-boot-using-encrypt-hook"></a></h4>
+<h4 id="nastavte-parametr-jádra-pro-odemknutí-fyzického-svazku-btrfs-při-spouštění-pomocí-encrypt-hook">Nastavte parametr jádra pro odemknutí fyzického svazku BTRFS při spouštění pomocí <code>encrypt</code> hook<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#uuid-is-the-partition-containing-the-luks-container"></a></h4>
+<h5 id="uuid-je-oddíl-obsahující-kontejner-luks">UUID je oddíl obsahující kontejner LUKS</h5>
+<pre tabindex="0"><code>blkid
+</code></pre><pre tabindex="0"><code>/dev/nvme0n1p2: UUID=&#34;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&#34; TYPE=&#34;crypto_LUKS&#34; PARTLABEL=&#34;Linux LUKS&#34; PARTUUID=&#34;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&#34;
+</code></pre><pre tabindex="0"><code>/etc/default/grub
+</code></pre><pre tabindex="0"><code># allow-discards is only for ssd to let trim work with encryption enabled
+GRUB_CMDLINE_LINUX=&#34;... cryptdevice=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:cryptbtrfs:allow-discards&#34;
+</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#install-grub-to-the-mounted-esp-for-uefi-booting"></a></h4>
+<h4 id="nainstalujte-grub-do-připojeného-esp-pro-spouštění-uefi">Nainstalujte GRUB do připojeného ESP pro spouštění UEFI</h4>
+<pre tabindex="0"><code>grub-install --target=x86_64-efi --bootloader-id=ARCH --efi-directory=/efi --recheck
+</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#generate-grubs-configuration-file"></a></h4>
+<h4 id="vygenerujte-konfigurační-soubor-grub">Vygenerujte konfigurační soubor GRUB</h4>
+<pre tabindex="0"><code>grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre><h3><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#recommended-embed-a-keyfile-in-initramfs"></a></h3>
+<h3 id="doporučeno-vložte-soubor-s-klíčem-do-initramfs">(doporučeno) Vložte soubor s klíčem do initramfs</h3>
+<p>To se provádí proto, abyste nemuseli zadávat heslo pro dešifrování dvakrát (jednou pro GRUB, jednou pro initramfs.)<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#create-a-keyfile-and-add-it-as-luks-key"></a></p>
+<h4 id="vytvořte-soubor-s-klíčem-a-přidejte-jej-jako-klíč-luks">Vytvořte soubor s klíčem a přidejte jej jako klíč LUKS</h4>
+<pre tabindex="0"><code>mkdir /root/secrets &amp;&amp; chmod 700 /root/secrets
+head -c 64 /dev/urandom &gt; /root/secrets/crypto_keyfile.bin &amp;&amp; chmod 600 /root/secrets/crypto_keyfile.bin
+cryptsetup -v luksAddKey -i 1 /dev/nvme0n1p2 /root/secrets/crypto_keyfile.bin
+</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#add-the-keyfile-to-the-initramfs-image"></a></h4>
+<h4 id="přidejte-soubor-s-klíčem-do-obrazu-initramfs">Přidejte soubor s klíčem do obrazu initramfs</h4>
+<pre tabindex="0"><code>nvim /etc/mkinitcpio.conf
+</code></pre><pre tabindex="0"><code>FILES=(/root/secrets/crypto_keyfile.bin)
+</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#recreate-the-initramfs-image-1"></a></h4>
+<h4 id="znovu-vytvořte-obraz-initramfs-1">Znovu vytvořte obraz initramfs</h4>
+<pre tabindex="0"><code>mkinitcpio -P
+</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#set-kernel-parameters-to-unlock-the-luks-partition-with-the-keyfile-using-encrypt-hook"></a></h4>
+<h4 id="nastavte-parametry-jádra-pro-odemknutí-oddílu-luks-pomocí-souboru-s-klíčem-v-encrypt-hook">Nastavte parametry jádra pro odemknutí oddílu LUKS pomocí souboru s klíčem v <code>encrypt</code> hook</h4>
+<pre tabindex="0"><code>/etc/default/grub
+</code></pre><pre tabindex="0"><code>GRUB_CMDLINE_LINUX=&#34;... cryptkey=rootfs:/root/secrets/crypto_keyfile.bin&#34;
+</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#regenerate-grubs-configuration-file"></a></h4>
+<h4 id="znovu-finálně-vygenerujte-konfigurační-soubor-grub">Znovu finálně vygenerujte konfigurační soubor GRUB</h4>
+<pre tabindex="0"><code>grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#restrict-boot-permissions"></a></h4>
+<h4 id="omezit-bootoprávnění">Omezit <code>/boot</code>oprávnění</h4>
+<pre tabindex="0"><code>chmod 700 /boot
+</code></pre><p>Instalace je nyní dokončena. Ukončete chroot a restartujte počítač.</p>
+<pre tabindex="0"><code>exit
+reboot
+</code></pre><h2><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#post-installation"></a></h2>
+<h2 id="po-instalaci-post-instalační-kroky">Po instalaci (post-instalační kroky)</h2>
+<p>Váš systém by nyní měl být plně nainstalován, spustitelný a plně zašifrovaný.</p>
+<p>Pokud jste soubor s klíčem vložili do obrazu initramfs, měl by k odemknutí do systému počítač vyžadovat vaše heslo pro dešifrování pouze jednou <strong>před GRUB tabulkou</strong>. Narozdíl od archinstall skriptu, toto je daleko více bezpečnostní zabezpečení.</p>
+<p>Pro další standardní kroky po instalaci Arch Linuxu <a href="https://wiki.archlinux.org/index.php/General_recommendations">RTFM</a> .</p>
+<h3><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#speeding-up-luks-decryption-in-grub"></a></h3>
+<h3 id="zrychlení-dešifrování-luks-v-grub-po-zadání-hesla">Zrychlení dešifrování LUKS v GRUB po zadání hesla</h3>
+<p><strong>Upozornění:</strong> Před pokračováním v této části se ujistěte, že rozumíte důležitosti hesel s vysokou entropií. Informace o tom, jak generovat bezpečná hesla, naleznete na Wikipedii: <a href="https://cs.wikipedia.org/wiki/S%C3%ADla_hesla">Síla hesla</a>.</p>
+<p>Při bootování může GRUB v některých případech trvat dlouho, než bude ověřeno heslo. To může být způsobeno vysokým počtem iterací PBKDF, který můžete zkontrolovat následovně:</p>
+<pre tabindex="0"><code>cryptsetup luksDump /dev/nvme0n1p2
+</code></pre><p>Problém je v tom, že iterace byly vypočteny pro daný <code>keyslot</code> při normálním běhu počítače (nikoliv při bootu), když byl klíč přidán, aby byla zajištěna rovnováha mezi dostatečně vysokou úrovní pro ochranu před útoky hrubou silou a dostatečně nízkou, aby umožnila rychlé odvození klíče pomocí odhadu schopností vašeho počítače. Když se však GRUB spustí, <strong>nemusí mít</strong> k dispozici stejné výpočetní zdroje, a proto je <strong>výrazně pomalejší</strong> .</p>
+<p>Pokud vaše <strong>heslo poskytuje dostatečnou entropii,</strong> aby samo čelilo běžným útokům, můžete toto číslo snížit:</p>
+<pre tabindex="0"><code>cryptsetup luksChangeKey --key-slot 1 --pbkdf-force-iterations 1000 /dev/nvme0n1p2
+</code></pre><p>Podle RFC 2898 se doporučuje minimálně 1000 iterací, ale pokud je to možné, měli byste se zaměřit na vyšší hodnoty (náklady pro útočníka a také čas na odvození klíče lineárně škálují).</p>
+<p><strong>Tip:</strong> GRUB zkouší aktivované klíčové sloty postupně. Při přidávání klíčů se <code>--key-slot</code>lze použít k explicitnímu zadání klíčového slotu.</p>
+<h3><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#recommended-secure-boot---hardening-against-evil-maid-attacks"></a></h3>
+<h3 id="doporučeno-secure-boot--odolávaní-proti-útokům-evil-maid">(doporučeno) Secure Boot – Odolávaní proti útokům Evil Maid</h3>
+<p>Se zašifrovaným zaváděcím oddílem nikdo nemůže vidět ani upravit váš obraz jádra nebo initramfs, ale stále byste byli zranitelní vůči <a href="https://www.schneier.com/blog/archives/2009/10/evil_maid_attac.html">útokům Evil Maid</a> .</p>
+<p>Jedním z možných řešení je použití UEFI Secure Boot. Zbavte se předinstalovaných klíčů Secure Boot (opravdu nechcete věřit Microsoftu a OEM), zaregistrujte <a href="https://wiki.archlinux.org/index.php/Secure_Boot#Using_your_own_keys">si své vlastní klíče Secure Boot</a> a podepište zavaděč GRUB svými klíči. Evil Maid by nemohla zavést upravený zavaděč (nepodepsaný vašimi klíči) a útoku je zabráněno.<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#creating-keys"></a></p>
+<h4 id="vytváření-klíčů">Vytváření klíčů</h4>
+<p>Následující kroky by měly být provedeny pod <code>root</code>uživatelem s doprovodnými soubory uloženými v <code>/root</code>adresáři.<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#install-efitools"></a></p>
+<h5 id="nainstalujte-efitools">Nainstalujte <code>efitools</code></h5>
+<pre tabindex="0"><code>pacman -S efitools
+</code></pre><h5 id="vytvořte-guid-pro-identifikaci-vlastníka"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#create-a-guid-for-owner-identification"></a>Vytvořte GUID pro identifikaci vlastníka</h5>
+<pre tabindex="0"><code>uuidgen --random &gt; GUID.txt
+</code></pre><h5 id="platformový-klíč"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#platform-key"></a>Platformový klíč</h5>
+<p>CN je běžné jméno, které lze zapsat jako cokoliv.</p>
+<pre tabindex="0"><code>openssl req -newkey rsa:4096 -nodes -keyout PK.key -new -x509 -sha256 -days 3650 -subj &#34;/CN=my Platform Key/&#34; -out PK.crt
+openssl x509 -outform DER -in PK.crt -out PK.cer
+cert-to-efi-sig-list -g &#34;$(/dev/null | /usr/bin/grep -q &#34;signature certificates&#34;; then /usr/bin/sbsign --key /root/db.key --cert /root/db.crt --output {} {}; fi&#39; \ ;
+Depends = sbsigntools
+Depends = findutils
+Depends = grep
+</code></pre><pre tabindex="0"><code>/etc/pacman.d/hooks/98-secureboot-grub.hook
+</code></pre><pre tabindex="0"><code>[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = grub
+
+[Action]
+Description = Signing GRUB for SecureBoot
+When = PostTransaction
+Exec = /usr/bin/find /efi/ -name &#39;grubx64*&#39; -exec /usr/bin/sh -c &#39;if ! /usr/bin/sbverify --list {} 2&gt;/dev/null | /usr/bin/grep -q &#34;signature certificates&#34;; then /usr/bin/sbsign --key /root/db.key --cert /root/db.crt --output {} {}; fi&#39; \ ;
+Depends = sbsigntools
+Depends = findutils
+Depends = grep
+</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#enroll-keys-in-firmware"></a></h4>
+<h4 id="zaregistrujte-klíče-do-firmwaru">Zaregistrujte klíče do firmwaru</h4>
+<h5 id="zkopírujte-vše-cer-esl-authdo-systémového-oddílu-efi"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#copy-all-cer-esl-auth-to-the-efi-system-partition"></a>Zkopírujte vše <code>*.cer</code>, <code>*.esl</code>, <code>*.auth</code>do systémového oddílu EFI</h5>
+<pre tabindex="0"><code>cp /root/*.cer /root/*.esl /root/*.auth /efi/
+</code></pre><h5 id="spusťte-nástroj-pro-nastavení-firmwaru-uefi-často-nesprávně-označovaný-jako-bios">Spusťte nástroj pro nastavení firmwaru UEFI (často nesprávně označovaný jako „BIOS“)</h5>
+<pre tabindex="0"><code>systemctl reboot --firmware
+</code></pre><p>Firmware má různá rozhraní, <a href="http://www.rodsbooks.com/efi-bootloaders/controlling-sb.html#setuputil">viz Výměna klíčů pomocí nástroje pro nastavení firmwaru</a>, pokud jsou následující pokyny nejasné nebo neúspěšné.</p>
+<h5 id="nastavte-typ-os-na-windows-uefi-mode"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#set-os-type-to-windows-uefi-mode"></a>Nastavte Typ OS na <code>Windows UEFI mode</code></h5>
+<p>Najděte možnosti Secure Boot a nastavte typ OS na <code>Windows UEFI mode</code>(Ano, i když nejsme na Windows.) To může být nezbytné pro funkci Secure Boot.<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#clear-preloaded-secure-boot-keys"></a></p>
+<h5 id="vymažte-předinstalované-klíče-secure-boot">Vymažte předinstalované klíče Secure Boot</h5>
+<p>Pomocí Key Management vymažte všechny předinstalované klíče Secure Boot (Microsoft a OEM).</p>
+<p>Vymazáním všech klíčů Secure Boot vstoupíte do režimu nastavení (takže si můžete zaregistrovat své vlastní klíče Secure Boot).<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#set-or-append-the-new-keys"></a></p>
+<h5 id="nastavte-nebo-připojte-nové-klíče">Nastavte nebo připojte nové klíče</h5>
+<p>Klíče musí být nastaveny v následujícím pořadí:</p>
+<pre tabindex="0"><code>db =&gt; KEK =&gt; PK
+</code></pre><p>To je způsobeno tím, že některé systémy ukončí režim nastavení, jakmile <code>PK</code>je zadáno.</p>
+<p>Nenahrávejte výchozí tovární nastavení, místo toho procházejte dostupné souborové systémy při hledání souborů dříve zkopírovaných do systémového oddílu EFI.</p>
+<p>Vyberte některý z formátů. Firmware by vás měl vyzvat k zadání typu ( <em>Poznámka:</em> názvy typů se mohou mírně lišit.)</p>
+<pre tabindex="0"><code>*.cer is a Public Key Certificate
+*.esl is a UEFI Secure Variable
+*.auth is an Authenticated Variable
+</code></pre><p>Určitý firmware (například můj vlastní) vyžaduje použití souborů *.auth. Vyzkoušejte různé, dokud nebudou fungovat.<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#set-uefi-supervisor-administrator-password"></a></p>
+<h5 id="nastavte-heslo-správce-administrátora-uefi">Nastavte heslo správce (administrátora) UEFI</h5>
+<p>V nastavení zabezpečení musíte také nastavit heslo správce (administrátora) firmwaru UEFI, takže nikdo nemůže jednoduše spustit nástroj pro nastavení UEFI a vypnout zabezpečené spouštění.</p>
+<p>Nikdy byste neměli používat stejné heslo správce firmwaru UEFI jako heslo pro šifrování, protože na některých starých přenosných počítačích lze heslo správce obnovit jako prostý text z čipu EEPROM.<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#exit-and-save-changes"></a></p>
+<h5 id="ukončete-a-uložte-změny">Ukončete a uložte změny</h5>
+<p>Jakmile načtete všechny tři klíče a nastavíte heslo správce, stiskněte F10 pro ukončení a uložení změn.</p>
+<p>Pokud bylo vše provedeno správně, měl by se při restartu objevit váš zavaděč.</p>
+<p><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#check-if-secure-boot-was-enabled"></a></p>
+<h4 id="zkontrolujte-zda-byl-povolen-secure-boot">Zkontrolujte, zda byl povolen Secure Boot</h4>
+<pre tabindex="0"><code>od -An -t u1 /sys/firmware/efi/efivars/SecureBoot-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+</code></pre><p>Znaky označené XXXX se liší stroj od stroje. Chcete-li s tím pomoci, můžete použít tab doplňování nebo seznam proměnných EFI.</p>
+<p>Pokud je povoleno Secure Boot, tento příkaz vrátí 1 jako poslední celé číslo v seznamu pěti hodnot, například:</p>
+<pre tabindex="0"><code>6  0  0  0  1
+</code></pre><p>Pokud bylo aktivováno Secure Boot a bylo nastaveno heslo správce UEFI, můžete se nyní považovat za chráněného před útokům Evil Maid!</p>
+<h3 id="docker-používaný-s-btrfs-souborovým-systémem">Docker používaný s BTRFS souborovým systémem</h3>
+<p>Seznámení se s dockerem na Arch Linuxu na wiki <a href="https://wiki.archlinux.org/title/docker">Docker on Arch</a>.</p>
+<p>BTRFS je idální pro správu docker snapshotů. Pro nastavení postupujte podle <a href="https://docs.docker.com/storage/storagedriver/btrfs-driver/">originálního článku</a>.</p>
+<p>Celé prostředí máme pro dockerizaci již nachystané. Mělo by stačit nastavit pouze v <code>/etc/docker/daemon.json</code></p>
+<pre tabindex="0"><code>{
+  &#34;storage-driver&#34;: &#34;btrfs&#34;
+}
+</code></pre><h3 id="kompletní-video-návod">Kompletní video návod</h3>
+<p><a href="https://www.youtube.com/watch?v=YdqGsv3tmN4">https://www.youtube.com/watch?v=YdqGsv3tmN4</a></p>
+<h3 id="odkazy-na-zdroje">Odkazy na zdroje</h3>
+<ul>
+<li>
+<p><strong>HLAVNÍ ČLÁNEK:</strong> <a href="https://gist.github.com/huntrar/e42aee630bee3295b2c671d098c81268">https://gist.github.com/huntrar/e42aee630bee3295b2c671d098c81268</a></p>
+</li>
+<li>
+<p><a href="https://www.nishantnadkarni.tech/posts/arch_installation/">https://www.nishantnadkarni.tech/posts/arch_installation/</a></p>
+</li>
+<li>
+<p><a href="https://www.dwarmstrong.org/archlinux-install/">https://www.dwarmstrong.org/archlinux-install/</a></p>
+</li>
+<li>
+<p><a href="https://btrfs.readthedocs.io/en/latest/btrfs-man5.html#compression">https://btrfs.readthedocs.io/en/latest/btrfs-man5.html#compression</a></p>
+</li>
+<li>
+<p><a href="https://github.com/Szwendacz99/Arch-install-encrypted-btrfs">https://github.com/Szwendacz99/Arch-install-encrypted-btrfs</a></p>
+</li>
+<li>
+<p><a href="https://gist.github.com/mruiz42/83d9a232e7592d65d953671409a2aab9">https://gist.github.com/mruiz42/83d9a232e7592d65d953671409a2aab9</a></p>
+</li>
+<li>
+<p><a href="https://wiki.archlinux.org/title/btrfs">https://wiki.archlinux.org/title/btrfs</a></p>
+</li>
+<li>
+<p><a href="https://wiki.archlinux.org/title/dm-crypt/Encrypting_an_entire_system">https://wiki.archlinux.org/title/dm-crypt/Encrypting_an_entire_system</a></p>
+</li>
+<li>
+<p><a href="https://wiki.tnonline.net/w/Btrfs/Compression">https://wiki.tnonline.net/w/Btrfs/Compression</a></p>
+</li>
+</ul>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://mastodon.arch-linux.cz/@archlinux" target="_blank" rel="noopener noreferrer me"
+    title="Mastodon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M21.58 13.913c-.29 1.469-2.592 3.121-5.238 3.396-1.379.184-2.737.368-4.185.276-2.368-.092-4.237-.551-4.237-.551 0 .184.014.459.043.643.308 2.294 2.317 2.478 4.22 2.57 1.922 0 3.633-.46 3.633-.46l.079 1.653s-1.344.734-3.738.918c-1.32.091-2.96-.092-4.869-.551-4.14-1.102-4.853-5.507-4.961-10.005-.034-1.285-.013-2.57-.013-3.58 0-4.589 3-5.966 3-5.966 1.513-.734 4.11-1.01 6.808-1.01h.067c2.699 0 5.296.276 6.81 1.01 0 0 3 1.377 3 5.967 0 0 .037 3.304-.419 5.69"
+        stroke="currentColor" />
+    <path
+        d="M17.832 8.633v5h-1.978V8.78c0-1.023-.43-1.542-1.29-1.542-.95 0-1.427.616-1.427 1.834v2.655H11.17V9.072c0-1.218-.476-1.834-1.427-1.834-.86 0-1.29.52-1.29 1.542v4.852H6.475V8.633c0-1.022.26-1.834.782-2.434.538-.6 1.243-.909 2.118-.909 1.012 0 1.779.39 2.286 1.169l.492.827.493-.827c.507-.78 1.274-1.169 2.286-1.169.875 0 1.58.308 2.118.909.522.6.782 1.412.782 2.434"
+        fill="currentColor" stroke="none" />
+</svg>
+</a>
+<a href="https://matrix.to/#/#archlinuxcz:matrix.org" target="_blank" rel="noopener noreferrer me"
+    title="Matrix">
+    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+    <path
+        d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.481.314.448.208.785.582 1.02 1.108.254-.374.6-.706 1.034-.992.434-.287.95-.43 1.546-.43.453 0 .872.056 1.26.167.388.11.716.286.993.53.276.245.489.559.646.951.152.392.23.863.23 1.417v5.728h-2.349V11.52c0-.286-.01-.559-.032-.812a1.755 1.755 0 0 0-.18-.66 1.106 1.106 0 0 0-.438-.448c-.194-.11-.457-.166-.785-.166-.332 0-.6.064-.803.189a1.38 1.38 0 0 0-.48.499 1.946 1.946 0 0 0-.231.696 5.56 5.56 0 0 0-.06.785v4.768h-2.35v-4.8c0-.254-.004-.503-.018-.752a2.074 2.074 0 0 0-.143-.688 1.052 1.052 0 0 0-.415-.503c-.194-.125-.476-.19-.854-.19-.111 0-.259.024-.439.074-.18.051-.36.143-.53.282-.171.138-.319.337-.439.595-.12.259-.18.6-.18 1.02v4.966H5.46V7.81zm15.693 15.64V.55H21.72V0H24v24h-2.28v-.55z" />
+</svg>
+</a>
+<a href="/index.xml" target="_blank" rel="noopener noreferrer me"
+    title="Rss">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024–2026 Arch Linux CZ
+        
+    </small>
+</footer><a href="#" title="" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

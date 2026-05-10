@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/tags/kde/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Sat, 30 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/kde/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>KDE Plasma - Pracovní prostředí nové generace pro Linux</title>
+      <link>http://localhost:1313/posts/kde-plasma-pracovni-prostredi-nove-generace-pro-linux/</link>
+      <pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kde-plasma-pracovni-prostredi-nove-generace-pro-linux/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://arch-linux.cz/wp-content/uploads/2022/04/kde-1-1024x576.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://arch-linux.cz/wp-content/uploads/2022/04/kde-bismuth-1024x576.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;English document variant &lt;a href=&#34;https://github.com/raven2cz/tux/blob/main/220327-kde/kde-en.org&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;kde---pracovní-prostředí-nové-generace-pro-linux&#34;&gt;KDE - Pracovní prostředí nové generace pro Linux&lt;/h3&gt;
+&lt;p&gt;V dalším díle seriálu &lt;a href=&#34;https://github.com/raven2cz&#34;&gt;Tondy Fischera&lt;/a&gt; si ukážeme instalaci grafického prostředí KDE.&lt;/p&gt;
+&lt;p&gt;Mocné, multiplatformní a pro všechny. Používejte software KDE pro brouzdání na webu, komunikaci s kolegy, přáteli a rodinou, spravování svých souborů, poslech hudby a sledování videí nebo pro kreativní a produktivní práci. Komunita KDE vyvíjí a udržuje více než 200 aplikací, které běží na kterémkoliv počítači s Linuxem a často i na jiných platformách.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

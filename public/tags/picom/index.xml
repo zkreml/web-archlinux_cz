@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/tags/picom/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/picom/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Picom Compositor</title>
+      <link>http://localhost:1313/posts/picom-compositor/</link>
+      <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/picom-compositor/</guid>
+      <description>&lt;p&gt;V dalším díle seriálu &lt;a href=&#34;https://github.com/raven2cz&#34;&gt;Tondy Fischera&lt;/a&gt; si nainstalujeme &lt;a href=&#34;https://wiki.archlinux.org/title/Picom&#34;&gt;kompozitor Picom&lt;/a&gt;. Provedeme jeho základní konfiguraci a spouštění. Soustředíme se na praktickou stránku tohoto nástroje a rovněž historii projektu a správnou funkcionalitu.&lt;/p&gt;
+&lt;h2&gt;&lt;a href=&#34;https://github.com/raven2cz/tux/tree/main/210923-picom-compositor#co-je-yshuipicom&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;co-je-yshuipicom&#34;&gt;Co je yshui/Picom?&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://wiki.archlinux.org/title/Picom&#34;&gt;Picom-Compositor&lt;/a&gt; &lt;code&gt;Picom&lt;/code&gt; je samostatný kompositor pro Xorg, vhodný pro použití se správci oken (Window Manager), kteří neposkytují kompozici. Picom vznikl jako fork z populárního &lt;code&gt;compton&lt;/code&gt;.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;paru -S picom-git # git next version (snapshots, rolling)
+paru -S picom # released version
+&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;&lt;a href=&#34;https://github.com/raven2cz/tux/tree/main/210923-picom-compositor#picom-nen%C3%AD-pouze-o-grafick%C3%BDch-vychyt%C3%A1vk%C3%A1ch-a-animac%C3%ADch&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;picom-není-pouze-o-grafických-vychytávkách-a-animacích&#34;&gt;Picom není pouze o grafických vychytávkách a animacích&lt;/h3&gt;
+&lt;h3&gt;&lt;a href=&#34;https://github.com/raven2cz/tux/tree/main/210923-picom-compositor#jeho-silnou-podporou-je-kvalitn%C3%AD-vsynch-glx-mode-gpu-rendering-a-vyhlazov%C3%A1n%C3%AD&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;jeho-silnou-podporou-je-kvalitní-vsynch-glx-mode-gpu-rendering-a-vyhlazování&#34;&gt;Jeho silnou podporou je kvalitní vsynch, glx mode (gpu rendering) a vyhlazování.&lt;/h3&gt;
+&lt;h3&gt;&lt;a href=&#34;https://github.com/raven2cz/tux/tree/main/210923-picom-compositor#picom-lze-konfigurovat-zcela-minimalisticky-pro-striktn%C4%9B-velmi-svi%C5%BEn%C3%A9-prost%C5%99ed%C3%AD-a%C5%BE-po-mnoho-des%C3%ADtek-grafick%C3%BDch-features-a-animac%C3%AD&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;picom-lze-konfigurovat-zcela-minimalisticky-pro-striktně-velmi-svižné-prostředí-až-po-mnoho-desítek-grafických-features-a-animací&#34;&gt;Picom lze konfigurovat zcela minimalisticky pro striktně velmi svižné prostředí až po mnoho desítek grafických features a animací.&lt;/h3&gt;
+&lt;h3&gt;&lt;a href=&#34;https://github.com/raven2cz/tux/tree/main/210923-picom-compositor#jeho-anima%C4%8Dn%C3%AD-schopnosti-jsou-fakt-omezen%C3%A9-oproti-kwin-a-dal%C5%A1%C3%ADm-de-kompositor%C5%AFm&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;jeho-animační-schopnosti-jsou-fakt-omezené-oproti-kwin-a-dalším-de-kompositorům&#34;&gt;Jeho animační schopnosti jsou fakt omezené oproti KWin a dalším DE kompositorům.&lt;/h3&gt;
+&lt;h3&gt;&lt;a href=&#34;https://github.com/raven2cz/tux/tree/main/210923-picom-compositor#existuj%C3%AD-n%C4%9Bkolik-fork-picoms-kter%C3%A9-se-soust%C5%99ed%C3%AD-na-skupinu-animac%C3%AD-blur-efekt%C5%AF-a-dal%C5%A1%C3%ADch-grafick%C3%BDch-vylep%C5%A1en%C3%ADch-pod%C3%ADvejte-a-sledujte-toto-issue-animation-support&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;existují-několik-fork-picoms-které-se-soustředí-na-skupinu-animací-blur-efektů-a-dalších-grafických-vylepšeních-podívejte-a-sledujte-toto-issue-animation-support&#34;&gt;Existují několik fork picoms, které se soustředí na skupinu animací, blur efektů a dalších grafických vylepšeních. Podívejte a sledujte toto issue &lt;a href=&#34;https://github.com/yshui/picom/issues/217&#34;&gt;Animation Support&lt;/a&gt;.&lt;/h3&gt;
+&lt;h4&gt;&lt;a href=&#34;https://github.com/raven2cz/tux/tree/main/210923-picom-compositor#picom-ibhagwan&#34;&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;picom-ibhagwan&#34;&gt;picom ibhagwan&lt;/h4&gt;
+&lt;h4&gt;&lt;a href=&#34;https://github.com/raven2cz/tux/tree/main/210923-picom-compositor#picom-jonaburg&#34;&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;picom-jonaburg&#34;&gt;picom jonaburg&lt;/h4&gt;
+&lt;h4&gt;&lt;a href=&#34;https://github.com/raven2cz/tux/tree/main/210923-picom-compositor#picom-dccsillag&#34;&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;picom-dccsillag&#34;&gt;picom dccsillag&lt;/h4&gt;
+&lt;h2&gt;&lt;a href=&#34;https://github.com/raven2cz/tux/tree/main/210923-picom-compositor#doporu%C4%8Den%C3%A1-konfigurace-configpicompicomconf&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;doporučená-konfigurace-configpicompicomconf&#34;&gt;Doporučená konfigurace (~/.config/picom/picom.conf)&lt;/h2&gt;
+&lt;h3&gt;&lt;a href=&#34;https://github.com/raven2cz/tux/tree/main/210923-picom-compositor#minimalistick%C3%A9-%C5%99e%C5%A1en%C3%AD-vysoce-efektivn%C3%AD&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;minimalistické-řešení-vysoce-efektivní&#34;&gt;Minimalistické řešení (vysoce efektivní)&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;backend = &amp;#34;glx&amp;#34;;
+fading = false
+vsync = true
+wintypes:
+{
+  tooltip = { fade = true; shadow = true; opacity = 0.9; focus = true; full-shadow = false; };
+  dock = { shadow = false; }
+  dnd = { shadow = false; }
+  popup_menu = { opacity = 0.9; }
+  dropdown_menu = { opacity = 0.9; }
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;&lt;a href=&#34;https://github.com/raven2cz/tux/tree/main/210923-picom-compositor#zlat%C3%A1-st%C5%99edn%C3%AD-cesta&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;zlatá-střední-cesta&#34;&gt;Zlatá střední cesta&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;backend = &amp;#34;glx&amp;#34;;
+vsync = true
+fading = false
+round-borders = 15;
+detect-rounded-corners = true;
+shadow = true;
+# The blur radius for shadows. (default 12)
+shadow-radius = 14;
+# The left offset for shadows. (default -15)
+shadow-offset-x = -7;
+# The top offset for shadows. (default -15)
+shadow-offset-y = -7;
+# The translucency for shadows. (default .75)
+shadow-opacity = .5;
+# Dim inactive windows. (0.0 - 1.0)
+inactive-dim = 0.05;
+# Fade windows during opacity changes.
+fading = true;
+# Opacity change between steps while fading in. (default 0.028).
+fade-in-step = 0.056;
+# Opacity change between steps while fading out. (default 0.03).
+fade-out-step = 0.06;
+# Window type settings
+wintypes:
+{
+    tooltip =
+    {
+        # fade: Fade the particular type of windows.
+        fade = true;
+        # shadow: Give those windows shadow
+        shadow = false;
+        # opacity: Default opacity for the type of windows.
+        opacity = 0.85;
+        # focus: Whether to always consider windows of this type focused.
+        focus = true;
+    };
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;&lt;a href=&#34;https://github.com/raven2cz/tux/tree/main/210923-picom-compositor#spou%C5%A1t%C4%9Bn%C3%AD-picom-v-autorun-skriptech&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;spouštění-picom-v-autorun-skriptech&#34;&gt;Spouštění picom v autorun skriptech&lt;/h3&gt;
+&lt;p&gt;Picom nutno správně spouštět ve svých autorun skriptech s možností jeho opětovného spuštění v případě pádu.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

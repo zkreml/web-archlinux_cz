@@ -1,0 +1,272 @@
+---
+title: "AwesomeWM Ricing"
+date: 2022-04-23
+author: "archos"
+draft: false
+categories: ['Návody']
+tags: ['awesomewm']
+series: ['Arch Linux instalace']
+---
+
+AwesomeWM patří k nejlepším window managerům s podporou vyššího programovacího jazyka Lua. V našem seriálu [Tondy Fischera](https://github.com/raven2cz)  již máte dostatek zkušeností pro plný ricing pokročilého prostředí AwesomeWM.
+
+![](https://arch-linux.cz/wp-content/uploads/2022/04/awesomewm-1-1-1024x576.jpg)
+
+![](https://arch-linux.cz/wp-content/uploads/2022/04/awesomewm-2-1-1024x576.jpg)
+
+https://www.youtube.com/watch?v=FCxd5id77c4&t=31s
+
+## Awesome Ricing - Pokročilá Konfigurace
+
+Nyní již můžeme přikročit k plné a pokročilé konfiguraci AwesomeWM. Cest je nekonečné množství. **Já jsem zvolil cestu pro jednoduchou údržbu, vysokou efektivitu práce a kvalitní grafický design, který nesníží performance systému**. Podobně jako u xfce v minulých dílech. Zde je navíc možné vše integrovat dohromady, jakoukoliv věc si přizpůsobit svému workflow a propojit WM s vašimi pracovními skripty a nástroji.
+
+Vše, co tady bude probíráno je moje aktuální řešení problematiky. Je nutné pochopit, že ve chvíli, kdy máte framework awesomewm k dispozici, můžete si vše vytvořit podle vlastní představy, variant je tedy nekončné množství, toto je největší rozdíl od fixních WMs nebo DEs, které lze pouze omezeně konfigurovat.
+
+#### Základ dobrého designu a dlouhodobého úspěšného programování
+
+Úspěchem dobrého programování a nejlepšího designu jsou 3 věci:
+
+- Jednoduchost a přehlednost
+
+- Vlastní knihovna / framework
+
+- Omezení a minimalismus třetích stran
+
+Vždy nejlepší řešení je to nejjednodušší. Je velmi obtížné se k němu dostat, protože lidé přemýšlí komplexně. Vždy dbejte na tom se k němu dostat a mít vše přehledné i pro další lidi, je to v podstatě zásada free open source.
+
+Obecné věci, které používáte a určtiě budete používat i dále si ukládejte do svého frameworku a knihoven. Toto je nutný základ. Vlastní přehledný framework je naprostým základem pro každého programátora, ať už děláte v jakémkoliv jazyce. Správná správa balíčků a knihoven je základ, pouze takto lze se neustále zdokonalovat, vyvíjet a minimalizovat chyby, stabilizací frameworku.
+
+Používání 3 stran je potřeba minimalizovat na rozumnou úroveň. Knihovny musí být otevřené, aktivní a opět jednoduché. Nikdy neberte nic komplikovaného. Vždy dejte přednost svému řešení, pokud je v časovém rámci. Pečlivě volte knihovny, které potom již velmi težce lze opouštět!
+
+V našem případě je zde vytvořen základní lua balíček `fishlive`, který slouží k rozšíření frameworku awesome pro moje osobní potřeby a přístupy. **Vytvořte si svůj vlastní.**
+
+![](https://arch-linux.cz/wp-content/uploads/2022/04/mvc.png)
+
+## Pattern MVC - Model, View, Controller
+
+Tento návrhový vzor umožňuje rozdělit funkcionalitu do 3 základních celků, které mezi sebou navzájem komunikují. Jeho nespornou výhodou je oddělení business logic od grafického zpracování a doménové vrstvy. Stav aplikace je držen v modelu, který je zpravováván controllerem, ve finále je předán model komponentě view, která jej zobrazí. Pro frontend je toto základ, kdy views může být celá řada, business logiky mají různou implementaci a je jednoduché udržovat a zprovávvat doménové objekty v rámci modelu i zcela jiným procovním teamem. Tento pattern je již starší, takže existuje řada modifikací a pokročilých nápadů, které jej doplňují, nicméně základní myšlenka zůstavá.
+
+My si tento pattern půjčíme a pomocí něj si myšlenkově upravíme defaultní `rc.lua`, který již používáte z předchozí nahrávky. Defaultní konfigurace je tvořena pouze jedním konfiguračním souborem `rc.lua` a doplňkovým souborem `theme.lua`, která umoňuje záměnu dle zvoleného theme. Myšlenka je správná, ale implementace je nevhodná. Brzy zjistíte, že jakákoliv větší grafická úprava zasahuje zejména do `rc.lua`, neboť je velmi nekvalitně odděleno řízení controller a view. Naše první kroky tedy musí nutně vést k základnímu oddělení controller a model-view části.
+
+Provedeme zjednodušení na controller část a model-view část. Stav systému/grafického prostředí necháme držet ve vhodných sdílených lua tabulkách, které jsou sdíleny mezi oběma částmi. View část musíme nutně oddělit od `rc.lua`, kde ponecháme striktně pouze controller.
+
+### [](https://github.com/raven2cz/tux/tree/main/211207-awesome-ricing#model-view---themesthemelua)
+
+### **Model-View** - themes/…/theme.lua
+
+část je dobré rozdělit si na 3 základní podčásti:
+
+- **View Common Libs** - použitelné části, které budeme používat i dalších našich themes a views, toto přesuneme do vlastní lua knihovny
+
+- **View Color Schemes** - barevná schémata, která lze aplikovat na naše views a která jsou rovněž obecná.
+
+- **View Theme** - specifická část pro každé vaše jednotlivé theme. Definice a konfigurace všech grafických komponent a jejich chování, aplikace základních view coomon libs a color schemat do těchto komponent. Tato třetí část je jako jediná definována vždy od začátku pro každé vaše nové theme.
+
+#### [](https://github.com/raven2cz/tux/tree/main/211207-awesome-ricing#view-common-libs)
+
+#### View Common Libs
+
+Tato knihovna byla založena a uložena v adresáři `~/.config/awesome/fishlive`. Obsahuje colorschemes, nové layouts, wallpaper různorodá ovládání, widgety a utility.
+
+#### [](https://github.com/raven2cz/tux/tree/main/211207-awesome-ricing#view-color-schemes)
+
+#### View Color Schemes
+
+Jsou zavedena pomocí vytvořeného příkazu `local theme = fishlive.colorscheme.default`, který do modelu/tabulky `theme` nastaví všechny důležité barvy, základní proměnné pro grafické view pro zvolené poslední barevné schéma, které lze dynamicky měnit.
+
+#### [](https://github.com/raven2cz/tux/tree/main/211207-awesome-ricing#view-theme)
+
+#### View Theme
+
+Je uloženo v každém `theme.lua` souboru. Tento soubor mám principiálně tvořen touto strukturou:
+
+- `theme = fishlive.colorscheme.default` Defaultní naplnění modelu daným barevných schématem a přípravou atributů modelu
+
+- `model attribute settings` Další specifické nastavení modelu dle zvoleného theme, okraje, fonty, notifikační události, taglist, layouts, menu
+
+- `wallpaper support` Nastavení adresářů a základních atributů pro ovládání wallpapers v awesomewm
+
+- `widget declaration` Vytvoření instanací widgetů a jejich specifické nakonfigurování do wibox grafických prvků, které lze umístit do prostředí
+
+- `menu a application launcher declaration` Deklarace grafické části menu dle modelu a controlleru
+
+- `screen.connect_signal(request:desktop_decoration)` Hlavní funkce, která provádí zavádění a hlavní činnost každého theme při jeho inicializačním procesu. Další body jsou již součástí tohoto procesu, volání této funkce, listenera.
+
+- `tags and layout settings` Nastavení tagů a layotů, taglistu pro dané theme
+
+- `tasklist configuration` Nastavení tasklistu pro zobrazování aktivně běžících aplikací systému
+
+- `main panel configuration` Sestavení hlavního top panelu ze všech wiboxes, taglistu, tasklistu, systray apod.
+
+- `naughty configuration` Nastavení notifikačních událostí a notification center a error handling support
+
+- `wallpaper handling` Nastavení wallpaper ovládání a propojení s controllerem. V mém případě mám rád wallpapers, takže mám i velmi silnou podporu vytvořenou v awesomewm.
+
+### [](https://github.com/raven2cz/tux/tree/main/211207-awesome-ricing#controller---rclua)
+
+### **Controller** - rc.lua
+
+je možné taky rovněž dělit na další celky. Nicméně já mám v tomto ohledu rád minimalismus a lepší údržbu, neměl jsem tedy důvod tento soubor rozdělovat, naopak jej strukturalizuji pomoci folding sekcí a používám jednotlivé listenery, které awesome API nabízí k oddělení jednotlivých funkcionálních bloků. Soubor je tedy pořád jeden `rc.lua`, obsahuje však pouze vše co není grafika nebo grafická komponenta. Obsahuje tedy veškerou business logiku a workflow. Konkrétně obsahuje:
+
+- `naughty.connect_signal(request:display_error)` Error handling (zpracování výjimek a chyb v awesome a spojených aplikacích)
+
+- `modkey, terminal, editor, menus` Definice základních proměnných pro základní klávesy, terminaly, editory, menu modely
+
+- `tag.connect_signal(request:default_layouts)` Definice základních layouts, které budete používat
+
+- `beautiful.init` Výběr model-view (theme), které bude napojedno a zobrazováno
+
+- `awful.mouse.append_global_mousebindings` Nadefinování myších událostí a chování myši
+
+- `awful.keyboard.append_global_keybindings` Definice globálních keybindings pro váš systém, rozděleno dle kategorií a účelu (folding style a separátní listeners)
+
+- `client.connect_signal(request:default_keybindings)` Clientská konfigurace keybindings pro jednotlivá zobrazovaná okna (client = běžící aplikace v okně)
+
+- `ruled.client.connect_signal("request:rules" ...)` Definice pravidel (rules) pro zobrazování aplikací, druhů aplikací a reakce oken na speciální events
+
+- `special connect_signal events for specific handling` Poslech dalších několik speciálních událostí pro specifické změny v awesomewm prostředí. Patří sem titlebars (horní lišta na okně), zpracování událostí, další chování myši apod.
+
+- `awful.spawn.with_shell("~/.config/awesome/autorun.sh")` Poslední částí `rc.lua` souboru je spuštění vašeho `autorun.sh` skriptu pro aplikace, služby a další přednastavení prostředí, ve kterém awesomewm běží.
+
+## AwesomeWM Multicolor Theme Instalace
+
+Demostraci principů si předvedeme na mém github projektu [raven2cz/awesomewm-config](https://github.com/raven2cz/awesomewm-config).
+
+#### Zajištění resources a podpůrných skriptů pro spolupráci systémového prostředí (external resources)
+
+```
+# 1. backup your awesomewm configuration first
+# 2. git clone repository to ~/.config/awesome
+git clone git@github.com:raven2cz/awesomewm-config.git ~/.config/awesome
+# 3. ensure prerequsities and dependencies
+paru -S rofi # rofi similar app like d-menu
+# my used wallpapers and event images
+mkdir ~/Pictures/wallpapers && git clone git@github.com:raven2cz/public-wallpapers.git
+# my global colorscheme switcher script
+# make steps which are described in the raven2cz/global-colorscheme.git project, you need themes for your terminal mainly
+mkdir ~/git/github && git clone git@github.com:raven2cz/global-colorscheme.git && cd ~/git/github/global-colorscheme && ./install.sh
+# rofi project themes
+mkdir ~/.config/rofi && git clone https://github.com/raven2cz/rofi-themes ~/.config/rofi
+```
+
+Těmito několika kroky jsme si připravili celé prostředí a zajistili potřebné grafické resources, které jsou v projektu používány. Nejedná se tedy pouze o jeden projekt, ale řadu několika projektů, které spolu spolupracují. Pamatujte, že vždy v GNU/Linux platí, každá věc musí dělat jednu dílčí činnost a dělat ji správně. Nedělejte multi věci, pak se to nabaluje na sebe a nefunguje. Dělejte malé komponenty, které se navzájem používají a dají se použít i pro další linuxová prostředí a uživatele…
+
+Já ještě používám externí aplikaci [xmenu](https://github.com/phillbush/xmenu), pro rychlé restartování, vypnutí počítače, oblíbené aplikace, kernel nástroje a skupiny aplikací. Nicméně to není podmínkou. Mám jej na klávesové zkratce `super+w`. Viz například nahrávka [DistroTube XMenu](https://youtu.be/wMrdCbrQjnQ).
+
+Nyní již máte připraveno celé prostředí pro spuštění. Jediné co chybí je zkontrolovat váš `~/.xinitrc`, který by měl být nastaven již z minulé nahrávky a `autorun.sh`, který pouze jako ukázku zde prezentuji.
+
+```
+#!/usr/bin/env bash
+function run {
+  if ! pgrep -f $1 ;
+  then
+    $@&
+  fi
+}
+
+run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+run /usr/lib/kactivitymanagerd
+#run /use/lib/polkit-kde-authentication-agent-1
+run /usr/lib/pam_kwallet_init
+run nm-applet
+run pamac-tray
+if ! pgrep -f cloud-drive-ui; then synology-drive start; fi
+run parcellite
+run clipmenud
+run volctl
+run /usr/bin/emacs --daemon
+run ~/.config/conky/start_conky ~/.config/conky/MX-CoreBlue/conkyrc2core
+run remmina -i
+run picom --experimental-backends --config $HOME/.config/picom/picom.conf
+```
+
+Autorun běžících aplikací a služeb je nespočet. Tento berte jako můj základ, pokud budou nejasnosti, napište to do youtube vlákna k nahrávce, nebo na naše [diskuzní fórum](https://forum.arch-linux.cz/).
+
+## Základní ovládání
+
+Complete Guide [here](https://github.com/raven2cz/tux/blob/main/211207-awesome-ricing/awesome-keybindings-en.org).
+
+`super+ctrl+s`
+
+![](https://arch-linux.cz/wp-content/uploads/2022/04/awesome-multicolor-keybindings-1024x685.jpg)
+
+Základní ovládání se točí kolem klávesy `Super` (modkey), která je výhdardně určena pro AW prostředí. Samostatné `alt, ctrl a shift` nikdy nejsou použity, pouze ve vazbě. Toto je nezbytné pro další všechna programová prostředí a aplikace. Výhradně se snažte nastavovat ve svých prostředích X11 bindingkeys. Například DWM svůj default používá velmi nevhodně.
+
+S učením klávesových zkratek nespěchejte, doporučuji se je osvojit, jsou totiž sebrány z nejlepších WM současnosti a nastaveny pro nejlepší ergonomii a efektivní práci. Několik rad bude uvedeno ve videu.
+
+## Změna barevných schémat a aplikací
+
+`super+c -> change color scheme, super+alt+c -> next colorschme wallpaper, super+ctrl+c -> previous colorscheme wallpaper`
+
+![](https://arch-linux.cz/wp-content/uploads/2022/04/awesome-multicolor-theme-910x1024.jpg)
+
+Změna barevného schématu probíhá na třech úrovních:
+
+- Nejprve se zavolá globální skript `global_colorscheme.sh`, který změní podporované externí aplikace. V aktuální verzi mezi ně patří kitty, alacritty, doom emacs, atom. Dojde k okamžité dynamické změně.
+
+- Pak dojde ke změně základních barev pro conky aplikaci. Ta vytváří změnu v konfiguračním souboru, který je načítán conky knihovnou. Dojde k okamžité dynamické změně.
+
+- Naposled dojde k přepsání souboru `last.lua` v multicolor scheme AW, kam se nastaví aktuální zvolené schéma a dojde k restartu AW. Celkově se tak završí celkové přenastavení všech schémat celého systému
+
+## Změna wallpapers pro jednotlivé tagy
+
+- random wallpaper for 1st tag
+
+- different wallpaper per actual shown tag
+
+- user wallpaper tags
+
+`super+alt+w next user wallpaper, super+ctrl+w previous user wallpaper`
+
+- dev tag uses as default colorscheme wallpaper
+
+`super+c -> change color scheme, super+alt+c -> next colorschme wallpaper, super+ctrl+c -> previous colorscheme wallpaper`
+
+## Prohlídka prostředí a programového Lua řešení
+
+Po spuštění multicolor theme awesomewm projektu si můžeme prohlédnout detailněji strukturu projektu.
+
+```
+nvim ~/.config/awesome/rc.lua
+nvim ~/.config/awesmoe/themes/multicolor/theme.lua
+```
+
+Zde se opět vraťe k první kapitole a postupně projděte seznam `rc.lua` a `theme.lua` přímo v kódu si mozkově propojit, které části kódu patří k daným strukturám.
+
+Tato část je popsána primárně **ve druhé** video nahrávce věnované awesomewm ricing…
+
+## Propojení aplikací do awesomewm prostředí
+
+- ukázka s tmux a nvim propojení s awesomewm
+
+Spustit tmux, nvim a zobrazit `super+ctrl+s`, napojení na awesomewm a jeho klávesové propojení a možnosti controlleru
+
+- propjení barevných schémat a unifikace GNU/Linux aplikací s prostředím awesomewm a jeho model-view schématem
+
+- napojení událostí aplikací s naughty
+
+dokončená kompilace nebo testy vašich projektů v maven, komprimací, událostí z browseru, napojení cron tasků, stavů běhu aplikací na pozadí bash terminálu, dokončení kdenlive vytvoření videií a mnoho dalšího.
+
+https://www.youtube.com/watch?v=KDJbas2FVXM
+
+# [](https://github.com/raven2cz/tux/tree/main/211207-awesome-ricing#důležité-odkazy)
+
+# Důležité odkazy
+
+- [raven2cz/awesomewm-config](https://github.com/raven2cz/awesomewm-config)
+
+- [Youtube Channel TUX: Svět Linuxu](https://www.youtube.com/user/tondafischer/featured)
+
+- [archlinux.org](https://archlinux.org/)
+
+- [wiki.a](https://wiki.archlinux.org/)[c](https://wiki.archlinux.org/)[hlinux.org](https://wiki.archlinux.org/)
+
+- [fishlive.org/blog](https://fishlive.org/en/blog-tech-art/arch)
+
+- [github/raven2cz/tux](https://github.com/raven2cz/tux)
+
+- [github/raven2cz/dotfiles](https://github.com/raven2cz/dotfiles)
+
+- [raven2cz/public-wallpapers](https://github.com/raven2cz/public-wallpapers)
+
+- [raven2cz/global-colorschemes](https://github.com/raven2cz/global-colorscheme)

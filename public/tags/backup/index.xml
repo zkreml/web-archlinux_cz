@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/tags/backup/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Sat, 01 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/backup/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Jak zálohovat pomocí  BorgBackup</title>
+      <link>http://localhost:1313/posts/jak-zalohovat-pomoci-borgbackup/</link>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/jak-zalohovat-pomoci-borgbackup/</guid>
+      <description>&lt;h3 id=&#34;co-je-borg&#34;&gt;Co je Borg&lt;/h3&gt;
+&lt;p&gt;Borg  je open-source nástroj pro zálohování souborů a složek, který je k dispozici pro operační systémy Linux, macOS. Tento program je navržen tak, aby byl jednoduchý k použití, ale zároveň poskytoval robustní a spolehlivou zálohovací funkci pro ukládání důležitých dat.&lt;/p&gt;
+&lt;p&gt;Borg  používá jedinečnou technologii komprese dat, což umožňuje ukládat velké objemy dat v menších souborech, což zase znamená, že je možné ušetřit místo na disku. Další výhodou Borg Backupu je jeho rychlost - rychle zálohuje a obnovuje data, což je užitečné pro uživatele, kteří potřebují často měnit a ukládat data.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

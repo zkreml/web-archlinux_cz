@@ -10,15 +10,106 @@
     <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
     <webMaster>archos@arch-linux.cz (archos)</webMaster>
     
-    <lastBuildDate>Thu, 26 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Posts</title>
       <link>http://localhost:1313/posts/</link>
-      <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Home</title>
+      <link>http://localhost:1313/home/</link>
+      <pubDate>Fri, 14 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/home/</guid>
+      <description>&lt;p&gt;[et_pb_section fb_built=&amp;ldquo;1&amp;rdquo; _builder_version=&amp;ldquo;4.27.4&amp;rdquo; _module_preset=&amp;ldquo;default&amp;rdquo; global_colors_info=&amp;quot;{}&amp;quot;][et_pb_row _builder_version=&amp;ldquo;4.27.4&amp;rdquo; _module_preset=&amp;ldquo;default&amp;rdquo; global_colors_info=&amp;quot;{}&amp;quot;][et_pb_column type=&amp;ldquo;4_4&amp;rdquo; _builder_version=&amp;ldquo;4.27.4&amp;rdquo; _module_preset=&amp;ldquo;default&amp;rdquo; global_colors_info=&amp;quot;{}&amp;quot;][et_pb_post_slider posts_number=&amp;ldquo;6&amp;rdquo; include_categories=&amp;ldquo;all&amp;rdquo; excerpt_length=&amp;ldquo;350&amp;rdquo; use_bg_overlay=&amp;ldquo;off&amp;rdquo; use_text_overlay=&amp;ldquo;on&amp;rdquo; text_border_radius=&amp;ldquo;0px&amp;rdquo; _builder_version=&amp;ldquo;4.27.4&amp;rdquo; header_font=&amp;ldquo;Cardo|700|||||||&amp;rdquo; background_color=&amp;ldquo;RGBA(255,255,255,0)&amp;rdquo; custom_button=&amp;ldquo;on&amp;rdquo; button_text_size=&amp;ldquo;16px&amp;rdquo; button_text_color=&amp;quot;#FFFFFF&amp;quot; button_bg_color=&amp;quot;#0da4db&amp;quot; button_border_width=&amp;ldquo;2px&amp;rdquo; button_border_color=&amp;quot;#0C71C3&amp;quot; button_icon=&amp;ldquo;E||divi||400&amp;rdquo; button_on_hover=&amp;ldquo;off&amp;rdquo; text_orientation=&amp;ldquo;left&amp;rdquo; background_layout=&amp;ldquo;light&amp;rdquo; custom_padding=&amp;ldquo;273px|0px|32px|0px|false|true&amp;rdquo; custom_padding_tablet=&amp;ldquo;100px||||false|true&amp;rdquo; custom_padding_phone=&amp;ldquo;32px||32px||true|false&amp;rdquo; custom_padding_last_edited=&amp;ldquo;on|phone&amp;rdquo; header_text_shadow_style=&amp;ldquo;preset3&amp;rdquo; header_text_shadow_color=&amp;ldquo;rgba(0,0,0,0)&amp;rdquo; body_text_shadow_style=&amp;ldquo;preset3&amp;rdquo; body_text_shadow_color=&amp;ldquo;rgba(0,0,0,0)&amp;rdquo; border_width_all=&amp;ldquo;5px&amp;rdquo; border_color_all=&amp;quot;#ffffff&amp;quot; box_shadow_style_button=&amp;ldquo;preset2&amp;rdquo; global_colors_info=&amp;quot;{}&amp;quot; bg_overlay_color__hover_enabled=&amp;ldquo;on|hover&amp;rdquo; bg_overlay_color__hover=&amp;ldquo;rgba(197,224,220,0.91)&amp;rdquo;][/et_pb_post_slider][/et_pb_column][/et_pb_row][/et_pb_section][et_pb_section fb_built=&amp;ldquo;1&amp;rdquo; admin_label=&amp;ldquo;Trending&amp;rdquo; _builder_version=&amp;ldquo;4.16&amp;rdquo; global_colors_info=&amp;quot;{}&amp;quot;][et_pb_row _builder_version=&amp;ldquo;4.16&amp;rdquo; global_colors_info=&amp;quot;{}&amp;quot;][et_pb_column type=&amp;ldquo;4_4&amp;rdquo; _builder_version=&amp;ldquo;4.16&amp;rdquo; global_colors_info=&amp;quot;{}&amp;quot;][et_pb_text _builder_version=&amp;ldquo;4.27.4&amp;rdquo; header_2_font=&amp;ldquo;Montserrat|700|||||||&amp;rdquo; header_2_text_color=&amp;quot;#000000&amp;quot; header_2_font_size=&amp;ldquo;70px&amp;rdquo; header_2_line_height=&amp;ldquo;1.2em&amp;rdquo; z_index=&amp;ldquo;2&amp;rdquo; max_width=&amp;ldquo;750px&amp;rdquo; header_2_font_size_tablet=&amp;ldquo;48px&amp;rdquo; header_2_font_size_phone=&amp;ldquo;36px&amp;rdquo; header_2_font_size_last_edited=&amp;ldquo;on|desktop&amp;rdquo; global_colors_info=&amp;quot;{}&amp;quot;]&lt;/p&gt;
+&lt;h2 id=&#34;novinky&#34;&gt;Novinky&lt;/h2&gt;
+&lt;p&gt;[/et_pb_text][et_pb_text _builder_version=&amp;ldquo;4.27.4&amp;rdquo; text_font=&amp;ldquo;Cardo|700|||||||&amp;rdquo; text_text_color=&amp;ldquo;rgba(0,0,0,0.03)&amp;rdquo; text_font_size=&amp;ldquo;150px&amp;rdquo; text_line_height=&amp;ldquo;1em&amp;rdquo; custom_margin=&amp;quot;-0.8em|||-0.8em|false|false&amp;quot; custom_margin_tablet=&amp;quot;-100px||||false|false&amp;quot; custom_margin_phone=&amp;quot;-80px|||-60px|false|false&amp;quot; custom_margin_last_edited=&amp;ldquo;on|desktop&amp;rdquo; text_font_size_tablet=&amp;ldquo;100px&amp;rdquo; text_font_size_phone=&amp;ldquo;60px&amp;rdquo; text_font_size_last_edited=&amp;ldquo;on|desktop&amp;rdquo; global_colors_info=&amp;quot;{}&amp;quot;]Novinky
+[/et_pb_text][/et_pb_column][/et_pb_row][et_pb_row column_structure=&amp;ldquo;2_3,1_3&amp;rdquo; use_custom_gutter=&amp;ldquo;on&amp;rdquo; gutter_width=&amp;ldquo;2&amp;rdquo; make_equal=&amp;ldquo;on&amp;rdquo; _builder_version=&amp;ldquo;4.16&amp;rdquo; custom_padding=&amp;quot;||0px|||&amp;quot; global_colors_info=&amp;quot;{}&amp;quot;][et_pb_column type=&amp;ldquo;2_3&amp;rdquo; _builder_version=&amp;ldquo;4.16&amp;rdquo; global_colors_info=&amp;quot;{}&amp;quot;][et_pb_blog fullwidth=&amp;ldquo;off&amp;rdquo; posts_number=&amp;ldquo;5000&amp;rdquo; include_categories=&amp;ldquo;65&amp;rdquo; show_author=&amp;ldquo;off&amp;rdquo; show_excerpt=&amp;ldquo;off&amp;rdquo; show_pagination=&amp;ldquo;off&amp;rdquo; _builder_version=&amp;ldquo;4.27.4&amp;rdquo; header_level=&amp;ldquo;h3&amp;rdquo; header_font=&amp;ldquo;Cardo|700|||||||&amp;rdquo; header_font_size=&amp;ldquo;16px&amp;rdquo; header_line_height=&amp;ldquo;1.8em&amp;rdquo; meta_font_size=&amp;ldquo;12px&amp;rdquo; meta_line_height=&amp;ldquo;1.8em&amp;rdquo; border_width_all=&amp;ldquo;0px&amp;rdquo; global_colors_info=&amp;quot;{}&amp;quot;][/et_pb_blog][/et_pb_column][et_pb_column type=&amp;ldquo;1_3&amp;rdquo; _builder_version=&amp;ldquo;4.16&amp;rdquo; custom_padding=&amp;quot;|||30px|false|false&amp;quot; border_width_left=&amp;ldquo;8px&amp;rdquo; global_colors_info=&amp;quot;{}&amp;quot;][et_pb_blog posts_number=&amp;ldquo;4&amp;rdquo; include_categories=&amp;ldquo;72&amp;rdquo; show_thumbnail=&amp;ldquo;off&amp;rdquo; use_manual_excerpt=&amp;ldquo;off&amp;rdquo; excerpt_length=&amp;ldquo;80&amp;rdquo; show_author=&amp;ldquo;off&amp;rdquo; show_date=&amp;ldquo;off&amp;rdquo; show_pagination=&amp;ldquo;off&amp;rdquo; _builder_version=&amp;ldquo;4.16&amp;rdquo; header_level=&amp;ldquo;h3&amp;rdquo; header_font=&amp;ldquo;Cardo|700|||||||&amp;rdquo; header_font_size=&amp;ldquo;16px&amp;rdquo; header_line_height=&amp;ldquo;1.8em&amp;rdquo; meta_font=&amp;quot;|700|||||||&amp;quot; meta_text_color=&amp;quot;#ffc077&amp;quot; meta_font_size=&amp;ldquo;12px&amp;rdquo; meta_line_height=&amp;ldquo;1.8em&amp;rdquo; border_width_all=&amp;ldquo;0px&amp;rdquo; locked=&amp;ldquo;off&amp;rdquo; global_colors_info=&amp;quot;{}&amp;quot;][/et_pb_blog][/et_pb_column][/et_pb_row][/et_pb_section]&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Zásady ochrany osobních údajů</title>
+      <link>http://localhost:1313/zasady-ochrany-osobnich-udaju/</link>
+      <pubDate>Mon, 28 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zasady-ochrany-osobnich-udaju/</guid>
+      <description>&lt;h2 id=&#34;kdo-jsme&#34;&gt;Kdo jsme&lt;/h2&gt;
+&lt;p&gt;Naše webová adresa je: &lt;a href=&#34;https://arch-linux.cz&#34;&gt;https://arch-linux.cz&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;komentáře&#34;&gt;Komentáře&lt;/h2&gt;
+&lt;p&gt;Když návštěvníci přidají komentář na tento web, jsou shromažďovány údaje zobrazené ve formuláři pro komentář, dále IP adresa návštěvníka a řetězec user agent definující prohlížeč, což pomáhá k detekci spamu.&lt;/p&gt;
+&lt;p&gt;Službě Gravatar může být poskytnut anonymní řetězec vytvořený z vaší e-mailové adresy (nazývaný také hash), díky kterému lze určit jestli tuto službu používáte. Zásady ochrany osobních údajů služby Gravatar jsou k dispozici zde: &lt;a href=&#34;https://automattic.com/privacy/&#34;&gt;https://automattic.com/privacy/&lt;/a&gt;. Po schválení vašeho komentáře je váš profilový obrázek viditelný pro veřejnost v kontextu vašeho komentáře.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Podpořte nás</title>
+      <link>http://localhost:1313/podporte-nas/</link>
+      <pubDate>Sun, 27 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/podporte-nas/</guid>
+      <description>&lt;p&gt;Arch Linux CZ je místo, kde jsou umístěny skvělé opensource aplikace jako je Mastodon, Peertube, Pixelfed, Matrix, Joplin, Vikunja, CryptPad, Bitwarden - vše pro veřejné použití, bez reklam a sledování.&lt;/p&gt;
+&lt;p&gt;Pokud chcete využít našich aplikací a nevíte jak na to. Nebojte se nám napsat, zprovozníme vám účet a poradíme jak dál. Můžete nám napsat na:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Archos &lt;a href=&#34;mailto:archos@arch-linux.cz&#34;&gt;archos@arch-linux.cz&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Kankys  &lt;a href=&#34;mailto:kankys@arch-linux.cz&#34;&gt;kankys@arch-linux.cz&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Díky vašemu příspěvku je možné financovat provoz těchto serverů. Bez dárců jako jste vy, bych to nemohl dělat a bez této neuvěřitelné podpory bych musel servery zavřít.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Jak stáhnou Arch Linux</title>
+      <link>http://localhost:1313/jak-stahnout/</link>
+      <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/jak-stahnout/</guid>
+      <description>&lt;h3 id=&#34;získejte-nejnovější-obraz-iso&#34;&gt;Získejte nejnovější obraz ISO&lt;/h3&gt;
+&lt;p&gt;Nejnovější obraz ISO lze stáhnout ze stránek &lt;a href=&#34;https://archlinux.org/download/&#34;&gt;Arch Linuxu&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Obraz ISO obsahuje pouze programy nezbytné k instalaci minimálního základního systému GNU / Linux. *Všimněte si, že minimální základní systém neobsahuje grafické uživatelské rozhraní. *Zbytek systému Arch Linux – včetně grafického rozhraní – se nastavuje z příkazové řádky.&lt;/p&gt;
+&lt;h3 id=&#34;zkontrolujte-obraz-iso&#34;&gt;Zkontrolujte obraz ISO&lt;/h3&gt;
+&lt;p&gt;Při stahování přes &lt;a href=&#34;https://archlinux.org/releng/releases/2021.12.01/torrent/&#34;&gt;torrent&lt;/a&gt; nebo magnetický odkaz je po stažení ISO soubor automaticky zkontrolován na shodu s originálem. Pokud je obraz ISO stažen přes HTTPS, měla by proběhnout kontrola se součtem SHA1. Pokud má být vytvořeno CD nebo DVD, je lepší zkontrolovat shodu až po vypálení na medium.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Kontakt</title>
+      <link>http://localhost:1313/kontakt/</link>
+      <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/kontakt/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;mailto:archos@arch-linux.cz&#34;&gt;  archos@arch-linux.cz &lt;/a&gt;  (  PGP   |  &lt;a href=&#34;https://keyoxide.org/8B4BFBDECF67A57B56CAAEEF73F17C5E85E9DE2C&#34;&gt; Keyoxide) &lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tato adresa funguje i pro XMPP.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://telegram.me/Zdendys&#34;&gt; @archos &lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://matrix.to/#/@archos:mxchat.cz&#34;&gt;[ ** m ** ]  @archos:mxchat.cz &lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://mastodon.arch-linux.cz/@archos&#34;&gt;  @archos@mastodon.arch-linux.cz &lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>O Arch Linuxu</title>
+      <link>http://localhost:1313/co-je-arch-linux/</link>
+      <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/co-je-arch-linux/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Arch Linux&lt;/strong&gt;  je nezávislá &lt;a href=&#34;https://cs.wikipedia.org/wiki/Linuxov%C3%A1_distribuce&#34;&gt;linuxová distribuce&lt;/a&gt; vytvořená &lt;a href=&#34;https://cs.wikipedia.org/wiki/Judd_Vinet&#34;&gt;Juddem Vinetem&lt;/a&gt;, jenž se inspiroval distribucí CRUX Linux. Arch Linux je vyvíjen jako nenáročný, odlehčený a snadno přizpůsobitelný systém.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://arch-linux.cz/wp-content/uploads/2021/12/external-content.duckduckgo.com_-1.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Vývoj začal již v roce 2001 a první verzi Archu vydal &lt;a href=&#34;https://cs.wikipedia.org/wiki/Judd_Vinet&#34;&gt;Judd Vinet&lt;/a&gt; v roce 2002. Ten také byl do roku 2007 hlavním vývojářem. Od roku 2007 je hlavním vývojářem Archu &lt;a href=&#34;https://www.Archlinux.org/people/developers/&#34;&gt;Aaron Griffin&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Arch je od začátku svého vývoje až do dneška nezávisle vyvíjenou komunitní distribucí.&lt;/p&gt;
+&lt;h2 id=&#34;zásady&#34;&gt;Zásady&lt;/h2&gt;
+&lt;h4 id=&#34;jednoduchost&#34;&gt;Jednoduchost&lt;/h4&gt;
+&lt;p&gt;Arch je v základu odlehčená a vysoce flexibilní distribuce, která po instalaci poskytuje pouze minimální prostředí bez grafického uživatelského rozhraní. Většina ostatních distribucí nabízí tuto možnost také, ale většinou ne jako hlavní a už vůbec ne jedinou variantu pro instalaci.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -50,14 +141,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/navody/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Podpořte nás</title>
-      <link>http://localhost:1313/podporte-nas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/podporte-nas/</guid>
-      <description>&lt;p&gt;Podpořte českou komunitu Arch Linuxu.&lt;/p&gt;</description>
     </item>
     
     <item>

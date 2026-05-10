@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/tags/update/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Fri, 06 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/update/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Neplatné podpisové klíče během aktualizace systému</title>
+      <link>http://localhost:1313/posts/neplatne-podpisove-klice-behem-aktualizace-systemu/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/neplatne-podpisove-klice-behem-aktualizace-systemu/</guid>
+      <description>&lt;p&gt;V současné době existují některé podpisové klíče pro balíčky Arch, které jsou při aktualizaci detekovány jako neplatné (vypršela platnost, byly staženy atd.). To způsobí, že aktualizace systému pomocí Pacmana selže.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;error: 
+: signature from &amp;#34;Someone &amp;#34; is marginal trust
+:: File /var/cache/pacman/pkg/_x86_64.pkg.tar.zst is corrupted (invalid or corrupted package (PGP signature)).
+Do you want to delete it? [Y/n]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Je třeba nejprve aktualizovat podpisové klíče a potom systém.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -Sy archlinux-keys
+sudo pacman -Syu
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

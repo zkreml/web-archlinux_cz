@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="cs"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">￼AwesomeWM Basics | Arch Linux CZ</title>
+<meta property="og:title" content="￼AwesomeWM Basics | Arch Linux CZ" />
+<meta name="twitter:title" content="￼AwesomeWM Basics | Arch Linux CZ" />
+<meta itemprop="name" content="￼AwesomeWM Basics | Arch Linux CZ" />
+<meta name="application-name" content="￼AwesomeWM Basics | Arch Linux CZ" />
+<meta property="og:site_name" content="Arch Linux CZ" />
+
+<meta name="description" content="Česká komunita Arch Linuxu">
+<meta itemprop="description" content="Česká komunita Arch Linuxu" />
+<meta property="og:description" content="Česká komunita Arch Linuxu" />
+<meta name="twitter:description" content="Česká komunita Arch Linuxu" />
+
+<meta property="og:locale" content="cs" />
+<meta name="language" content="cs" />
+
+  <link rel="alternate" hreflang="en" href="http://localhost:1313/posts/%ef%bf%bcawesomewm-basics/" title="" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2022-04-17T00:00:00Z />
+    <meta property="article:published_time" content=2022-04-17T00:00:00Z />
+    <meta property="og:url" content="http://localhost:1313/posts/%ef%bf%bcawesomewm-basics/" />
+
+    
+    <meta property="og:article:author" content="archos" />
+    <meta property="article:author" content="archos" />
+    <meta name="author" content="archos" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "￼AwesomeWM Basics",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2022-04-17",
+        "description": "",
+        "wordCount":  820 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2022-04-17",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Arch Linux CZ"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.161.1">
+
+    
+    <meta property="og:url" content="http://localhost:1313/posts/%ef%bf%bcawesomewm-basics/">
+  <meta property="og:site_name" content="Arch Linux CZ">
+  <meta property="og:title" content="￼AwesomeWM Basics">
+  <meta property="og:description" content="AwesomeWM patří k nejlepším window managerům s podporou vyššího programovacího jazyka Lua. Ukážeme si, proč tento WM má takový význam a jeho nesporné výhody. Naučíme se jej nainstalovat, nastavit základní témata a testovat svá nastavení v testovacím prostředí. Nakonec vyzkoušíme základní ovládání a nápovědu klávesových zkratek. Součástí nahrávky je rovněž velmi jemný úvod do programovacího jazyka Lua. Další díl seriálu Tondy Fischera.
+Awesome Window Manager Awesome je vysoce konfigurovatelný správce oken nové generace pro Xorg. Je velmi rychlý a rozšiřitelný pomocí perfektně zdokumentovaného API. Primárně se zaměřuje na pokročilé uživatele, vývojáře a všechny lidi, kteří se zabývají každodenními složitějšími úkoly a chtějí mít plnou kontrolu nad ovládáním jejich vlastního grafického prostředí.">
+  <meta property="og:locale" content="cs">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-04-17T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-04-17T00:00:00+00:00">
+    <meta property="article:tag" content="Awesome">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="￼AwesomeWM Basics">
+  <meta name="twitter:description" content="AwesomeWM patří k nejlepším window managerům s podporou vyššího programovacího jazyka Lua. Ukážeme si, proč tento WM má takový význam a jeho nesporné výhody. Naučíme se jej nainstalovat, nastavit základní témata a testovat svá nastavení v testovacím prostředí. Nakonec vyzkoušíme základní ovládání a nápovědu klávesových zkratek. Součástí nahrávky je rovněž velmi jemný úvod do programovacího jazyka Lua. Další díl seriálu Tondy Fischera.
+Awesome Window Manager Awesome je vysoce konfigurovatelný správce oken nové generace pro Xorg. Je velmi rychlý a rozšiřitelný pomocí perfektně zdokumentovaného API. Primárně se zaměřuje na pokročilé uživatele, vývojáře a všechny lidi, kteří se zabývají každodenními složitějšími úkoly a chtějí mít plnou kontrolu nad ovládáním jejich vlastního grafického prostředí.">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/%ef%bf%bcawesomewm-basics/">
+    <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+    <meta name="color-scheme" content="light dark">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    
+</head>
+<body data-theme = "" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <img src="/logo.png" alt="Arch Linux CZ" height="50">
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Domů
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/categories/n%C3%A1vody/">
+                        Návody
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/categories/zrp%C3%A1vy/">
+                        Zprávy
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/o-arch-linuxu/">
+                        O Arch Linuxu
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="https://wiki.arch-linux.cz/shelves/arch-linux-cz">
+                        Wiki
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="https://forum.arch-linux.cz/">
+                        Fórum
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/komunita/">
+                        Komunita
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/podporte-nas/">
+                        Podpořte nás
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">￼AwesomeWM Basics</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2022-04-17T00:00:00&#43;00:00" itemprop="datePublished"> 17. 4. 2022 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <p>AwesomeWM patří k nejlepším window managerům s podporou vyššího programovacího jazyka Lua. Ukážeme si, proč tento WM má takový význam a jeho nesporné výhody. Naučíme se jej nainstalovat, nastavit základní témata a testovat svá nastavení v testovacím prostředí. Nakonec vyzkoušíme základní ovládání a nápovědu klávesových zkratek. Součástí nahrávky je rovněž velmi jemný úvod do programovacího jazyka Lua. Další díl seriálu <a href="https://github.com/raven2cz">Tondy Fischera.</a></p>
+<p><img src="https://arch-linux.cz/wp-content/uploads/2022/04/awesomewm-1-1024x576.jpg" alt=""></p>
+<p><img src="https://arch-linux.cz/wp-content/uploads/2022/04/awesomewm-2-1024x576.jpg" alt=""></p>
+<h2 id="awesome-window-manager"><a href="https://github.com/raven2cz/tux/tree/main/211205-awesome-basics#awesome-window-manager"></a>Awesome Window Manager</h2>
+<p><code>Awesome</code> je vysoce konfigurovatelný správce oken nové generace pro Xorg. Je velmi rychlý a rozšiřitelný pomocí perfektně zdokumentovaného API. Primárně se zaměřuje na pokročilé uživatele, vývojáře a všechny lidi, kteří se zabývají každodenními složitějšími úkoly a chtějí mít plnou kontrolu nad ovládáním jejich <strong>vlastního grafického prostředí</strong>.</p>
+<ul>
+<li>Základní stránka: <a href="https://awesomewm.org/">https://awesomewm.org/</a>- Arch Wiki: <a href="https://wiki.archlinux.org/title/Awesome">https://wiki.archlinux.org/title/Awesome</a>- Screenshot Gallery: <a href="https://mipmip.github.io/awesomewm-screenshots/">https://mipmip.github.io/awesomewm-screenshots/</a>- API Dokumentace: <a href="https://awesomewm.org/apidoc/">https://awesomewm.org/apidoc/</a>- Ukázka mého ricing YouTube nahrávka: <a href="https://youtu.be/-Fo7mB6_Wtg">Awesome není pouze Tiling Window Manager</a></li>
+</ul>
+<h2 id="lua---programovací-jazyk">LUA - Programovací jazyk</h2>
+<p><img src="https://arch-linux.cz/wp-content/uploads/2022/04/lua-info.png" alt="">*Lua *</p>
+<ul>
+<li>Základní web: <a href="https://www.lua.org/">https://www.lua.org/</a>, <a href="https://www.lua.org/start.html">https://www.lua.org/start.html</a>- Vynikající kniha (nutno přečíst): <a href="https://www.lua.org/pil/">https://www.lua.org/pil/</a>- <strong>Programming in Lua, fourth edition</strong></li>
+</ul>
+<h2 id="lua-wiki-info">Lua Wiki Info</h2>
+<p><strong>Lua</strong> je odlehčený, reflexivní, imperativní a procedurální programovací jazyk navržený jako skriptovací jazyk s rozšiřitelnou sémantikou. Název je odvozen z portugalského slova pro měsíc.</p>
+<p>Jazyk Lua je určen jako rozšiřující nebo skriptovací jazyk a je dostatečně malý, aby se vešel na nejrůznější hostitelské platformy. Podporuje jen malé množství atomárních datových struktur jako jsou boolovské hodnoty, čísla (implicitně s dvojitou přesností plovoucí čárky) a řetězce. Běžné datové struktury jako jsou pole, množiny, hashovací tabulky, seznamy a záznamy mohou být reprezentovány použitím jediné nativní datové struktury – tabulky, která je v podstatě heterogenním asociativním polem. Jmenné prostory a objekty mohou být vytvořeny taktéž za použití tabulek. Zahrnutím minimálního počtu datových typů se Lua pokouší dosáhnout rovnováhy mezi sílou a velikostí.</p>
+<p>Sémantika Lua může být rozšiřována a měněna předefinováním některých zabudovaných funkcí v metatabulkách. Navíc podporuje Lua pokročilé vlastnosti, jako jsou funkce vyššího řádu a garbage collector. Kombinací mnoha těchto vlastností je možné v Lua psát i objektově orientované programy.</p>
+<p>Lua se uplatňuje především v mnoha hrách, jako je <strong>World of Warcraft</strong>, masivní onlinová multiplayerová hra na hrdiny, ve které si mohou uživatelé přizpůsobit uživatelské rozhraní, animace postav a vzhled světa právě v jazyku Lua, a sérii Baldur’s Gate a videohře MDK2, kde je použit jako skriptovací jazyk pro moduly. Také se objevuje v některých open source hrách, jakými jsou Battle for Wesnoth, Daimonin a hry ve stylu Rogue: ToME a H-World. Skripty v jazyce Lua jsou také využity u her Worms 3D, Worms 4: Mayhem, Mafia II a v modifikaci pro GTA V, FiveM. Therescript, použitý k řízení vozidel a animací v There, je mírně upravená verze Lua. Správce oken Ion používá Lua pro své přizpůsobování a rozšiřování. Program Chat Mapper pro zapisování a ukládání rozhovorů (například mezi postavami ve hrách) používá jazyk Lua k řízení rozhovoru. Program LuaTeX rozšiřuje primitivní příkazy TeXu o možnost zadávání kódu v jazyce Lua.</p>
+<p>V našem případě budeme Lua používat pro <code>AwesomeWM</code> a <code>Neovim</code>.</p>
+<h2 id="the-eight-queen-in-programming-in-lua-fourth-edition-8-královen-z-knihy-programování-lua-4-vydání">The Eight-Queen in Programming in Lua Fourth Edition (8 královen z knihy programování Lua 4. vydání)</h2>
+<pre tabindex="0"><code>N = 8 -- board size
+
+-- check whether position (n, c) is free from attacks
+function isplaceok (a, n ,c)
+    for i = 1, n - 1 do -- for each queen already placed
+        if (a[i] == c) or           -- same column?
+        (a[i] - i == c - n) or      -- same diagonal?
+        (a[i] + i == c + n) then    -- same diagonal?
+            return false -- place can be attacked
+        end
+    end
+    return true -- no attacks; place is OK
+end
+
+-- print a board
+function printsolution (a)
+    for i = 1, N do                 -- for each row
+        for j = 1, N do             -- and for each column
+            -- write &#34;X&#34; or &#34;-&#34; plus a space
+            io.write(a[i] == j and &#34;X&#34; or &#34;-&#34;, &#34; &#34;)
+        end
+        io.write(&#34;\n&#34;)
+    end
+    io.write(&#34;\n&#34;)
+end
+
+-- add to board &#39;a&#39; all queens from &#39;n&#39; to &#39;N&#39;
+function addqueen (a, n)
+    if n &gt; N then -- all queens have been placed?
+        printsolution(a)
+    else -- try to place n-th queen
+        for c = 1, N do
+            if isplaceok(a, n, c) then
+                a[n] = c -- place n-th queen at column &#39;c&#39;
+                addqueen(a, n + 1)
+            end
+        end
+    end
+end
+
+-- run the program
+addqueen({}, 1)
+</code></pre><h2 id="awesome-základní-instalace">Awesome základní instalace</h2>
+<pre tabindex="0"><code>paru -S awesome-git
+mkdir -p ~/.config/awesome
+cp /etc/xdg/awesome/rc.lua ~/.config/awesome/
+nvim ~/.xinitrc
+</code></pre><h2 id="awesome-základní-konfigurace-před-spuštěním">Awesome základní konfigurace před spuštěním</h2>
+<p>Editujte <code>~/.config/awesome/rc.lua</code> Zkopírujte požadované themes do vašeho prostředí: <code>/usr/share/awesome/themes/ Copy it to ~/.config/awesome/themes/</code></p>
+<pre tabindex="0"><code>-- theme examples: default, zenburn
+-- beautiful.init(gears.filesystem.get_configuration_dir() .. &#34;/themes/default/theme.lua&#34;)
+local theme_path = string.format(&#34;%s/.config/awesome/themes/%s/theme.lua&#34;, os.getenv(&#34;HOME&#34;), &#34;default&#34;)
+beautiful.init(theme_path)
+-- terminal and editor settings
+terminal = &#34;kitty&#34;
+editor = os.getenv(&#34;EDITOR&#34;) or &#34;nvim&#34;
+</code></pre><h2 id="ověření-a-testování-awesomeww-sandbox">Ověření a testování AwesomeWW Sandbox</h2>
+<p>Použijeme Xephyr pro testování Xorg.</p>
+<pre tabindex="0"><code>paru -S xorg-server-xephyr
+Xephyr :1 -ac -br -noreset -screen 1980x1024 &amp;
+DISPLAY=:1.0 awesome -c ~/.config/awesome/rc.lua
+</code></pre><p>Volitlně použít wrapper: <code>awmtt</code> (Awesome WM Testing Tool) z AUR</p>
+<h2 id="defaultní-ovládání-awesome-awesomewm-default-keybindings">Defaultní ovládání awesome (AwesomeWM Default Keybindings)</h2>
+<p><img src="https://arch-linux.cz/wp-content/uploads/2022/04/awesome-keybindings-default-1024x684.png" alt=""><em><strong>awesome-keybindings-defaul</strong>t</em></p>
+<h2 id="defaultní-rclua">Defaultní rc.lua</h2>
+<p>Pojďme si projít základní sekce a organizaci <code>nvim ~/.config/awesome/rc.lua</code></p>
+<p><a href="https://www.youtube.com/watch?v=wi_EM5zXt8s&amp;t=112s">https://www.youtube.com/watch?v=wi_EM5zXt8s&amp;t=112s</a></p>
+<h1 id="důležité-odkazy">Důležité odkazy</h1>
+<ul>
+<li><a href="https://www.youtube.com/user/tondafischer/featured">Youtube Channel TUX: Svět Linuxu</a>- <a href="https://archlinux.org/">archlinux.org</a>- <a href="https://wiki.archlinux.org/">wiki.achlinux.org</a>- <a href="https://fishlive.org/en/blog-tech-art/arch">fishlive.org/blog</a>- <a href="https://github.com/raven2cz/tux">github/raven2cz/tux</a>- <a href="https://github.com/raven2cz/dotfiles">github/raven2cz/dotfiles</a></li>
+</ul>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://mastodon.arch-linux.cz/@archlinux" target="_blank" rel="noopener noreferrer me"
+    title="Mastodon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M21.58 13.913c-.29 1.469-2.592 3.121-5.238 3.396-1.379.184-2.737.368-4.185.276-2.368-.092-4.237-.551-4.237-.551 0 .184.014.459.043.643.308 2.294 2.317 2.478 4.22 2.57 1.922 0 3.633-.46 3.633-.46l.079 1.653s-1.344.734-3.738.918c-1.32.091-2.96-.092-4.869-.551-4.14-1.102-4.853-5.507-4.961-10.005-.034-1.285-.013-2.57-.013-3.58 0-4.589 3-5.966 3-5.966 1.513-.734 4.11-1.01 6.808-1.01h.067c2.699 0 5.296.276 6.81 1.01 0 0 3 1.377 3 5.967 0 0 .037 3.304-.419 5.69"
+        stroke="currentColor" />
+    <path
+        d="M17.832 8.633v5h-1.978V8.78c0-1.023-.43-1.542-1.29-1.542-.95 0-1.427.616-1.427 1.834v2.655H11.17V9.072c0-1.218-.476-1.834-1.427-1.834-.86 0-1.29.52-1.29 1.542v4.852H6.475V8.633c0-1.022.26-1.834.782-2.434.538-.6 1.243-.909 2.118-.909 1.012 0 1.779.39 2.286 1.169l.492.827.493-.827c.507-.78 1.274-1.169 2.286-1.169.875 0 1.58.308 2.118.909.522.6.782 1.412.782 2.434"
+        fill="currentColor" stroke="none" />
+</svg>
+</a>
+<a href="https://matrix.to/#/#archlinuxcz:matrix.org" target="_blank" rel="noopener noreferrer me"
+    title="Matrix">
+    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+    <path
+        d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.481.314.448.208.785.582 1.02 1.108.254-.374.6-.706 1.034-.992.434-.287.95-.43 1.546-.43.453 0 .872.056 1.26.167.388.11.716.286.993.53.276.245.489.559.646.951.152.392.23.863.23 1.417v5.728h-2.349V11.52c0-.286-.01-.559-.032-.812a1.755 1.755 0 0 0-.18-.66 1.106 1.106 0 0 0-.438-.448c-.194-.11-.457-.166-.785-.166-.332 0-.6.064-.803.189a1.38 1.38 0 0 0-.48.499 1.946 1.946 0 0 0-.231.696 5.56 5.56 0 0 0-.06.785v4.768h-2.35v-4.8c0-.254-.004-.503-.018-.752a2.074 2.074 0 0 0-.143-.688 1.052 1.052 0 0 0-.415-.503c-.194-.125-.476-.19-.854-.19-.111 0-.259.024-.439.074-.18.051-.36.143-.53.282-.171.138-.319.337-.439.595-.12.259-.18.6-.18 1.02v4.966H5.46V7.81zm15.693 15.64V.55H21.72V0H24v24h-2.28v-.55z" />
+</svg>
+</a>
+<a href="/index.xml" target="_blank" rel="noopener noreferrer me"
+    title="Rss">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024–2026 Arch Linux CZ
+        
+    </small>
+</footer><a href="#" title="" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

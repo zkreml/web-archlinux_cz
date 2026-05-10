@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/categories/aplikace-n%C3%A1vody/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Sun, 09 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/aplikace-n%C3%A1vody/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Desktopový klient pro Borg Backup Vorta</title>
+      <link>http://localhost:1313/posts/desktopovy-klient-pro-borg-backup-vorta/</link>
+      <pubDate>Sun, 09 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/desktopovy-klient-pro-borg-backup-vorta/</guid>
+      <description>&lt;h3 id=&#34;co-je-vorta&#34;&gt;Co je Vorta&lt;/h3&gt;
+&lt;p&gt;Vorta je open-source aplikace pro zálohování dat v Linuxu. Jedním z hlavních důvodů, proč se Vorta stala oblíbenou mezi uživateli Linuxu, je její snadná instalace a použití. Vorta je k dispozici v mnoha distribucích Linuxu, jako je například Ubuntu, Fedora, Debian, Arch Linux a další. Po instalaci aplikace se uživatelé mohou snadno připojit k existujícímu účtu Borg Backup nebo si vytvořit nový účet a začít vytvářet zálohy.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Vzdálené zálohování pomocí Borg Backup</title>
+      <link>http://localhost:1313/posts/vzdalene-zalohovani-pomoci-borg-backup/</link>
+      <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vzdalene-zalohovani-pomoci-borg-backup/</guid>
+      <description>&lt;p&gt;V tomto návodu se budeme zaměřovat na vzdálené zálohování pomocí&lt;a href=&#34;https://www.borgbackup.org/&#34;&gt; Borg Backup&lt;/a&gt; na Arch Linuxu.&lt;/p&gt;
+&lt;h3 id=&#34;instalace-borg-backup&#34;&gt;Instalace Borg Backup&lt;/h3&gt;
+&lt;p&gt;Instalaci Borga jsme si ukázali v minulém &lt;a href=&#34;https://arch-linux.cz/jak-zalohovat-pomoci-borgbackup/&#34;&gt;díle&lt;/a&gt;. Stačí jen příkaz&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -S borgbackup
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;příprava-cílového-server&#34;&gt;Příprava cílového server&lt;/h3&gt;
+&lt;p&gt;Na cílovém serveru je potřeba nainstalovat Borg Backup a vytvořit uživatele, který bude mít práva pro ukládání záloh. Pokud máte server s Ubuntu/Debianem, můžete nainstalovat Borg Backup pomocí příkazu:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install borgbackup
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Dále vytvořte uživatele s názvem &amp;ldquo;borg&amp;rdquo;, který bude mít práva pro ukládání záloh. To lze provést pomocí následujícího příkazu:&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

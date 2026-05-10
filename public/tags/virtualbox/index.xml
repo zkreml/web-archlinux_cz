@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/tags/virtualbox/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/virtualbox/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Virtualbox Arch Linux nastavení</title>
+      <link>http://localhost:1313/posts/virtualbox-arch-linux-nastaveni/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/virtualbox-arch-linux-nastaveni/</guid>
+      <description>&lt;p&gt;Další díl od &lt;a href=&#34;https://github.com/raven2cz&#34;&gt;raven2cz&lt;/a&gt;  pojednává o nastavení konzolového rozlišení a fontu. Dále pak nastavení Virtualbox Services pro dynamickou změnu rozlišení, sdílenou schránku a sdílení souborové složky. Doplňuje některé důležité body z minulého dílu. Po tomto díle budete mít Virtualbox Arch Image zcela připraven pro všechny ostatní další práce s Arch Linuxem.&lt;/p&gt;
+&lt;h1 id=&#34;nastavení-tty-rozlišení-a-fontu&#34;&gt;Nastavení TTY rozlišení a fontu&lt;/h1&gt;
+&lt;h2&gt;&lt;a href=&#34;https://github.com/raven2cz/tux/blob/main/210913-vbox-arch-nastaveni/vbox-arch-nastaveni.org#nastaven%C3%AD-rozli%C5%A1en%C3%AD-pro-tty-framebuffer&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;nastavení-rozlišení-pro-tty-framebuffer&#34;&gt;Nastavení rozlišení pro TTY framebuffer&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo nvim /etc/default/grub (zkontrolujte a změňte následující řádky)
+GRUB_GFXMODE=1920x1080x32,auto
+GRUB_GFXPAYLOAD_LINUX=keep
+
+přegenerovat grub default do /boot/grub/grub.cfg příkazem z instalace:
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+poweroff
+(znovu spusťte virtualbox arch image)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Nyní máme již v pořádku nastaven framebuffer na fullhd, ale font je příliš malý (pokud máte velké rozlišení obrazovky).&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Jak na VirtualBox</title>
+      <link>http://localhost:1313/posts/jak-na-virtualbox/</link>
+      <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/jak-na-virtualbox/</guid>
+      <description>&lt;p&gt;Pro všechny co chtějí zatím jen vyzkoušet instalaci &lt;a href=&#34;https://arch-linux.cz/arch-linux-instalace/&#34;&gt;Arch Linuxu&lt;/a&gt; připravil &lt;a href=&#34;https://github.com/raven2cz&#34;&gt;raven2cz&lt;/a&gt;  video návod jak použit virtualizaci a připravit vše pro instalaci Arch Linuxu.&lt;/p&gt;
+&lt;p&gt;Video je již na našem &lt;a href=&#34;https://peertube.arch-linux.cz/w/hGJe97QHBVZHhBXveRaz3a&#34;&gt;PeerTube kanále&lt;/a&gt; a nebo video můžete zhlédnout   na Youtube autora&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/LOMXEppGMXU&#34;&gt;https://youtu.be/LOMXEppGMXU&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

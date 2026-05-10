@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/tags/grub2/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Fri, 11 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/grub2/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Quad Boot</title>
+      <link>http://localhost:1313/posts/quad-boot/</link>
+      <pubDate>Fri, 11 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/quad-boot/</guid>
+      <description>&lt;p&gt;Další díl seriálu  o &lt;a href=&#34;https://arch-linux.cz/series/arch-linux-instalace/&#34;&gt;instalaci a nastavení Arch Linuxu&lt;/a&gt; od &lt;a href=&#34;https://github.com/raven2cz/tux&#34;&gt;Tondy Fishera&lt;/a&gt;, obsahuje plné nastavení reálného desktopu se čtyřmi operačními systémy s výběrovým dialogem pro zvolení, který systém si při spuštění počítače vybrat. Jedná se tedy o quad booting (dual booting je pouze pro dva operační systémy). Video je již i na našem&lt;a href=&#34;https://peertube.arch-linux.cz/w/b3ajczWRf3XFy4vhCTPQz1&#34;&gt; PeerTube kanále.&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;diskový-správce-gnome-disks&#34;&gt;Diskový správce Gnome-Disks&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -S gnome-disk-utility
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Moutovat diskové oddíly pomocí ikony ozubených kol, zvolit &lt;strong&gt;Edit Mount Options&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

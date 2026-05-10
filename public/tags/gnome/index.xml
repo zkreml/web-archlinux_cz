@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/tags/gnome/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Sat, 25 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/gnome/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>GNOME - Jednoduché, krásné, elegantní.</title>
+      <link>http://localhost:1313/posts/gnome-jednoduche-krasne-elegantni/</link>
+      <pubDate>Sat, 25 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/gnome-jednoduche-krasne-elegantni/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://arch-linux.cz/wp-content/uploads/2022/06/gnome-logo.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://arch-linux.cz/wp-content/uploads/2022/06/gnome-screenshot1-1024x576.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://arch-linux.cz/wp-content/uploads/2022/06/gnome-screenshot3-1024x576.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Další díl seriálu o Arch Linuxu od &lt;a href=&#34;https://github.com/raven2cz&#34;&gt;Tondy Fischera&lt;/a&gt;. V dnešním díle se podíváme  desktopové prostředí Gnome.&lt;/p&gt;
+&lt;h2 id=&#34;gnome---jednoduché-krásné-elegantní&#34;&gt;&lt;a href=&#34;https://github.com/raven2cz/tux/tree/main/220501-gnome#gnome---jednoduch%C3%A9-kr%C3%A1sn%C3%A9-elegantn%C3%AD-1&#34;&gt;&lt;/a&gt;GNOME - Jednoduché, krásné, elegantní.&lt;/h2&gt;
+&lt;p&gt;GNOME (&lt;em&gt;(ɡ)noʊm&lt;/em&gt;, GNU Network Object Model Environment) je desktopové prostředí, jehož cílem je být jednoduché a snadno použitelné. Je navržen &lt;a href=&#34;https://en.wikipedia.org/wiki/The_GNOME_Project&#34;&gt;GNOME Project&lt;/a&gt; a skládá se výhradně z bezplatného a open-source softwaru. Největším firemním přispěvatelem je &lt;strong&gt;Red Hat&lt;/strong&gt;. Výchozí zobrazení je Wayland místo Xorg a dostupné relace jsou&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

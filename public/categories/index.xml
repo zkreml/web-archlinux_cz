@@ -10,8 +10,72 @@
     <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
     <webMaster>archos@arch-linux.cz (archos)</webMaster>
     
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Zrpávy</title>
+      <link>http://localhost:1313/categories/zrp%C3%A1vy/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/zrp%C3%A1vy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arch Linux</title>
+      <link>http://localhost:1313/categories/arch-linux/</link>
+      <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/arch-linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Návody</title>
+      <link>http://localhost:1313/categories/n%C3%A1vody/</link>
+      <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/n%C3%A1vody/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rychlé Zprávy</title>
+      <link>http://localhost:1313/categories/rychl%C3%A9-zpr%C3%A1vy/</link>
+      <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/rychl%C3%A9-zpr%C3%A1vy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aplikace</title>
+      <link>http://localhost:1313/categories/aplikace/</link>
+      <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/aplikace/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mastodon</title>
+      <link>http://localhost:1313/categories/mastodon/</link>
+      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/mastodon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Naše Komunita</title>
+      <link>http://localhost:1313/categories/na%C5%A1e-komunita/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/na%C5%A1e-komunita/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aplikace Návody</title>
+      <link>http://localhost:1313/categories/aplikace-n%C3%A1vody/</link>
+      <pubDate>Sun, 09 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/aplikace-n%C3%A1vody/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

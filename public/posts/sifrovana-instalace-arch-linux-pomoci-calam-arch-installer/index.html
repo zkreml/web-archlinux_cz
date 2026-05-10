@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="cs"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Šifrovaná instalace Arch Linux pomocí Calam-Arch-Installer | Arch Linux CZ</title>
+<meta property="og:title" content="Šifrovaná instalace Arch Linux pomocí Calam-Arch-Installer | Arch Linux CZ" />
+<meta name="twitter:title" content="Šifrovaná instalace Arch Linux pomocí Calam-Arch-Installer | Arch Linux CZ" />
+<meta itemprop="name" content="Šifrovaná instalace Arch Linux pomocí Calam-Arch-Installer | Arch Linux CZ" />
+<meta name="application-name" content="Šifrovaná instalace Arch Linux pomocí Calam-Arch-Installer | Arch Linux CZ" />
+<meta property="og:site_name" content="Arch Linux CZ" />
+
+<meta name="description" content="Česká komunita Arch Linuxu">
+<meta itemprop="description" content="Česká komunita Arch Linuxu" />
+<meta property="og:description" content="Česká komunita Arch Linuxu" />
+<meta name="twitter:description" content="Česká komunita Arch Linuxu" />
+
+<meta property="og:locale" content="cs" />
+<meta name="language" content="cs" />
+
+  <link rel="alternate" hreflang="en" href="http://localhost:1313/posts/sifrovana-instalace-arch-linux-pomoci-calam-arch-installer/" title="" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2022-03-03T00:00:00Z />
+    <meta property="article:published_time" content=2022-03-03T00:00:00Z />
+    <meta property="og:url" content="http://localhost:1313/posts/sifrovana-instalace-arch-linux-pomoci-calam-arch-installer/" />
+
+    
+    <meta property="og:article:author" content="archos" />
+    <meta property="article:author" content="archos" />
+    <meta name="author" content="archos" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Šifrovaná instalace Arch Linux pomocí Calam-Arch-Installer",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2022-03-03",
+        "description": "",
+        "wordCount":  903 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2022-03-03",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Arch Linux CZ"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.161.1">
+
+    
+    <meta property="og:url" content="http://localhost:1313/posts/sifrovana-instalace-arch-linux-pomoci-calam-arch-installer/">
+  <meta property="og:site_name" content="Arch Linux CZ">
+  <meta property="og:title" content="Šifrovaná instalace Arch Linux pomocí Calam-Arch-Installer">
+  <meta property="og:description" content="Úvod Pro začátečníka může být složité až skoro nemožné Arch Linux nainstalovat a nakonfigurovat podle svých potřeb. Někoho může i instalace v příkazovém řádku odradit. V dnešním návodu si ukážeme, jak nainstalovat Arch Linux pomocí instalátoru Calam-Arch-installer. Tento návod předpokládá,že Arch Linux bude jediným OS v zařízení.
+Co získáme instalací • Plně LUKS šifrovaný oddíl obsahující souborový systém BTRFS s / boot, / root a / home • / a /home jako samostatné dílčí svazky, které umožňují snadnou a úložnou úsporu místa snímků kořenového systému • automatické vytváření snímků (při upgradu systému a každodenním a bootování) • schopnost zavést do funkčního snímku z nabídky grub (automatické vytváření spouštěcích položek) a poté nastavit tento nebo jiný snímek jako nový výchozí systém (z grafického uživatelského rozhraní)">
+  <meta property="og:locale" content="cs">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-03-03T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-03-03T00:00:00+00:00">
+    <meta property="article:tag" content="Btrfs">
+    <meta property="article:tag" content="Calamares">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Šifrovaná instalace Arch Linux pomocí Calam-Arch-Installer">
+  <meta name="twitter:description" content="Úvod Pro začátečníka může být složité až skoro nemožné Arch Linux nainstalovat a nakonfigurovat podle svých potřeb. Někoho může i instalace v příkazovém řádku odradit. V dnešním návodu si ukážeme, jak nainstalovat Arch Linux pomocí instalátoru Calam-Arch-installer. Tento návod předpokládá,že Arch Linux bude jediným OS v zařízení.
+Co získáme instalací • Plně LUKS šifrovaný oddíl obsahující souborový systém BTRFS s / boot, / root a / home • / a /home jako samostatné dílčí svazky, které umožňují snadnou a úložnou úsporu místa snímků kořenového systému • automatické vytváření snímků (při upgradu systému a každodenním a bootování) • schopnost zavést do funkčního snímku z nabídky grub (automatické vytváření spouštěcích položek) a poté nastavit tento nebo jiný snímek jako nový výchozí systém (z grafického uživatelského rozhraní)">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/sifrovana-instalace-arch-linux-pomoci-calam-arch-installer/">
+    <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+    <meta name="color-scheme" content="light dark">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    
+</head>
+<body data-theme = "" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <img src="/logo.png" alt="Arch Linux CZ" height="50">
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Domů
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/categories/n%C3%A1vody/">
+                        Návody
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/categories/zrp%C3%A1vy/">
+                        Zprávy
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/o-arch-linuxu/">
+                        O Arch Linuxu
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="https://wiki.arch-linux.cz/shelves/arch-linux-cz">
+                        Wiki
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="https://forum.arch-linux.cz/">
+                        Fórum
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/komunita/">
+                        Komunita
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/podporte-nas/">
+                        Podpořte nás
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Šifrovaná instalace Arch Linux pomocí Calam-Arch-Installer</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2022-03-03T00:00:00&#43;00:00" itemprop="datePublished"> 3. 3. 2022 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h2 id="úvod">Úvod</h2>
+<p>Pro začátečníka může být složité až skoro nemožné Arch Linux nainstalovat a nakonfigurovat podle svých
+potřeb. Někoho může i instalace v příkazovém řádku odradit. V dnešním návodu si ukážeme, jak
+nainstalovat Arch Linux pomocí instalátoru Calam-Arch-installer. Tento návod předpokládá,že Arch
+Linux bude jediným OS v zařízení.</p>
+<h2 id="co-získáme-instalací">Co získáme instalací</h2>
+<p>• Plně LUKS šifrovaný oddíl obsahující souborový systém BTRFS s / boot, / root a / home
+• / a /home jako samostatné dílčí svazky, které umožňují snadnou a úložnou úsporu místa
+snímků kořenového systému
+• automatické vytváření snímků (při upgradu systému a každodenním a bootování)
+• schopnost zavést do funkčního snímku z nabídky grub (automatické vytváření spouštěcích
+položek) a poté nastavit tento nebo jiný snímek jako nový výchozí systém (z grafického
+uživatelského rozhraní)</p>
+<h2 id="stažení-a-příprava-instalačního-usb">Stažení a příprava instalačního USB</h2>
+<p>Nejprve si stáhneme ISO <a href="https://sourceforge.net/projects/blue-arch-installer/">Calam-Arch-Installer</a>  Obraz zapíšeme na USB disk třeba pomocí nástroje
+Etcher.Restartujeme počítač a při zavádění systému v BIOSu nastavíme zavádění systému pomocí
+USB.
+Pří zavádění z USB se vám ukáže úvodní obrazovka instalátoru</p>
+<p><img src="https://arch-linux.cz/wp-content/uploads/2022/02/instalace1.png" alt=""></p>
+<h2 id="příprava-instalace">Příprava instalace</h2>
+<p>Nejdříve je třeba udělat pár maličkostí před instalací našeho nového systému.
+Změňte výchozí nastavení btrfs calamar pro fstab.Následující krok vynutí, aby calamar přiřadil a
+používal kompresi na všech instalačních zařízeních btrfs; bez ohledu na to, zda jsou ssd nebo
+hdd. Použijeme kompresi zstd.
+Otevřete Terminal,Firefox s naším návodem a zadejte (nebo označte a zkopírujte níže uvedené
+příkazy pomocí ctrl-c a vložte do terminálu pomocí shift-ctrl-v | vždy můžete kopírovat a vložit
+všechny řádky zobrazené v jednom bloku najednou)</p>
+<pre tabindex="0"><code>sudo sed -i &#39;s/compress=lzo/compress=zstd/&#39;
+/usr/share/calamares/modules/fstab.conf
+sudo sed -i &#39;s/autodefrag/autodefrag,compress=zstd/&#39;
+/usr/share/calamares/modules/fstab.conf
+</code></pre><p>Terminál necháme otevřený a můžeme přistoupit k samotné instalaci.</p>
+<h2 id="instalace-systému">Instalace systému</h2>
+<p>Instalátor <a href="https://sourceforge.net/projects/blue-arch-installer/">Calam-Arch-Installer</a> je založený na instalačním frameworku <a href="https://calamares.io/">Calamares</a>, který používají i
+jiné linuxové distribuce EndeavourOS, Manjaro, Arcolinux a mnoho dalších.
+Instalátor nám položí několik otázek. Nejdříve nastavíme jazyk systému.</p>
+<p><img src="https://arch-linux.cz/wp-content/uploads/2022/02/instalace_vyber_jazyka3.png" alt=""><em>výběr jazyka</em></p>
+<p>Nastavíme časové pásmo.</p>
+<p><img src="https://arch-linux.cz/wp-content/uploads/2022/02/casove_pasmo4.png" alt=""><em>výběr časového pásma</em></p>
+<p>V dalším kroku vybereme požadované rozložení klvesnice</p>
+<p><img src="https://arch-linux.cz/wp-content/uploads/2022/02/vyber_klavesnice5.png" alt=""><em>rozložení klávesnice</em></p>
+<p>Nyní přejdeme k rozdělení disku.Nejdříve vytvoříme novou tabulku oddílů a jako typ oddílu
+zvolíme <a href="https://cs.wikipedia.org/wiki/GUID_Partition_Table">GPT</a> zadáním ok,vytvoříme tabulku.</p>
+<p><img src="https://arch-linux.cz/wp-content/uploads/2022/02/nova-tabulka-oddilu6.png" alt=""><em>Vytvoření tabulky GPT</em></p>
+<p>Dále zvolíme ruční rozdělení disku a vytvoříme oddíl 512MB Fat 32 s přípojným bodem /boot a s
+příznakem boot. Tímto vytvoříme systémový oddíl EFI.</p>
+<p><img src="https://arch-linux.cz/wp-content/uploads/2022/02/rucni-rozdeleni-disku.png" alt=""><em>ruční rozdělení disku</em></p>
+<p><img src="https://arch-linux.cz/wp-content/uploads/2022/02/vytvoreni_efi7.png" alt=""></p>
+<p>Na zbytku volného místa vytvoříme souborový systém BTRFS, zaškrtneme šifrování a zvolíme
+heslo.
+Přípojný bod pro tento oddíl bude /</p>
+<p><img src="https://arch-linux.cz/wp-content/uploads/2022/02/zbytek_btrfs8.png" alt=""><em>Oddíl BTRFS</em></p>
+<p>V dalším kroku vybereme jaké chceme použít grafické prostředí, ovladače grafické karty a nebo
+veškeré balíčky pro správu tisku.</p>
+<p><img src="https://arch-linux.cz/wp-content/uploads/2022/02/vyber-prostredi9.png" alt=""></p>
+<p>V dalším kroku vytvoříme uživatele, heslo pro přihlášení do systému.</p>
+<p><img src="https://arch-linux.cz/wp-content/uploads/2022/02/vytvoreni_uzivatele10.png" alt=""><em>vytvoření uživatele</em></p>
+<p>Klikneme na další a systém se nám nainstaluje. Po dokončení instalace systém
+<strong>NERESTARTOVAT</strong>,
+ale zadáme ještě několik příkazů. Prvním příkazem vytvoříme odkládací prostor. 8G nahradíme
+požadovanou velikostí.</p>
+<pre tabindex="0"><code>swapsize=8G
+</code></pre><p>Po vytvoření oddílu spustíme další příkazy.Stáčí je jen všechny zkopírovat (ctrl+c) a následně vložit
+do terminálu (ctrl+shift+v)</p>
+<pre tabindex="0"><code>sudo mkdir /mnt/btrfs
+btrfsonluks=`sudo blkid -o device | grep luks`
+sudo mount -o subvolid=5 $btrfsonluks /mnt/btrfs
+sudo sed -i &#39;s/compress=zstd 0 1/compress=zstd 0 0/&#39; /mnt/btrfs/@/etc/fstab
+sudo sed -i &#39;s/compress=zstd 0 2/compress=zstd 0 0/&#39; /mnt/btrfs/@/etc/fstab
+sudo btrfs subvolume create /mnt/btrfs/@var-cache-pacman-pkg
+fstabstr=`grep &#34;/home&#34; /mnt/btrfs/@/etc/fstab`
+fstabstr=${fstabstr//\/home/\/var\/cache\/pacman\/pkg}
+fstabstr=${fstabstr//@home/@var-cache-pacman-pkg}
+sudo sh -c &#34;echo $fstabstr &gt;&gt; /mnt/btrfs/@/etc/fstab&#34;
+sudo btrfs subvolume create /mnt/btrfs/@swap
+sudo mkdir /mnt/btrfs/@/swap
+sudo sh -c &#34;printf &#39;\n$btrfsonluks /swap
+btrfs
+subvol=@swap,defaults,compress=no 0 0\n&#39; &gt;&gt; /mnt/btrfs/@/etc/fstab&#34;
+sudo truncate -s 0 /mnt/btrfs/@swap/swapfile
+sudo chattr +C /mnt/btrfs/@swap/swapfile
+sudo btrfs property set /mnt/btrfs/@swap/swapfile compression none
+sudo fallocate -l $swapsize /mnt/btrfs/@swap/swapfile
+sudo chmod 600 /mnt/btrfs/@swap/swapfile
+sudo mkswap /mnt/btrfs/@swap/swapfile
+sudo swapon /mnt/btrfs/@swap/swapfile
+sudo sh -c &#34;echo &#39;/swap/swapfile none swap defaults 0 0&#39; &gt;&gt;
+/mnt/btrfs/@/etc/fstab&#34;
+wget https://raw.githubusercontent.com/osandov/osandov-linux/master/scripts/
+btrfs_map_physical.c
+gcc -O2 -o btrfs_map_physical btrfs_map_physical.c
+offset=`sudo ./btrfs_map_physical /mnt/btrfs/@swap/swapfile`
+offset_arr=(`echo ${offset}`)
+offset_pagesize=(`getconf PAGESIZE`)
+offset=$(( offset_arr[25] / offset_pagesize ))
+sudo sed -i &#34;s/loglevel=3/loglevel=3 resume_offset=$offset/&#34;
+/mnt/btrfs/@/etc/default/grub
+sudo sed -i &#34;s#loglevel=3#resume=$btrfsonluks loglevel=3#&#34;
+/mnt/btrfs/@/etc/default/grub
+sudo sed -i &#39;s/keymap encrypt filesystems/keymap encrypt filesystems resume/&#39;
+/mnt/btrfs/@/etc/mkinitcpio.conf
+sudo mkdir /mnt/chroot
+sudo mount -o compress=zstd,subvol=@ $btrfsonluks /mnt/chroot
+efidevice=`sudo blkid -o device -l -t TYPE=vfat`
+sudo mount $efidevice /mnt/chroot/boot/efi
+sudo arch-chroot /mnt/chroot
+sudo pacman --noconfirm -S cronie
+sudo systemctl enable cronie.service
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo mkinitcpio -p linux
+</code></pre><p>Nyní můžeme restartovat počítač.</p>
+<h2 id="nový-systém">Nový systém</h2>
+<p>Po restartu a přihlášení do nového systému, musíme nejdřív nainstalovat pomocníka YAY pro AUR
+repozitář. V AUR repozitáři se nachází zálohovací program Timeshift.</p>
+<pre tabindex="0"><code>pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+</code></pre><p>Nyní nainstalujeme program Timeshift a potřebné závislosti.</p>
+<pre tabindex="0"><code>sudo pacman --noconfirm -Syy &amp;&amp;
+yay --noconfirm -S timeshift timeshift-autosnap grub-btrfs
+</code></pre><p>Poté spustíme následující příkazy</p>
+<pre tabindex="0"><code>sudo cp /etc/timeshift/default.json /etc/timeshift/timeshift.json &amp;&amp;
+fs_uuid=`sudo blkid -o device | grep luks` &amp;&amp;
+fs_uuid=`sudo blkid -o value -s UUID $fs_uuid` &amp;&amp;
+sudo sed -i &#34;s/backup_device_uuid\&#34; : \&#34;/backup_device_uuid\&#34; : \&#34;$fs_uuid/&#34;
+/etc/timeshift/timeshift.json &amp;&amp;
+fs_uuid=`sudo blkid -o device -l -t TYPE=crypto_LUKS` &amp;&amp;
+fs_uuid=`sudo blkid -o value -s UUID $fs_uuid` &amp;&amp;
+sudo sed -i &#34;s/parent_device_uuid\&#34; : \&#34;/parent_device_uuid\&#34; : \&#34;$fs_uuid/&#34;
+/etc/timeshift/timeshift.json &amp;&amp;
+sudo sed -i &#39;s/run&#34; : &#34;true/run&#34; : &#34;false/&#39; /etc/timeshift/timeshift.json &amp;&amp;
+sudo sed -i &#39;s/btrfs_mode&#34; : &#34;false/btrfs_mode&#34; : &#34;true/&#39;
+/etc/timeshift/timeshift.json &amp;&amp;
+sudo sed -i &#39;s/ &#34;include_btrfs_home&#34; : &#34;false&#34;,/
+&#34;include_btrfs_home_for_backup&#34; : &#34;false&#34;,\n &#34;include_btrfs_home_for_restore&#34; :
+&#34;false&#34;,/&#39; /etc/timeshift/timeshift.json &amp;&amp;
+sudo sed -i &#39;s/schedule_daily&#34; : &#34;false/schedule_daily&#34; : &#34;true/&#39;
+/etc/timeshift/timeshift.json &amp;&amp;
+sudo sed -i &#39;s/schedule_boot&#34; : &#34;false/schedule_boot&#34; : &#34;true/&#39;
+/etc/timeshift/timeshift.json &amp;&amp;
+sudo sed -i &#39;s/count_boot&#34; : &#34;5/count_boot&#34; : &#34;3/&#39; /etc/timeshift/timeshift.json
+sudo timeshift --create --comments &#34;1st&#34;
+</code></pre><h2 id="omezení-maximálního-počtu-snímků">Omezení maximálního počtu snímků</h2>
+<pre tabindex="0"><code>max_snapshots=6
+</code></pre><p>A jako poslední spustgíme příkazy.</p>
+<pre tabindex="0"><code>sudo sh -c &#39;
+cat &gt; /etc/systemd/system/limit-timeshift-snapshots-update-grub.service $max_snapshots&#39;\` \&amp;\&amp; /usr/bin/grub-mkconfig -o /boot/grub/grub.cfg\&#34;#&#34;
+/etc/systemd/system/limit-timeshift-snapshots-update-grub.service &amp;&amp;
+sudo systemctl enable limit-timeshift-snapshots-update-grub.service &amp;&amp;
+sudo systemctl start limit-timeshift-snapshots-update-grub.service
+</code></pre><p><strong>A je to</strong>
+nyní máte plně šifrovaný systém Arch Linux, s aumaticky vytvořenými snímky. Stačí jen při
+botování vybrat k jakému snímku se potřebujete vrátit.</p>
+<p><img src="https://arch-linux.cz/wp-content/uploads/2022/02/grub11.png" alt=""><em>nový systém</em></p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://mastodon.arch-linux.cz/@archlinux" target="_blank" rel="noopener noreferrer me"
+    title="Mastodon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M21.58 13.913c-.29 1.469-2.592 3.121-5.238 3.396-1.379.184-2.737.368-4.185.276-2.368-.092-4.237-.551-4.237-.551 0 .184.014.459.043.643.308 2.294 2.317 2.478 4.22 2.57 1.922 0 3.633-.46 3.633-.46l.079 1.653s-1.344.734-3.738.918c-1.32.091-2.96-.092-4.869-.551-4.14-1.102-4.853-5.507-4.961-10.005-.034-1.285-.013-2.57-.013-3.58 0-4.589 3-5.966 3-5.966 1.513-.734 4.11-1.01 6.808-1.01h.067c2.699 0 5.296.276 6.81 1.01 0 0 3 1.377 3 5.967 0 0 .037 3.304-.419 5.69"
+        stroke="currentColor" />
+    <path
+        d="M17.832 8.633v5h-1.978V8.78c0-1.023-.43-1.542-1.29-1.542-.95 0-1.427.616-1.427 1.834v2.655H11.17V9.072c0-1.218-.476-1.834-1.427-1.834-.86 0-1.29.52-1.29 1.542v4.852H6.475V8.633c0-1.022.26-1.834.782-2.434.538-.6 1.243-.909 2.118-.909 1.012 0 1.779.39 2.286 1.169l.492.827.493-.827c.507-.78 1.274-1.169 2.286-1.169.875 0 1.58.308 2.118.909.522.6.782 1.412.782 2.434"
+        fill="currentColor" stroke="none" />
+</svg>
+</a>
+<a href="https://matrix.to/#/#archlinuxcz:matrix.org" target="_blank" rel="noopener noreferrer me"
+    title="Matrix">
+    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+    <path
+        d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.481.314.448.208.785.582 1.02 1.108.254-.374.6-.706 1.034-.992.434-.287.95-.43 1.546-.43.453 0 .872.056 1.26.167.388.11.716.286.993.53.276.245.489.559.646.951.152.392.23.863.23 1.417v5.728h-2.349V11.52c0-.286-.01-.559-.032-.812a1.755 1.755 0 0 0-.18-.66 1.106 1.106 0 0 0-.438-.448c-.194-.11-.457-.166-.785-.166-.332 0-.6.064-.803.189a1.38 1.38 0 0 0-.48.499 1.946 1.946 0 0 0-.231.696 5.56 5.56 0 0 0-.06.785v4.768h-2.35v-4.8c0-.254-.004-.503-.018-.752a2.074 2.074 0 0 0-.143-.688 1.052 1.052 0 0 0-.415-.503c-.194-.125-.476-.19-.854-.19-.111 0-.259.024-.439.074-.18.051-.36.143-.53.282-.171.138-.319.337-.439.595-.12.259-.18.6-.18 1.02v4.966H5.46V7.81zm15.693 15.64V.55H21.72V0H24v24h-2.28v-.55z" />
+</svg>
+</a>
+<a href="/index.xml" target="_blank" rel="noopener noreferrer me"
+    title="Rss">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024–2026 Arch Linux CZ
+        
+    </small>
+</footer><a href="#" title="" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

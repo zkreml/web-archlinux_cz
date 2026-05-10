@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/tags/pass/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Fri, 10 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/pass/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Unixový správce hesel Pass</title>
+      <link>http://localhost:1313/posts/unixovy-spravce-hesel-pass/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/unixovy-spravce-hesel-pass/</guid>
+      <description>&lt;h3 id=&#34;co-je-správce-hesel-pass&#34;&gt;Co je správce hesel PASS&lt;/h3&gt;
+&lt;p&gt;Pass je správce hesel příkazového řádku vytvořený s ohledem na filozofii Unixu. Umožňuje vám pracovat s vašimi hesly pomocí běžných unixových příkazů. Přihlašovací údaje jsou uloženy v souborech zašifrovaných GPG.&lt;/p&gt;
+&lt;h3 id=&#34;pass-je-komplikovaný-jen-pro-geeky&#34;&gt;PASS je komplikovaný! Jen pro geeky!&lt;/h3&gt;
+&lt;p&gt;Toto je typická odpověď mnoha uživatelů, kteří pláčou na fórech. Ale není to pravda. Jakákoli technologie potřebuje znát některé základy používání. Pokud chcete řídit auto nebo hrát World of Warcraft, musíte se nejprve naučit základy. Abyste byli PRO, potřebujete víc. Pro základní a standardní uživatelské použití &lt;strong&gt;je pass jednoduchý a efektivní nástroj&lt;/strong&gt; .&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

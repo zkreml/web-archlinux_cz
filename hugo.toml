@@ -45,12 +45,12 @@ paginate = 10
 
 [[menu.main]]
   name = "Návody"
-  pageRef = "/navody"
+  url = "/categories/návody/"
   weight = 2
 
 [[menu.main]]
   name = "Zprávy"
-  pageRef = "/zpravy"
+  url = "/categories/zrpávy/"
   weight = 3
 
 [[menu.main]]

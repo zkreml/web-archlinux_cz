@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/tags/archinstall/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/archinstall/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Archinstall 4.2 – novinky v instalátoru Arch Linuxu</title>
+      <link>http://localhost:1313/posts/archinstall-4-2-novinky-v-instalatoru-arch-linuxu/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/archinstall-4-2-novinky-v-instalatoru-arch-linuxu/</guid>
+      <description>&lt;p&gt;Archinstall 4.2 je venku a přináší pár zajímavých změn, které stojí za zmínku. Pokud instaluješ Arch přes oficiální textový instalátor, tahle verze ti nabídne jemnější kontrolu nad KDE Plasma, pár vylepšení kolem pacmanu a jeden dost zásadní bezpečnostní fix u šifrovaných instalací.&lt;/p&gt;
+&lt;h2 id=&#34;co-je-archinstall&#34;&gt;Co je Archinstall&lt;/h2&gt;
+&lt;p&gt;Archinstall je oficiální textový instalátor Arch Linuxu, který najdeš přímo na instalačním ISO. Od verze 4.0 běží na frameworku Textual, takže místo starého curses rozhraní máš moderní TUI. Default instalátor na ISO &lt;code&gt;2026.04.01&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
