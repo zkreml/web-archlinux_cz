@@ -70,3 +70,7 @@ paginate = 10
   name = "Podpořte nás"
   pageRef = "/podporte-nas"
   weight = 8
+
+[params.logo]
+  img = "/logo.png"
+  alt = "Arch Linux CZ"
