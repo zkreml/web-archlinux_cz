@@ -5,7 +5,7 @@ Oficiální web české komunity Arch Linuxu — [arch-linux.cz](https://arch-li
 ## Stack
 
 - **Generátor:** [Hugo](https://gohugo.io/)
-- **Téma:** [Hugo Blog Awesome](https://github.com/hugo-sid/hugo-blog-awesome)
+- **Téma:** [Blowfish](https://blowfish.page/)
 - **Jazyk obsahu:** čeština
 - **Hosting:** statický (nginx)
 
@@ -13,9 +13,7 @@ Oficiální web české komunity Arch Linuxu — [arch-linux.cz](https://arch-li
 
 ```
 content/
-├── posts/          # blogové články
-├── navody/         # návody a tutoriály
-├── zpravy/         # novinky z Arch světa
+├── posts/          # blogové články a návody
 ├── o-arch-linuxu.md
 ├── komunita.md
 └── podporte-nas.md
@@ -38,6 +36,11 @@ hugo server -D
 hugo --minify
 # výstup v public/
 ```
+
+## Větve
+
+- `main` — produkční verze
+- `test-blowfish` — experimenty s tématem
 
 ## Komunita
 
