@@ -11,40 +11,40 @@
     
     <item>
       <title>Arch Linux – Základní příkazy</title>
-      <link>http://localhost:1313/posts/arch-linux-zakladni-prikazy/</link>
+      <link>http://localhost:1313/arch-linux-z%C3%A1kladn%C3%AD-p%C5%99%C3%ADkazy/</link>
       <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/arch-linux-zakladni-prikazy/</guid>
+      <guid>http://localhost:1313/arch-linux-z%C3%A1kladn%C3%AD-p%C5%99%C3%ADkazy/</guid>
       <description>&lt;h1 class=&#34;relative group&#34;&gt;Arch Linux – Základní příkazy&#xA;    &lt;div id=&#34;arch-linux--základní-příkazy&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#arch-linux--z%c3%a1kladn%c3%ad-p%c5%99%c3%adkazy&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;em&gt;Praktický průvodce pro začátečníky a mírně pokročilé uživatele&lt;/em&gt;&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;1. Úvod&#xA;    &lt;div id=&#34;1-úvod&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#1-%c3%bavod&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Arch Linux je minimalistická rolling-release distribuce – dostaneš čistý systém bez zbytečností a sám si ho postavíš podle sebe. Žádný GUI instalátor, žádné předinstalované haraburdí.&lt;/p&gt;&#xA;&lt;p&gt;Proč znát příkazy? Protože na Archu neexistuje klikací záchranný kruh. Když se něco rozbije (a rozbije), terminal je jediná cesta ven. A taky je to prostě rychlejší než jakékoliv GUI.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Nový Arch Linux ISO s kernelem 6.16</title>
-      <link>http://localhost:1313/posts/novy-arch-linux-iso-s-kernelem-6-16/</link>
+      <link>http://localhost:1313/nov%C3%BD-arch-linux-iso-s-kernelem-6.16/</link>
       <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/novy-arch-linux-iso-s-kernelem-6-16/</guid>
+      <guid>http://localhost:1313/nov%C3%BD-arch-linux-iso-s-kernelem-6.16/</guid>
       <description>&lt;h1 class=&#34;relative group&#34;&gt;Nový Arch Linux ISO s kernelem 6.16&#xA;    &lt;div id=&#34;nový-arch-linux-iso-s-kernelem-616&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#nov%c3%bd-arch-linux-iso-s-kernelem-616&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;1. září 2025&lt;/strong&gt; - Je tu nový Arch Linux ISO snapshot pro září 2025, první který běží na &lt;strong&gt;Linux kernelu 6.16&lt;/strong&gt;. Hlavní novinky:&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Co je nového&#xA;    &lt;div id=&#34;co-je-nového&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#co-je-nov%c3%a9ho&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Linux Kernel 6.16&#xA;    &lt;div id=&#34;linux-kernel-616&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#linux-kernel-616&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lepší detekce hardware, zejména na novějších zařízeních&lt;/li&gt;&#xA;&lt;li&gt;Vylepšená podpora i pro starší komponenty, kde předchozí ISO selhávala&lt;/li&gt;&#xA;&lt;li&gt;Obecně stabilnější základ systému&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Archinstall 3.0.9&#xA;    &lt;div id=&#34;archinstall-309&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#archinstall-309&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;Nová verze instalátoru přináší několik užitečných funkcí:&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Návod na i3 pro Arch Linux</title>
-      <link>http://localhost:1313/posts/navod-na-i3-pro-arch-linux/</link>
+      <link>http://localhost:1313/n%C3%A1vod-na-i3-pro-arch-linux/</link>
       <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/navod-na-i3-pro-arch-linux/</guid>
+      <guid>http://localhost:1313/n%C3%A1vod-na-i3-pro-arch-linux/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Úvod do i3&#xA;    &lt;div id=&#34;úvod-do-i3&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%c3%bavod-do-i3&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;i3 je dynamický správce oken, který je určen pro pokročilé uživatele, kteří chtějí mít plnou kontrolu nad rozvržením svého desktopového prostředí. i3 je velmi flexibilní a umožňuje přizpůsobení pomocí klávesových zkratek, skriptů a konfigurací.&lt;/p&gt;&#xA;&lt;p&gt;Výhody i3:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Minimalistické a rychlé prostředí.&lt;/li&gt;&#xA;&lt;li&gt;Plně přizpůsobitelné.&lt;/li&gt;&#xA;&lt;li&gt;Podpora pro více monitorů a workspace.&lt;/li&gt;&#xA;&lt;li&gt;Výborné pro efektivní multitasking a produktivitu.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Proč zvolit i3:&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Arch Linux Instalace</title>
-      <link>http://localhost:1313/posts/arch-linux-instalace/</link>
+      <link>http://localhost:1313/arch-linux-instalace/</link>
       <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/arch-linux-instalace/</guid>
+      <guid>http://localhost:1313/arch-linux-instalace/</guid>
       <description>&lt;p&gt;Velké poděkování patří uživateli &lt;a href=&#34;https://github.com/raven2cz&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;raven2cz&lt;/a&gt;, který připravil tento skvělý návod včetně videa. Video je již nahráno na našem &lt;a href=&#34;https://peertube.arch-linux.cz/c/videa_archlinuxcz/videos?s=1&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;PeerTube kanále&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Příprava zařízení pro instalaci&#xA;    &lt;div id=&#34;příprava-zařízení-pro-instalaci&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#p%c5%99%c3%adprava-za%c5%99%c3%adzen%c3%ad-pro-instalaci&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&#xA;&lt;h4 class=&#34;relative group&#34;&gt;Stažení ISO a vytvoření BOOT USB disku&#xA;    &lt;div id=&#34;stažení-iso-a-vytvoření-boot-usb-disku&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#sta%c5%been%c3%ad-iso-a-vytvo%c5%99en%c3%ad-boot-usb-disku&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h4&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://arch-linux.cz/jak-stahnout/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Stažení ArchLinux ISO&lt;/a&gt;&lt;/strong&gt;, ve Win použít Rufus software (portable) na flash disk. V Linuxu použít &lt;code&gt;dd&lt;/code&gt; command.&lt;/p&gt;</description>
       
     </item>

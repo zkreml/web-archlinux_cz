@@ -11,60 +11,60 @@
     
     <item>
       <title>Informace o odstávce našeho serveru</title>
-      <link>http://localhost:1313/posts/informace-o-odstavce-naseho-serveru/</link>
+      <link>http://localhost:1313/informace-o-odst%C3%A1vce-na%C5%A1eho-serveru/</link>
       <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/informace-o-odstavce-naseho-serveru/</guid>
+      <guid>http://localhost:1313/informace-o-odst%C3%A1vce-na%C5%A1eho-serveru/</guid>
       <description>&lt;p&gt;Vážení uživatelé našeho serveru Arch Linuxu CZ, ve středu 10. května v 8:30 bude probíhat údržba našeho serveru. Oprava bude trvat přibližně 45 minut. Bohužel nebylo možné tuto údržbu oznámit dříve, proto se omlouváme za případné nepříjemnosti. Instance &lt;a href=&#34;https://mastodon.arch-linux.cz&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Mastodon&lt;/a&gt; se údržba netýká, je na jiném serveru.  Odstaveny budou všechny ostatní aplikace i tyto stránky.  Děkuji za pochopení.&#xA;Archos.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Pixelfed CZ</title>
-      <link>http://localhost:1313/posts/pixelfed-cz/</link>
+      <link>http://localhost:1313/pixelfed-cz/</link>
       <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/pixelfed-cz/</guid>
+      <guid>http://localhost:1313/pixelfed-cz/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://pixelfed.cz&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Pixelfed CZ&lt;/a&gt;  je náš další komunitní projekt, kde je možné se zdarma zaregistrovat a užívat sociální síť bez reklam a sledování.&lt;/p&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Co je Pixelfed&#xA;    &lt;div id=&#34;co-je-pixelfed&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#co-je-pixelfed&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;Pixelfed je sociální síť zaměřená na sdílení fotografií a videí, která se v poslední době stává velmi populární. Jeho uživatelské rozhraní je podobné Instagramu, ale s mnoha vylepšeními, které ho činí jedinečným.&lt;/p&gt;&#xA;&lt;p&gt;Pixelfed byl vytvořen jako open-source alternativa k Instagramu, která by umožnila uživatelům sdílet své fotografie a videa bez zásahu externích společností. Pixelfed byl vytvořen jako federovaná platforma, což znamená, že uživatelé mohou hostovat své vlastní instance Pixelfedu a připojit se k federaci, aby sdíleli své příspěvky s uživateli z jiných instancí. To znamená, že uživatelé mají větší kontrolu nad svými daty a mohou se vyhnout problémům s ochranou soukromí, které se mohou objevit na centralizovaných sociálních sítích.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Wiki Arch Linux CZ</title>
-      <link>http://localhost:1313/posts/wiki-arch-linux-cz/</link>
+      <link>http://localhost:1313/wiki-arch-linux-cz/</link>
       <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/wiki-arch-linux-cz/</guid>
+      <guid>http://localhost:1313/wiki-arch-linux-cz/</guid>
       <description>&lt;p&gt;Protože články s návody se zde časem mohou ztrácet a musí se hledat, rozhodl jsem se vyzkoušet nainstalovat na náš server &lt;a href=&#34;https://wiki.arch-linux.cz&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Wiki Arch LInux CZ&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Není to  úplně klasická Wiki, kterou používají ostatní distribuce, ale je tvořena formou knihovny, ve které jsou uloženy knihy s návody.&lt;/p&gt;&#xA;&lt;p&gt;Zatím to jsou začátky, ale budu se snažit postupně  návody nahrávat i na &lt;a href=&#34;https://wiki.arch-linux.cz&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Wiki &lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Kdyby někdo chtěl pomoc sepsat návod, nebo i jen krátký článek sem na naše stránky budu rád za jakoukoliv pomoc.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Nový diskuzní kanál Arch Linux Cz</title>
-      <link>http://localhost:1313/posts/novy-diskuzni-kanal-arch-linux-cz/</link>
+      <link>http://localhost:1313/nov%C3%BD-diskuzn%C3%AD-kan%C3%A1l-arch-linux-cz/</link>
       <pubDate>Thu, 26 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/novy-diskuzni-kanal-arch-linux-cz/</guid>
+      <guid>http://localhost:1313/nov%C3%BD-diskuzn%C3%AD-kan%C3%A1l-arch-linux-cz/</guid>
       <description>&lt;p&gt;V posledních dnech se na naši  instanci&lt;a href=&#34;https://mastodon.arch-linux.cz&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt; Mastodon&lt;/a&gt;, registrovalo několik nových uživatelů. Rozhodl jsem se vytvořit &lt;a href=&#34;https://matrix.to/#/%23Archlinux_Cz:archoslinux.cz&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;diskusní kanál&lt;/a&gt; na našem serveru &lt;a href=&#34;https://matrix.org/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Matrix&lt;/a&gt;.  Matrix je open source projekt, pro bezpečnou decentralizovanou komunikaci v reálném čase. Pro ty co nemají na Matrixu vytvořený uživatelský účet,  je zde možnost registrace na na našem &lt;a href=&#34;https://element.archoslinux.cz&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;serveru&lt;/a&gt;.  Samozřejmě je zde i  naše &lt;a href=&#34;https://forum.arch-linux.cz/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;diskuzní fórum &lt;/a&gt;, ale třeba někdo rád využije i jinou komunikaci a pomůžeme nám trochu oživit naší komunitu.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Neplatné podpisové klíče během aktualizace systému</title>
-      <link>http://localhost:1313/posts/neplatne-podpisove-klice-behem-aktualizace-systemu/</link>
+      <link>http://localhost:1313/neplatn%C3%A9-podpisov%C3%A9-kl%C3%AD%C4%8De-b%C4%9Bhem-aktualizace-syst%C3%A9mu/</link>
       <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/neplatne-podpisove-klice-behem-aktualizace-systemu/</guid>
+      <guid>http://localhost:1313/neplatn%C3%A9-podpisov%C3%A9-kl%C3%AD%C4%8De-b%C4%9Bhem-aktualizace-syst%C3%A9mu/</guid>
       <description>&lt;p&gt;V současné době existují některé podpisové klíče pro balíčky Arch, které jsou při aktualizaci detekovány jako neplatné (vypršela platnost, byly staženy atd.). To způsobí, že aktualizace systému pomocí Pacmana selže.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;error: &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;: signature from &amp;#34;Someone &amp;#34; is marginal trust&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;:: File /var/cache/pacman/pkg/_x86_64.pkg.tar.zst is corrupted (invalid or corrupted package (PGP signature)).&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Do you want to delete it? [Y/n]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&lt;p&gt;Je třeba nejprve aktualizovat podpisové klíče a potom systém.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -Sy archlinux-keys&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -Syu&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
       
     </item>
     
     <item>
       <title>Mastodon má oficiální aplikaci pro Android</title>
-      <link>http://localhost:1313/posts/mastodon-ma-oficialni-aplikaci-pro-android/</link>
+      <link>http://localhost:1313/mastodon-m%C3%A1-ofici%C3%A1ln%C3%AD-aplikaci-pro-android/</link>
       <pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/mastodon-ma-oficialni-aplikaci-pro-android/</guid>
+      <guid>http://localhost:1313/mastodon-m%C3%A1-ofici%C3%A1ln%C3%AD-aplikaci-pro-android/</guid>
       <description>&lt;p&gt;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;low&#34;&#xA;    alt=&#34;&#34;&#xA;    src=&#34;https://arch-linux.cz/wp-content/uploads/2022/04/external-content.duckduckgo.com_-2.jpg&#34;&#xA;    &gt;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Mastodon, populární alternativa k mikroblogovací platformě Twitter, má nyní oficiálně aplikaci pro &lt;a href=&#34;https://play.google.com/store/apps/details?id=org.joinmastodon.android&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Android&lt;/a&gt;. Aplikace pro &lt;a href=&#34;https://apps.apple.com/us/app/mastodon-for-iphone/id1571998974&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;iOS&lt;/a&gt; byla spuštěna  v červenci loňského roku.&lt;/p&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Co je Mastodon&#xA;    &lt;div id=&#34;co-je-mastodon&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#co-je-mastodon&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;**Mastodon **je decentralizovaná, open-source sociální síť s více než dvěma miliony uživatelů, pro zveřejňování krátkého textu o délce až 500 znaků.  Má &lt;a href=&#34;https://en.wikipedia.org/wiki/Microblogging&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;mikroblogovací &lt;/a&gt;funkce podobné jako &lt;a href=&#34;https://en.wikipedia.org/wiki/Twitter&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Twitter &lt;/a&gt;, které nabízí velké množství nezávisle provozovaných uzlů (známých jako „instance“), z nichž každá instance má svůj vlastní kodex chování , podmínky služby , možnosti ochrany osobních údajů a moderování .&lt;/p&gt;</description>
       
     </item>

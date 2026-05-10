@@ -11,10 +11,10 @@
     
     <item>
       <title>Neplatné podpisové klíče během aktualizace systému</title>
-      <link>http://localhost:1313/posts/neplatne-podpisove-klice-behem-aktualizace-systemu/</link>
+      <link>http://localhost:1313/neplatn%C3%A9-podpisov%C3%A9-kl%C3%AD%C4%8De-b%C4%9Bhem-aktualizace-syst%C3%A9mu/</link>
       <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/neplatne-podpisove-klice-behem-aktualizace-systemu/</guid>
+      <guid>http://localhost:1313/neplatn%C3%A9-podpisov%C3%A9-kl%C3%AD%C4%8De-b%C4%9Bhem-aktualizace-syst%C3%A9mu/</guid>
       <description>&lt;p&gt;V současné době existují některé podpisové klíče pro balíčky Arch, které jsou při aktualizaci detekovány jako neplatné (vypršela platnost, byly staženy atd.). To způsobí, že aktualizace systému pomocí Pacmana selže.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;error: &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;: signature from &amp;#34;Someone &amp;#34; is marginal trust&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;:: File /var/cache/pacman/pkg/_x86_64.pkg.tar.zst is corrupted (invalid or corrupted package (PGP signature)).&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Do you want to delete it? [Y/n]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&lt;p&gt;Je třeba nejprve aktualizovat podpisové klíče a potom systém.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -Sy archlinux-keys&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -Syu&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
       
     </item>

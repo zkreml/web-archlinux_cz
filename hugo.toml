@@ -129,3 +129,6 @@ theme = "blowfish"
   name = "Tagy"
   pageRef = "/tags"
   weight = 10
+
+[permalinks]
+  posts = "/:slug/"
