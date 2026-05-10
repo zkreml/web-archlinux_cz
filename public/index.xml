@@ -180,6 +180,16 @@
     </item>
     
     <item>
+      <title>Komunita</title>
+      <link>http://localhost:1313/komunita/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/komunita/</guid>
+      <description>&lt;p&gt;Připoj se k české komunitě Arch Linuxu na těchto platformách:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://arch-linux.cz/@arch&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Fediverse (GoToSocial)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://peertube.arch-linux.cz/c/videa_archlinuxcz/videos&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;PeerTube&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://pixelfed.cz&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Pixelfed CZ&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://matrix.to/#/%23archlinuxcz:matrix.org&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Matrix&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://forum.arch-linux.cz/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Fórum&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://discord.gg/sJYcCdENCT&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Discord&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://git.arch-linux.cz/ArchlinuxCz&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Gitea&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>Instalační program Arch Linuxu, Archinstall 2.7, nyní přidává podporu pro Unified Kernel Image.</title>
       <link>http://localhost:1313/posts/instalacni-program-arch-linuxu-archinstall-2-7-nyni-pridava-podporu-pro-unified-kernel-image/</link>
       <pubDate>Thu, 23 Nov 2023 00:00:00 +0000</pubDate>
@@ -676,16 +686,6 @@
       
       <guid>http://localhost:1313/co-je-arch-linux/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Arch Linux&lt;/strong&gt;  je nezávislá &lt;a href=&#34;https://cs.wikipedia.org/wiki/Linuxov%C3%A1_distribuce&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;linuxová distribuce&lt;/a&gt; vytvořená &lt;a href=&#34;https://cs.wikipedia.org/wiki/Judd_Vinet&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Juddem Vinetem&lt;/a&gt;, jenž se inspiroval distribucí CRUX Linux. Arch Linux je vyvíjen jako nenáročný, odlehčený a snadno přizpůsobitelný systém.&lt;/p&gt;&#xA;&lt;p&gt;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;low&#34;&#xA;    alt=&#34;&#34;&#xA;    src=&#34;https://arch-linux.cz/wp-content/uploads/2021/12/external-content.duckduckgo.com_-1.jpg&#34;&#xA;    &gt;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Vývoj začal již v roce 2001 a první verzi Archu vydal &lt;a href=&#34;https://cs.wikipedia.org/wiki/Judd_Vinet&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Judd Vinet&lt;/a&gt; v roce 2002. Ten také byl do roku 2007 hlavním vývojářem. Od roku 2007 je hlavním vývojářem Archu &lt;a href=&#34;https://www.Archlinux.org/people/developers/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Aaron Griffin&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Arch je od začátku svého vývoje až do dneška nezávisle vyvíjenou komunitní distribucí.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Komunita</title>
-      <link>http://localhost:1313/komunita/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/komunita/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://mastodon.arch-linux.cz/@archlinux&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Mastodon&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://peertube.arch-linux.cz/c/videa_archlinuxcz/videos&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;PeerTube&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://pixelfed.cz&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Pixelfed CZ&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://matrix.to/#/%23archlinuxcz:matrix.org&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Matrix&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://forum.arch-linux.cz/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Fórum&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://discord.gg/sJYcCdENCT&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Discord&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
       
     </item>
     
