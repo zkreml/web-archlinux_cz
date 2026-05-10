@@ -263,6 +263,10 @@
     <lastmod>2021-12-30T00:00:00+00:00</lastmod>
   </url>
   <url>
+    <loc>http://localhost:1313/o-arch-linuxu/</loc>
+    <lastmod>2021-12-11T00:00:00+00:00</lastmod>
+  </url>
+  <url>
     <loc>http://localhost:1313/jak-stahnout/</loc>
     <lastmod>2021-12-11T00:00:00+00:00</lastmod>
   </url>
@@ -273,9 +277,6 @@
   <url>
     <loc>http://localhost:1313/co-je-arch-linux/</loc>
     <lastmod>2021-12-11T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/o-arch-linuxu/</loc>
   </url>
   <url>
     <loc>http://localhost:1313/komunita/</loc>

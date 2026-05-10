@@ -19,7 +19,8 @@ theme = "blowfish"
         headline = "Česká komunita Arch Linuxu"
         bio = "Návody, novinky a podpora pro uživatele Arch Linuxu v češtině."
         links = [
-          { mastodon = "https://mastodon.arch-linux.cz/@archlinux" },
+          { fediverse = "https://gts.arch-linux.cz/@arch" },
+          { gitea = "https://git.arch-linux.cz/ArchlinuxCz" },
           { matrix = "https://matrix.to/#/#archlinuxcz:matrix.org" },
           { rss = "/index.xml" }
         ]
@@ -102,3 +103,19 @@ theme = "blowfish"
   name = "Podpořte nás"
   pageRef = "/podporte-nas"
   weight = 8
+
+[[params.socialIcons]]
+  name = "fediverse"
+  url = "https://gts.arch-linux.cz/@arch"
+
+[[params.socialIcons]]
+  name = "gitea"
+  url = "https://git.arch-linux.cz/ArchlinuxCz"
+
+[[params.socialIcons]]
+  name = "matrix"
+  url = "https://matrix.to/#/#archlinuxcz:matrix.org"
+
+[[params.socialIcons]]
+  name = "rss"
+  url = "/index.xml"
