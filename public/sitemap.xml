@@ -1,370 +1,289 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2026-04-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/archinstall/</loc>
-    <lastmod>2026-04-20T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/archinstall-4-2-novinky-v-instalatoru-arch-linuxu/</loc>
     <lastmod>2026-04-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-04-20T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/</loc>
     <lastmod>2026-04-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-04-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/zrp%C3%A1vy/</loc>
-    <lastmod>2026-04-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/arch-linux/</loc>
-    <lastmod>2026-03-26T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/arch-linux-zakladni-prikazy/</loc>
     <lastmod>2026-03-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/n%C3%A1vody/</loc>
-    <lastmod>2026-03-26T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/home/</loc>
     <lastmod>2025-11-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/archlinux/</loc>
-    <lastmod>2025-09-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/iso/</loc>
-    <lastmod>2025-09-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/novy-arch-linux-iso-s-kernelem-6-16/</loc>
     <lastmod>2025-09-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/ivpn-soukroma-vpn-sluzba-pro-arch-linux-a-android/</loc>
     <lastmod>2025-06-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/opensource/</loc>
-    <lastmod>2025-06-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/vpn/</loc>
-    <lastmod>2025-06-07T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/%f0%9f%8e%84-vesele-vanoce-a-stastny-novy-rok-od-komunity-arch-linux-cz-%f0%9f%8e%84/</loc>
     <lastmod>2024-12-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/komunita/</loc>
-    <lastmod>2024-12-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/rychl%C3%A9-zpr%C3%A1vy/</loc>
-    <lastmod>2024-12-24T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/xfce-4-20-nova-kapitola-pro-oblibene-desktopove-prostredi-v-arch-linuxu/</loc>
     <lastmod>2024-12-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/i3/</loc>
-    <lastmod>2024-12-06T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/navod-na-i3-pro-arch-linux/</loc>
     <lastmod>2024-12-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/aplikace/</loc>
-    <lastmod>2024-11-17T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/hedgedoc-na-oscloud/</loc>
     <lastmod>2024-11-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/cryptpad/</loc>
-    <lastmod>2024-10-27T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/cryptpad-bezpecna-a-soukroma-spoluprace-na-dokumentech/</loc>
     <lastmod>2024-10-27T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/co-je-pairdrop-a-jak-funguje-na-oscloud/</loc>
     <lastmod>2024-10-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/pairdrop/</loc>
-    <lastmod>2024-10-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/vaultwarden/</loc>
-    <lastmod>2024-10-13T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/878-2/</loc>
     <lastmod>2024-10-13T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/co-je-noveho-ve-verzi-mastodon-4-3-vylepseni-a-nove-funkce/</loc>
     <lastmod>2024-10-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/mastodon/</loc>
-    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/arch-linux-navazuje-primou-spolupraci-s-valve/</loc>
     <lastmod>2024-09-28T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/arch-linux-vydava-prvni-iso-s-jadrem-linux-6-10/</loc>
     <lastmod>2024-08-02T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/linkding-open-source-spravce-zalozek-pro-minimalisty/</loc>
     <lastmod>2024-05-12T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/nejnovejsi-vydani-arch-linux-iso-prinasi-jadro-linuxu-6-8-aktualizovany-instalacni-program/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/zpr%C3%A1vy/</loc>
-    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/instalacni-program-arch-linuxu-archinstall-2-7-nyni-pridava-podporu-pro-unified-kernel-image/</loc>
     <lastmod>2023-11-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/searxng/</loc>
-    <lastmod>2023-11-20T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/searxng-cz-vyhledavac-ktery-chrani-vase-soukromi/</loc>
     <lastmod>2023-11-20T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/dlazdicovy-terminal-tilix/</loc>
     <lastmod>2023-08-16T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/informace-o-odstavce-naseho-serveru/</loc>
     <lastmod>2023-05-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/na%C5%A1e-komunita/</loc>
-    <lastmod>2023-05-07T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/aur-repozitar-neni-docasne-k-dispozici/</loc>
     <lastmod>2023-05-05T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/privatebin/</loc>
     <lastmod>2023-04-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/aplikace-n%C3%A1vody/</loc>
-    <lastmod>2023-04-09T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/desktopovy-klient-pro-borg-backup-vorta/</loc>
     <lastmod>2023-04-09T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/vzdalene-zalohovani-pomoci-borg-backup/</loc>
     <lastmod>2023-04-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/backup/</loc>
-    <lastmod>2023-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/borg/</loc>
-    <lastmod>2023-04-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/jak-zalohovat-pomoci-borgbackup/</loc>
     <lastmod>2023-04-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/pixelfed-cz/</loc>
     <lastmod>2023-03-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/pass/</loc>
-    <lastmod>2023-02-10T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/unixovy-spravce-hesel-pass/</loc>
     <lastmod>2023-02-10T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/prvni-vydani-iso-arch-linuxu-v-roce-2023-je-venku/</loc>
     <lastmod>2023-01-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/wiki/</loc>
-    <lastmod>2023-01-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/wiki-arch-linux-cz/</loc>
     <lastmod>2023-01-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/pf-2023/</loc>
     <lastmod>2022-12-31T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/arch-linux-pruvodce-instalaci-zakladniho-sifrovani-celeho-disku/</loc>
     <lastmod>2022-12-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/btrfs/</loc>
-    <lastmod>2022-12-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/instalace/</loc>
-    <lastmod>2022-12-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/luks/</loc>
-    <lastmod>2022-12-06T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/archinstall-skript-pro-luks-a-btrfs-arch-linux-instalaci/</loc>
     <lastmod>2022-12-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/bitwarden/</loc>
-    <lastmod>2022-12-02T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/spravce-hesel-bitwarden/</loc>
     <lastmod>2022-12-02T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/zasady-ochrany-osobnich-udaju/</loc>
     <lastmod>2022-11-28T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/podporte-nas/</loc>
     <lastmod>2022-11-27T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/jak-povolit-dvoufaktorovou-autentizaci-na-mastodon/</loc>
     <lastmod>2022-11-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/mastodon/</loc>
-    <lastmod>2022-11-25T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/jak-opravit-poskozeny-soubor-historie-zsh/</loc>
     <lastmod>2022-11-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/zsh/</loc>
-    <lastmod>2022-11-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/cryfs/</loc>
-    <lastmod>2022-07-31T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/cryfs-sifrovani-suboru/</loc>
     <lastmod>2022-07-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/gnome/</loc>
-    <lastmod>2022-06-25T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/gnome-jednoduche-krasne-elegantni/</loc>
     <lastmod>2022-06-25T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/nova-verze-instalacniho-programu-arch-linux/</loc>
     <lastmod>2022-05-29T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/cryptpad-je-open-source-bezplatny-webovy-kancelarsky-system-zalozeny-na-spolupraci/</loc>
     <lastmod>2022-05-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/matrix/</loc>
-    <lastmod>2022-05-26T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/novy-diskuzni-kanal-arch-linux-cz/</loc>
     <lastmod>2022-05-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/openbox/</loc>
-    <lastmod>2022-05-21T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/openbox-velikostne-maly-rychly-window-manager-plne-v-souladu-s-icccm-a-ewmh/</loc>
     <lastmod>2022-05-21T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/neplatne-podpisove-klice-behem-aktualizace-systemu/</loc>
     <lastmod>2022-05-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/update/</loc>
-    <lastmod>2022-05-06T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/aktualizace-skriptu-archinstall/</loc>
     <lastmod>2022-04-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/kde/</loc>
-    <lastmod>2022-04-30T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/kde-plasma-pracovni-prostredi-nove-generace-pro-linux/</loc>
     <lastmod>2022-04-30T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/mastodon-ma-oficialni-aplikaci-pro-android/</loc>
     <lastmod>2022-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/awesomewm/</loc>
-    <lastmod>2022-04-23T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/awesomewm-ricing/</loc>
     <lastmod>2022-04-23T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/%ef%bf%bcawesomewm-basics/</loc>
     <lastmod>2022-04-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/awesome/</loc>
-    <lastmod>2022-04-17T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/command-line-shell/</loc>
     <lastmod>2022-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/shell/</loc>
-    <lastmod>2022-04-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/instalace-xfce/</loc>
     <lastmod>2022-03-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/xfce/</loc>
-    <lastmod>2022-03-18T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/20-let-arch-linuxu/</loc>
     <lastmod>2022-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/picom/</loc>
-    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/picom-compositor/</loc>
     <lastmod>2022-03-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/xorg/</loc>
-    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/calamares/</loc>
-    <lastmod>2022-03-03T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/forum-arch-linux-cz/</loc>
     <lastmod>2022-03-03T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/sifrovana-instalace-arch-linux-pomoci-calam-arch-installer/</loc>
     <lastmod>2022-03-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/aur/</loc>
-    <lastmod>2022-02-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/pacmam/</loc>
-    <lastmod>2022-02-19T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/pacman-a-aur-pomocnici/</loc>
     <lastmod>2022-02-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/grub2/</loc>
-    <lastmod>2022-02-11T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/quad-boot/</loc>
     <lastmod>2022-02-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/dwm/</loc>
-    <lastmod>2022-02-05T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/instalace-xorg-a-window-manageru-dwm/</loc>
     <lastmod>2022-02-05T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/jak-nainstalovat-aur-pomocnika-yay/</loc>
     <lastmod>2022-01-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/yay/</loc>
-    <lastmod>2022-01-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/virtualbox/</loc>
-    <lastmod>2022-01-16T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/virtualbox-arch-linux-nastaveni/</loc>
     <lastmod>2022-01-16T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/jak-na-virtualbox/</loc>
     <lastmod>2022-01-08T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/arch-linux-instalace/</loc>
     <lastmod>2021-12-30T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/jak-stahnout/</loc>
     <lastmod>2021-12-11T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/kontakt/</loc>
     <lastmod>2021-12-11T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/co-je-arch-linux/</loc>
     <lastmod>2021-12-11T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/o-arch-linuxu/</loc>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/komunita/</loc>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/navody/</loc>
-  </url><url>
+  </url>
+  <url>
     <loc>http://localhost:1313/zpravy/</loc>
   </url>
 </urlset>

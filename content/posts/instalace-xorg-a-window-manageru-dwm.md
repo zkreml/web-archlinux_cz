@@ -5,7 +5,6 @@ author: "archos"
 draft: false
 categories: ['Návody']
 tags: ['DWM']
-series: ['Arch Linux instalace']
 ---
 
 Další díl seriálu o Arch Linuxu od[ Tondy Fischera](https://github.com/raven2cz). Tento 4. díl pojednává o instalaci Xorg a dynamického tiling window manageru DWM. Provede Vás postupně základní instalací v OS Arch Linux a seznámí se základním ovládáním prostředí. Ve finále budete mít systém nachystán pro svou běžnou práci a budete se moci pustit do studia systému 

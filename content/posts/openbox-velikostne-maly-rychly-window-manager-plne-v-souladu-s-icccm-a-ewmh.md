@@ -5,7 +5,6 @@ author: "archos"
 draft: false
 categories: ['Návody']
 tags: ['openbox']
-series: ['Arch Linux instalace']
 ---
 
 ![](https://arch-linux.cz/wp-content/uploads/2022/05/openbox-screen-1024x576.jpg)

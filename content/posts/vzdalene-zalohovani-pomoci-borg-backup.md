@@ -4,7 +4,6 @@ date: 2023-04-08
 author: "archos"
 draft: false
 categories: ['Aplikace návody']
-series: ['Zálohování v Linuxu']
 ---
 
 V tomto návodu se budeme zaměřovat na vzdálené zálohování pomocí[ Borg Backup](https://www.borgbackup.org/) na Arch Linuxu.

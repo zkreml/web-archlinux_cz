@@ -4,7 +4,6 @@ date: 2023-04-09
 author: "archos"
 draft: false
 categories: ['Aplikace návody']
-series: ['Zálohování v Linuxu']
 ---
 
 ### Co je Vorta

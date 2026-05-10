@@ -5,7 +5,6 @@ author: "archos"
 draft: false
 categories: ['Návody']
 tags: ['Xfce']
-series: ['Arch Linux instalace']
 ---
 
 V osmém díle seriálu o instalaci [Arch Linuxu ](https://arch-linux.cz/series/arch-linux-instalace/) od [Tondy Fischera](https://github.com/raven2cz) se podíváme, jak instalovat a nastavit desktopové prostředí [Xfce](https://wiki.archlinux.org/title/Xfce_(%C4%8Ce%C5%A1tina)).

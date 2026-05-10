@@ -5,7 +5,6 @@ author: "archos"
 draft: false
 categories: ['Návody']
 tags: ['xorg', 'picom']
-series: ['Arch Linux instalace']
 ---
 
 V dalším díle seriálu [Tondy Fischera](https://github.com/raven2cz) si nainstalujeme [kompozitor Picom](https://wiki.archlinux.org/title/Picom). Provedeme jeho základní konfiguraci a spouštění. Soustředíme se na praktickou stránku tohoto nástroje a rovněž historii projektu a správnou funkcionalitu.

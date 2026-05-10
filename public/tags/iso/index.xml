@@ -1,58 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Arch Linux CZ</title>
+    <title>Iso on Arch Linux CZ</title>
     <link>http://localhost:1313/tags/iso/</link>
-    <description>Česká komunita Arch Linuxu</description>
+    <description>Recent content in Iso on Arch Linux CZ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
-    <webMaster>archos@arch-linux.cz (archos)</webMaster>
-    
-    <lastBuildDate>Mon, 01 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/iso/" rel="self" type="application/rss+xml" />
+    <language>cs</language>
+    <copyright>© 2026 Arch Linux CZ</copyright>
+    <lastBuildDate>Mon, 01 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/iso/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Nový Arch Linux ISO s kernelem 6.16</title>
       <link>http://localhost:1313/posts/novy-arch-linux-iso-s-kernelem-6-16/</link>
       <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/novy-arch-linux-iso-s-kernelem-6-16/</guid>
-      <description>&lt;h1 id=&#34;nový-arch-linux-iso-s-kernelem-616&#34;&gt;Nový Arch Linux ISO s kernelem 6.16&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;1. září 2025&lt;/strong&gt; - Je tu nový Arch Linux ISO snapshot pro září 2025, první který běží na &lt;strong&gt;Linux kernelu 6.16&lt;/strong&gt;. Hlavní novinky:&lt;/p&gt;
-&lt;h2 id=&#34;co-je-nového&#34;&gt;Co je nového&lt;/h2&gt;
-&lt;h3 id=&#34;linux-kernel-616&#34;&gt;Linux Kernel 6.16&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Lepší detekce hardware, zejména na novějších zařízeních&lt;/li&gt;
-&lt;li&gt;Vylepšená podpora i pro starší komponenty, kde předchozí ISO selhávala&lt;/li&gt;
-&lt;li&gt;Obecně stabilnější základ systému&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;archinstall-309&#34;&gt;Archinstall 3.0.9&lt;/h3&gt;
-&lt;p&gt;Nová verze instalátoru přináší několik užitečných funkcí:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;LUKS iteration time&lt;/strong&gt; - možnost změnit čas iterací pro šifrování&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;U2F autentifikace&lt;/strong&gt; - podpora pro hardware klíče&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Bluetooth během instalace&lt;/strong&gt; - nastavení BT spojení přímo v instalátoru&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;--skip-boot&lt;/code&gt; parametr&lt;/strong&gt; - přeskočení instalace bootloaderu&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Lepší COSMIC podpora&lt;/strong&gt; - vylepšená integrace nového DE&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Btrfs + GRUB combo&lt;/strong&gt; - automatická instalace &lt;code&gt;inotify-tools&lt;/code&gt; a &lt;code&gt;grub-btrfs&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;pro-koho-je-určený&#34;&gt;Pro koho je určený&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Nové instalace&lt;/strong&gt; - pokud chystáš čistou instalaci&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rescue situace&lt;/strong&gt; - pro opravy systému&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Hardware testing&lt;/strong&gt; - nový kernel může rozchodit problémové komponenty&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Existující Arch systémy aktualizuješ klasicky:&lt;/p&gt;</description>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;Nový Arch Linux ISO s kernelem 6.16&#xA;    &lt;div id=&#34;nový-arch-linux-iso-s-kernelem-616&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#nov%c3%bd-arch-linux-iso-s-kernelem-616&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;1. září 2025&lt;/strong&gt; - Je tu nový Arch Linux ISO snapshot pro září 2025, první který běží na &lt;strong&gt;Linux kernelu 6.16&lt;/strong&gt;. Hlavní novinky:&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Co je nového&#xA;    &lt;div id=&#34;co-je-nového&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#co-je-nov%c3%a9ho&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Linux Kernel 6.16&#xA;    &lt;div id=&#34;linux-kernel-616&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#linux-kernel-616&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lepší detekce hardware, zejména na novějších zařízeních&lt;/li&gt;&#xA;&lt;li&gt;Vylepšená podpora i pro starší komponenty, kde předchozí ISO selhávala&lt;/li&gt;&#xA;&lt;li&gt;Obecně stabilnější základ systému&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Archinstall 3.0.9&#xA;    &lt;div id=&#34;archinstall-309&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#archinstall-309&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;Nová verze instalátoru přináší několik užitečných funkcí:&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>První vydání ISO Arch Linuxu v roce 2023 je venku</title>
       <link>http://localhost:1313/posts/prvni-vydani-iso-arch-linuxu-v-roce-2023-je-venku/</link>
       <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/prvni-vydani-iso-arch-linuxu-v-roce-2023-je-venku/</guid>
-      <description>&lt;p&gt;Arch Linux je první distribucí GNU/Linux, která zahájila rok 2023 novým vydáním ISO zaměřeným na ty, kteří chtějí nasadit Arch Linux na nové počítače, opravit stávající, nebo jen přeinstalovat své systémy.&lt;/p&gt;
-&lt;p&gt;Arch Linux 2023.01.01 není jen první vydání ISO Arch Linuxu v roce 2023, ale je to také první vydání ISO Arch Linuxu založené na nejnovější a nejlepší &lt;strong&gt;&lt;a href=&#34;https://9to5linux.com/linux-kernel-6-1-lts-released-with-initial-support-for-the-rust-programming-language&#34;&gt;linuxového jádra 6.1&lt;/a&gt;&lt;/strong&gt; sérii . To znamená, že při zavádění nového Arch Linux ISO na některých počítačích získáváte lepší hardwarovou podporu.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Arch Linux je první distribucí GNU/Linux, která zahájila rok 2023 novým vydáním ISO zaměřeným na ty, kteří chtějí nasadit Arch Linux na nové počítače, opravit stávající, nebo jen přeinstalovat své systémy.&lt;/p&gt;&#xA;&lt;p&gt;Arch Linux 2023.01.01 není jen první vydání ISO Arch Linuxu v roce 2023, ale je to také první vydání ISO Arch Linuxu založené na nejnovější a nejlepší &lt;strong&gt;&lt;a href=&#34;https://9to5linux.com/linux-kernel-6-1-lts-released-with-initial-support-for-the-rust-programming-language&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;linuxového jádra 6.1&lt;/a&gt;&lt;/strong&gt; sérii . To znamená, že při zavádění nového Arch Linux ISO na některých počítačích získáváte lepší hardwarovou podporu.&lt;/p&gt;</description>
+      
     </item>
     
   </channel>

@@ -5,7 +5,6 @@ author: "archos"
 draft: false
 categories: ['Návody']
 tags: ['virtualbox']
-series: ['Arch Linux instalace']
 ---
 
 Další díl od [raven2cz](https://github.com/raven2cz)  pojednává o nastavení konzolového rozlišení a fontu. Dále pak nastavení Virtualbox Services pro dynamickou změnu rozlišení, sdílenou schránku a sdílení souborové složky. Doplňuje některé důležité body z minulého dílu. Po tomto díle budete mít Virtualbox Arch Image zcela připraven pro všechny ostatní další práce s Arch Linuxem.

@@ -1,70 +1,62 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Arch Linux CZ</title>
+    <title>Rychlé Zprávy on Arch Linux CZ</title>
     <link>http://localhost:1313/categories/rychl%C3%A9-zpr%C3%A1vy/</link>
-    <description>Česká komunita Arch Linuxu</description>
+    <description>Recent content in Rychlé Zprávy on Arch Linux CZ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
-    <webMaster>archos@arch-linux.cz (archos)</webMaster>
-    
-    <lastBuildDate>Tue, 24 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/rychl%C3%A9-zpr%C3%A1vy/" rel="self" type="application/rss+xml" />
+    <language>cs</language>
+    <copyright>© 2026 Arch Linux CZ</copyright>
+    <lastBuildDate>Tue, 24 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/rychl%C3%A9-zpr%C3%A1vy/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>🎄 Veselé Vánoce a šťastný nový rok od komunity Arch Linux CZ! 🎄</title>
       <link>http://localhost:1313/posts/%f0%9f%8e%84-vesele-vanoce-a-stastny-novy-rok-od-komunity-arch-linux-cz-%f0%9f%8e%84/</link>
       <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/%f0%9f%8e%84-vesele-vanoce-a-stastny-novy-rok-od-komunity-arch-linux-cz-%f0%9f%8e%84/</guid>
-      <description>&lt;h2 id=&#34;-veselé-vánoce-od-arch-linux-cz-&#34;&gt;🎄 Veselé Vánoce od Arch Linux CZ 🎄&lt;/h2&gt;
-&lt;p&gt;Milí uživatelé, přátelé a příznivci Arch Linuxu,&lt;/p&gt;
-&lt;p&gt;rádi bychom vám poděkovali za vaši podporu a zapojení během celého roku 2024.&lt;/p&gt;
-&lt;p&gt;Přejeme vám klidné a radostné svátky, plné pohody, odpočinku a dobré nálady.&lt;/p&gt;
-&lt;p&gt;Do roku 2025 vám přejeme nejen stabilní systémy, rychlé aktualizace a úspěšné kompilace, ale také mnoho osobních úspěchů a radosti.&lt;/p&gt;
-&lt;p&gt;Děkujeme, že jste součástí naší komunity.&lt;/p&gt;
-&lt;p&gt;S pozdravem,&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;váš tým Arch Linux CZ&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;🎄 Veselé Vánoce od Arch Linux CZ 🎄&#xA;    &lt;div id=&#34;-veselé-vánoce-od-arch-linux-cz-&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#-vesel%c3%a9-v%c3%a1noce-od-arch-linux-cz-&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Milí uživatelé, přátelé a příznivci Arch Linuxu,&lt;/p&gt;&#xA;&lt;p&gt;rádi bychom vám poděkovali za vaši podporu a zapojení během celého roku 2024.&lt;/p&gt;&#xA;&lt;p&gt;Přejeme vám klidné a radostné svátky, plné pohody, odpočinku a dobré nálady.&lt;/p&gt;&#xA;&lt;p&gt;Do roku 2025 vám přejeme nejen stabilní systémy, rychlé aktualizace a úspěšné kompilace, ale také mnoho osobních úspěchů a radosti.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Arch Linux navazuje přímou spolupráci s Valve</title>
       <link>http://localhost:1313/posts/arch-linux-navazuje-primou-spolupraci-s-valve/</link>
       <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/arch-linux-navazuje-primou-spolupraci-s-valve/</guid>
-      <description>&lt;p&gt;Levente Polyak zveřejnil na webu &lt;a href=&#34;https://lists.archlinux.org/archives/list/arch-dev-public@lists.archlinux.org/thread/RIZSKIBDSLY4S5J2E2STNP5DH4XZGJMR/&#34;&gt;Arch Linuxu&lt;/a&gt; informaci o tom, že Arch Linux vstupuje do přímé spolupráce s Valve. Valve velkoryse podporuje dva klíčové projekty, které budou mít obrovský dopad na naši distribuci: infrastrukturu pro build službu a zabezpečenou podepisovací enklávu. Díky podpoře těchto projektů formou freelance práce nám Valve umožňuje se na nich soustředit, aniž by nás omezoval nedostatek volného času našich dobrovolníků.&lt;/p&gt;
-&lt;p&gt;Tato příležitost nám umožňuje řešit některé z největších výzev, kterým jsme čelili již delší dobu. Spolupráce urychlí pokrok, který by jinak trval mnohem déle, a konečně nám umožní pokračovat v některých plánovaných projektech. Jsme nesmírně vděční společnosti Valve za tuto příležitost a za jejich výslovný závazek pomoci a podpořit Arch Linux.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Levente Polyak zveřejnil na webu &lt;a href=&#34;https://lists.archlinux.org/archives/list/arch-dev-public@lists.archlinux.org/thread/RIZSKIBDSLY4S5J2E2STNP5DH4XZGJMR/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Arch Linuxu&lt;/a&gt; informaci o tom, že Arch Linux vstupuje do přímé spolupráce s Valve. Valve velkoryse podporuje dva klíčové projekty, které budou mít obrovský dopad na naši distribuci: infrastrukturu pro build službu a zabezpečenou podepisovací enklávu. Díky podpoře těchto projektů formou freelance práce nám Valve umožňuje se na nich soustředit, aniž by nás omezoval nedostatek volného času našich dobrovolníků.&lt;/p&gt;&#xA;&lt;p&gt;Tato příležitost nám umožňuje řešit některé z největších výzev, kterým jsme čelili již delší dobu. Spolupráce urychlí pokrok, který by jinak trval mnohem déle, a konečně nám umožní pokračovat v některých plánovaných projektech. Jsme nesmírně vděční společnosti Valve za tuto příležitost a za jejich výslovný závazek pomoci a podpořit Arch Linux.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Arch Linux vydává první ISO s jádrem Linux 6.10</title>
       <link>http://localhost:1313/posts/arch-linux-vydava-prvni-iso-s-jadrem-linux-6-10/</link>
       <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/arch-linux-vydava-prvni-iso-s-jadrem-linux-6-10/</guid>
-      <description>&lt;p&gt;Arch Linux oznámil vydání prvního ISO obrazu pro rok 2024, který je poháněn jádrem Linux 6.10. Tato aktualizace přináší vylepšenou podporu pro nejnovější hardware a opravy chyb v instalační aplikaci archinstall. Nové ISO obsahuje verzi archinstall 2.5.2, která opravuje chyby u NVMe disků a locale nastavení. Pro nové instalace nebo reinstalace doporučujeme stáhnout tuto verzi ISO. Stávající uživatelé mohou své systémy aktualizovat příkazem.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -Syu
-&lt;/code&gt;&lt;/pre&gt;</description>
+      <description>&lt;p&gt;Arch Linux oznámil vydání prvního ISO obrazu pro rok 2024, který je poháněn jádrem Linux 6.10. Tato aktualizace přináší vylepšenou podporu pro nejnovější hardware a opravy chyb v instalační aplikaci archinstall. Nové ISO obsahuje verzi archinstall 2.5.2, která opravuje chyby u NVMe disků a locale nastavení. Pro nové instalace nebo reinstalace doporučujeme stáhnout tuto verzi ISO. Stávající uživatelé mohou své systémy aktualizovat příkazem.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -Syu&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      
     </item>
     
     <item>
       <title>Nejnovější vydání Arch Linux ISO přináší jádro Linuxu 6.8, aktualizovaný instalační program</title>
       <link>http://localhost:1313/posts/nejnovejsi-vydani-arch-linux-iso-prinasi-jadro-linuxu-6-8-aktualizovany-instalacni-program/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/nejnovejsi-vydani-arch-linux-iso-prinasi-jadro-linuxu-6-8-aktualizovany-instalacni-program/</guid>
-      <description>&lt;p&gt;Arch Linux představil novou ISO verzi s Linux jádrem 6.8 a vylepšeným instalačním procesem. Tato aktualizace byla zrychlena kvůli bezpečnostním obavám s balíčkem XZ Utils. Nové jádro nabízí lepší podporu pro nový hardware a instalátor archinstall, nyní ve verzi 2.7.2, zlepšuje práci se sjednocenými obrazy jádra a prostředím KDE Plasma. ISO je ke stažení na &lt;a href=&#34;https://archlinux.org/download/&#34;&gt;oficiálních stránkách&lt;/a&gt; a stávající uživatelé mohou aktualizovat systém příkazem.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -Syu
-&lt;/code&gt;&lt;/pre&gt;</description>
+      <description>&lt;p&gt;Arch Linux představil novou ISO verzi s Linux jádrem 6.8 a vylepšeným instalačním procesem. Tato aktualizace byla zrychlena kvůli bezpečnostním obavám s balíčkem XZ Utils. Nové jádro nabízí lepší podporu pro nový hardware a instalátor archinstall, nyní ve verzi 2.7.2, zlepšuje práci se sjednocenými obrazy jádra a prostředím KDE Plasma. ISO je ke stažení na &lt;a href=&#34;https://archlinux.org/download/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;oficiálních stránkách&lt;/a&gt; a stávající uživatelé mohou aktualizovat systém příkazem.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -Syu&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      
     </item>
     
     <item>
       <title>Instalační program Arch Linuxu, Archinstall 2.7, nyní přidává podporu pro Unified Kernel Image.</title>
       <link>http://localhost:1313/posts/instalacni-program-arch-linuxu-archinstall-2-7-nyni-pridava-podporu-pro-unified-kernel-image/</link>
       <pubDate>Thu, 23 Nov 2023 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/instalacni-program-arch-linuxu-archinstall-2-7-nyni-pridava-podporu-pro-unified-kernel-image/</guid>
-      <description>&lt;p&gt;Toto vydání rovněž zavádí funkci kontroly nových verzí archinstallu při spouštění instalačního programu Arch Linuxu.&lt;/p&gt;
-&lt;p&gt;Instalační program Arch Linuxu, archinstall, založený na menu, byl dnes aktualizován na verzi 2.7. Jedná se o hlavní vydání, které přináší řadu nových funkcí a opravuje mnoho chyb.&lt;/p&gt;
-&lt;p&gt;Archinstall 2.7 uvádí dvě důležité novinky: podporu pro Unified Kernel Image (UKI), což je jediný spustitelný soubor, který lze spouštět přímo z UEFI firmwaru, a možnost kontrolovat nové verze archinstallu při spouštění instalačního programu Arch Linuxu.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Toto vydání rovněž zavádí funkci kontroly nových verzí archinstallu při spouštění instalačního programu Arch Linuxu.&lt;/p&gt;&#xA;&lt;p&gt;Instalační program Arch Linuxu, archinstall, založený na menu, byl dnes aktualizován na verzi 2.7. Jedná se o hlavní vydání, které přináší řadu nových funkcí a opravuje mnoho chyb.&lt;/p&gt;&#xA;&lt;p&gt;Archinstall 2.7 uvádí dvě důležité novinky: podporu pro Unified Kernel Image (UKI), což je jediný spustitelný soubor, který lze spouštět přímo z UEFI firmwaru, a možnost kontrolovat nové verze archinstallu při spouštění instalačního programu Arch Linuxu.&lt;/p&gt;</description>
+      
     </item>
     
   </channel>

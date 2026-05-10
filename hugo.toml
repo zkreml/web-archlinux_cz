@@ -1,42 +1,67 @@
 baseURL = "https://arch-linux.cz/"
-languageCode = "cs"
-title = "Arch Linux CZ"
-theme = "hugo-blog-awesome"
-paginate = 10
+defaultContentLanguage = "cs"
+theme = "blowfish"
+
+# Blowfish defaultně načítá další configy
+[languages]
+  [languages.cs]
+    languageName = "Čeština"
+    languageCode = "cs"
+    weight = 1
+    title = "Arch Linux CZ"
+
+    [languages.cs.params]
+      logo = "img/logo.png"
+      description = "Česká komunita Arch Linuxu"
+
+      [languages.cs.params.author]
+        name = "Arch Linux CZ"
+        headline = "Česká komunita Arch Linuxu"
+        bio = "Návody, novinky a podpora pro uživatele Arch Linuxu v češtině."
+        links = [
+          { mastodon = "https://mastodon.arch-linux.cz/@archlinux" },
+          { matrix = "https://matrix.to/#/#archlinuxcz:matrix.org" },
+          { rss = "/index.xml" }
+        ]
 
 [params]
-  siteName = "Arch Linux CZ"
-  description = "Česká komunita Arch Linuxu"
+  colorScheme = "blowfish"
+  defaultAppearance = "dark"
+  autoSwitchAppearance = true
+  enableSearch = true
+  enableCodeCopy = true
   mainSections = ["posts"]
-  showReadingTime = true
-  showToc = true
-  goToTop = true
+  showAppearanceSwitcher = true
+  showScrollToTop = true
 
-  [params.author]
-    name = "archos"
-    email = "archos@arch-linux.cz"
-    avatar = "logo.png"
-    intro = "Arch Linux CZ"
-    description = "Návody, novinky a podpora pro uživatele Arch Linuxu v češtině."
+  [params.homepage]
+    layout = "background"
+    homepageImage = ""
+    showRecent = true
+    showRecentItems = 5
+    showMoreLink = true
+
+  [params.article]
+    showDate = true
+    showAuthor = true
+    showReadingTime = true
+    showTaxonomies = true
+    showTableOfContents = true
+    showPagination = true
+    showComments = false
+
+  [params.list]
+    showHero = false
+    showBreadcrumbs = true
+    showSummary = true
+    showTableOfContents = false
+    showCards = true
+    groupByYear = false
+    paginationWidth = 1
 
   [params.footer]
-    copyright = "© 2024–2026 Arch Linux CZ"
-
-  [params.logo]
-    img = "/logo.png"
-    alt = "Arch Linux CZ"
-
-[[params.socialIcons]]
-  name = "mastodon"
-  url = "https://mastodon.arch-linux.cz/@archlinux"
-
-[[params.socialIcons]]
-  name = "matrix"
-  url = "https://matrix.to/#/#archlinuxcz:matrix.org"
-
-[[params.socialIcons]]
-  name = "rss"
-  url = "/index.xml"
+    showCopyright = true
+    showThemeAttribution = true
 
 [[menu.main]]
   name = "Domů"

@@ -1,83 +1,70 @@
-<!DOCTYPE html>
-<html lang="cs"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="content-type" content="text/html">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html
+  lang="cs"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="cs">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
 
-<title itemprop="name">Arch Linux průvodce instalací základního šifrování celého disku | Arch Linux CZ</title>
-<meta property="og:title" content="Arch Linux průvodce instalací základního šifrování celého disku | Arch Linux CZ" />
-<meta name="twitter:title" content="Arch Linux průvodce instalací základního šifrování celého disku | Arch Linux CZ" />
-<meta itemprop="name" content="Arch Linux průvodce instalací základního šifrování celého disku | Arch Linux CZ" />
-<meta name="application-name" content="Arch Linux průvodce instalací základního šifrování celého disku | Arch Linux CZ" />
-<meta property="og:site_name" content="Arch Linux CZ" />
+  
+  
+    <title>Arch Linux průvodce instalací základního šifrování celého disku &middot; Arch Linux CZ</title>
+    <meta name="title" content="Arch Linux průvodce instalací základního šifrování celého disku &middot; Arch Linux CZ">
+  
 
-<meta name="description" content="Česká komunita Arch Linuxu">
-<meta itemprop="description" content="Česká komunita Arch Linuxu" />
-<meta property="og:description" content="Česká komunita Arch Linuxu" />
-<meta name="twitter:description" content="Česká komunita Arch Linuxu" />
+  
+  
+    <meta name="description" content="Česká komunita Arch Linuxu">
+  
+  
+    <meta name="keywords" content="instalace,btrfs,luks,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/arch-linux-pruvodce-instalaci-zakladniho-sifrovani-celeho-disku/">
+  
+  
 
-<meta property="og:locale" content="cs" />
-<meta name="language" content="cs" />
-
-  <link rel="alternate" hreflang="en" href="http://localhost:1313/posts/arch-linux-pruvodce-instalaci-zakladniho-sifrovani-celeho-disku/" title="" />
-
-
-
-
-
+  
+  
+    <meta name="author" content="Arch Linux CZ">
+  
+  
     
+      
+        
+          <link href="https://mastodon.arch-linux.cz/@archlinux" rel="me">
+        
+      
     
+      
+        
+          <link href="https://matrix.to/#/#archlinuxcz:matrix.org" rel="me">
+        
+      
     
-
-    <meta property="og:type" content="article" />
-    <meta property="og:article:published_time" content=2022-12-06T00:00:00Z />
-    <meta property="article:published_time" content=2022-12-06T00:00:00Z />
-    <meta property="og:url" content="http://localhost:1313/posts/arch-linux-pruvodce-instalaci-zakladniho-sifrovani-celeho-disku/" />
-
+      
+        
+          <link href="/index.xml" rel="me">
+        
+      
     
-    <meta property="og:article:author" content="archos" />
-    <meta property="article:author" content="archos" />
-    <meta name="author" content="archos" />
-    
-    
+  
 
-    
-
-    <script defer type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "Article",
-        "headline": "Arch Linux průvodce instalací základního šifrování celého disku",
-        "author": {
-        "@type": "Person",
-        "name": ""
-        },
-        "datePublished": "2022-12-06",
-        "description": "",
-        "wordCount":  2149 ,
-        "mainEntityOfPage": "True",
-        "dateModified": "2022-12-06",
-        "image": {
-        "@type": "imageObject",
-        "url": ""
-        },
-        "publisher": {
-        "@type": "Organization",
-        "name": "Arch Linux CZ"
-        }
-    }
-    </script>
-
-
-<meta name="generator" content="Hugo 0.161.1">
-
-    
-    <meta property="og:url" content="http://localhost:1313/posts/arch-linux-pruvodce-instalaci-zakladniho-sifrovani-celeho-disku/">
+  
+  <meta property="og:url" content="http://localhost:1313/posts/arch-linux-pruvodce-instalaci-zakladniho-sifrovani-celeho-disku/">
   <meta property="og:site_name" content="Arch Linux CZ">
   <meta property="og:title" content="Arch Linux průvodce instalací základního šifrování celého disku">
   <meta property="og:description" content="Tato příručka obsahuje pokyny pro instalaci Arch Linuxu se šifrováním celého disku pomocí BTRFS na LUKS a šifrovaným spouštěcím oddílem (GRUB) pro systémy UEFI.
 Po hlavní instalaci následují další pokyny, jak se bránit útokům Evil Maid prostřednictvím vlastní registrace klíče UEFI Secure Boot, jádra a bootloaderu s vlastním podpisem.
-Předmluva Většinu těchto informací najdete na Arch Wiki a dalších zdrojů na ně odkazovaných v dolní části článku.
-Poznámka: Návod popisuje instalaci na moderní NVMe SSD disk. Pokud používáte jiný typ disků, proveďte všude v návodu substituci /dev/nvme0nX na /dev/sdX, popř. jiný typ zařízení podle potřeby. Video návod používá /dev/sdX, který je standardním nastavením ve Virtualboxu.">
+Předmluva # Většinu těchto informací najdete na Arch Wiki a dalších zdrojů na ně odkazovaných v dolní části článku.">
   <meta property="og:locale" content="cs">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -87,590 +74,2520 @@ Poznámka: Návod popisuje instalaci na moderní NVMe SSD disk. Pokud používá
     <meta property="article:tag" content="Btrfs">
     <meta property="article:tag" content="Luks">
 
-
-    
-    
+  
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Arch Linux průvodce instalací základního šifrování celého disku">
   <meta name="twitter:description" content="Tato příručka obsahuje pokyny pro instalaci Arch Linuxu se šifrováním celého disku pomocí BTRFS na LUKS a šifrovaným spouštěcím oddílem (GRUB) pro systémy UEFI.
 Po hlavní instalaci následují další pokyny, jak se bránit útokům Evil Maid prostřednictvím vlastní registrace klíče UEFI Secure Boot, jádra a bootloaderu s vlastním podpisem.
-Předmluva Většinu těchto informací najdete na Arch Wiki a dalších zdrojů na ně odkazovaných v dolní části článku.
-Poznámka: Návod popisuje instalaci na moderní NVMe SSD disk. Pokud používáte jiný typ disků, proveďte všude v návodu substituci /dev/nvme0nX na /dev/sdX, popř. jiný typ zařízení podle potřeby. Video návod používá /dev/sdX, který je standardním nastavením ve Virtualboxu.">
+Předmluva # Většinu těchto informací najdete na Arch Wiki a dalších zdrojů na ně odkazovaných v dolní části článku.">
 
-
+  
+  
+  
+  
     
-
-    <link rel="canonical" href="http://localhost:1313/posts/arch-linux-pruvodce-instalaci-zakladniho-sifrovani-celeho-disku/">
-    <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
-    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
-
+      
     
-    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
-    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
-    <link rel="shortcut icon" href="/favicon.ico">
-
-
-
-
-<link rel="manifest" href="http://localhost:1313/site.webmanifest">
-
-<meta name="msapplication-config" content="/browserconfig.xml">
-<meta name="msapplication-TileColor" content="#2d89ef">
-<meta name="theme-color" content="#434648">
-    <meta name="color-scheme" content="light dark">
-
+  
     
-    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
 
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
     
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.07a8088c33086a4f22f8c0e9b9dd8b3d24774753ce35a341034d6f7c1e249b72e184af812c1341e6a62df443da9e4bb28feddf7f5c6f07b24a20a900ef559483.css"
+    integrity="sha512-B6gIjDMIak8i&#43;MDpud2LPSR3R1PONaNBA01vfB4km3LhhK&#43;BLBNB5qYt9EPankuyj&#43;3ff1xvB7JKIKkA71WUgw==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
     
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.4c6b36324987fc05dd8cd58437946294b6f2e315675cef16098738373ac2a0fe600416b00e13a1a8687c872f82868f7a0ece1e4ae0b9ea6ead63721f5e8b6748.js"
+      integrity="sha512-TGs2MkmH/AXdjNWEN5RilLby4xVnXO8WCYc4NzrCoP5gBBawDhOhqGh8hy&#43;Cho96Ds4eSuC56m6tY3IfXotnSA=="
+      data-copy="Kopírovat"
+      data-copied="Zkopírováno"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Arch Linux průvodce instalací základního šifrování celého disku",
+    "headline": "Arch Linux průvodce instalací základního šifrování celého disku",
+    
+    "inLanguage": "cs",
+    "url" : "http://localhost:1313/posts/arch-linux-pruvodce-instalaci-zakladniho-sifrovani-celeho-disku/",
+    "author" : {
+      "@type": "Person",
+      "name": "Arch Linux CZ"
+    },
+    "copyrightYear": "2022",
+    "dateCreated": "2022-12-06T00:00:00\u002b00:00",
+    "datePublished": "2022-12-06T00:00:00\u002b00:00",
+    
+    "dateModified": "2022-12-06T00:00:00\u002b00:00",
+    
+    "keywords": ["instalace","btrfs","luks"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2251"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
 </head>
-<body data-theme = "" class="notransition">
 
-<script src="/js/theme.js"></script>
 
-<div class="navbar" role="navigation">
-    <nav class="menu" aria-label="Main Navigation">
-        <a href="http://localhost:1313/" class="logo">
-            <img src="/logo.png" alt="Arch Linux CZ" height="50">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Přeskočit na hlavní obsah
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+    
+    
+      <div>
+        <a href="/" class="flex">
+          <span class="sr-only">Arch Linux CZ</span>
+          
+            <img
+              src="/img/logo.png"
+              width="32"
+              height="32"
+              class="logo max-h-20 max-w-20 object-scale-down object-left nozoom"
+              alt="">
+          
         </a>
-        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
-        <label for="menu-trigger">
-            <span class="menu-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
-            </span>
-        </label>
+      </div>
+    
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Arch Linux CZ
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Domů"
+      title="Arch Linux CZ">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Domů
+        </span>
+      
+    </a>
+  
 
-        <div class="trigger">
-            <ul class="trigger-container">
-                
-                
-                <li>
-                    <a class="menu-link " href="/">
-                        Domů
-                    </a>
-                    
-                </li>
-                
-                <li>
-                    <a class="menu-link " href="/categories/n%C3%A1vody/">
-                        Návody
-                    </a>
-                    
-                </li>
-                
-                <li>
-                    <a class="menu-link " href="/categories/zrp%C3%A1vy/">
-                        Zprávy
-                    </a>
-                    
-                </li>
-                
-                <li>
-                    <a class="menu-link " href="/o-arch-linuxu/">
-                        O Arch Linuxu
-                    </a>
-                    
-                </li>
-                
-                <li>
-                    <a class="menu-link " href="https://wiki.arch-linux.cz/shelves/arch-linux-cz">
-                        Wiki
-                    </a>
-                    
-                </li>
-                
-                <li>
-                    <a class="menu-link " href="https://forum.arch-linux.cz/">
-                        Fórum
-                    </a>
-                    
-                </li>
-                
-                <li>
-                    <a class="menu-link " href="/komunita/">
-                        Komunita
-                    </a>
-                    
-                </li>
-                
-                <li>
-                    <a class="menu-link " href="/podporte-nas/">
-                        Podpořte nás
-                    </a>
-                    
-                </li>
-                
-                <li class="menu-separator">
-                    <span>|</span>
-                </li>
-                
-                
-            </ul>
-            <a id="mode" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
-<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
-<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
-            </a>
+    
+      
+  
+    <a
+      href="/categories/n%C3%A1vody/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Návody"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Návody
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/categories/zrp%C3%A1vy/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Zprávy"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Zprávy
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/o-arch-linuxu/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="O Arch Linuxu"
+      title="Co je Arch Linux">
+      
+      
+        <span class="text-base font-medium break-normal">
+          O Arch Linuxu
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="https://wiki.arch-linux.cz/shelves/arch-linux-cz"
+      
+        target="_blank"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Wiki"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Wiki
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="https://forum.arch-linux.cz/"
+      
+        target="_blank"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Fórum"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Fórum
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/komunita/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Komunita"
+      title="Komunita">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Komunita
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/podporte-nas/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Podpořte nás"
+      title="Podpořte nás">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Podpořte nás
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Vyhledat (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
         </div>
-    </nav>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Vyhledat (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Domů"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Arch Linux CZ" class="text-2xl font-bold tracking-tight">
+          Domů
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/categories/n%C3%A1vody/"
+        aria-label="Návody"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Návody
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/categories/zrp%C3%A1vy/"
+        aria-label="Zprávy"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Zprávy
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/o-arch-linuxu/"
+        aria-label="O Arch Linuxu"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Co je Arch Linux" class="text-2xl font-bold tracking-tight">
+          O Arch Linuxu
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="https://wiki.arch-linux.cz/shelves/arch-linux-cz"
+        aria-label="Wiki"
+        
+          target="_blank"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Wiki
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="https://forum.arch-linux.cz/"
+        aria-label="Fórum"
+        
+          target="_blank"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Fórum
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/komunita/"
+        aria-label="Komunita"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Komunita" class="text-2xl font-bold tracking-tight">
+          Komunita
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/podporte-nas/"
+        aria-label="Podpořte nás"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Podpořte nás" class="text-2xl font-bold tracking-tight">
+          Podpořte nás
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
 </div>
 
-<div class="wrapper post">
-    <main class="page-content" aria-label="Content">
-        <article>
-            <header class="header">
-                <h1 class="header-title">Arch Linux průvodce instalací základního šifrování celého disku</h1>
-                
-                
-                
-                <div class="post-meta">
-                    <time datetime="2022-12-06T00:00:00&#43;00:00" itemprop="datePublished"> 6. 12. 2022 </time>
-                </div>
-                
-            </header>
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Arch Linux průvodce instalací základního šifrování celého disku
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2022-12-06T00:00:00&#43;00:00">6. prosince 2022</time><span class="px-2 text-primary-500">&middot;</span><span>2251 slov</span><span class="px-2 text-primary-500">&middot;</span><span title="Doba čtení">11 min</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
             
-            <div class="page-content">
-                <p>Tato příručka obsahuje pokyny pro instalaci Arch Linuxu se šifrováním celého disku pomocí BTRFS na LUKS a šifrovaným spouštěcím oddílem (GRUB) pro systémy UEFI.</p>
+              
+                <a class="relative mt-[0.5rem] me-2" href="/categories/n%C3%A1vody/">
+                  
+                  <span class="flex cursor-pointer">
+  
+  
+  
+    
+    
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Návody
+  </span>
+</span>
+
+                </a>
+              
+            
+            
+              
+            
+          
+        
+      
+        
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/instalace/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Instalace
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/btrfs/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Btrfs
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/luks/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Luks
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Autor
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Arch Linux CZ
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">Návody, novinky a podpora pro uživatele Arch Linuxu v češtině.</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500 space-x-2">
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://mastodon.arch-linux.cz/@archlinux"
+          
+          target="_blank"
+          aria-label="Mastodon"
+          title="Mastodon"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://matrix.to/#/#archlinuxcz:matrix.org"
+          
+          target="_blank"
+          aria-label="Matrix"
+          title="Matrix"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Matrix</title><path fill="currentColor" d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.481.314.448.208.785.582 1.02 1.108.254-.374.6-.706 1.034-.992.434-.287.95-.43 1.546-.43.453 0 .872.056 1.26.167.388.11.716.286.993.53.276.245.489.559.646.951.152.392.23.863.23 1.417v5.728h-2.349V11.52c0-.286-.01-.559-.032-.812a1.755 1.755 0 0 0-.18-.66 1.106 1.106 0 0 0-.438-.448c-.194-.11-.457-.166-.785-.166-.332 0-.6.064-.803.189a1.38 1.38 0 0 0-.48.499 1.946 1.946 0 0 0-.231.696 5.56 5.56 0 0 0-.06.785v4.768h-2.35v-4.8c0-.254-.004-.503-.018-.752a2.074 2.074 0 0 0-.143-.688 1.052 1.052 0 0 0-.415-.503c-.194-.125-.476-.19-.854-.19-.111 0-.259.024-.439.074-.18.051-.36.143-.53.282-.171.138-.319.337-.439.595-.12.259-.18.6-.18 1.02v4.966H5.46V7.81zm15.693 15.64V.55H21.72V0H24v24h-2.28v-.55z"/></svg></span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="/index.xml"
+          
+          target="_blank"
+          aria-label="Rss"
+          title="Rss"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM128 416c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg></span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Obsah
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#předmluva">Předmluva</a></li>
+        <li><a href="#připojení-k-internetu">Připojení k internetu</a></li>
+        <li><a href="#příprava-disku">Příprava disku</a></li>
+        <li><a href="#příprava-svazkupodsvazků-btrfs">Příprava svazku/podsvazků BTRFS</a></li>
+        <li><a href="#příprava-oddílu-efi">Příprava oddílu EFI</a></li>
+        <li><a href="#instalace-arch-base">Instalace Arch Base</a></li>
+        <li><a href="#nakonfigurujte-systém">Nakonfigurujte systém</a></li>
+        <li><a href="#konfigurace-sítě">Konfigurace sítě</a></li>
+        <li></li>
+        <li><a href="#volitelné-vytváření-swap-souboru">(Volitelné) Vytváření swap souboru</a></li>
+        <li></li>
+        <li><a href="#initramfs">Initramfs</a></li>
+        <li></li>
+        <li><a href="#instalace-základního-softwaru">Instalace základního softwaru</a></li>
+        <li></li>
+        <li><a href="#heslo-uživatele-root">Heslo uživatele root</a></li>
+        <li><a href="#přidat-uživatele-linuxu">Přidat uživatele Linuxu</a></li>
+        <li></li>
+        <li><a href="#zavaděč-bootloader">Zavaděč (bootloader)</a></li>
+        <li></li>
+        <li><a href="#doporučeno-vložte-soubor-s-klíčem-do-initramfs">(doporučeno) Vložte soubor s klíčem do initramfs</a></li>
+      </ul>
+    </li>
+    <li></li>
+    <li><a href="#po-instalaci-post-instalační-kroky">Po instalaci (post-instalační kroky)</a>
+      <ul>
+        <li></li>
+        <li><a href="#zrychlení-dešifrování-luks-v-grub-po-zadání-hesla">Zrychlení dešifrování LUKS v GRUB po zadání hesla</a></li>
+        <li></li>
+        <li><a href="#doporučeno-secure-boot--odolávaní-proti-útokům-evil-maid">(doporučeno) Secure Boot – Odolávaní proti útokům Evil Maid</a></li>
+        <li><a href="#docker-používaný-s-btrfs-souborovým-systémem">Docker používaný s BTRFS souborovým systémem</a></li>
+        <li><a href="#kompletní-video-návod">Kompletní video návod</a></li>
+        <li><a href="#odkazy-na-zdroje">Odkazy na zdroje</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Obsah
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#předmluva">Předmluva</a></li>
+        <li><a href="#připojení-k-internetu">Připojení k internetu</a></li>
+        <li><a href="#příprava-disku">Příprava disku</a></li>
+        <li><a href="#příprava-svazkupodsvazků-btrfs">Příprava svazku/podsvazků BTRFS</a></li>
+        <li><a href="#příprava-oddílu-efi">Příprava oddílu EFI</a></li>
+        <li><a href="#instalace-arch-base">Instalace Arch Base</a></li>
+        <li><a href="#nakonfigurujte-systém">Nakonfigurujte systém</a></li>
+        <li><a href="#konfigurace-sítě">Konfigurace sítě</a></li>
+        <li></li>
+        <li><a href="#volitelné-vytváření-swap-souboru">(Volitelné) Vytváření swap souboru</a></li>
+        <li></li>
+        <li><a href="#initramfs">Initramfs</a></li>
+        <li></li>
+        <li><a href="#instalace-základního-softwaru">Instalace základního softwaru</a></li>
+        <li></li>
+        <li><a href="#heslo-uživatele-root">Heslo uživatele root</a></li>
+        <li><a href="#přidat-uživatele-linuxu">Přidat uživatele Linuxu</a></li>
+        <li></li>
+        <li><a href="#zavaděč-bootloader">Zavaděč (bootloader)</a></li>
+        <li></li>
+        <li><a href="#doporučeno-vložte-soubor-s-klíčem-do-initramfs">(doporučeno) Vložte soubor s klíčem do initramfs</a></li>
+      </ul>
+    </li>
+    <li></li>
+    <li><a href="#po-instalaci-post-instalační-kroky">Po instalaci (post-instalační kroky)</a>
+      <ul>
+        <li></li>
+        <li><a href="#zrychlení-dešifrování-luks-v-grub-po-zadání-hesla">Zrychlení dešifrování LUKS v GRUB po zadání hesla</a></li>
+        <li></li>
+        <li><a href="#doporučeno-secure-boot--odolávaní-proti-útokům-evil-maid">(doporučeno) Secure Boot – Odolávaní proti útokům Evil Maid</a></li>
+        <li><a href="#docker-používaný-s-btrfs-souborovým-systémem">Docker používaný s BTRFS souborovým systémem</a></li>
+        <li><a href="#kompletní-video-návod">Kompletní video návod</a></li>
+        <li><a href="#odkazy-na-zdroje">Odkazy na zdroje</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <p>Tato příručka obsahuje pokyny pro instalaci Arch Linuxu se šifrováním celého disku pomocí BTRFS na LUKS a šifrovaným spouštěcím oddílem (GRUB) pro systémy UEFI.</p>
 <p>Po hlavní instalaci následují další pokyny, jak se bránit útokům Evil Maid prostřednictvím vlastní registrace klíče UEFI Secure Boot, jádra a bootloaderu s vlastním podpisem.</p>
-<h3 id="předmluva">Předmluva</h3>
-<p>Většinu těchto informací najdete na <a href="https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#Encrypted_boot_partition_(GRUB)">Arch Wiki</a> a dalších zdrojů na ně odkazovaných v dolní části článku.</p>
+
+<h3 class="relative group">Předmluva
+    <div id="předmluva" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#p%c5%99edmluva" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+<p>Většinu těchto informací najdete na <a href="https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#Encrypted_boot_partition_%28GRUB%29"  target="_blank" rel="noreferrer">Arch Wiki</a> a dalších zdrojů na ně odkazovaných v dolní části článku.</p>
 <p><em>Poznámka:</em>  Návod popisuje instalaci na moderní NVMe SSD disk. Pokud používáte jiný typ disků, proveďte všude v návodu substituci <code>/dev/nvme0nX</code> na <code>/dev/sdX</code>, popř. jiný typ zařízení podle potřeby. Video návod používá  <code>/dev/sdX</code>, který je standardním nastavením ve Virtualboxu.</p>
-<h3 id="připojení-k-internetu">Připojení k internetu</h3>
-<p>Zapojte ethernet a pokračujte dál, nebo pro bezdrátové připojení se podívejte na <em>vševědoucí</em>  <a href="https://wiki.archlinux.org/index.php/installation_guide#Connect_to_the_internet">Arch Wiki</a>.</p>
-<h4 id="nastavení-wifi">Nastavení Wifi</h4>
-<pre tabindex="0"><code>iwctl
-[iwd]# device list -&gt; note your device
-[iwd]# station  get-networks
-[iwd]# station  connect 
 
-# second variant
-iwctl --passphrase  station  connect 
+<h3 class="relative group">Připojení k internetu
+    <div id="připojení-k-internetu" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#p%c5%99ipojen%c3%ad-k-internetu" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+<p>Zapojte ethernet a pokračujte dál, nebo pro bezdrátové připojení se podívejte na <em>vševědoucí</em>  <a href="https://wiki.archlinux.org/index.php/installation_guide#Connect_to_the_internet"  target="_blank" rel="noreferrer">Arch Wiki</a>.</p>
 
-# test connection
-ping archlinux.org
-</code></pre><h4 id="aktualizujte-systémové-hodiny">Aktualizujte systémové hodiny</h4>
-<pre tabindex="0"><code>timedatectl set-ntp true
-</code></pre><h4 id="volitelně-aktualizujte-mirrorlist">(Volitelně) Aktualizujte mirrorlist</h4>
-<pre tabindex="0"><code>pacman -Syy
-pacman -S reflector
-cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+<h4 class="relative group">Nastavení Wifi
+    <div id="nastavení-wifi" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nastaven%c3%ad-wifi" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>iwctl
+</span></span><span style="display:flex;"><span>[iwd]# device list -&gt; note your device
+</span></span><span style="display:flex;"><span>[iwd]# station  get-networks
+</span></span><span style="display:flex;"><span>[iwd]# station  connect 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># second variant
+</span></span><span style="display:flex;"><span>iwctl --passphrase  station  connect 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># test connection
+</span></span><span style="display:flex;"><span>ping archlinux.org</span></span></code></pre></div></div>
 
-reflector --country &#39;Czechia&#39; --age 24 --verbose --sort rate --save /etc/pacman.d/mirrorlist
-# OR
-reflector -c &#34;CZ&#34; -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist
-</code></pre><h4 id="nastavení-rozlišení-virtualbox-tty">Nastavení rozlišení Virtualbox tty</h4>
-<pre tabindex="0"><code>pacman -S fbset terminus-font
-fbset -g 2048 1080 2048 1080 32
-setfont ter-132n
-</code></pre><h3 id="příprava-disku">Příprava disku</h3>
-<h4 id="aktualizujte-btrfs-progs">Aktualizujte btrfs-progs</h4>
-<pre tabindex="0"><code>pacman -Syy btrfs-progs
-</code></pre><h4 id="zobrazení-disků-a-oddílů">Zobrazení disků a oddílů</h4>
-<pre tabindex="0"><code>lsblk
-</code></pre><h4 id="vytvořte-oddíly-efi-system-a-linux-luks"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#create-efi-system-and-linux-luks-partitions"></a>Vytvořte oddíly EFI System a Linux LUKS</h4>
+<h4 class="relative group">Aktualizujte systémové hodiny
+    <div id="aktualizujte-systémové-hodiny" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#aktualizujte-syst%c3%a9mov%c3%a9-hodiny" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>timedatectl set-ntp true</span></span></code></pre></div></div>
+
+<h4 class="relative group">(Volitelně) Aktualizujte mirrorlist
+    <div id="volitelně-aktualizujte-mirrorlist" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#voliteln%c4%9b-aktualizujte-mirrorlist" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>pacman -Syy
+</span></span><span style="display:flex;"><span>pacman -S reflector
+</span></span><span style="display:flex;"><span>cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>reflector --country &#39;Czechia&#39; --age 24 --verbose --sort rate --save /etc/pacman.d/mirrorlist
+</span></span><span style="display:flex;"><span># OR
+</span></span><span style="display:flex;"><span>reflector -c &#34;CZ&#34; -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist</span></span></code></pre></div></div>
+
+<h4 class="relative group">Nastavení rozlišení Virtualbox tty
+    <div id="nastavení-rozlišení-virtualbox-tty" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nastaven%c3%ad-rozli%c5%a1en%c3%ad-virtualbox-tty" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>pacman -S fbset terminus-font
+</span></span><span style="display:flex;"><span>fbset -g 2048 1080 2048 1080 32
+</span></span><span style="display:flex;"><span>setfont ter-132n</span></span></code></pre></div></div>
+
+<h3 class="relative group">Příprava disku
+    <div id="příprava-disku" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#p%c5%99%c3%adprava-disku" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">Aktualizujte btrfs-progs
+    <div id="aktualizujte-btrfs-progs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#aktualizujte-btrfs-progs" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>pacman -Syy btrfs-progs</span></span></code></pre></div></div>
+
+<h4 class="relative group">Zobrazení disků a oddílů
+    <div id="zobrazení-disků-a-oddílů" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#zobrazen%c3%ad-disk%c5%af-a-odd%c3%adl%c5%af" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>lsblk</span></span></code></pre></div></div>
+
+<h4 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#create-efi-system-and-linux-luks-partitions"  target="_blank" rel="noreferrer"></a>Vytvořte oddíly EFI System a Linux LUKS
+    <div id="vytvořte-oddíly-efi-system-a-linux-luks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vytvo%c5%99te-odd%c3%adly-efi-system-a-linux-luks" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
 <p><strong>Number<strong><strong>Start (sector</strong></strong>End (sector)<strong><strong>Size</strong></strong>Code****Name</strong>120481130495256.0 MiBEF00EFI System21130496976773134465.2 GiB8309Linux LUKS</p>
-<pre tabindex="0"><code>gdisk /dev/nvme0n1
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>gdisk /dev/nvme0n1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># alternative apps
+</span></span><span style="display:flex;"><span>cfdisk
+</span></span><span style="display:flex;"><span>fdisk</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>o
+</span></span><span style="display:flex;"><span>n
+</span></span><span style="display:flex;"><span>[Enter]
+</span></span><span style="display:flex;"><span>0
+</span></span><span style="display:flex;"><span>+256M
+</span></span><span style="display:flex;"><span>ef00
+</span></span><span style="display:flex;"><span>n
+</span></span><span style="display:flex;"><span>[Enter]
+</span></span><span style="display:flex;"><span>[Enter]
+</span></span><span style="display:flex;"><span>[Enter]
+</span></span><span style="display:flex;"><span>8309
+</span></span><span style="display:flex;"><span>w</span></span></code></pre></div></div>
 
-# alternative apps
-cfdisk
-fdisk
-</code></pre><pre tabindex="0"><code>o
-n
-[Enter]
-0
-+256M
-ef00
-n
-[Enter]
-[Enter]
-[Enter]
-8309
-w
-</code></pre><h4 id="vytvořte-šifrovaný-kontejner-luks1-na-oddílu-linux-luks-grub-nepodporuje-luks2-od-května-2019">Vytvořte šifrovaný kontejner LUKS1 na oddílu Linux LUKS (GRUB nepodporuje LUKS2 od května 2019)</h4>
-<pre tabindex="0"><code>cryptsetup luksFormat --type luks1 --use-random -S 1 -s 512 -h sha512 -i 1000 /dev/nvme0n1p2
-</code></pre><h4 id="otevřete-kontejner-dešifrujte-jej-a-zpřístupněte-na-devmappercryptbtrfs">Otevřete kontejner (dešifrujte jej a zpřístupněte na /dev/mapper/cryptbtrfs)</h4>
-<pre tabindex="0"><code>cryptsetup open /dev/nvme0n1p2 cryptbtrfs
-</code></pre><h3 id="příprava-svazkupodsvazků-btrfs">Příprava svazku/podsvazků BTRFS</h3>
-<h4 id="formátování-btrfs-nyní-již-dešifrovaného-disku">Formátování btrfs, nyní již dešifrovaného disku</h4>
-<pre tabindex="0"><code>mkfs.btrfs -L &#34;Arch Linux&#34; /dev/mapper/cryptbtrfs
-</code></pre><h4 id="připojit-souborový-systém-zatím-bezparametrické">Připojit souborový systém (zatím bezparametrické)</h4>
-<pre tabindex="0"><code>mount /dev/mapper/cryptbtrfs /mnt
-</code></pre><h4 id="vytvoření-podsvazků-subvolumes">Vytvoření podsvazků (subvolumes)</h4>
+<h4 class="relative group">Vytvořte šifrovaný kontejner LUKS1 na oddílu Linux LUKS (GRUB nepodporuje LUKS2 od května 2019)
+    <div id="vytvořte-šifrovaný-kontejner-luks1-na-oddílu-linux-luks-grub-nepodporuje-luks2-od-května-2019" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vytvo%c5%99te-%c5%a1ifrovan%c3%bd-kontejner-luks1-na-odd%c3%adlu-linux-luks-grub-nepodporuje-luks2-od-kv%c4%9btna-2019" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>cryptsetup luksFormat --type luks1 --use-random -S 1 -s 512 -h sha512 -i 1000 /dev/nvme0n1p2</span></span></code></pre></div></div>
+
+<h4 class="relative group">Otevřete kontejner (dešifrujte jej a zpřístupněte na /dev/mapper/cryptbtrfs)
+    <div id="otevřete-kontejner-dešifrujte-jej-a-zpřístupněte-na-devmappercryptbtrfs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#otev%c5%99ete-kontejner-de%c5%a1ifrujte-jej-a-zp%c5%99%c3%adstupn%c4%9bte-na-devmappercryptbtrfs" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>cryptsetup open /dev/nvme0n1p2 cryptbtrfs</span></span></code></pre></div></div>
+
+<h3 class="relative group">Příprava svazku/podsvazků BTRFS
+    <div id="příprava-svazkupodsvazků-btrfs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#p%c5%99%c3%adprava-svazkupodsvazk%c5%af-btrfs" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">Formátování btrfs, nyní již dešifrovaného disku
+    <div id="formátování-btrfs-nyní-již-dešifrovaného-disku" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#form%c3%a1tov%c3%a1n%c3%ad-btrfs-nyn%c3%ad-ji%c5%be-de%c5%a1ifrovan%c3%a9ho-disku" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>mkfs.btrfs -L &#34;Arch Linux&#34; /dev/mapper/cryptbtrfs</span></span></code></pre></div></div>
+
+<h4 class="relative group">Připojit souborový systém (zatím bezparametrické)
+    <div id="připojit-souborový-systém-zatím-bezparametrické" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#p%c5%99ipojit-souborov%c3%bd-syst%c3%a9m-zat%c3%adm-bezparametrick%c3%a9" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>mount /dev/mapper/cryptbtrfs /mnt</span></span></code></pre></div></div>
+
+<h4 class="relative group">Vytvoření podsvazků (subvolumes)
+    <div id="vytvoření-podsvazků-subvolumes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vytvo%c5%99en%c3%ad-podsvazk%c5%af-subvolumes" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
 <p>Toto schéma lze upravit podle vašich potřeb, navrhoval bych alespoň jeden podsvazek pro root (@) a jeden pro snímky (.@snapshots). varlog a tmp jsou vytvořeny pro snadné zakázání kopírování při zápisu na /var/log a /tmp. pkg subvolume naopak pomáhá v organizaci pacman balíčků s možností jejich zálohy a vrácení se k předchozím verzím. docker subvolume umožňuje efektivní práci s dockrem, který má implementovanou efektivní spolupráci s btrfs souborovým systémem.</p>
-<pre tabindex="0"><code>btrfs sub cr /mnt/@
-btrfs sub cr /mnt/@home
-btrfs sub cr /mnt/@tmp
-btrfs sub cr /mnt/@log
-btrfs sub cr /mnt/@pkg
-btrfs sub cr /mnt/@docker
-btrfs sub cr /mnt/.@snapshots
-</code></pre><h4 id="zakázat-kopírování-při-zápisu-do-varlog-a-tmp">Zakázat kopírování při zápisu do /var/log a /tmp</h4>
-<pre tabindex="0"><code>chattr +C /mnt/@log
-chattr +C /mnt/@tmp  
-umount /mnt
-</code></pre><h4 id="připojení-subolumes-btrfs-nyní-již-s-kompletní-parametrizací-pro-stálé-používání">Připojení subolumes BTRFS, nyní již s kompletní parametrizací pro stálé používání</h4>
-<pre tabindex="0"><code>mount -o defaults,noatime,discard,ssd,subvol=@ /dev/mapper/cryptbtrfs /mnt  
-mkdir -p /mnt/{home,var/log,var/cache/pacman/pkg,var/lib/docker,tmp,.snapshots}
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>btrfs sub cr /mnt/@
+</span></span><span style="display:flex;"><span>btrfs sub cr /mnt/@home
+</span></span><span style="display:flex;"><span>btrfs sub cr /mnt/@tmp
+</span></span><span style="display:flex;"><span>btrfs sub cr /mnt/@log
+</span></span><span style="display:flex;"><span>btrfs sub cr /mnt/@pkg
+</span></span><span style="display:flex;"><span>btrfs sub cr /mnt/@docker
+</span></span><span style="display:flex;"><span>btrfs sub cr /mnt/.@snapshots</span></span></code></pre></div></div>
 
-# Discard and ssd options and are for ssd disks only
-mount -o defaults,noatime,discard,ssd,subvol=@home /dev/mapper/cryptbtrfs /mnt/home
-mount -o defaults,noatime,discard,ssd,subvol=@tmp /dev/mapper/cryptbtrfs /mnt/tmp
-mount -o defaults,noatime,discard,ssd,subvol=@log /dev/mapper/cryptbtrfs /mnt/var/log
-mount -o defaults,noatime,discard,ssd,subvol=@pkg /dev/mapper/cryptbtrfs /mnt/var/cache/pacman/pkg/
-mount -o defaults,noatime,discard,ssd,subvol=@docker /dev/mapper/cryptbtrfs /mnt/var/lib/docker
-mount -o defaults,noatime,discard,ssd,subvol=.@snapshots /dev/mapper/cryptbtrfs /mnt/.snapshots
-</code></pre><h3 id="příprava-oddílu-efi">Příprava oddílu EFI</h3>
-<h4 id="vytvořte-souborový-systém-fat32-na-systémovém-oddílu-efi">Vytvořte souborový systém FAT32 na systémovém oddílu EFI</h4>
-<pre tabindex="0"><code>mkfs.fat -F32 /dev/nvme0n1p1
-</code></pre><h4 id="vytvořte-bod-připojení-pro-systémový-oddíl-efi-na-efi-pro-kompatibilitu-s-grub-install-a-připojte-jej">Vytvořte bod připojení pro systémový oddíl EFI na /efi pro kompatibilitu s grub-install a připojte jej</h4>
-<pre tabindex="0"><code>mkdir /mnt/efi
-mount /dev/nvme0n1p1 /mnt/efi
-</code></pre><h3 id="instalace-arch-base">Instalace Arch Base</h3>
-<h4 id="nainstalujte-potřebné-balíčky"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#install-necessary-packages"></a>Nainstalujte potřebné balíčky</h4>
-<pre tabindex="0"><code>pacstrap /mnt/ base base-devel linux linux-headers linux-firmware polkit git btrfs-progs efibootmgr dhcpcd bash-completion sudo neovim nano
-</code></pre><h3 id="nakonfigurujte-systém">Nakonfigurujte systém</h3>
-<h4 id="vygenerujte-soubor-etcfstab">Vygenerujte soubor /etc/fstab</h4>
-<pre tabindex="0"><code>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
-</code></pre><p>Zkontrolujte, zda <code>fstab</code>je správně vytvořen s definovanými parametry btrfs z předchozí kapitoly s editorem neovim.</p>
-<h4 id="vstupne-do-svého-nového-systému-pomocí-arch-chroot">Vstupne do svého nového systému pomocí arch-chroot</h4>
-<pre tabindex="0"><code>arch-chroot /mnt
-</code></pre><p>V tomto okamžiku byste měli mít následující oddíly a logické svazky:</p>
-<pre tabindex="0"><code>lsblk
-</code></pre><p>NAMEMAJ:MINRMSIZEROTYPEMOUNTPOINTnvme0n1259:00465.8G0disk├─nvme0n1p1259:50256M0part/efi├─nvme0n1p2259:60465.2G0part/.snapshots      └─cryptbtrfs254:00465.2G0crypt/var/lib/docker/var/cache/pacman/pkg/var/log/tmp/home/</p>
-<h4 id="časové-pásmo"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#time-zone"></a>Časové pásmo</h4>
+<h4 class="relative group">Zakázat kopírování při zápisu do /var/log a /tmp
+    <div id="zakázat-kopírování-při-zápisu-do-varlog-a-tmp" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#zak%c3%a1zat-kop%c3%adrov%c3%a1n%c3%ad-p%c5%99i-z%c3%a1pisu-do-varlog-a-tmp" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>chattr +C /mnt/@log
+</span></span><span style="display:flex;"><span>chattr +C /mnt/@tmp  
+</span></span><span style="display:flex;"><span>umount /mnt</span></span></code></pre></div></div>
+
+<h4 class="relative group">Připojení subolumes BTRFS, nyní již s kompletní parametrizací pro stálé používání
+    <div id="připojení-subolumes-btrfs-nyní-již-s-kompletní-parametrizací-pro-stálé-používání" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#p%c5%99ipojen%c3%ad-subolumes-btrfs-nyn%c3%ad-ji%c5%be-s-kompletn%c3%ad-parametrizac%c3%ad-pro-st%c3%a1l%c3%a9-pou%c5%be%c3%adv%c3%a1n%c3%ad" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>mount -o defaults,noatime,discard,ssd,subvol=@ /dev/mapper/cryptbtrfs /mnt  
+</span></span><span style="display:flex;"><span>mkdir -p /mnt/{home,var/log,var/cache/pacman/pkg,var/lib/docker,tmp,.snapshots}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Discard and ssd options and are for ssd disks only
+</span></span><span style="display:flex;"><span>mount -o defaults,noatime,discard,ssd,subvol=@home /dev/mapper/cryptbtrfs /mnt/home
+</span></span><span style="display:flex;"><span>mount -o defaults,noatime,discard,ssd,subvol=@tmp /dev/mapper/cryptbtrfs /mnt/tmp
+</span></span><span style="display:flex;"><span>mount -o defaults,noatime,discard,ssd,subvol=@log /dev/mapper/cryptbtrfs /mnt/var/log
+</span></span><span style="display:flex;"><span>mount -o defaults,noatime,discard,ssd,subvol=@pkg /dev/mapper/cryptbtrfs /mnt/var/cache/pacman/pkg/
+</span></span><span style="display:flex;"><span>mount -o defaults,noatime,discard,ssd,subvol=@docker /dev/mapper/cryptbtrfs /mnt/var/lib/docker
+</span></span><span style="display:flex;"><span>mount -o defaults,noatime,discard,ssd,subvol=.@snapshots /dev/mapper/cryptbtrfs /mnt/.snapshots</span></span></code></pre></div></div>
+
+<h3 class="relative group">Příprava oddílu EFI
+    <div id="příprava-oddílu-efi" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#p%c5%99%c3%adprava-odd%c3%adlu-efi" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">Vytvořte souborový systém FAT32 na systémovém oddílu EFI
+    <div id="vytvořte-souborový-systém-fat32-na-systémovém-oddílu-efi" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vytvo%c5%99te-souborov%c3%bd-syst%c3%a9m-fat32-na-syst%c3%a9mov%c3%a9m-odd%c3%adlu-efi" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>mkfs.fat -F32 /dev/nvme0n1p1</span></span></code></pre></div></div>
+
+<h4 class="relative group">Vytvořte bod připojení pro systémový oddíl EFI na /efi pro kompatibilitu s grub-install a připojte jej
+    <div id="vytvořte-bod-připojení-pro-systémový-oddíl-efi-na-efi-pro-kompatibilitu-s-grub-install-a-připojte-jej" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vytvo%c5%99te-bod-p%c5%99ipojen%c3%ad-pro-syst%c3%a9mov%c3%bd-odd%c3%adl-efi-na-efi-pro-kompatibilitu-s-grub-install-a-p%c5%99ipojte-jej" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>mkdir /mnt/efi
+</span></span><span style="display:flex;"><span>mount /dev/nvme0n1p1 /mnt/efi</span></span></code></pre></div></div>
+
+<h3 class="relative group">Instalace Arch Base
+    <div id="instalace-arch-base" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#instalace-arch-base" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#install-necessary-packages"  target="_blank" rel="noreferrer"></a>Nainstalujte potřebné balíčky
+    <div id="nainstalujte-potřebné-balíčky" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nainstalujte-pot%c5%99ebn%c3%a9-bal%c3%ad%c4%8dky" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>pacstrap /mnt/ base base-devel linux linux-headers linux-firmware polkit git btrfs-progs efibootmgr dhcpcd bash-completion sudo neovim nano</span></span></code></pre></div></div>
+
+<h3 class="relative group">Nakonfigurujte systém
+    <div id="nakonfigurujte-systém" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nakonfigurujte-syst%c3%a9m" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">Vygenerujte soubor /etc/fstab
+    <div id="vygenerujte-soubor-etcfstab" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vygenerujte-soubor-etcfstab" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</span></span></code></pre></div></div>
+<p>Zkontrolujte, zda <code>fstab</code>je správně vytvořen s definovanými parametry btrfs z předchozí kapitoly s editorem neovim.</p>
+
+<h4 class="relative group">Vstupne do svého nového systému pomocí arch-chroot
+    <div id="vstupne-do-svého-nového-systému-pomocí-arch-chroot" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vstupne-do-sv%c3%a9ho-nov%c3%a9ho-syst%c3%a9mu-pomoc%c3%ad-arch-chroot" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>arch-chroot /mnt</span></span></code></pre></div></div>
+<p>V tomto okamžiku byste měli mít následující oddíly a logické svazky:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>lsblk</span></span></code></pre></div></div>
+<p>NAMEMAJ:MINRMSIZEROTYPEMOUNTPOINTnvme0n1259:00465.8G0disk├─nvme0n1p1259:50256M0part/efi├─nvme0n1p2259:60465.2G0part/.snapshots      └─cryptbtrfs254:00465.2G0crypt/var/lib/docker/var/cache/pacman/pkg/var/log/tmp/home/</p>
+
+<h4 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#time-zone"  target="_blank" rel="noreferrer"></a>Časové pásmo
+    <div id="časové-pásmo" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%c4%8dasov%c3%a9-p%c3%a1smo" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
 <p>Nahradit <code>Europe/Prague</code>s vaším příslušným časovým pásmem nalezeným v <code>/usr/share/zoneinfo</code></p>
-<pre tabindex="0"><code>ln -sf /usr/share/zoneinfo/Europe/Prague /etc/localtime
-</code></pre><h4 id="běh-hwclock-vygeneruje-etcadjtime">Běh <code>hwclock</code> vygeneruje <code>/etc/adjtime</code></h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ln -sf /usr/share/zoneinfo/Europe/Prague /etc/localtime</span></span></code></pre></div></div>
+
+<h4 class="relative group">Běh <code>hwclock</code> vygeneruje <code>/etc/adjtime</code>
+    <div id="běh-hwclock-vygeneruje-etcadjtime" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b%c4%9bh-hwclock-vygeneruje-etcadjtime" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
 <p>Hardwarové hodiny budou nastaveny na UTC a synchronizovány s aktuálním systémovým časem.</p>
-<pre tabindex="0"><code>hwclock --systohc --utc
-</code></pre><h4 id="lokalizace">Lokalizace</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>hwclock --systohc --utc</span></span></code></pre></div></div>
+
+<h4 class="relative group">Lokalizace
+    <div id="lokalizace" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lokalizace" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
 <p>Odkomentovat řádku <code>en_US.UTF-8 UTF-8</code> v  <code>/etc/locale.gen</code> a vygenerovat národní prostředí.</p>
-<pre tabindex="0"><code>locale-gen
-</code></pre><h4 id="vytvořit-localeconf-a-nastavte-lang-proměnnou-prostředí">Vytvořit <code>locale.conf</code> a nastavte <code>LANG</code> proměnnou prostředí</h4>
-<pre tabindex="0"><code>echo LANG=en_US.UTF-8 &gt; /etc/locale.conf
-export LANG=en_US.UTF-8
-</code></pre><h3 id="konfigurace-sítě">Konfigurace sítě</h3>
-<h4 id="vytvořte-soubor-etchostname-s-názvem-počítače">Vytvořte soubor /etc/hostname s názvem počítače</h4>
-<pre tabindex="0"><code>echo myhostname &gt; /etc/hostname
-</code></pre><p>Toto je jedinečný název pro identifikaci vašeho zařízení v síti.</p>
-<h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#add-matching-entries-to-hosts"></a></h4>
-<h4 id="přidejte-odpovídající-záznamy-do-etchosts">Přidejte odpovídající záznamy do /etc/hosts</h4>
-<pre tabindex="0"><code>nvim /etc/hosts
-</code></pre><pre tabindex="0"><code>127.0.0.1 localhost
-::1 localhost
-127.0.1.1 myhostname
-</code></pre><h3><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#optional-swap-file-creation"></a></h3>
-<h3 id="volitelné-vytváření-swap-souboru">(Volitelné) Vytváření swap souboru</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>locale-gen</span></span></code></pre></div></div>
+
+<h4 class="relative group">Vytvořit <code>locale.conf</code> a nastavte <code>LANG</code> proměnnou prostředí
+    <div id="vytvořit-localeconf-a-nastavte-lang-proměnnou-prostředí" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vytvo%c5%99it-localeconf-a-nastavte-lang-prom%c4%9bnnou-prost%c5%99ed%c3%ad" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>echo LANG=en_US.UTF-8 &gt; /etc/locale.conf
+</span></span><span style="display:flex;"><span>export LANG=en_US.UTF-8</span></span></code></pre></div></div>
+
+<h3 class="relative group">Konfigurace sítě
+    <div id="konfigurace-sítě" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#konfigurace-s%c3%adt%c4%9b" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">Vytvořte soubor /etc/hostname s názvem počítače
+    <div id="vytvořte-soubor-etchostname-s-názvem-počítače" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vytvo%c5%99te-soubor-etchostname-s-n%c3%a1zvem-po%c4%8d%c3%adta%c4%8de" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>echo myhostname &gt; /etc/hostname</span></span></code></pre></div></div>
+<p>Toto je jedinečný název pro identifikaci vašeho zařízení v síti.</p>
+
+<h4 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#add-matching-entries-to-hosts"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+
+<h4 class="relative group">Přidejte odpovídající záznamy do /etc/hosts
+    <div id="přidejte-odpovídající-záznamy-do-etchosts" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#p%c5%99idejte-odpov%c3%addaj%c3%adc%c3%ad-z%c3%a1znamy-do-etchosts" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>nvim /etc/hosts</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>127.0.0.1 localhost
+</span></span><span style="display:flex;"><span>::1 localhost
+</span></span><span style="display:flex;"><span>127.0.1.1 myhostname</span></span></code></pre></div></div>
+
+<h3 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#optional-swap-file-creation"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+
+<h3 class="relative group">(Volitelné) Vytváření swap souboru
+    <div id="volitelné-vytváření-swap-souboru" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#voliteln%c3%a9-vytv%c3%a1%c5%99en%c3%ad-swap-souboru" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
 <p>Nyní vytvořte prázdný (s velikostí 0) odkládací soubor. Vytvořte samostatný podsvazek pro odkládací soubor. Tento podsvazek je potřebný k tomu, abyste mohli vytvořit snímek /, což by nebylo možné s žádným souborem v něm s vypnutým CoW!</p>
-<pre tabindex="0"><code>btrfs su create /swap
-chattr +C /swap
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>btrfs su create /swap
+</span></span><span style="display:flex;"><span>chattr +C /swap
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Copy on Write should always be disabled on swap file, so it will be done in the next step
+</span></span><span style="display:flex;"><span>touch /swap/swapfile
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Check if C attribute is enabled (should be already if created in folder with disabled CoW attribute)
+</span></span><span style="display:flex;"><span>lsattr /swap/swapfile
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># If not then disable CoW for swapfile manually
+</span></span><span style="display:flex;"><span>chattr +C /swap/swapfile  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Expanding empty file to 4GiB swap file
+</span></span><span style="display:flex;"><span>dd if=/dev/zero of=/swap/swapfile bs=1024K count=4096  
+</span></span><span style="display:flex;"><span>chmod 600 /swap/swapfile
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Format the swap file.
+</span></span><span style="display:flex;"><span>mkswap /swap/swapfile
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Turn swap file on.
+</span></span><span style="display:flex;"><span>swapon /swap/swapfile  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># You also need to update /etc/fstab to mount swapfile on boot
+</span></span><span style="display:flex;"><span>/swap/swapfile none swap sw 0 0</span></span></code></pre></div></div>
 
-# Copy on Write should always be disabled on swap file, so it will be done in the next step
-touch /swap/swapfile
+<h3 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#initramfs"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
 
-# Check if C attribute is enabled (should be already if created in folder with disabled CoW attribute)
-lsattr /swap/swapfile
+<h3 class="relative group">Initramfs<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#add-the-keyboard-encrypt-and-btrfs-hooks-to-etcmkinitcpioconf"  target="_blank" rel="noreferrer"></a>
+    <div id="initramfs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#initramfs" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
 
-# If not then disable CoW for swapfile manually
-chattr +C /swap/swapfile  
-
-# Expanding empty file to 4GiB swap file
-dd if=/dev/zero of=/swap/swapfile bs=1024K count=4096  
-chmod 600 /swap/swapfile
-
-# Format the swap file.
-mkswap /swap/swapfile
-
-# Turn swap file on.
-swapon /swap/swapfile  
-
-# You also need to update /etc/fstab to mount swapfile on boot
-/swap/swapfile none swap sw 0 0
-</code></pre><h3><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#initramfs"></a></h3>
-<h3 id="initramfs">Initramfs<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#add-the-keyboard-encrypt-and-btrfs-hooks-to-etcmkinitcpioconf"></a></h3>
-<h4 id="přidat-encrypt-a-btrfs-háčky-hooks-na-etcmkinitcpioconf">Přidat <code>encrypt</code>, a <code>btrfs</code> háčky (hooks) na <code>/etc/mkinitcpio.conf</code></h4>
+<h4 class="relative group">Přidat <code>encrypt</code>, a <code>btrfs</code> háčky (hooks) na <code>/etc/mkinitcpio.conf</code>
+    <div id="přidat-encrypt-a-btrfs-háčky-hooks-na-etcmkinitcpioconf" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#p%c5%99idat-encrypt-a-btrfs-h%c3%a1%c4%8dky-hooks-na-etcmkinitcpioconf" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
 <p><em>Poznámka:</em>  Záleží na pořádí!</p>
-<pre tabindex="0"><code>HOOKS=(base udev autodetect modconf kms keyboard keymap consolefont block encrypt btrfs filesystems fsck)
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>HOOKS=(base udev autodetect modconf kms keyboard keymap consolefont block encrypt btrfs filesystems fsck)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Add btrfsck to binaries
+</span></span><span style="display:flex;"><span>BINARIES=(btrfsck)</span></span></code></pre></div></div>
 
-# Add btrfsck to binaries
-BINARIES=(btrfsck)
-</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#recreate-the-initramfs-image"></a></h4>
-<h4 id="znovu-vytvořte-obraz-initramfs">Znovu vytvořte obraz initramfs</h4>
-<pre tabindex="0"><code>mkinitcpio -P
-</code></pre><h3><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#fundamental-software-installation"></a></h3>
-<h3 id="instalace-základního-softwaru">Instalace základního softwaru</h3>
-<pre tabindex="0"><code>pacman -S openssh networkmanager wpa_supplicant netctl
-systemctl enable NetworkManager
-systemctl enable sshd
+<h4 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#recreate-the-initramfs-image"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
 
-pacman -S amd-ucode (for AMD), pacman -S intel-ucode (for INTEL)
-mkinitcpio -p linux
-</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#graphical-drivers-and-xorg"></a></h4>
-<h4 id="grafické-ovladače-a-xorg">Grafické ovladače a Xorg<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#amd-cards"></a></h4>
-<h5 id="karty-amd">Karty AMD</h5>
-<pre tabindex="0"><code>pacman -S xorg xorg-xinit
-pacman -S mesa
-</code></pre><h5><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#nvidia-cards"></a></h5>
-<h5 id="karty-nvidia">Karty Nvidia</h5>
-<pre tabindex="0"><code>pacman -S xorg xorg-xinit
-pacman -S nvidia nvidia-utils
+<h4 class="relative group">Znovu vytvořte obraz initramfs
+    <div id="znovu-vytvořte-obraz-initramfs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#znovu-vytvo%c5%99te-obraz-initramfs" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>mkinitcpio -P</span></span></code></pre></div></div>
 
-sudo vim /etc/mkinitcpio.conf
-# edit Modules and Files
-MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm ...)
-FILES=&#34;/etc/modprobe.d/nvidia.conf&#34;
+<h3 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#fundamental-software-installation"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
 
-sudo mkinitcpio -P
-nvim /etc/modprobe.d/nvidia.conf
-# Add row to the file
-options nvidia_drm modeset=1
-</code></pre><h5><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#virtualbox-support"></a></h5>
-<h5 id="podpora-virtualboxu">Podpora Virtualboxu</h5>
-<pre tabindex="0"><code>pacman -S virtualbox-guest-utils
-</code></pre><h3><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#root-password"></a></h3>
-<h3 id="heslo-uživatele-root">Heslo uživatele root<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#set-the-root-password"></a></h3>
-<h4 id="nastavte-heslo-uživatele-root">Nastavte heslo uživatele root</h4>
-<pre tabindex="0"><code>passwd
-</code></pre><h3 id="přidat-uživatele-linuxu"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#add-linux-user"></a>Přidat uživatele Linuxu</h3>
-<pre tabindex="0"><code>useradd -m -g users -G wheel,storage,power -s /bin/bash 
-passwd 
-pacman -S sudo
-EDITOR=nvim visudo,  (uncomment) %wheel ALL=(ALL:ALL) ALL
-</code></pre><h3><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#boot-loader"></a></h3>
-<h3 id="zavaděč-bootloader">Zavaděč (bootloader)<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#install-grub"></a></h3>
-<h4 id="nainstalujte-grub">Nainstalujte GRUB</h4>
-<pre tabindex="0"><code>pacman -S grub efibootmgr os-prober dosfstools mtools
-</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#configure-grub-to-allow-booting-from-boot-on-a-luks1-encrypted-partition"></a></h4>
-<h4 id="nakonfigurujte-grub-tak-aby-umožňoval-spouštění-z-boot-na-šifrovaném-oddílu-luks1">Nakonfigurujte GRUB tak, aby umožňoval spouštění z /boot na šifrovaném oddílu LUKS1</h4>
-<pre tabindex="0"><code>nvim /etc/default/grub
-</code></pre><pre tabindex="0"><code>GRUB_ENABLE_CRYPTODISK=y
-</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#set-kernel-parameter-to-unlock-the-btrfs-physical-volume-at-boot-using-encrypt-hook"></a></h4>
-<h4 id="nastavte-parametr-jádra-pro-odemknutí-fyzického-svazku-btrfs-při-spouštění-pomocí-encrypt-hook">Nastavte parametr jádra pro odemknutí fyzického svazku BTRFS při spouštění pomocí <code>encrypt</code> hook<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#uuid-is-the-partition-containing-the-luks-container"></a></h4>
-<h5 id="uuid-je-oddíl-obsahující-kontejner-luks">UUID je oddíl obsahující kontejner LUKS</h5>
-<pre tabindex="0"><code>blkid
-</code></pre><pre tabindex="0"><code>/dev/nvme0n1p2: UUID=&#34;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&#34; TYPE=&#34;crypto_LUKS&#34; PARTLABEL=&#34;Linux LUKS&#34; PARTUUID=&#34;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&#34;
-</code></pre><pre tabindex="0"><code>/etc/default/grub
-</code></pre><pre tabindex="0"><code># allow-discards is only for ssd to let trim work with encryption enabled
-GRUB_CMDLINE_LINUX=&#34;... cryptdevice=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:cryptbtrfs:allow-discards&#34;
-</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#install-grub-to-the-mounted-esp-for-uefi-booting"></a></h4>
-<h4 id="nainstalujte-grub-do-připojeného-esp-pro-spouštění-uefi">Nainstalujte GRUB do připojeného ESP pro spouštění UEFI</h4>
-<pre tabindex="0"><code>grub-install --target=x86_64-efi --bootloader-id=ARCH --efi-directory=/efi --recheck
-</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#generate-grubs-configuration-file"></a></h4>
-<h4 id="vygenerujte-konfigurační-soubor-grub">Vygenerujte konfigurační soubor GRUB</h4>
-<pre tabindex="0"><code>grub-mkconfig -o /boot/grub/grub.cfg
-</code></pre><h3><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#recommended-embed-a-keyfile-in-initramfs"></a></h3>
-<h3 id="doporučeno-vložte-soubor-s-klíčem-do-initramfs">(doporučeno) Vložte soubor s klíčem do initramfs</h3>
-<p>To se provádí proto, abyste nemuseli zadávat heslo pro dešifrování dvakrát (jednou pro GRUB, jednou pro initramfs.)<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#create-a-keyfile-and-add-it-as-luks-key"></a></p>
-<h4 id="vytvořte-soubor-s-klíčem-a-přidejte-jej-jako-klíč-luks">Vytvořte soubor s klíčem a přidejte jej jako klíč LUKS</h4>
-<pre tabindex="0"><code>mkdir /root/secrets &amp;&amp; chmod 700 /root/secrets
-head -c 64 /dev/urandom &gt; /root/secrets/crypto_keyfile.bin &amp;&amp; chmod 600 /root/secrets/crypto_keyfile.bin
-cryptsetup -v luksAddKey -i 1 /dev/nvme0n1p2 /root/secrets/crypto_keyfile.bin
-</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#add-the-keyfile-to-the-initramfs-image"></a></h4>
-<h4 id="přidejte-soubor-s-klíčem-do-obrazu-initramfs">Přidejte soubor s klíčem do obrazu initramfs</h4>
-<pre tabindex="0"><code>nvim /etc/mkinitcpio.conf
-</code></pre><pre tabindex="0"><code>FILES=(/root/secrets/crypto_keyfile.bin)
-</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#recreate-the-initramfs-image-1"></a></h4>
-<h4 id="znovu-vytvořte-obraz-initramfs-1">Znovu vytvořte obraz initramfs</h4>
-<pre tabindex="0"><code>mkinitcpio -P
-</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#set-kernel-parameters-to-unlock-the-luks-partition-with-the-keyfile-using-encrypt-hook"></a></h4>
-<h4 id="nastavte-parametry-jádra-pro-odemknutí-oddílu-luks-pomocí-souboru-s-klíčem-v-encrypt-hook">Nastavte parametry jádra pro odemknutí oddílu LUKS pomocí souboru s klíčem v <code>encrypt</code> hook</h4>
-<pre tabindex="0"><code>/etc/default/grub
-</code></pre><pre tabindex="0"><code>GRUB_CMDLINE_LINUX=&#34;... cryptkey=rootfs:/root/secrets/crypto_keyfile.bin&#34;
-</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#regenerate-grubs-configuration-file"></a></h4>
-<h4 id="znovu-finálně-vygenerujte-konfigurační-soubor-grub">Znovu finálně vygenerujte konfigurační soubor GRUB</h4>
-<pre tabindex="0"><code>grub-mkconfig -o /boot/grub/grub.cfg
-</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#restrict-boot-permissions"></a></h4>
-<h4 id="omezit-bootoprávnění">Omezit <code>/boot</code>oprávnění</h4>
-<pre tabindex="0"><code>chmod 700 /boot
-</code></pre><p>Instalace je nyní dokončena. Ukončete chroot a restartujte počítač.</p>
-<pre tabindex="0"><code>exit
-reboot
-</code></pre><h2><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#post-installation"></a></h2>
-<h2 id="po-instalaci-post-instalační-kroky">Po instalaci (post-instalační kroky)</h2>
+<h3 class="relative group">Instalace základního softwaru
+    <div id="instalace-základního-softwaru" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#instalace-z%c3%a1kladn%c3%adho-softwaru" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>pacman -S openssh networkmanager wpa_supplicant netctl
+</span></span><span style="display:flex;"><span>systemctl enable NetworkManager
+</span></span><span style="display:flex;"><span>systemctl enable sshd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pacman -S amd-ucode (for AMD), pacman -S intel-ucode (for INTEL)
+</span></span><span style="display:flex;"><span>mkinitcpio -p linux</span></span></code></pre></div></div>
+
+<h4 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#graphical-drivers-and-xorg"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+
+<h4 class="relative group">Grafické ovladače a Xorg<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#amd-cards"  target="_blank" rel="noreferrer"></a>
+    <div id="grafické-ovladače-a-xorg" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#grafick%c3%a9-ovlada%c4%8de-a-xorg" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+
+<h5 class="relative group">Karty AMD
+    <div id="karty-amd" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#karty-amd" aria-label="Kotva">#</a>
+    </span>
+    
+</h5>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>pacman -S xorg xorg-xinit
+</span></span><span style="display:flex;"><span>pacman -S mesa</span></span></code></pre></div></div>
+
+<h5 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#nvidia-cards"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h5>
+
+<h5 class="relative group">Karty Nvidia
+    <div id="karty-nvidia" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#karty-nvidia" aria-label="Kotva">#</a>
+    </span>
+    
+</h5>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>pacman -S xorg xorg-xinit
+</span></span><span style="display:flex;"><span>pacman -S nvidia nvidia-utils
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo vim /etc/mkinitcpio.conf
+</span></span><span style="display:flex;"><span># edit Modules and Files
+</span></span><span style="display:flex;"><span>MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm ...)
+</span></span><span style="display:flex;"><span>FILES=&#34;/etc/modprobe.d/nvidia.conf&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo mkinitcpio -P
+</span></span><span style="display:flex;"><span>nvim /etc/modprobe.d/nvidia.conf
+</span></span><span style="display:flex;"><span># Add row to the file
+</span></span><span style="display:flex;"><span>options nvidia_drm modeset=1</span></span></code></pre></div></div>
+
+<h5 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#virtualbox-support"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h5>
+
+<h5 class="relative group">Podpora Virtualboxu
+    <div id="podpora-virtualboxu" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#podpora-virtualboxu" aria-label="Kotva">#</a>
+    </span>
+    
+</h5>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>pacman -S virtualbox-guest-utils</span></span></code></pre></div></div>
+
+<h3 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#root-password"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+
+<h3 class="relative group">Heslo uživatele root<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#set-the-root-password"  target="_blank" rel="noreferrer"></a>
+    <div id="heslo-uživatele-root" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#heslo-u%c5%beivatele-root" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">Nastavte heslo uživatele root
+    <div id="nastavte-heslo-uživatele-root" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nastavte-heslo-u%c5%beivatele-root" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>passwd</span></span></code></pre></div></div>
+
+<h3 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#add-linux-user"  target="_blank" rel="noreferrer"></a>Přidat uživatele Linuxu
+    <div id="přidat-uživatele-linuxu" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#p%c5%99idat-u%c5%beivatele-linuxu" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>useradd -m -g users -G wheel,storage,power -s /bin/bash 
+</span></span><span style="display:flex;"><span>passwd 
+</span></span><span style="display:flex;"><span>pacman -S sudo
+</span></span><span style="display:flex;"><span>EDITOR=nvim visudo,  (uncomment) %wheel ALL=(ALL:ALL) ALL</span></span></code></pre></div></div>
+
+<h3 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#boot-loader"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+
+<h3 class="relative group">Zavaděč (bootloader)<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#install-grub"  target="_blank" rel="noreferrer"></a>
+    <div id="zavaděč-bootloader" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#zavad%c4%9b%c4%8d-bootloader" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">Nainstalujte GRUB
+    <div id="nainstalujte-grub" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nainstalujte-grub" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>pacman -S grub efibootmgr os-prober dosfstools mtools</span></span></code></pre></div></div>
+
+<h4 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#configure-grub-to-allow-booting-from-boot-on-a-luks1-encrypted-partition"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+
+<h4 class="relative group">Nakonfigurujte GRUB tak, aby umožňoval spouštění z /boot na šifrovaném oddílu LUKS1
+    <div id="nakonfigurujte-grub-tak-aby-umožňoval-spouštění-z-boot-na-šifrovaném-oddílu-luks1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nakonfigurujte-grub-tak-aby-umo%c5%be%c5%88oval-spou%c5%a1t%c4%9bn%c3%ad-z-boot-na-%c5%a1ifrovan%c3%a9m-odd%c3%adlu-luks1" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>nvim /etc/default/grub</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>GRUB_ENABLE_CRYPTODISK=y</span></span></code></pre></div></div>
+
+<h4 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#set-kernel-parameter-to-unlock-the-btrfs-physical-volume-at-boot-using-encrypt-hook"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+
+<h4 class="relative group">Nastavte parametr jádra pro odemknutí fyzického svazku BTRFS při spouštění pomocí <code>encrypt</code> hook<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#uuid-is-the-partition-containing-the-luks-container"  target="_blank" rel="noreferrer"></a>
+    <div id="nastavte-parametr-jádra-pro-odemknutí-fyzického-svazku-btrfs-při-spouštění-pomocí-encrypt-hook" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nastavte-parametr-j%c3%a1dra-pro-odemknut%c3%ad-fyzick%c3%a9ho-svazku-btrfs-p%c5%99i-spou%c5%a1t%c4%9bn%c3%ad-pomoc%c3%ad-encrypt-hook" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+
+<h5 class="relative group">UUID je oddíl obsahující kontejner LUKS
+    <div id="uuid-je-oddíl-obsahující-kontejner-luks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#uuid-je-odd%c3%adl-obsahuj%c3%adc%c3%ad-kontejner-luks" aria-label="Kotva">#</a>
+    </span>
+    
+</h5>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>blkid</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/dev/nvme0n1p2: UUID=&#34;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&#34; TYPE=&#34;crypto_LUKS&#34; PARTLABEL=&#34;Linux LUKS&#34; PARTUUID=&#34;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&#34;</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/etc/default/grub</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span># allow-discards is only for ssd to let trim work with encryption enabled
+</span></span><span style="display:flex;"><span>GRUB_CMDLINE_LINUX=&#34;... cryptdevice=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:cryptbtrfs:allow-discards&#34;</span></span></code></pre></div></div>
+
+<h4 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#install-grub-to-the-mounted-esp-for-uefi-booting"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+
+<h4 class="relative group">Nainstalujte GRUB do připojeného ESP pro spouštění UEFI
+    <div id="nainstalujte-grub-do-připojeného-esp-pro-spouštění-uefi" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nainstalujte-grub-do-p%c5%99ipojen%c3%a9ho-esp-pro-spou%c5%a1t%c4%9bn%c3%ad-uefi" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>grub-install --target=x86_64-efi --bootloader-id=ARCH --efi-directory=/efi --recheck</span></span></code></pre></div></div>
+
+<h4 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#generate-grubs-configuration-file"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+
+<h4 class="relative group">Vygenerujte konfigurační soubor GRUB
+    <div id="vygenerujte-konfigurační-soubor-grub" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vygenerujte-konfigura%c4%8dn%c3%ad-soubor-grub" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>grub-mkconfig -o /boot/grub/grub.cfg</span></span></code></pre></div></div>
+
+<h3 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#recommended-embed-a-keyfile-in-initramfs"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+
+<h3 class="relative group">(doporučeno) Vložte soubor s klíčem do initramfs
+    <div id="doporučeno-vložte-soubor-s-klíčem-do-initramfs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#doporu%c4%8deno-vlo%c5%bete-soubor-s-kl%c3%ad%c4%8dem-do-initramfs" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+<p>To se provádí proto, abyste nemuseli zadávat heslo pro dešifrování dvakrát (jednou pro GRUB, jednou pro initramfs.)<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#create-a-keyfile-and-add-it-as-luks-key"  target="_blank" rel="noreferrer"></a></p>
+
+<h4 class="relative group">Vytvořte soubor s klíčem a přidejte jej jako klíč LUKS
+    <div id="vytvořte-soubor-s-klíčem-a-přidejte-jej-jako-klíč-luks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vytvo%c5%99te-soubor-s-kl%c3%ad%c4%8dem-a-p%c5%99idejte-jej-jako-kl%c3%ad%c4%8d-luks" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>mkdir /root/secrets &amp;&amp; chmod 700 /root/secrets
+</span></span><span style="display:flex;"><span>head -c 64 /dev/urandom &gt; /root/secrets/crypto_keyfile.bin &amp;&amp; chmod 600 /root/secrets/crypto_keyfile.bin
+</span></span><span style="display:flex;"><span>cryptsetup -v luksAddKey -i 1 /dev/nvme0n1p2 /root/secrets/crypto_keyfile.bin</span></span></code></pre></div></div>
+
+<h4 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#add-the-keyfile-to-the-initramfs-image"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+
+<h4 class="relative group">Přidejte soubor s klíčem do obrazu initramfs
+    <div id="přidejte-soubor-s-klíčem-do-obrazu-initramfs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#p%c5%99idejte-soubor-s-kl%c3%ad%c4%8dem-do-obrazu-initramfs" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>nvim /etc/mkinitcpio.conf</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>FILES=(/root/secrets/crypto_keyfile.bin)</span></span></code></pre></div></div>
+
+<h4 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#recreate-the-initramfs-image-1"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+
+<h4 class="relative group">Znovu vytvořte obraz initramfs
+    <div id="znovu-vytvořte-obraz-initramfs-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#znovu-vytvo%c5%99te-obraz-initramfs-1" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>mkinitcpio -P</span></span></code></pre></div></div>
+
+<h4 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#set-kernel-parameters-to-unlock-the-luks-partition-with-the-keyfile-using-encrypt-hook"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+
+<h4 class="relative group">Nastavte parametry jádra pro odemknutí oddílu LUKS pomocí souboru s klíčem v <code>encrypt</code> hook
+    <div id="nastavte-parametry-jádra-pro-odemknutí-oddílu-luks-pomocí-souboru-s-klíčem-v-encrypt-hook" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nastavte-parametry-j%c3%a1dra-pro-odemknut%c3%ad-odd%c3%adlu-luks-pomoc%c3%ad-souboru-s-kl%c3%ad%c4%8dem-v-encrypt-hook" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/etc/default/grub</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>GRUB_CMDLINE_LINUX=&#34;... cryptkey=rootfs:/root/secrets/crypto_keyfile.bin&#34;</span></span></code></pre></div></div>
+
+<h4 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#regenerate-grubs-configuration-file"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+
+<h4 class="relative group">Znovu finálně vygenerujte konfigurační soubor GRUB
+    <div id="znovu-finálně-vygenerujte-konfigurační-soubor-grub" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#znovu-fin%c3%a1ln%c4%9b-vygenerujte-konfigura%c4%8dn%c3%ad-soubor-grub" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>grub-mkconfig -o /boot/grub/grub.cfg</span></span></code></pre></div></div>
+
+<h4 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#restrict-boot-permissions"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+
+<h4 class="relative group">Omezit <code>/boot</code>oprávnění
+    <div id="omezit-bootoprávnění" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#omezit-bootopr%c3%a1vn%c4%9bn%c3%ad" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>chmod 700 /boot</span></span></code></pre></div></div>
+<p>Instalace je nyní dokončena. Ukončete chroot a restartujte počítač.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>exit
+</span></span><span style="display:flex;"><span>reboot</span></span></code></pre></div></div>
+
+<h2 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#post-installation"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">Po instalaci (post-instalační kroky)
+    <div id="po-instalaci-post-instalační-kroky" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#po-instalaci-post-instala%c4%8dn%c3%ad-kroky" aria-label="Kotva">#</a>
+    </span>
+    
+</h2>
 <p>Váš systém by nyní měl být plně nainstalován, spustitelný a plně zašifrovaný.</p>
 <p>Pokud jste soubor s klíčem vložili do obrazu initramfs, měl by k odemknutí do systému počítač vyžadovat vaše heslo pro dešifrování pouze jednou <strong>před GRUB tabulkou</strong>. Narozdíl od archinstall skriptu, toto je daleko více bezpečnostní zabezpečení.</p>
-<p>Pro další standardní kroky po instalaci Arch Linuxu <a href="https://wiki.archlinux.org/index.php/General_recommendations">RTFM</a> .</p>
-<h3><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#speeding-up-luks-decryption-in-grub"></a></h3>
-<h3 id="zrychlení-dešifrování-luks-v-grub-po-zadání-hesla">Zrychlení dešifrování LUKS v GRUB po zadání hesla</h3>
-<p><strong>Upozornění:</strong> Před pokračováním v této části se ujistěte, že rozumíte důležitosti hesel s vysokou entropií. Informace o tom, jak generovat bezpečná hesla, naleznete na Wikipedii: <a href="https://cs.wikipedia.org/wiki/S%C3%ADla_hesla">Síla hesla</a>.</p>
-<p>Při bootování může GRUB v některých případech trvat dlouho, než bude ověřeno heslo. To může být způsobeno vysokým počtem iterací PBKDF, který můžete zkontrolovat následovně:</p>
-<pre tabindex="0"><code>cryptsetup luksDump /dev/nvme0n1p2
-</code></pre><p>Problém je v tom, že iterace byly vypočteny pro daný <code>keyslot</code> při normálním běhu počítače (nikoliv při bootu), když byl klíč přidán, aby byla zajištěna rovnováha mezi dostatečně vysokou úrovní pro ochranu před útoky hrubou silou a dostatečně nízkou, aby umožnila rychlé odvození klíče pomocí odhadu schopností vašeho počítače. Když se však GRUB spustí, <strong>nemusí mít</strong> k dispozici stejné výpočetní zdroje, a proto je <strong>výrazně pomalejší</strong> .</p>
-<p>Pokud vaše <strong>heslo poskytuje dostatečnou entropii,</strong> aby samo čelilo běžným útokům, můžete toto číslo snížit:</p>
-<pre tabindex="0"><code>cryptsetup luksChangeKey --key-slot 1 --pbkdf-force-iterations 1000 /dev/nvme0n1p2
-</code></pre><p>Podle RFC 2898 se doporučuje minimálně 1000 iterací, ale pokud je to možné, měli byste se zaměřit na vyšší hodnoty (náklady pro útočníka a také čas na odvození klíče lineárně škálují).</p>
-<p><strong>Tip:</strong> GRUB zkouší aktivované klíčové sloty postupně. Při přidávání klíčů se <code>--key-slot</code>lze použít k explicitnímu zadání klíčového slotu.</p>
-<h3><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#recommended-secure-boot---hardening-against-evil-maid-attacks"></a></h3>
-<h3 id="doporučeno-secure-boot--odolávaní-proti-útokům-evil-maid">(doporučeno) Secure Boot – Odolávaní proti útokům Evil Maid</h3>
-<p>Se zašifrovaným zaváděcím oddílem nikdo nemůže vidět ani upravit váš obraz jádra nebo initramfs, ale stále byste byli zranitelní vůči <a href="https://www.schneier.com/blog/archives/2009/10/evil_maid_attac.html">útokům Evil Maid</a> .</p>
-<p>Jedním z možných řešení je použití UEFI Secure Boot. Zbavte se předinstalovaných klíčů Secure Boot (opravdu nechcete věřit Microsoftu a OEM), zaregistrujte <a href="https://wiki.archlinux.org/index.php/Secure_Boot#Using_your_own_keys">si své vlastní klíče Secure Boot</a> a podepište zavaděč GRUB svými klíči. Evil Maid by nemohla zavést upravený zavaděč (nepodepsaný vašimi klíči) a útoku je zabráněno.<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#creating-keys"></a></p>
-<h4 id="vytváření-klíčů">Vytváření klíčů</h4>
-<p>Následující kroky by měly být provedeny pod <code>root</code>uživatelem s doprovodnými soubory uloženými v <code>/root</code>adresáři.<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#install-efitools"></a></p>
-<h5 id="nainstalujte-efitools">Nainstalujte <code>efitools</code></h5>
-<pre tabindex="0"><code>pacman -S efitools
-</code></pre><h5 id="vytvořte-guid-pro-identifikaci-vlastníka"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#create-a-guid-for-owner-identification"></a>Vytvořte GUID pro identifikaci vlastníka</h5>
-<pre tabindex="0"><code>uuidgen --random &gt; GUID.txt
-</code></pre><h5 id="platformový-klíč"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#platform-key"></a>Platformový klíč</h5>
-<p>CN je běžné jméno, které lze zapsat jako cokoliv.</p>
-<pre tabindex="0"><code>openssl req -newkey rsa:4096 -nodes -keyout PK.key -new -x509 -sha256 -days 3650 -subj &#34;/CN=my Platform Key/&#34; -out PK.crt
-openssl x509 -outform DER -in PK.crt -out PK.cer
-cert-to-efi-sig-list -g &#34;$(/dev/null | /usr/bin/grep -q &#34;signature certificates&#34;; then /usr/bin/sbsign --key /root/db.key --cert /root/db.crt --output {} {}; fi&#39; \ ;
-Depends = sbsigntools
-Depends = findutils
-Depends = grep
-</code></pre><pre tabindex="0"><code>/etc/pacman.d/hooks/98-secureboot-grub.hook
-</code></pre><pre tabindex="0"><code>[Trigger]
-Operation = Install
-Operation = Upgrade
-Type = Package
-Target = grub
+<p>Pro další standardní kroky po instalaci Arch Linuxu <a href="https://wiki.archlinux.org/index.php/General_recommendations"  target="_blank" rel="noreferrer">RTFM</a> .</p>
 
-[Action]
-Description = Signing GRUB for SecureBoot
-When = PostTransaction
-Exec = /usr/bin/find /efi/ -name &#39;grubx64*&#39; -exec /usr/bin/sh -c &#39;if ! /usr/bin/sbverify --list {} 2&gt;/dev/null | /usr/bin/grep -q &#34;signature certificates&#34;; then /usr/bin/sbsign --key /root/db.key --cert /root/db.crt --output {} {}; fi&#39; \ ;
-Depends = sbsigntools
-Depends = findutils
-Depends = grep
-</code></pre><h4><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#enroll-keys-in-firmware"></a></h4>
-<h4 id="zaregistrujte-klíče-do-firmwaru">Zaregistrujte klíče do firmwaru</h4>
-<h5 id="zkopírujte-vše-cer-esl-authdo-systémového-oddílu-efi"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#copy-all-cer-esl-auth-to-the-efi-system-partition"></a>Zkopírujte vše <code>*.cer</code>, <code>*.esl</code>, <code>*.auth</code>do systémového oddílu EFI</h5>
-<pre tabindex="0"><code>cp /root/*.cer /root/*.esl /root/*.auth /efi/
-</code></pre><h5 id="spusťte-nástroj-pro-nastavení-firmwaru-uefi-často-nesprávně-označovaný-jako-bios">Spusťte nástroj pro nastavení firmwaru UEFI (často nesprávně označovaný jako „BIOS“)</h5>
-<pre tabindex="0"><code>systemctl reboot --firmware
-</code></pre><p>Firmware má různá rozhraní, <a href="http://www.rodsbooks.com/efi-bootloaders/controlling-sb.html#setuputil">viz Výměna klíčů pomocí nástroje pro nastavení firmwaru</a>, pokud jsou následující pokyny nejasné nebo neúspěšné.</p>
-<h5 id="nastavte-typ-os-na-windows-uefi-mode"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#set-os-type-to-windows-uefi-mode"></a>Nastavte Typ OS na <code>Windows UEFI mode</code></h5>
-<p>Najděte možnosti Secure Boot a nastavte typ OS na <code>Windows UEFI mode</code>(Ano, i když nejsme na Windows.) To může být nezbytné pro funkci Secure Boot.<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#clear-preloaded-secure-boot-keys"></a></p>
-<h5 id="vymažte-předinstalované-klíče-secure-boot">Vymažte předinstalované klíče Secure Boot</h5>
+<h3 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#speeding-up-luks-decryption-in-grub"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+
+<h3 class="relative group">Zrychlení dešifrování LUKS v GRUB po zadání hesla
+    <div id="zrychlení-dešifrování-luks-v-grub-po-zadání-hesla" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#zrychlen%c3%ad-de%c5%a1ifrov%c3%a1n%c3%ad-luks-v-grub-po-zad%c3%a1n%c3%ad-hesla" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+<p><strong>Upozornění:</strong> Před pokračováním v této části se ujistěte, že rozumíte důležitosti hesel s vysokou entropií. Informace o tom, jak generovat bezpečná hesla, naleznete na Wikipedii: <a href="https://cs.wikipedia.org/wiki/S%C3%ADla_hesla"  target="_blank" rel="noreferrer">Síla hesla</a>.</p>
+<p>Při bootování může GRUB v některých případech trvat dlouho, než bude ověřeno heslo. To může být způsobeno vysokým počtem iterací PBKDF, který můžete zkontrolovat následovně:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>cryptsetup luksDump /dev/nvme0n1p2</span></span></code></pre></div></div>
+<p>Problém je v tom, že iterace byly vypočteny pro daný <code>keyslot</code> při normálním běhu počítače (nikoliv při bootu), když byl klíč přidán, aby byla zajištěna rovnováha mezi dostatečně vysokou úrovní pro ochranu před útoky hrubou silou a dostatečně nízkou, aby umožnila rychlé odvození klíče pomocí odhadu schopností vašeho počítače. Když se však GRUB spustí, <strong>nemusí mít</strong> k dispozici stejné výpočetní zdroje, a proto je <strong>výrazně pomalejší</strong> .</p>
+<p>Pokud vaše <strong>heslo poskytuje dostatečnou entropii,</strong> aby samo čelilo běžným útokům, můžete toto číslo snížit:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>cryptsetup luksChangeKey --key-slot 1 --pbkdf-force-iterations 1000 /dev/nvme0n1p2</span></span></code></pre></div></div>
+<p>Podle RFC 2898 se doporučuje minimálně 1000 iterací, ale pokud je to možné, měli byste se zaměřit na vyšší hodnoty (náklady pro útočníka a také čas na odvození klíče lineárně škálují).</p>
+<p><strong>Tip:</strong> GRUB zkouší aktivované klíčové sloty postupně. Při přidávání klíčů se <code>--key-slot</code>lze použít k explicitnímu zadání klíčového slotu.</p>
+
+<h3 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#recommended-secure-boot---hardening-against-evil-maid-attacks"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+
+<h3 class="relative group">(doporučeno) Secure Boot – Odolávaní proti útokům Evil Maid
+    <div id="doporučeno-secure-boot--odolávaní-proti-útokům-evil-maid" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#doporu%c4%8deno-secure-boot--odol%c3%a1van%c3%ad-proti-%c3%batok%c5%afm-evil-maid" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+<p>Se zašifrovaným zaváděcím oddílem nikdo nemůže vidět ani upravit váš obraz jádra nebo initramfs, ale stále byste byli zranitelní vůči <a href="https://www.schneier.com/blog/archives/2009/10/evil_maid_attac.html"  target="_blank" rel="noreferrer">útokům Evil Maid</a> .</p>
+<p>Jedním z možných řešení je použití UEFI Secure Boot. Zbavte se předinstalovaných klíčů Secure Boot (opravdu nechcete věřit Microsoftu a OEM), zaregistrujte <a href="https://wiki.archlinux.org/index.php/Secure_Boot#Using_your_own_keys"  target="_blank" rel="noreferrer">si své vlastní klíče Secure Boot</a> a podepište zavaděč GRUB svými klíči. Evil Maid by nemohla zavést upravený zavaděč (nepodepsaný vašimi klíči) a útoku je zabráněno.<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#creating-keys"  target="_blank" rel="noreferrer"></a></p>
+
+<h4 class="relative group">Vytváření klíčů
+    <div id="vytváření-klíčů" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vytv%c3%a1%c5%99en%c3%ad-kl%c3%ad%c4%8d%c5%af" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<p>Následující kroky by měly být provedeny pod <code>root</code>uživatelem s doprovodnými soubory uloženými v <code>/root</code>adresáři.<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#install-efitools"  target="_blank" rel="noreferrer"></a></p>
+
+<h5 class="relative group">Nainstalujte <code>efitools</code>
+    <div id="nainstalujte-efitools" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nainstalujte-efitools" aria-label="Kotva">#</a>
+    </span>
+    
+</h5>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>pacman -S efitools</span></span></code></pre></div></div>
+
+<h5 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#create-a-guid-for-owner-identification"  target="_blank" rel="noreferrer"></a>Vytvořte GUID pro identifikaci vlastníka
+    <div id="vytvořte-guid-pro-identifikaci-vlastníka" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vytvo%c5%99te-guid-pro-identifikaci-vlastn%c3%adka" aria-label="Kotva">#</a>
+    </span>
+    
+</h5>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>uuidgen --random &gt; GUID.txt</span></span></code></pre></div></div>
+
+<h5 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#platform-key"  target="_blank" rel="noreferrer"></a>Platformový klíč
+    <div id="platformový-klíč" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#platformov%c3%bd-kl%c3%ad%c4%8d" aria-label="Kotva">#</a>
+    </span>
+    
+</h5>
+<p>CN je běžné jméno, které lze zapsat jako cokoliv.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>openssl req -newkey rsa:4096 -nodes -keyout PK.key -new -x509 -sha256 -days 3650 -subj &#34;/CN=my Platform Key/&#34; -out PK.crt
+</span></span><span style="display:flex;"><span>openssl x509 -outform DER -in PK.crt -out PK.cer
+</span></span><span style="display:flex;"><span>cert-to-efi-sig-list -g &#34;$(/dev/null | /usr/bin/grep -q &#34;signature certificates&#34;; then /usr/bin/sbsign --key /root/db.key --cert /root/db.crt --output {} {}; fi&#39; \ ;
+</span></span><span style="display:flex;"><span>Depends = sbsigntools
+</span></span><span style="display:flex;"><span>Depends = findutils
+</span></span><span style="display:flex;"><span>Depends = grep</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/etc/pacman.d/hooks/98-secureboot-grub.hook</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>[Trigger]
+</span></span><span style="display:flex;"><span>Operation = Install
+</span></span><span style="display:flex;"><span>Operation = Upgrade
+</span></span><span style="display:flex;"><span>Type = Package
+</span></span><span style="display:flex;"><span>Target = grub
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Action]
+</span></span><span style="display:flex;"><span>Description = Signing GRUB for SecureBoot
+</span></span><span style="display:flex;"><span>When = PostTransaction
+</span></span><span style="display:flex;"><span>Exec = /usr/bin/find /efi/ -name &#39;grubx64*&#39; -exec /usr/bin/sh -c &#39;if ! /usr/bin/sbverify --list {} 2&gt;/dev/null | /usr/bin/grep -q &#34;signature certificates&#34;; then /usr/bin/sbsign --key /root/db.key --cert /root/db.crt --output {} {}; fi&#39; \ ;
+</span></span><span style="display:flex;"><span>Depends = sbsigntools
+</span></span><span style="display:flex;"><span>Depends = findutils
+</span></span><span style="display:flex;"><span>Depends = grep</span></span></code></pre></div></div>
+
+<h4 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#enroll-keys-in-firmware"  target="_blank" rel="noreferrer"></a>
+    <div id="" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+
+<h4 class="relative group">Zaregistrujte klíče do firmwaru
+    <div id="zaregistrujte-klíče-do-firmwaru" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#zaregistrujte-kl%c3%ad%c4%8de-do-firmwaru" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+
+<h5 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#copy-all-cer-esl-auth-to-the-efi-system-partition"  target="_blank" rel="noreferrer"></a>Zkopírujte vše <code>*.cer</code>, <code>*.esl</code>, <code>*.auth</code>do systémového oddílu EFI
+    <div id="zkopírujte-vše-cer-esl-authdo-systémového-oddílu-efi" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#zkop%c3%adrujte-v%c5%a1e-cer-esl-authdo-syst%c3%a9mov%c3%a9ho-odd%c3%adlu-efi" aria-label="Kotva">#</a>
+    </span>
+    
+</h5>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>cp /root/*.cer /root/*.esl /root/*.auth /efi/</span></span></code></pre></div></div>
+
+<h5 class="relative group">Spusťte nástroj pro nastavení firmwaru UEFI (často nesprávně označovaný jako „BIOS“)
+    <div id="spusťte-nástroj-pro-nastavení-firmwaru-uefi-často-nesprávně-označovaný-jako-bios" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#spus%c5%a5te-n%c3%a1stroj-pro-nastaven%c3%ad-firmwaru-uefi-%c4%8dasto-nespr%c3%a1vn%c4%9b-ozna%c4%8dovan%c3%bd-jako-bios" aria-label="Kotva">#</a>
+    </span>
+    
+</h5>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>systemctl reboot --firmware</span></span></code></pre></div></div>
+<p>Firmware má různá rozhraní, <a href="http://www.rodsbooks.com/efi-bootloaders/controlling-sb.html#setuputil"  target="_blank" rel="noreferrer">viz Výměna klíčů pomocí nástroje pro nastavení firmwaru</a>, pokud jsou následující pokyny nejasné nebo neúspěšné.</p>
+
+<h5 class="relative group"><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#set-os-type-to-windows-uefi-mode"  target="_blank" rel="noreferrer"></a>Nastavte Typ OS na <code>Windows UEFI mode</code>
+    <div id="nastavte-typ-os-na-windows-uefi-mode" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nastavte-typ-os-na-windows-uefi-mode" aria-label="Kotva">#</a>
+    </span>
+    
+</h5>
+<p>Najděte možnosti Secure Boot a nastavte typ OS na <code>Windows UEFI mode</code>(Ano, i když nejsme na Windows.) To může být nezbytné pro funkci Secure Boot.<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#clear-preloaded-secure-boot-keys"  target="_blank" rel="noreferrer"></a></p>
+
+<h5 class="relative group">Vymažte předinstalované klíče Secure Boot
+    <div id="vymažte-předinstalované-klíče-secure-boot" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vyma%c5%bete-p%c5%99edinstalovan%c3%a9-kl%c3%ad%c4%8de-secure-boot" aria-label="Kotva">#</a>
+    </span>
+    
+</h5>
 <p>Pomocí Key Management vymažte všechny předinstalované klíče Secure Boot (Microsoft a OEM).</p>
-<p>Vymazáním všech klíčů Secure Boot vstoupíte do režimu nastavení (takže si můžete zaregistrovat své vlastní klíče Secure Boot).<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#set-or-append-the-new-keys"></a></p>
-<h5 id="nastavte-nebo-připojte-nové-klíče">Nastavte nebo připojte nové klíče</h5>
+<p>Vymazáním všech klíčů Secure Boot vstoupíte do režimu nastavení (takže si můžete zaregistrovat své vlastní klíče Secure Boot).<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#set-or-append-the-new-keys"  target="_blank" rel="noreferrer"></a></p>
+
+<h5 class="relative group">Nastavte nebo připojte nové klíče
+    <div id="nastavte-nebo-připojte-nové-klíče" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nastavte-nebo-p%c5%99ipojte-nov%c3%a9-kl%c3%ad%c4%8de" aria-label="Kotva">#</a>
+    </span>
+    
+</h5>
 <p>Klíče musí být nastaveny v následujícím pořadí:</p>
-<pre tabindex="0"><code>db =&gt; KEK =&gt; PK
-</code></pre><p>To je způsobeno tím, že některé systémy ukončí režim nastavení, jakmile <code>PK</code>je zadáno.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>db =&gt; KEK =&gt; PK</span></span></code></pre></div></div>
+<p>To je způsobeno tím, že některé systémy ukončí režim nastavení, jakmile <code>PK</code>je zadáno.</p>
 <p>Nenahrávejte výchozí tovární nastavení, místo toho procházejte dostupné souborové systémy při hledání souborů dříve zkopírovaných do systémového oddílu EFI.</p>
 <p>Vyberte některý z formátů. Firmware by vás měl vyzvat k zadání typu ( <em>Poznámka:</em> názvy typů se mohou mírně lišit.)</p>
-<pre tabindex="0"><code>*.cer is a Public Key Certificate
-*.esl is a UEFI Secure Variable
-*.auth is an Authenticated Variable
-</code></pre><p>Určitý firmware (například můj vlastní) vyžaduje použití souborů *.auth. Vyzkoušejte různé, dokud nebudou fungovat.<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#set-uefi-supervisor-administrator-password"></a></p>
-<h5 id="nastavte-heslo-správce-administrátora-uefi">Nastavte heslo správce (administrátora) UEFI</h5>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>*.cer is a Public Key Certificate
+</span></span><span style="display:flex;"><span>*.esl is a UEFI Secure Variable
+</span></span><span style="display:flex;"><span>*.auth is an Authenticated Variable</span></span></code></pre></div></div>
+<p>Určitý firmware (například můj vlastní) vyžaduje použití souborů *.auth. Vyzkoušejte různé, dokud nebudou fungovat.<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#set-uefi-supervisor-administrator-password"  target="_blank" rel="noreferrer"></a></p>
+
+<h5 class="relative group">Nastavte heslo správce (administrátora) UEFI
+    <div id="nastavte-heslo-správce-administrátora-uefi" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nastavte-heslo-spr%c3%a1vce-administr%c3%a1tora-uefi" aria-label="Kotva">#</a>
+    </span>
+    
+</h5>
 <p>V nastavení zabezpečení musíte také nastavit heslo správce (administrátora) firmwaru UEFI, takže nikdo nemůže jednoduše spustit nástroj pro nastavení UEFI a vypnout zabezpečené spouštění.</p>
-<p>Nikdy byste neměli používat stejné heslo správce firmwaru UEFI jako heslo pro šifrování, protože na některých starých přenosných počítačích lze heslo správce obnovit jako prostý text z čipu EEPROM.<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#exit-and-save-changes"></a></p>
-<h5 id="ukončete-a-uložte-změny">Ukončete a uložte změny</h5>
+<p>Nikdy byste neměli používat stejné heslo správce firmwaru UEFI jako heslo pro šifrování, protože na některých starých přenosných počítačích lze heslo správce obnovit jako prostý text z čipu EEPROM.<a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#exit-and-save-changes"  target="_blank" rel="noreferrer"></a></p>
+
+<h5 class="relative group">Ukončete a uložte změny
+    <div id="ukončete-a-uložte-změny" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ukon%c4%8dete-a-ulo%c5%bete-zm%c4%9bny" aria-label="Kotva">#</a>
+    </span>
+    
+</h5>
 <p>Jakmile načtete všechny tři klíče a nastavíte heslo správce, stiskněte F10 pro ukončení a uložení změn.</p>
 <p>Pokud bylo vše provedeno správně, měl by se při restartu objevit váš zavaděč.</p>
-<p><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#check-if-secure-boot-was-enabled"></a></p>
-<h4 id="zkontrolujte-zda-byl-povolen-secure-boot">Zkontrolujte, zda byl povolen Secure Boot</h4>
-<pre tabindex="0"><code>od -An -t u1 /sys/firmware/efi/efivars/SecureBoot-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-</code></pre><p>Znaky označené XXXX se liší stroj od stroje. Chcete-li s tím pomoci, můžete použít tab doplňování nebo seznam proměnných EFI.</p>
+<p><a href="https://github.com/raven2cz/geek-room/blob/main/arch-install-luks-btrfs/arch-install-luks-btrfs.md#check-if-secure-boot-was-enabled"  target="_blank" rel="noreferrer"></a></p>
+
+<h4 class="relative group">Zkontrolujte, zda byl povolen Secure Boot
+    <div id="zkontrolujte-zda-byl-povolen-secure-boot" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#zkontrolujte-zda-byl-povolen-secure-boot" aria-label="Kotva">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>od -An -t u1 /sys/firmware/efi/efivars/SecureBoot-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</span></span></code></pre></div></div>
+<p>Znaky označené XXXX se liší stroj od stroje. Chcete-li s tím pomoci, můžete použít tab doplňování nebo seznam proměnných EFI.</p>
 <p>Pokud je povoleno Secure Boot, tento příkaz vrátí 1 jako poslední celé číslo v seznamu pěti hodnot, například:</p>
-<pre tabindex="0"><code>6  0  0  0  1
-</code></pre><p>Pokud bylo aktivováno Secure Boot a bylo nastaveno heslo správce UEFI, můžete se nyní považovat za chráněného před útokům Evil Maid!</p>
-<h3 id="docker-používaný-s-btrfs-souborovým-systémem">Docker používaný s BTRFS souborovým systémem</h3>
-<p>Seznámení se s dockerem na Arch Linuxu na wiki <a href="https://wiki.archlinux.org/title/docker">Docker on Arch</a>.</p>
-<p>BTRFS je idální pro správu docker snapshotů. Pro nastavení postupujte podle <a href="https://docs.docker.com/storage/storagedriver/btrfs-driver/">originálního článku</a>.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>6  0  0  0  1</span></span></code></pre></div></div>
+<p>Pokud bylo aktivováno Secure Boot a bylo nastaveno heslo správce UEFI, můžete se nyní považovat za chráněného před útokům Evil Maid!</p>
+
+<h3 class="relative group">Docker používaný s BTRFS souborovým systémem
+    <div id="docker-používaný-s-btrfs-souborovým-systémem" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#docker-pou%c5%be%c3%advan%c3%bd-s-btrfs-souborov%c3%bdm-syst%c3%a9mem" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+<p>Seznámení se s dockerem na Arch Linuxu na wiki <a href="https://wiki.archlinux.org/title/docker"  target="_blank" rel="noreferrer">Docker on Arch</a>.</p>
+<p>BTRFS je idální pro správu docker snapshotů. Pro nastavení postupujte podle <a href="https://docs.docker.com/storage/storagedriver/btrfs-driver/"  target="_blank" rel="noreferrer">originálního článku</a>.</p>
 <p>Celé prostředí máme pro dockerizaci již nachystané. Mělo by stačit nastavit pouze v <code>/etc/docker/daemon.json</code></p>
-<pre tabindex="0"><code>{
-  &#34;storage-driver&#34;: &#34;btrfs&#34;
-}
-</code></pre><h3 id="kompletní-video-návod">Kompletní video návod</h3>
-<p><a href="https://www.youtube.com/watch?v=YdqGsv3tmN4">https://www.youtube.com/watch?v=YdqGsv3tmN4</a></p>
-<h3 id="odkazy-na-zdroje">Odkazy na zdroje</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  &#34;storage-driver&#34;: &#34;btrfs&#34;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+
+<h3 class="relative group">Kompletní video návod
+    <div id="kompletní-video-návod" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#kompletn%c3%ad-video-n%c3%a1vod" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
+<p><a href="https://www.youtube.com/watch?v=YdqGsv3tmN4"  target="_blank" rel="noreferrer">https://www.youtube.com/watch?v=YdqGsv3tmN4</a></p>
+
+<h3 class="relative group">Odkazy na zdroje
+    <div id="odkazy-na-zdroje" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#odkazy-na-zdroje" aria-label="Kotva">#</a>
+    </span>
+    
+</h3>
 <ul>
 <li>
-<p><strong>HLAVNÍ ČLÁNEK:</strong> <a href="https://gist.github.com/huntrar/e42aee630bee3295b2c671d098c81268">https://gist.github.com/huntrar/e42aee630bee3295b2c671d098c81268</a></p>
+<p><strong>HLAVNÍ ČLÁNEK:</strong> <a href="https://gist.github.com/huntrar/e42aee630bee3295b2c671d098c81268"  target="_blank" rel="noreferrer">https://gist.github.com/huntrar/e42aee630bee3295b2c671d098c81268</a></p>
 </li>
 <li>
-<p><a href="https://www.nishantnadkarni.tech/posts/arch_installation/">https://www.nishantnadkarni.tech/posts/arch_installation/</a></p>
+<p><a href="https://www.nishantnadkarni.tech/posts/arch_installation/"  target="_blank" rel="noreferrer">https://www.nishantnadkarni.tech/posts/arch_installation/</a></p>
 </li>
 <li>
-<p><a href="https://www.dwarmstrong.org/archlinux-install/">https://www.dwarmstrong.org/archlinux-install/</a></p>
+<p><a href="https://www.dwarmstrong.org/archlinux-install/"  target="_blank" rel="noreferrer">https://www.dwarmstrong.org/archlinux-install/</a></p>
 </li>
 <li>
-<p><a href="https://btrfs.readthedocs.io/en/latest/btrfs-man5.html#compression">https://btrfs.readthedocs.io/en/latest/btrfs-man5.html#compression</a></p>
+<p><a href="https://btrfs.readthedocs.io/en/latest/btrfs-man5.html#compression"  target="_blank" rel="noreferrer">https://btrfs.readthedocs.io/en/latest/btrfs-man5.html#compression</a></p>
 </li>
 <li>
-<p><a href="https://github.com/Szwendacz99/Arch-install-encrypted-btrfs">https://github.com/Szwendacz99/Arch-install-encrypted-btrfs</a></p>
+<p><a href="https://github.com/Szwendacz99/Arch-install-encrypted-btrfs"  target="_blank" rel="noreferrer">https://github.com/Szwendacz99/Arch-install-encrypted-btrfs</a></p>
 </li>
 <li>
-<p><a href="https://gist.github.com/mruiz42/83d9a232e7592d65d953671409a2aab9">https://gist.github.com/mruiz42/83d9a232e7592d65d953671409a2aab9</a></p>
+<p><a href="https://gist.github.com/mruiz42/83d9a232e7592d65d953671409a2aab9"  target="_blank" rel="noreferrer">https://gist.github.com/mruiz42/83d9a232e7592d65d953671409a2aab9</a></p>
 </li>
 <li>
-<p><a href="https://wiki.archlinux.org/title/btrfs">https://wiki.archlinux.org/title/btrfs</a></p>
+<p><a href="https://wiki.archlinux.org/title/btrfs"  target="_blank" rel="noreferrer">https://wiki.archlinux.org/title/btrfs</a></p>
 </li>
 <li>
-<p><a href="https://wiki.archlinux.org/title/dm-crypt/Encrypting_an_entire_system">https://wiki.archlinux.org/title/dm-crypt/Encrypting_an_entire_system</a></p>
+<p><a href="https://wiki.archlinux.org/title/dm-crypt/Encrypting_an_entire_system"  target="_blank" rel="noreferrer">https://wiki.archlinux.org/title/dm-crypt/Encrypting_an_entire_system</a></p>
 </li>
 <li>
-<p><a href="https://wiki.tnonline.net/w/Btrfs/Compression">https://wiki.tnonline.net/w/Btrfs/Compression</a></p>
+<p><a href="https://wiki.tnonline.net/w/Btrfs/Compression"  target="_blank" rel="noreferrer">https://wiki.tnonline.net/w/Btrfs/Compression</a></p>
 </li>
 </ul>
 
-            </div>
-        </article></main>
-</div>
-<footer class="footer">
-    <span class="footer_item"> </span>
-    &nbsp;
-
-    <div class="footer_social-icons">
-<a href="https://mastodon.arch-linux.cz/@archlinux" target="_blank" rel="noopener noreferrer me"
-    title="Mastodon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path
-        d="M21.58 13.913c-.29 1.469-2.592 3.121-5.238 3.396-1.379.184-2.737.368-4.185.276-2.368-.092-4.237-.551-4.237-.551 0 .184.014.459.043.643.308 2.294 2.317 2.478 4.22 2.57 1.922 0 3.633-.46 3.633-.46l.079 1.653s-1.344.734-3.738.918c-1.32.091-2.96-.092-4.869-.551-4.14-1.102-4.853-5.507-4.961-10.005-.034-1.285-.013-2.57-.013-3.58 0-4.589 3-5.966 3-5.966 1.513-.734 4.11-1.01 6.808-1.01h.067c2.699 0 5.296.276 6.81 1.01 0 0 3 1.377 3 5.967 0 0 .037 3.304-.419 5.69"
-        stroke="currentColor" />
-    <path
-        d="M17.832 8.633v5h-1.978V8.78c0-1.023-.43-1.542-1.29-1.542-.95 0-1.427.616-1.427 1.834v2.655H11.17V9.072c0-1.218-.476-1.834-1.427-1.834-.86 0-1.29.52-1.29 1.542v4.852H6.475V8.633c0-1.022.26-1.834.782-2.434.538-.6 1.243-.909 2.118-.909 1.012 0 1.779.39 2.286 1.169l.492.827.493-.827c.507-.78 1.274-1.169 2.286-1.169.875 0 1.58.308 2.118.909.522.6.782 1.412.782 2.434"
-        fill="currentColor" stroke="none" />
-</svg>
-</a>
-<a href="https://matrix.to/#/#archlinuxcz:matrix.org" target="_blank" rel="noopener noreferrer me"
-    title="Matrix">
-    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-    <path
-        d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.481.314.448.208.785.582 1.02 1.108.254-.374.6-.706 1.034-.992.434-.287.95-.43 1.546-.43.453 0 .872.056 1.26.167.388.11.716.286.993.53.276.245.489.559.646.951.152.392.23.863.23 1.417v5.728h-2.349V11.52c0-.286-.01-.559-.032-.812a1.755 1.755 0 0 0-.18-.66 1.106 1.106 0 0 0-.438-.448c-.194-.11-.457-.166-.785-.166-.332 0-.6.064-.803.189a1.38 1.38 0 0 0-.48.499 1.946 1.946 0 0 0-.231.696 5.56 5.56 0 0 0-.06.785v4.768h-2.35v-4.8c0-.254-.004-.503-.018-.752a2.074 2.074 0 0 0-.143-.688 1.052 1.052 0 0 0-.415-.503c-.194-.125-.476-.19-.854-.19-.111 0-.259.024-.439.074-.18.051-.36.143-.53.282-.171.138-.319.337-.439.595-.12.259-.18.6-.18 1.02v4.966H5.46V7.81zm15.693 15.64V.55H21.72V0H24v24h-2.28v-.55z" />
-</svg>
-</a>
-<a href="/index.xml" target="_blank" rel="noopener noreferrer me"
-    title="Rss">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4 11a9 9 0 0 1 9 9" />
-    <path d="M4 4a16 16 0 0 1 16 16" />
-    <circle cx="5" cy="19" r="1" />
-</svg>
-</a>
-</div>
-    <small class="footer_copyright">
-        © 2024–2026 Arch Linux CZ
+          
+          
+          
+        </div>
         
-    </small>
-</footer><a href="#" title="" id="totop">
-    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
-    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
-</svg>
+        
 
-</a>
+        
 
+        
 
-    
-
-
-
-
-
+      </div>
+    </section>
 
     
-    <script async src="http://localhost:1313/js/main.js" ></script>
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/archinstall-skript-pro-luks-a-btrfs-arch-linux-instalaci/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Archinstall skript pro LUKS a BTRFS Arch Linux instalaci
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2022-12-04T00:00:00&#43;00:00">4. prosince 2022</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/pf-2023/">
+              <span class="leading-6">
+                PF 2023&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2022-12-31T00:00:00&#43;00:00">31. prosince 2022</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
 
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Nahoru"
+    title="Nahoru">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Arch Linux CZ
+      </p>
     
 
-</body>
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Postaveno na technologiích <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Hledat"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Zavřít (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
 </html>

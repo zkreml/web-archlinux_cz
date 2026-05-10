@@ -1,39 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Arch Linux CZ</title>
+    <title>Pairdrop on Arch Linux CZ</title>
     <link>http://localhost:1313/tags/pairdrop/</link>
-    <description>Česká komunita Arch Linuxu</description>
+    <description>Recent content in Pairdrop on Arch Linux CZ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
-    <webMaster>archos@arch-linux.cz (archos)</webMaster>
-    
-    <lastBuildDate>Fri, 25 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/pairdrop/" rel="self" type="application/rss+xml" />
+    <language>cs</language>
+    <copyright>© 2026 Arch Linux CZ</copyright>
+    <lastBuildDate>Fri, 25 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/pairdrop/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Co je Pairdrop a jak funguje na Oscloud?</title>
       <link>http://localhost:1313/posts/co-je-pairdrop-a-jak-funguje-na-oscloud/</link>
       <pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/co-je-pairdrop-a-jak-funguje-na-oscloud/</guid>
-      <description>&lt;h1 id=&#34;co-je-pairdrop-a-jak-funguje&#34;&gt;Co je Pairdrop a jak funguje&lt;/h1&gt;
-&lt;p&gt;Pairdrop na serveru &lt;a href=&#34;https://pair.oscloud.cz/&#34;&gt;pair.oscloud.cz&lt;/a&gt; ti umožňuje snadno a rychle sdílet soubory mezi zařízeními. Stačí, když jsou připojena k internetu&lt;/p&gt;
-&lt;p&gt;– není potřeba žádný speciální software, vše probíhá přes webový prohlížeč.&lt;/p&gt;
-&lt;h2 id=&#34;hlavní-výhody&#34;&gt;Hlavní výhody:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Snadné sdílení: Otevři prohlížeč, přejdi na &lt;a href=&#34;https://pair.oscloud.cz/&#34;&gt;pair.oscloud.cz&lt;/a&gt; a začni sdílet soubory s jinými zařízeními.&lt;/li&gt;
-&lt;li&gt;Platformově nezávislé: Funguje na všech operačních systémech – Linux, Windows, macOS, Android a iOS.&lt;/li&gt;
-&lt;li&gt;Lokální i vzdálené použití: Můžeš posílat soubory přes místní síť nebo i na dálku přes internet.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;jak-pairdrop-používat&#34;&gt;Jak Pairdrop používat?&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Otevři pair.oscloud.cz v prohlížeči na obou zařízeních.&lt;/li&gt;
-&lt;li&gt;Vyber zařízení: Aplikace automaticky rozpozná další zařízení připojená k síti nebo na stejném serveru.&lt;/li&gt;
-&lt;li&gt;Odešli soubor: Vyber soubor, který chceš odeslat, a přetáhni ho do rozhraní nebo jej nahraj pomocí tlačítka.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Pairdrop&lt;/strong&gt; je ideální pro rychlé sdílení souborů mezi zařízeními, ať už doma, v kanceláři, nebo na cestách!&lt;/p&gt;</description>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;Co je Pairdrop a jak funguje&#xA;    &lt;div id=&#34;co-je-pairdrop-a-jak-funguje&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#co-je-pairdrop-a-jak-funguje&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Pairdrop na serveru &lt;a href=&#34;https://pair.oscloud.cz/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;pair.oscloud.cz&lt;/a&gt; ti umožňuje snadno a rychle sdílet soubory mezi zařízeními. Stačí, když jsou připojena k internetu&lt;/p&gt;&#xA;&lt;p&gt;– není potřeba žádný speciální software, vše probíhá přes webový prohlížeč.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Hlavní výhody:&#xA;    &lt;div id=&#34;hlavní-výhody&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#hlavn%c3%ad-v%c3%bdhody&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Snadné sdílení: Otevři prohlížeč, přejdi na &lt;a href=&#34;https://pair.oscloud.cz/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;pair.oscloud.cz&lt;/a&gt; a začni sdílet soubory s jinými zařízeními.&lt;/li&gt;&#xA;&lt;li&gt;Platformově nezávislé: Funguje na všech operačních systémech – Linux, Windows, macOS, Android a iOS.&lt;/li&gt;&#xA;&lt;li&gt;Lokální i vzdálené použití: Můžeš posílat soubory přes místní síť nebo i na dálku přes internet.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Jak Pairdrop používat?&#xA;    &lt;div id=&#34;jak-pairdrop-používat&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#jak-pairdrop-pou%c5%be%c3%advat&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Otevři pair.oscloud.cz v prohlížeči na obou zařízeních.&lt;/li&gt;&#xA;&lt;li&gt;Vyber zařízení: Aplikace automaticky rozpozná další zařízení připojená k síti nebo na stejném serveru.&lt;/li&gt;&#xA;&lt;li&gt;Odešli soubor: Vyber soubor, který chceš odeslat, a přetáhni ho do rozhraní nebo jej nahraj pomocí tlačítka.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Pairdrop&lt;/strong&gt; je ideální pro rychlé sdílení souborů mezi zařízeními, ať už doma, v kanceláři, nebo na cestách!&lt;/p&gt;</description>
+      
     </item>
     
   </channel>

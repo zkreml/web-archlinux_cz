@@ -4,7 +4,6 @@ date: 2022-06-25
 author: "archos"
 draft: false
 tags: ['gnome']
-series: ['Arch Linux instalace']
 ---
 
 ![](https://arch-linux.cz/wp-content/uploads/2022/06/gnome-logo.png)

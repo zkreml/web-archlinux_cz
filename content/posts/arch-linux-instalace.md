@@ -5,7 +5,6 @@ author: "archos"
 draft: false
 categories: ['Návody', 'Arch Linux']
 tags: ['instalace']
-series: ['Arch Linux instalace']
 ---
 
 Velké poděkování patří uživateli [raven2cz](https://github.com/raven2cz), který připravil tento skvělý návod včetně videa. Video je již nahráno na našem [PeerTube kanále](https://peertube.arch-linux.cz/c/videa_archlinuxcz/videos?s=1).  

@@ -5,7 +5,6 @@ author: "archos"
 draft: false
 categories: ['Návody']
 tags: ['KDE']
-series: ['Arch Linux instalace']
 ---
 
 ![](https://arch-linux.cz/wp-content/uploads/2022/04/kde-1-1024x576.jpg)

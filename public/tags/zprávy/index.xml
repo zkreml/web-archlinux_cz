@@ -1,80 +1,72 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Arch Linux CZ</title>
+    <title>Zprávy on Arch Linux CZ</title>
     <link>http://localhost:1313/tags/zpr%C3%A1vy/</link>
-    <description>Česká komunita Arch Linuxu</description>
+    <description>Recent content in Zprávy on Arch Linux CZ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
-    <webMaster>archos@arch-linux.cz (archos)</webMaster>
-    
-    <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/zpr%C3%A1vy/" rel="self" type="application/rss+xml" />
+    <language>cs</language>
+    <copyright>© 2026 Arch Linux CZ</copyright>
+    <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/zpr%C3%A1vy/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Nejnovější vydání Arch Linux ISO přináší jádro Linuxu 6.8, aktualizovaný instalační program</title>
       <link>http://localhost:1313/posts/nejnovejsi-vydani-arch-linux-iso-prinasi-jadro-linuxu-6-8-aktualizovany-instalacni-program/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/nejnovejsi-vydani-arch-linux-iso-prinasi-jadro-linuxu-6-8-aktualizovany-instalacni-program/</guid>
-      <description>&lt;p&gt;Arch Linux představil novou ISO verzi s Linux jádrem 6.8 a vylepšeným instalačním procesem. Tato aktualizace byla zrychlena kvůli bezpečnostním obavám s balíčkem XZ Utils. Nové jádro nabízí lepší podporu pro nový hardware a instalátor archinstall, nyní ve verzi 2.7.2, zlepšuje práci se sjednocenými obrazy jádra a prostředím KDE Plasma. ISO je ke stažení na &lt;a href=&#34;https://archlinux.org/download/&#34;&gt;oficiálních stránkách&lt;/a&gt; a stávající uživatelé mohou aktualizovat systém příkazem.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -Syu
-&lt;/code&gt;&lt;/pre&gt;</description>
+      <description>&lt;p&gt;Arch Linux představil novou ISO verzi s Linux jádrem 6.8 a vylepšeným instalačním procesem. Tato aktualizace byla zrychlena kvůli bezpečnostním obavám s balíčkem XZ Utils. Nové jádro nabízí lepší podporu pro nový hardware a instalátor archinstall, nyní ve verzi 2.7.2, zlepšuje práci se sjednocenými obrazy jádra a prostředím KDE Plasma. ISO je ke stažení na &lt;a href=&#34;https://archlinux.org/download/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;oficiálních stránkách&lt;/a&gt; a stávající uživatelé mohou aktualizovat systém příkazem.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -Syu&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
+      
     </item>
     
     <item>
       <title>AUR repozitář není dočasně k dispozici</title>
       <link>http://localhost:1313/posts/aur-repozitar-neni-docasne-k-dispozici/</link>
       <pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/aur-repozitar-neni-docasne-k-dispozici/</guid>
-      <description>&lt;p&gt;AUR je v současné době nedostupný z důvodu některých nefunkčních odkazů v podkladu
-Git uložiště, které je potřeba opravit. Uvedl to vývojář &lt;a href=&#34;https://lists.archlinux.org/archives/users/c62376e598e8403881c98f36535e4b3d/&#34;&gt;Morten Linderud&lt;/a&gt; v &lt;a href=&#34;https://lists.archlinux.org/archives/list/aur-general@lists.archlinux.org/thread/Z4A6LKBQW4JYQL6P7ZMWT27SE4QQ4WKO/&#34;&gt;mailing listu.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Na opravě se pracuje, ale potrvá několik hodin.&lt;/p&gt;
-&lt;p&gt;Arch User Repository (AUR) je komunitou řízené úložiště pro uživatele Archu. Obsahuje popisy balíčků ( &lt;a href=&#34;https://wiki.archlinux.org/title/PKGBUILD&#34;&gt;PKGBUILDs&lt;/a&gt; ), které vám umožňují zkompilovat balíček ze zdrojového kódu pomocí &lt;a href=&#34;https://wiki.archlinux.org/title/Makepkg&#34;&gt;makepkg&lt;/a&gt; a poté jej nainstalovat pomocí &lt;a href=&#34;https://wiki.archlinux.org/title/Pacman#Additional_commands&#34;&gt;pacman&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;AUR je v současné době nedostupný z důvodu některých nefunkčních odkazů v podkladu&#xA;Git uložiště, které je potřeba opravit. Uvedl to vývojář &lt;a href=&#34;https://lists.archlinux.org/archives/users/c62376e598e8403881c98f36535e4b3d/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Morten Linderud&lt;/a&gt; v &lt;a href=&#34;https://lists.archlinux.org/archives/list/aur-general@lists.archlinux.org/thread/Z4A6LKBQW4JYQL6P7ZMWT27SE4QQ4WKO/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;mailing listu.&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Na opravě se pracuje, ale potrvá několik hodin.&lt;/p&gt;&#xA;&lt;p&gt;Arch User Repository (AUR) je komunitou řízené úložiště pro uživatele Archu. Obsahuje popisy balíčků ( &lt;a href=&#34;https://wiki.archlinux.org/title/PKGBUILD&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;PKGBUILDs&lt;/a&gt; ), které vám umožňují zkompilovat balíček ze zdrojového kódu pomocí &lt;a href=&#34;https://wiki.archlinux.org/title/Makepkg&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;makepkg&lt;/a&gt; a poté jej nainstalovat pomocí &lt;a href=&#34;https://wiki.archlinux.org/title/Pacman#Additional_commands&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;pacman&lt;/a&gt;.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Nová verze Instalačního programu Arch Linux</title>
       <link>http://localhost:1313/posts/nova-verze-instalacniho-programu-arch-linux/</link>
       <pubDate>Sun, 29 May 2022 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/nova-verze-instalacniho-programu-arch-linux/</guid>
-      <description>&lt;p&gt;Vývojáři Arch Linuxu dnes vydali novou verzi (2.5.0) svého instalačního programu založeného na menu archinstall, který přináší další vrstvu nových funkcí a oprav chyb, které usnadňují instalace Arch Linuxu. Hlavní nabídka Archinstallu byla v tomto vydání obohacena o nový náhled disku, nový náhled rozložení disku a také uživatelský náhled do hlavní nabídky.&lt;/p&gt;
-&lt;p&gt;Kromě jiných změn, archinstall 2.5.0 zavádí &lt;code&gt;Ctrl+C&lt;/code&gt; klávesová zkratka pro vymazání aktuální možnosti se automaticky nainstaluje &lt;code&gt;network-manager-applet&lt;/code&gt; při výběru profilu počítače a NetworkManageru a přidává nové jazykové překlady, včetně &lt;strong&gt;češtiny&lt;/strong&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Vývojáři Arch Linuxu dnes vydali novou verzi (2.5.0) svého instalačního programu založeného na menu archinstall, který přináší další vrstvu nových funkcí a oprav chyb, které usnadňují instalace Arch Linuxu. Hlavní nabídka Archinstallu byla v tomto vydání obohacena o nový náhled disku, nový náhled rozložení disku a také uživatelský náhled do hlavní nabídky.&lt;/p&gt;&#xA;&lt;p&gt;Kromě jiných změn, archinstall 2.5.0 zavádí &lt;code&gt;Ctrl+C&lt;/code&gt; klávesová zkratka pro vymazání aktuální možnosti se automaticky nainstaluje &lt;code&gt;network-manager-applet&lt;/code&gt; při výběru profilu počítače a NetworkManageru a přidává nové jazykové překlady, včetně &lt;strong&gt;češtiny&lt;/strong&gt;.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Aktualizace skriptu archinstall</title>
       <link>http://localhost:1313/posts/aktualizace-skriptu-archinstall/</link>
       <pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/aktualizace-skriptu-archinstall/</guid>
-      <description>&lt;p&gt;Instalační skript archinstall  byl aktualizován na verzi 2.4.1. Toto vydání přináší, řadu nových funkcí, vylepšení a také mnoho oprav chyb.&lt;/p&gt;
-&lt;p&gt;Největší novinkou vydání Archinstall 2.4.1 je zcela nový systém nabídek, který můžete vidět na snímku obrazovky. Zcela nový systém nabídek používá balík simple-term-menu Python, který vytváří jednoduché interaktivní nabídky na příkazovém řádku a je snadno přístupný. Kromě toho byl průvodce aktualizován, aby používal nový systém nabídek.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://arch-linux.cz/wp-content/uploads/2022/04/archin-1024x585.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Nový systém nabídek by měl instalaci **Arch Linuxu  **ještě více usnadnit. Mezi další nové funkce verze Archinstall 2.4.1 patří podpora komprese Btrfs při jeho výběru jako hlavního souborového systému,  stejně jako podpora pro bezproblémové načítání konfigurací a jejich ukládání. pomocí formátu „archinstall“.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Instalační skript archinstall  byl aktualizován na verzi 2.4.1. Toto vydání přináší, řadu nových funkcí, vylepšení a také mnoho oprav chyb.&lt;/p&gt;&#xA;&lt;p&gt;Největší novinkou vydání Archinstall 2.4.1 je zcela nový systém nabídek, který můžete vidět na snímku obrazovky. Zcela nový systém nabídek používá balík simple-term-menu Python, který vytváří jednoduché interaktivní nabídky na příkazovém řádku a je snadno přístupný. Kromě toho byl průvodce aktualizován, aby používal nový systém nabídek.&lt;/p&gt;&#xA;&lt;p&gt;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;low&#34;&#xA;    alt=&#34;&#34;&#xA;    src=&#34;https://arch-linux.cz/wp-content/uploads/2022/04/archin-1024x585.webp&#34;&#xA;    &gt;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Nový systém nabídek by měl instalaci **Arch Linuxu  **ještě více usnadnit. Mezi další nové funkce verze Archinstall 2.4.1 patří podpora komprese Btrfs při jeho výběru jako hlavního souborového systému,  stejně jako podpora pro bezproblémové načítání konfigurací a jejich ukládání. pomocí formátu „archinstall“.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>20 let Arch Linuxu</title>
       <link>http://localhost:1313/posts/20-let-arch-linuxu/</link>
       <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/20-let-arch-linuxu/</guid>
-      <description>&lt;ol start=&#34;11&#34;&gt;
-&lt;li&gt;března 2002 byla Juddem Vinetem oficiálně pro veřejnost uvolněna &lt;a href=&#34;https://archlinux.org/retro/2002/&#34;&gt;první verze Arch Linuxu&lt;/a&gt; „Homer“&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Arch Linux 0.1 obsahoval linuxové jádro 2.4.18, XFree86 verze 4.2 a Mozilla verze 0.9.9.&lt;/p&gt;
-&lt;p&gt;Judd Vinet se od začátku obešel bez přebytečných GUI a asistentů, kteří překáželi uživatelům.&lt;/p&gt;
-&lt;p&gt;Klíčovým rozdílem mezi Arch Linuxem a většinou distribucí byl od začátku jeho přístup k postupnému vydávání.&lt;/p&gt;
-&lt;p&gt;Po instalaci lze tedy Arch Linux průběžně udržovat a aktualizovat v jeho jednotlivých částech bez nutnosti větší aktualizace. I to dalo Arch Linuxu v průběhu let mnoho fanoušků.&lt;/p&gt;</description>
+      <description>&lt;ol start=&#34;11&#34;&gt;&#xA;&lt;li&gt;března 2002 byla Juddem Vinetem oficiálně pro veřejnost uvolněna &lt;a href=&#34;https://archlinux.org/retro/2002/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;první verze Arch Linuxu&lt;/a&gt; „Homer“&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Arch Linux 0.1 obsahoval linuxové jádro 2.4.18, XFree86 verze 4.2 a Mozilla verze 0.9.9.&lt;/p&gt;&#xA;&lt;p&gt;Judd Vinet se od začátku obešel bez přebytečných GUI a asistentů, kteří překáželi uživatelům.&lt;/p&gt;&#xA;&lt;p&gt;Klíčovým rozdílem mezi Arch Linuxem a většinou distribucí byl od začátku jeho přístup k postupnému vydávání.&lt;/p&gt;&#xA;&lt;p&gt;Po instalaci lze tedy Arch Linux průběžně udržovat a aktualizovat v jeho jednotlivých částech bez nutnosti větší aktualizace. I to dalo Arch Linuxu v průběhu let mnoho fanoušků.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Fórum Arch Linux Cz</title>
       <link>http://localhost:1313/posts/forum-arch-linux-cz/</link>
       <pubDate>Thu, 03 Mar 2022 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/forum-arch-linux-cz/</guid>
-      <description>&lt;p&gt;Dnes bylo spuštěno &lt;a href=&#34;https://forum.arch-linux.cz/&#34;&gt;&lt;strong&gt;oficiální fórum české komunity Arch Linuxu&lt;/strong&gt; &lt;/a&gt; v plné a již funkční podobě. Samozřejmě je prozatím prázdné a nějakou dobu potrvá, než se zaplní obsahem, k čemuž doufáme, že &lt;strong&gt;přispějete i vy&lt;/strong&gt;, návštěvníci stránek.&lt;/p&gt;
-&lt;p&gt;Fórum je &lt;strong&gt;zcela přístupné veřejnosti&lt;/strong&gt; a pro prohlížení není třeba se registrovat. Pokud se zaregistrujete, můžete na fórum přispívat a pomáhat tak vylepšit jeho obsah. Registrace je zcela **bezplatná **a velmi rychlá.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Dnes bylo spuštěno &lt;a href=&#34;https://forum.arch-linux.cz/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;&lt;strong&gt;oficiální fórum české komunity Arch Linuxu&lt;/strong&gt; &lt;/a&gt; v plné a již funkční podobě. Samozřejmě je prozatím prázdné a nějakou dobu potrvá, než se zaplní obsahem, k čemuž doufáme, že &lt;strong&gt;přispějete i vy&lt;/strong&gt;, návštěvníci stránek.&lt;/p&gt;&#xA;&lt;p&gt;Fórum je &lt;strong&gt;zcela přístupné veřejnosti&lt;/strong&gt; a pro prohlížení není třeba se registrovat. Pokud se zaregistrujete, můžete na fórum přispívat a pomáhat tak vylepšit jeho obsah. Registrace je zcela **bezplatná **a velmi rychlá.&lt;/p&gt;</description>
+      
     </item>
     
   </channel>

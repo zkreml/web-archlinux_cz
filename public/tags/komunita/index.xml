@@ -1,40 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Arch Linux CZ</title>
+    <title>Komunita on Arch Linux CZ</title>
     <link>http://localhost:1313/tags/komunita/</link>
-    <description>Česká komunita Arch Linuxu</description>
+    <description>Recent content in Komunita on Arch Linux CZ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
-    <webMaster>archos@arch-linux.cz (archos)</webMaster>
-    
-    <lastBuildDate>Tue, 24 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/komunita/" rel="self" type="application/rss+xml" />
+    <language>cs</language>
+    <copyright>© 2026 Arch Linux CZ</copyright>
+    <lastBuildDate>Tue, 24 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/komunita/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>🎄 Veselé Vánoce a šťastný nový rok od komunity Arch Linux CZ! 🎄</title>
       <link>http://localhost:1313/posts/%f0%9f%8e%84-vesele-vanoce-a-stastny-novy-rok-od-komunity-arch-linux-cz-%f0%9f%8e%84/</link>
       <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/%f0%9f%8e%84-vesele-vanoce-a-stastny-novy-rok-od-komunity-arch-linux-cz-%f0%9f%8e%84/</guid>
-      <description>&lt;h2 id=&#34;-veselé-vánoce-od-arch-linux-cz-&#34;&gt;🎄 Veselé Vánoce od Arch Linux CZ 🎄&lt;/h2&gt;
-&lt;p&gt;Milí uživatelé, přátelé a příznivci Arch Linuxu,&lt;/p&gt;
-&lt;p&gt;rádi bychom vám poděkovali za vaši podporu a zapojení během celého roku 2024.&lt;/p&gt;
-&lt;p&gt;Přejeme vám klidné a radostné svátky, plné pohody, odpočinku a dobré nálady.&lt;/p&gt;
-&lt;p&gt;Do roku 2025 vám přejeme nejen stabilní systémy, rychlé aktualizace a úspěšné kompilace, ale také mnoho osobních úspěchů a radosti.&lt;/p&gt;
-&lt;p&gt;Děkujeme, že jste součástí naší komunity.&lt;/p&gt;
-&lt;p&gt;S pozdravem,&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;váš tým Arch Linux CZ&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;🎄 Veselé Vánoce od Arch Linux CZ 🎄&#xA;    &lt;div id=&#34;-veselé-vánoce-od-arch-linux-cz-&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#-vesel%c3%a9-v%c3%a1noce-od-arch-linux-cz-&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Milí uživatelé, přátelé a příznivci Arch Linuxu,&lt;/p&gt;&#xA;&lt;p&gt;rádi bychom vám poděkovali za vaši podporu a zapojení během celého roku 2024.&lt;/p&gt;&#xA;&lt;p&gt;Přejeme vám klidné a radostné svátky, plné pohody, odpočinku a dobré nálady.&lt;/p&gt;&#xA;&lt;p&gt;Do roku 2025 vám přejeme nejen stabilní systémy, rychlé aktualizace a úspěšné kompilace, ale také mnoho osobních úspěchů a radosti.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Fórum Arch Linux Cz</title>
       <link>http://localhost:1313/posts/forum-arch-linux-cz/</link>
       <pubDate>Thu, 03 Mar 2022 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/forum-arch-linux-cz/</guid>
-      <description>&lt;p&gt;Dnes bylo spuštěno &lt;a href=&#34;https://forum.arch-linux.cz/&#34;&gt;&lt;strong&gt;oficiální fórum české komunity Arch Linuxu&lt;/strong&gt; &lt;/a&gt; v plné a již funkční podobě. Samozřejmě je prozatím prázdné a nějakou dobu potrvá, než se zaplní obsahem, k čemuž doufáme, že &lt;strong&gt;přispějete i vy&lt;/strong&gt;, návštěvníci stránek.&lt;/p&gt;
-&lt;p&gt;Fórum je &lt;strong&gt;zcela přístupné veřejnosti&lt;/strong&gt; a pro prohlížení není třeba se registrovat. Pokud se zaregistrujete, můžete na fórum přispívat a pomáhat tak vylepšit jeho obsah. Registrace je zcela **bezplatná **a velmi rychlá.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Dnes bylo spuštěno &lt;a href=&#34;https://forum.arch-linux.cz/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;&lt;strong&gt;oficiální fórum české komunity Arch Linuxu&lt;/strong&gt; &lt;/a&gt; v plné a již funkční podobě. Samozřejmě je prozatím prázdné a nějakou dobu potrvá, než se zaplní obsahem, k čemuž doufáme, že &lt;strong&gt;přispějete i vy&lt;/strong&gt;, návštěvníci stránek.&lt;/p&gt;&#xA;&lt;p&gt;Fórum je &lt;strong&gt;zcela přístupné veřejnosti&lt;/strong&gt; a pro prohlížení není třeba se registrovat. Pokud se zaregistrujete, můžete na fórum přispívat a pomáhat tak vylepšit jeho obsah. Registrace je zcela **bezplatná **a velmi rychlá.&lt;/p&gt;</description>
+      
     </item>
     
   </channel>

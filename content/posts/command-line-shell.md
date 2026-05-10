@@ -5,7 +5,6 @@ author: "archos"
 draft: false
 categories: ['Návody']
 tags: ['shell']
-series: ['Arch Linux instalace']
 ---
 
 V dalším díle seriálu [Tondy Fischera](https://github.com/raven2cz) se podíváme na prostředí příkazového řádku. Představíme si postupně 3 nejrozšířenější shelly v GNU/Linux (sh nepočítám). Shells si postupně nakonfigurujeme a přizpůsobíme opět pro nejlepší efektivitu svojí práce. Terminálové aplikace se tak dostanou na zcela jinou úroveň, se kterou se často nemohou měřit ani normální aplikace s tlačítky. Batch processing je nenahraditelnou součástí pokročilého používání počítačů, historie příkazů a fuzzy processing je něco, co se jiným operačním systémům ani nesnilo.

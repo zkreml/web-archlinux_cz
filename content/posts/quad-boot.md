@@ -5,7 +5,6 @@ author: "archos"
 draft: false
 categories: ['Návody']
 tags: ['Grub2']
-series: ['Arch Linux instalace']
 ---
 
 Další díl seriálu  o [instalaci a nastavení Arch Linuxu](https://arch-linux.cz/series/arch-linux-instalace/) od [Tondy Fishera](https://github.com/raven2cz/tux), obsahuje plné nastavení reálného desktopu se čtyřmi operačními systémy s výběrovým dialogem pro zvolení, který systém si při spuštění počítače vybrat. Jedná se tedy o quad booting (dual booting je pouze pro dva operační systémy). Video je již i na našem[ PeerTube kanále.](https://peertube.arch-linux.cz/w/b3ajczWRf3XFy4vhCTPQz1)

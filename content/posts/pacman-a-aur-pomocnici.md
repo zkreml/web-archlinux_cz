@@ -5,7 +5,6 @@ author: "archos"
 draft: false
 categories: ['Návody']
 tags: ['AUR', 'pacmam']
-series: ['Arch Linux instalace']
 ---
 
 V dalším díle seriálu  [Tondy Fischera ](https://github.com/raven2cz/tux) o [Arch LInuxu](https://arch-linux.cz/series/arch-linux-instalace/), se seznámíme se správci balíčku pro Arch Linux  a ukážeme si tripy a triky pro pacmana. Podíváme se na  AUR repozitář a  o používání  AUR pomocníků. Na video se můžete podívat na [Youtube autora ](https://www.youtube.com/watch?v=g60xHvIEyJ0), nebo našem [PeerTube kanále](https://peertube.arch-linux.cz/w/cBaNDGc6eYcksKXjqHck7p).

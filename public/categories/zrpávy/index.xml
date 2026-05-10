@@ -1,48 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Arch Linux CZ</title>
+    <title>Zrpávy on Arch Linux CZ</title>
     <link>http://localhost:1313/categories/zrp%C3%A1vy/</link>
-    <description>Česká komunita Arch Linuxu</description>
+    <description>Recent content in Zrpávy on Arch Linux CZ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
-    <webMaster>archos@arch-linux.cz (archos)</webMaster>
-    
-    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/zrp%C3%A1vy/" rel="self" type="application/rss+xml" />
+    <language>cs</language>
+    <copyright>© 2026 Arch Linux CZ</copyright>
+    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/zrp%C3%A1vy/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Archinstall 4.2 – novinky v instalátoru Arch Linuxu</title>
       <link>http://localhost:1313/posts/archinstall-4-2-novinky-v-instalatoru-arch-linuxu/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/archinstall-4-2-novinky-v-instalatoru-arch-linuxu/</guid>
-      <description>&lt;p&gt;Archinstall 4.2 je venku a přináší pár zajímavých změn, které stojí za zmínku. Pokud instaluješ Arch přes oficiální textový instalátor, tahle verze ti nabídne jemnější kontrolu nad KDE Plasma, pár vylepšení kolem pacmanu a jeden dost zásadní bezpečnostní fix u šifrovaných instalací.&lt;/p&gt;
-&lt;h2 id=&#34;co-je-archinstall&#34;&gt;Co je Archinstall&lt;/h2&gt;
-&lt;p&gt;Archinstall je oficiální textový instalátor Arch Linuxu, který najdeš přímo na instalačním ISO. Od verze 4.0 běží na frameworku Textual, takže místo starého curses rozhraní máš moderní TUI. Default instalátor na ISO &lt;code&gt;2026.04.01&lt;/code&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Archinstall 4.2 je venku a přináší pár zajímavých změn, které stojí za zmínku. Pokud instaluješ Arch přes oficiální textový instalátor, tahle verze ti nabídne jemnější kontrolu nad KDE Plasma, pár vylepšení kolem pacmanu a jeden dost zásadní bezpečnostní fix u šifrovaných instalací.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Co je Archinstall&#xA;    &lt;div id=&#34;co-je-archinstall&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#co-je-archinstall&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Archinstall je oficiální textový instalátor Arch Linuxu, který najdeš přímo na instalačním ISO. Od verze 4.0 běží na frameworku Textual, takže místo starého curses rozhraní máš moderní TUI. Default instalátor na ISO &lt;code&gt;2026.04.01&lt;/code&gt;.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>XFCE 4.20: Nová kapitola pro oblíbené desktopové prostředí v Arch Linuxu</title>
       <link>http://localhost:1313/posts/xfce-4-20-nova-kapitola-pro-oblibene-desktopove-prostredi-v-arch-linuxu/</link>
       <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/xfce-4-20-nova-kapitola-pro-oblibene-desktopove-prostredi-v-arch-linuxu/</guid>
-      <description>&lt;p&gt;XFCE, známé svým lehkým a stabilním provedením, přichází s verzí 4.20, která je nyní dostupná v repozitářích Arch Linuxu. Tato aktualizace přináší důležité novinky, lepší výkon a přizpůsobitelnost, díky nimž zůstává XFCE jedním z nejpopulárnějších prostředí pro Linux.&lt;/p&gt;
-&lt;h2 id=&#34;nejzajímavější-novinky-ve-verzi-420&#34;&gt;Nejzajímavější novinky ve verzi 4.20&lt;/h2&gt;
-&lt;h3 id=&#34;1-hdr-podpora-a-vylepšení-správce-oken-xfwm4&#34;&gt;1. HDR podpora a vylepšení správce oken (Xfwm4)&lt;/h3&gt;
-&lt;p&gt;XFCE nyní podporuje High Dynamic Range (HDR), což ocení majitelé moderních displejů. Kromě toho správce oken prošel optimalizací, což přináší plynulejší animace a lepší práci s okny.&lt;/p&gt;</description>
+      <description>&lt;p&gt;XFCE, známé svým lehkým a stabilním provedením, přichází s verzí 4.20, která je nyní dostupná v repozitářích Arch Linuxu. Tato aktualizace přináší důležité novinky, lepší výkon a přizpůsobitelnost, díky nimž zůstává XFCE jedním z nejpopulárnějších prostředí pro Linux.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Nejzajímavější novinky ve verzi 4.20&#xA;    &lt;div id=&#34;nejzajímavější-novinky-ve-verzi-420&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#nejzaj%c3%admav%c4%9bj%c5%a1%c3%ad-novinky-ve-verzi-420&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;1. HDR podpora a vylepšení správce oken (Xfwm4)&#xA;    &lt;div id=&#34;1-hdr-podpora-a-vylepšení-správce-oken-xfwm4&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#1-hdr-podpora-a-vylep%c5%a1en%c3%ad-spr%c3%a1vce-oken-xfwm4&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;XFCE nyní podporuje High Dynamic Range (HDR), což ocení majitelé moderních displejů. Kromě toho správce oken prošel optimalizací, což přináší plynulejší animace a lepší práci s okny.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>AUR repozitář není dočasně k dispozici</title>
       <link>http://localhost:1313/posts/aur-repozitar-neni-docasne-k-dispozici/</link>
       <pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/aur-repozitar-neni-docasne-k-dispozici/</guid>
-      <description>&lt;p&gt;AUR je v současné době nedostupný z důvodu některých nefunkčních odkazů v podkladu
-Git uložiště, které je potřeba opravit. Uvedl to vývojář &lt;a href=&#34;https://lists.archlinux.org/archives/users/c62376e598e8403881c98f36535e4b3d/&#34;&gt;Morten Linderud&lt;/a&gt; v &lt;a href=&#34;https://lists.archlinux.org/archives/list/aur-general@lists.archlinux.org/thread/Z4A6LKBQW4JYQL6P7ZMWT27SE4QQ4WKO/&#34;&gt;mailing listu.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Na opravě se pracuje, ale potrvá několik hodin.&lt;/p&gt;
-&lt;p&gt;Arch User Repository (AUR) je komunitou řízené úložiště pro uživatele Archu. Obsahuje popisy balíčků ( &lt;a href=&#34;https://wiki.archlinux.org/title/PKGBUILD&#34;&gt;PKGBUILDs&lt;/a&gt; ), které vám umožňují zkompilovat balíček ze zdrojového kódu pomocí &lt;a href=&#34;https://wiki.archlinux.org/title/Makepkg&#34;&gt;makepkg&lt;/a&gt; a poté jej nainstalovat pomocí &lt;a href=&#34;https://wiki.archlinux.org/title/Pacman#Additional_commands&#34;&gt;pacman&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;AUR je v současné době nedostupný z důvodu některých nefunkčních odkazů v podkladu&#xA;Git uložiště, které je potřeba opravit. Uvedl to vývojář &lt;a href=&#34;https://lists.archlinux.org/archives/users/c62376e598e8403881c98f36535e4b3d/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Morten Linderud&lt;/a&gt; v &lt;a href=&#34;https://lists.archlinux.org/archives/list/aur-general@lists.archlinux.org/thread/Z4A6LKBQW4JYQL6P7ZMWT27SE4QQ4WKO/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;mailing listu.&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Na opravě se pracuje, ale potrvá několik hodin.&lt;/p&gt;&#xA;&lt;p&gt;Arch User Repository (AUR) je komunitou řízené úložiště pro uživatele Archu. Obsahuje popisy balíčků ( &lt;a href=&#34;https://wiki.archlinux.org/title/PKGBUILD&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;PKGBUILDs&lt;/a&gt; ), které vám umožňují zkompilovat balíček ze zdrojového kódu pomocí &lt;a href=&#34;https://wiki.archlinux.org/title/Makepkg&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;makepkg&lt;/a&gt; a poté jej nainstalovat pomocí &lt;a href=&#34;https://wiki.archlinux.org/title/Pacman#Additional_commands&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;pacman&lt;/a&gt;.&lt;/p&gt;</description>
+      
     </item>
     
   </channel>

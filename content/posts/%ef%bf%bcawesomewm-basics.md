@@ -5,7 +5,6 @@ author: "archos"
 draft: false
 categories: ['Návody']
 tags: ['awesome']
-series: ['Arch Linux instalace']
 ---
 
 AwesomeWM patří k nejlepším window managerům s podporou vyššího programovacího jazyka Lua. Ukážeme si, proč tento WM má takový význam a jeho nesporné výhody. Naučíme se jej nainstalovat, nastavit základní témata a testovat svá nastavení v testovacím prostředí. Nakonec vyzkoušíme základní ovládání a nápovědu klávesových zkratek. Součástí nahrávky je rovněž velmi jemný úvod do programovacího jazyka Lua. Další díl seriálu [Tondy Fischera.](https://github.com/raven2cz)

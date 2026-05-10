@@ -5,7 +5,6 @@ author: "archos"
 draft: false
 categories: ['Návody', 'Aplikace']
 tags: ['borg', 'backup']
-series: ['Zálohování v Linuxu']
 ---
 
 ### Co je Borg

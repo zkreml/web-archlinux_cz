@@ -1,9 +1,4 @@
 ---
 title: "Arch Linux CZ"
+description: "Česká komunita Arch Linuxu"
 ---
-
-## Česká komunita Arch Linuxu
-
-![Arch Linux](/logo.png)
-
-Návody, novinky a podpora pro uživatele Arch Linuxu v češtině.
