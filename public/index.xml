@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch Linux CZ</title>
+    <link>http://localhost:1313/</link>
+    <description>Česká komunita Arch Linuxu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <managingEditor>archos@arch-linux.cz (archos)</managingEditor>
+    <webMaster>archos@arch-linux.cz (archos)</webMaster>
+    
+    <lastBuildDate>Thu, 26 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Posts</title>
+      <link>http://localhost:1313/posts/</link>
+      <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Co je Arch Linux</title>
+      <link>http://localhost:1313/o-arch-linuxu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/o-arch-linuxu/</guid>
+      <description>&lt;p&gt;Arch Linux je nezávislá rolling-release distribuce GNU/Linuxu pro pokročilé uživatele.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Komunita</title>
+      <link>http://localhost:1313/komunita/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/komunita/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://mastodon.arch-linux.cz/@archlinux&#34;&gt;Mastodon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://peertube.arch-linux.cz/c/videa_archlinuxcz/videos&#34;&gt;PeerTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pixelfed.cz&#34;&gt;Pixelfed CZ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://matrix.to/#/#archlinuxcz:matrix.org&#34;&gt;Matrix&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://forum.arch-linux.cz/&#34;&gt;Fórum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://discord.gg/sJYcCdENCT&#34;&gt;Discord&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Návody</title>
+      <link>http://localhost:1313/navody/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/navody/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Podpořte nás</title>
+      <link>http://localhost:1313/podporte-nas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/podporte-nas/</guid>
+      <description>&lt;p&gt;Podpořte českou komunitu Arch Linuxu.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Zprávy</title>
+      <link>http://localhost:1313/zpravy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zpravy/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

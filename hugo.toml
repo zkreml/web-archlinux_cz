@@ -1,0 +1,72 @@
+baseURL = "https://arch-linux.cz/"
+languageCode = "cs"
+title = "Arch Linux CZ"
+theme = "hugo-blog-awesome"
+paginate = 10
+
+[params]
+  siteName = "Arch Linux CZ"
+  description = "Česká komunita Arch Linuxu"
+  mainSections = ["posts"]
+  showReadingTime = true
+  showToc = true
+  goToTop = true
+
+  [params.author]
+    name = "archos"
+    email = "archos@arch-linux.cz"
+
+  [params.footer]
+    copyright = "© 2024–2026 Arch Linux CZ"
+
+[[params.socialIcons]]
+  name = "mastodon"
+  url = "https://mastodon.arch-linux.cz/@archlinux"
+
+[[params.socialIcons]]
+  name = "matrix"
+  url = "https://matrix.to/#/#archlinuxcz:matrix.org"
+
+[[params.socialIcons]]
+  name = "rss"
+  url = "/index.xml"
+
+[[menu.main]]
+  name = "Domů"
+  pageRef = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Návody"
+  pageRef = "/navody"
+  weight = 2
+
+[[menu.main]]
+  name = "Zprávy"
+  pageRef = "/zpravy"
+  weight = 3
+
+[[menu.main]]
+  name = "O Arch Linuxu"
+  pageRef = "/o-arch-linuxu"
+  weight = 4
+
+[[menu.main]]
+  name = "Wiki"
+  url = "https://wiki.arch-linux.cz/shelves/arch-linux-cz"
+  weight = 5
+
+[[menu.main]]
+  name = "Fórum"
+  url = "https://forum.arch-linux.cz/"
+  weight = 6
+
+[[menu.main]]
+  name = "Komunita"
+  pageRef = "/komunita"
+  weight = 7
+
+[[menu.main]]
+  name = "Podpořte nás"
+  pageRef = "/podporte-nas"
+  weight = 8
