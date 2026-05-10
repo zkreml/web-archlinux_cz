@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arch Linux CZ</title><link>https://arch-linux.cz/</link><description>Recent content on Arch Linux CZ</description><generator>Hugo -- gohugo.io</generator><language>cs</language><copyright>© 2026 Arch Linux CZ</copyright><lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://arch-linux.cz/index.xml" rel="self" type="application/rss+xml"/><item><title>Archinstall 4.2 – novinky v instalátoru Arch Linuxu</title><link>https://arch-linux.cz/archinstall-4.2-novinky-v-instal%C3%A1toru-arch-linuxu/</link><pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate><guid>https://arch-linux.cz/archinstall-4.2-novinky-v-instal%C3%A1toru-arch-linuxu/</guid><description>&lt;p&gt;Archinstall 4.2 je venku a přináší pár zajímavých změn, které stojí za zmínku. Pokud instaluješ Arch přes oficiální textový instalátor, tahle verze ti nabídne jemnější kontrolu nad KDE Plasma, pár vylepšení kolem pacmanu a jeden dost zásadní bezpečnostní fix u šifrovaných instalací.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arch Linux CZ</title><link>https://arch-linux.cz/</link><description>Recent content on Arch Linux CZ</description><generator>Hugo -- gohugo.io</generator><language>cs</language><copyright>© 2026 Arch Linux CZ</copyright><lastBuildDate>Sun, 10 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://arch-linux.cz/index.xml" rel="self" type="application/rss+xml"/><item><title>Nový web Arch Linux CZ</title><link>https://arch-linux.cz/nov%C3%BD-web-arch-linux-cz/</link><pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate><guid>https://arch-linux.cz/nov%C3%BD-web-arch-linux-cz/</guid><description>&lt;h2 class="relative group"&gt;Přecházíme na statický web
+ &lt;div id="přecházíme-na-statický-web" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#p%c5%99ech%c3%a1z%c3%adme-na-statick%c3%bd-web" aria-label="Kotva"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Po několika letech na WordPressu jsme se rozhodli přejít na modernější řešení. Nový web &lt;strong&gt;arch-linux.cz&lt;/strong&gt; běží na statickém generátoru &lt;a href="https://gohugo.io/" target="_blank" rel="noreferrer"&gt;Hugo&lt;/a&gt; s tématem &lt;a href="https://blowfish.page/" target="_blank" rel="noreferrer"&gt;Blowfish&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;Co se změnilo?
+ &lt;div id="co-se-změnilo" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#co-se-zm%c4%9bnilo" aria-label="Kotva"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Rychlost&lt;/strong&gt; — statický web se načítá okamžitě, žádné PHP, žádná databáze&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vyhledávání&lt;/strong&gt; — nový fulltext search přímo na webu&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dark mode&lt;/strong&gt; — přepínání světlého a tmavého režimu&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Přehlednější navigace&lt;/strong&gt; — návody, zprávy, archiv a tagy na jednom místě&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Open source&lt;/strong&gt; — zdrojový kód webu je veřejně dostupný na naší &lt;a href="https://git.arch-linux.cz/ArchlinuxCz/web-archlinux_cz" target="_blank" rel="noreferrer"&gt;Gitea&lt;/a&gt; - kdokoliv může přispět článkem nebo vylepšením&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 class="relative group"&gt;Proč Hugo?
+ &lt;div id="proč-hugo" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pro%c4%8d-hugo" aria-label="Kotva"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;WordPress nám sloužil dobře, ale pro technický blog o Arch Linuxu nedával smysl. Potřebovali jsme něco, co odpovídá filozofii Archu — jednoduché, rychlé a pod plnou kontrolou.&lt;/p&gt;</description></item><item><title>Archinstall 4.2 – novinky v instalátoru Arch Linuxu</title><link>https://arch-linux.cz/archinstall-4.2-novinky-v-instal%C3%A1toru-arch-linuxu/</link><pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate><guid>https://arch-linux.cz/archinstall-4.2-novinky-v-instal%C3%A1toru-arch-linuxu/</guid><description>&lt;p&gt;Archinstall 4.2 je venku a přináší pár zajímavých změn, které stojí za zmínku. Pokud instaluješ Arch přes oficiální textový instalátor, tahle verze ti nabídne jemnější kontrolu nad KDE Plasma, pár vylepšení kolem pacmanu a jeden dost zásadní bezpečnostní fix u šifrovaných instalací.&lt;/p&gt;
 
 &lt;h2 class="relative group"&gt;Co je Archinstall
  &lt;div id="co-je-archinstall" class="anchor"&gt;&lt;/div&gt;
