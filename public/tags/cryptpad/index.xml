@@ -1,33 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Cryptpad on Arch Linux CZ</title>
-    <link>http://localhost:1313/tags/cryptpad/</link>
-    <description>Recent content in Cryptpad on Arch Linux CZ</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>cs</language>
-    <copyright>© 2026 Arch Linux CZ</copyright>
-    <lastBuildDate>Sun, 27 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/cryptpad/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>CryptPad: Bezpečná a soukromá spolupráce na dokumentech</title>
-      <link>http://localhost:1313/cryptpad-bezpe%C4%8Dn%C3%A1-a-soukrom%C3%A1-spolupr%C3%A1ce-na-dokumentech/</link>
-      <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/cryptpad-bezpe%C4%8Dn%C3%A1-a-soukrom%C3%A1-spolupr%C3%A1ce-na-dokumentech/</guid>
-      <description>&lt;h1 class=&#34;relative group&#34;&gt;CryptPad: Bezpečná a soukromá spolupráce na dokumentech&#xA;    &lt;div id=&#34;cryptpad-bezpečná-a-soukromá-spolupráce-na-dokumentech&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#cryptpad-bezpe%c4%8dn%c3%a1-a-soukrom%c3%a1-spolupr%c3%a1ce-na-dokumentech&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://cryptpad.arch-linux.cz/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;CryptPad&lt;/a&gt;&lt;/strong&gt; je open-source platforma pro online spolupráci, která klade důraz na soukromí a zabezpečení dat. Na rozdíl od jiných cloudových nástrojů pro spolupráci nabízí CryptPad &lt;strong&gt;end-to-end šifrování&lt;/strong&gt;, což znamená, že data jsou šifrována na straně uživatele a poskytovatel služby (v tomto případě OSCloud) k nim nemá přístup.&lt;/p&gt;&#xA;&lt;p&gt;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;low&#34;&#xA;    alt=&#34;&#34;&#xA;    src=&#34;https://arch-linux.cz/wp-content/uploads/2024/10/Snimek-obrazovky-porizeny-2024-10-27-11-21-41-300x79.png&#34;&#xA;    &gt;&lt;/figure&gt;&#xA;&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>CryptPad je open-source, bezplatný webový kancelářský systém založený na spolupráci</title>
-      <link>http://localhost:1313/cryptpad-je-open-source-bezplatn%C3%BD-webov%C3%BD-kancel%C3%A1%C5%99sk%C3%BD-syst%C3%A9m-zalo%C5%BEen%C3%BD-na-spolupr%C3%A1ci/</link>
-      <pubDate>Sat, 28 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/cryptpad-je-open-source-bezplatn%C3%BD-webov%C3%BD-kancel%C3%A1%C5%99sk%C3%BD-syst%C3%A9m-zalo%C5%BEen%C3%BD-na-spolupr%C3%A1ci/</guid>
-      <description>&lt;p&gt;Určitě každý zná online kancelářskou sadu od Googlu, která obsahuje dokumenty, tabulky, prezentace, ale ne každý Googlu důvěřuje, zvláště ne lidé, kteří se starají o soukromí svých dat. Pro všechny, kteří mají rádi své soukromý jsem na náš server instaloval  open-source online kancelářský balík s názvem &lt;a href=&#34;https://cryptpad.arch-linux.cz/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;CryptPad.&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;CryptPad vytváří společnost &lt;a href=&#34;https://xwiki.com&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;XWiki&lt;/a&gt; se sídlem v Paříži ve Francii, která již více než 15 let vytváří open-source software. &lt;/p&gt;&#xA;&#xA;&lt;h4 class=&#34;relative group&#34;&gt;Co je CryptPad&#xA;    &lt;div id=&#34;co-je-cryptpad&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#co-je-cryptpad&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h4&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://cryptpad.arch-linux.cz/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;CryptPad&lt;/a&gt; je bezplatné, open-source, samostatně hostované řešení pro spolupráci, alternativa k Disku Google, ale šifrování typu end-to-end.&lt;/p&gt;</description>
-      
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cryptpad on Arch Linux CZ</title><link>https://arch-linux.cz/tags/cryptpad/</link><description>Recent content in Cryptpad on Arch Linux CZ</description><generator>Hugo -- gohugo.io</generator><language>cs</language><copyright>© 2026 Arch Linux CZ</copyright><lastBuildDate>Sun, 27 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://arch-linux.cz/tags/cryptpad/index.xml" rel="self" type="application/rss+xml"/><item><title>CryptPad: Bezpečná a soukromá spolupráce na dokumentech</title><link>https://arch-linux.cz/cryptpad-bezpe%C4%8Dn%C3%A1-a-soukrom%C3%A1-spolupr%C3%A1ce-na-dokumentech/</link><pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate><guid>https://arch-linux.cz/cryptpad-bezpe%C4%8Dn%C3%A1-a-soukrom%C3%A1-spolupr%C3%A1ce-na-dokumentech/</guid><description>&lt;h1 class="relative group"&gt;CryptPad: Bezpečná a soukromá spolupráce na dokumentech
+ &lt;div id="cryptpad-bezpečná-a-soukromá-spolupráce-na-dokumentech" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#cryptpad-bezpe%c4%8dn%c3%a1-a-soukrom%c3%a1-spolupr%c3%a1ce-na-dokumentech" aria-label="Kotva"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://cryptpad.arch-linux.cz/" target="_blank" rel="noreferrer"&gt;CryptPad&lt;/a&gt;&lt;/strong&gt; je open-source platforma pro online spolupráci, která klade důraz na soukromí a zabezpečení dat. Na rozdíl od jiných cloudových nástrojů pro spolupráci nabízí CryptPad &lt;strong&gt;end-to-end šifrování&lt;/strong&gt;, což znamená, že data jsou šifrována na straně uživatele a poskytovatel služby (v tomto případě OSCloud) k nim nemá přístup.&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt=""
+ src="https://arch-linux.cz/wp-content/uploads/2024/10/Snimek-obrazovky-porizeny-2024-10-27-11-21-41-300x79.png"
+ &gt;&lt;/figure&gt;
+&lt;/p&gt;</description></item><item><title>CryptPad je open-source, bezplatný webový kancelářský systém založený na spolupráci</title><link>https://arch-linux.cz/cryptpad-je-open-source-bezplatn%C3%BD-webov%C3%BD-kancel%C3%A1%C5%99sk%C3%BD-syst%C3%A9m-zalo%C5%BEen%C3%BD-na-spolupr%C3%A1ci/</link><pubDate>Sat, 28 May 2022 00:00:00 +0000</pubDate><guid>https://arch-linux.cz/cryptpad-je-open-source-bezplatn%C3%BD-webov%C3%BD-kancel%C3%A1%C5%99sk%C3%BD-syst%C3%A9m-zalo%C5%BEen%C3%BD-na-spolupr%C3%A1ci/</guid><description>&lt;p&gt;Určitě každý zná online kancelářskou sadu od Googlu, která obsahuje dokumenty, tabulky, prezentace, ale ne každý Googlu důvěřuje, zvláště ne lidé, kteří se starají o soukromí svých dat. Pro všechny, kteří mají rádi své soukromý jsem na náš server instaloval open-source online kancelářský balík s názvem &lt;a href="https://cryptpad.arch-linux.cz/" target="_blank" rel="noreferrer"&gt;CryptPad.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;CryptPad vytváří společnost &lt;a href="https://xwiki.com" target="_blank" rel="noreferrer"&gt;XWiki&lt;/a&gt; se sídlem v Paříži ve Francii, která již více než 15 let vytváří open-source software. &lt;/p&gt;
+
+&lt;h4 class="relative group"&gt;Co je CryptPad
+ &lt;div id="co-je-cryptpad" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#co-je-cryptpad" aria-label="Kotva"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;p&gt;&lt;a href="https://cryptpad.arch-linux.cz/" target="_blank" rel="noreferrer"&gt;CryptPad&lt;/a&gt; je bezplatné, open-source, samostatně hostované řešení pro spolupráci, alternativa k Disku Google, ale šifrování typu end-to-end.&lt;/p&gt;</description></item></channel></rss>

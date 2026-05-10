@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Wiki on Arch Linux CZ</title>
-    <link>http://localhost:1313/tags/wiki/</link>
-    <description>Recent content in Wiki on Arch Linux CZ</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>cs</language>
-    <copyright>© 2026 Arch Linux CZ</copyright>
-    <lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/wiki/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Wiki Arch Linux CZ</title>
-      <link>http://localhost:1313/wiki-arch-linux-cz/</link>
-      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/wiki-arch-linux-cz/</guid>
-      <description>&lt;p&gt;Protože články s návody se zde časem mohou ztrácet a musí se hledat, rozhodl jsem se vyzkoušet nainstalovat na náš server &lt;a href=&#34;https://wiki.arch-linux.cz&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Wiki Arch LInux CZ&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Není to  úplně klasická Wiki, kterou používají ostatní distribuce, ale je tvořena formou knihovny, ve které jsou uloženy knihy s návody.&lt;/p&gt;&#xA;&lt;p&gt;Zatím to jsou začátky, ale budu se snažit postupně  návody nahrávat i na &lt;a href=&#34;https://wiki.arch-linux.cz&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Wiki &lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Kdyby někdo chtěl pomoc sepsat návod, nebo i jen krátký článek sem na naše stránky budu rád za jakoukoliv pomoc.&lt;/p&gt;</description>
-      
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wiki on Arch Linux CZ</title><link>https://arch-linux.cz/tags/wiki/</link><description>Recent content in Wiki on Arch Linux CZ</description><generator>Hugo -- gohugo.io</generator><language>cs</language><copyright>© 2026 Arch Linux CZ</copyright><lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://arch-linux.cz/tags/wiki/index.xml" rel="self" type="application/rss+xml"/><item><title>Wiki Arch Linux CZ</title><link>https://arch-linux.cz/wiki-arch-linux-cz/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://arch-linux.cz/wiki-arch-linux-cz/</guid><description>&lt;p&gt;Protože články s návody se zde časem mohou ztrácet a musí se hledat, rozhodl jsem se vyzkoušet nainstalovat na náš server &lt;a href="https://wiki.arch-linux.cz" target="_blank" rel="noreferrer"&gt;Wiki Arch LInux CZ&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Není to úplně klasická Wiki, kterou používají ostatní distribuce, ale je tvořena formou knihovny, ve které jsou uloženy knihy s návody.&lt;/p&gt;
+&lt;p&gt;Zatím to jsou začátky, ale budu se snažit postupně návody nahrávat i na &lt;a href="https://wiki.arch-linux.cz" target="_blank" rel="noreferrer"&gt;Wiki &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Kdyby někdo chtěl pomoc sepsat návod, nebo i jen krátký článek sem na naše stránky budu rád za jakoukoliv pomoc.&lt;/p&gt;</description></item></channel></rss>
