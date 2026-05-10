@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Arch Linux CZ</title>
+    <title>Archiv článků on Arch Linux CZ</title>
     <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on Arch Linux CZ</description>
+    <description>Recent content in Archiv článků on Arch Linux CZ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cs</language>
     <copyright>© 2026 Arch Linux CZ</copyright>
@@ -46,16 +46,6 @@
       
       <guid>http://localhost:1313/posts/ivpn-soukroma-vpn-sluzba-pro-arch-linux-a-android/</guid>
       <description>&lt;p&gt;IVPN patří mezi VPN služby, které berou soukromí vážně. Na rozdíl od většiny komerčních VPN poskytovatelů, IVPN funguje bez logování, podporuje anonymní platby a má otevřený zdrojový kód svých aplikací. Pro uživatele Arch Linuxu a mobilních zařízení nabízí solidní řešení s důrazem na bezpečnost.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Proč IVPN?&#xA;    &lt;div id=&#34;proč-ivpn&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#pro%c4%8d-ivpn&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Žádné logování&lt;/strong&gt;: IVPN nemá co logovat - nesbírají IP adresy, DNS dotazy ani metadata o připojení.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>🎄 Veselé Vánoce a šťastný nový rok od komunity Arch Linux CZ! 🎄</title>
-      <link>http://localhost:1313/posts/%f0%9f%8e%84-vesele-vanoce-a-stastny-novy-rok-od-komunity-arch-linux-cz-%f0%9f%8e%84/</link>
-      <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/%f0%9f%8e%84-vesele-vanoce-a-stastny-novy-rok-od-komunity-arch-linux-cz-%f0%9f%8e%84/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;🎄 Veselé Vánoce od Arch Linux CZ 🎄&#xA;    &lt;div id=&#34;-veselé-vánoce-od-arch-linux-cz-&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#-vesel%c3%a9-v%c3%a1noce-od-arch-linux-cz-&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Milí uživatelé, přátelé a příznivci Arch Linuxu,&lt;/p&gt;&#xA;&lt;p&gt;rádi bychom vám poděkovali za vaši podporu a zapojení během celého roku 2024.&lt;/p&gt;&#xA;&lt;p&gt;Přejeme vám klidné a radostné svátky, plné pohody, odpočinku a dobré nálady.&lt;/p&gt;&#xA;&lt;p&gt;Do roku 2025 vám přejeme nejen stabilní systémy, rychlé aktualizace a úspěšné kompilace, ale také mnoho osobních úspěchů a radosti.&lt;/p&gt;</description>
       
     </item>
     

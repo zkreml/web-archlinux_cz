@@ -1,46 +1,57 @@
 ---
-title: "Podpořte nás"
-date: 2022-11-27
-author: "archos"
+title: 'Podpořte nás'
+date: 2024-01-01
 draft: false
+showDate: false
+showAuthor: false
+showReadingTime: false
+showPagination: false
 ---
 
-Arch Linux CZ je místo, kde jsou umístěny skvělé opensource aplikace jako je Mastodon, Peertube, Pixelfed, Matrix, Joplin, Vikunja, CryptPad, Bitwarden - vše pro veřejné použití, bez reklam a sledování.
+## Úvod
 
-Pokud chcete využít našich aplikací a nevíte jak na to. Nebojte se nám napsat, zprovozníme vám účet a poradíme jak dál. Můžete nám napsat na:
+Podpora mi umožňuje pokračovat v rozvoji projektů jako [OSCloud](https://oscloud.cz), [VHSky](https://vhsky.cz) a dalších komunitních aktivit. Každý příspěvek, ať už finanční nebo jiný, má pro mě obrovskou hodnotu. Děkuji, že se zajímáte o to, jak přispět k rozvoji naší práce.
 
-- Archos archos@arch-linux.cz
+## Možnosti podpory
 
-- Kankys  kankys@arch-linux.cz
+### Finanční podpora
 
-Díky vašemu příspěvku je možné financovat provoz těchto serverů. Bez dárců jako jste vy, bych to nemohl dělat a bez této neuvěřitelné podpory bych musel servery zavřít.
+- **Transparentní účet (CZ):** `264043266/0600`
+- **Další účet (CZ):** `263559105/0600`
+- **Mezinárodní bankovní převod (Commerzbank DE):**
+  - IBAN: `DE07 7734 0076 0131 2966 00`
+  - BIC: `COBADEFFXXX`
+- **Ko-fi:** [Podpořte nás přes Ko-fi](https://ko-fi.com)
+- **Revolut:** [revolut.me/archos](https://revolut.me/archos)
+- **Bitcoin (BTC):** `bc1qacfnj8gauujaulu36elmr2av5dw9527xg24wnu`
 
-Děkuji vám! ❤
+### Přímá spolupráce
 
-Naše další aplikace:
+Pokud vás baví psát návody, překládat obsah, nebo byste chtěli přispět vývojem, napište nám. Velmi rádi zapojíme do projektů nadšence, kteří sdílejí naše hodnoty a zájmy.
 
-- Správce hesel [Bitwarden](https://bitwarden.archoslinux.cz/).
+### Sdílení projektů
 
-- Instance [Pixelfed](https://pixelfed.cz/).
+Jednoduchý způsob, jak nás podpořit, je sdílení našich projektů mezi přáteli nebo na sociálních sítích. Každé doporučení pomáhá!
 
-- Instance [PeerTube](https://peertube.arch-linux.cz/).
+## Co za podporu nabízíme
 
-- Aplikace pro seznam úkolů [Vikunja](https://tasks.archoslinux.cz/).
+Vaši podporu si velmi vážíme, a proto nabízíme:
 
-- Kancelářský balík pro spolupráci [CryptPad](https://cryptpad.arch-linux.cz/).
+- Poděkování na našich stránkách (pokud budete souhlasit)
+- Zmínku na sociálních sítích
+- Možnost získat rozšířený přístup ke službám, které nabízíme
 
-- [Matrix Element](https://element.mxchat.cz)  E2E šifrovaná, federovaná **chatovací platforma** integrovaná s dalšími messengery.
+## Co je OSCloud?
 
-Podpořit nás můžete více způsoby:
+[OSCloud](https://oscloud.cz) je česká cloudová platforma zaměřená na soukromí, open source a decentralizaci. Provozuje vlastní infrastrukturu postavenou výhradně na svobodném softwaru a nabízí alternativu ke komerčním cloudovým gigantům. Tento web i většina komunitních služeb Arch Linux CZ jsou hostovány právě na OSCloud.
 
-- Na webu [LiberaPay](https://liberapay.com/archlinuxcz/).
+## Kontakt
 
-- Na přímo přes [PayPal](https://www.paypal.me/archoslinux).
+Máte-li jakékoliv dotazy ohledně podpory, napište nám:
 
-- Na Euro účet: Commerzbank De IBAN** DE07 7734 0076 0131 2966 00 BIC COBADEFFXXX**
+- **E-mail:** [archos@arch-linux.cz](mailto:archos@arch-linux.cz)
+- **Matrix:** [@archos:mxchat.cz](https://matrix.to/#/@archos:mxchat.cz)
 
-- Na český účet: CZ **264043266/0600**
+## Poděkování
 
-- Pomocí QR kódu můžete přispět na naši **BTC peněženku** **bc1qacfnj8gauujaulu36elmr2av5dw9527xg24wnu**
-
--  ![](https://arch-linux.cz/wp-content/uploads/2023/04/2023-04-13-18.26.06.jpg)
+Vaše podpora nám umožňuje nejen pokračovat v tom, co děláme, ale také zlepšovat a rozšiřovat naše služby. Děkujeme všem, kdo se rozhodnou přispět – vaše pomoc je nedílnou součástí naší práce. 💙

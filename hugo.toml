@@ -119,3 +119,13 @@ theme = "blowfish"
 [[params.socialIcons]]
   name = "rss"
   url = "/index.xml"
+
+[[menu.main]]
+  name = "Archiv"
+  pageRef = "/posts"
+  weight = 9
+
+[[menu.main]]
+  name = "Tagy"
+  pageRef = "/tags"
+  weight = 10
