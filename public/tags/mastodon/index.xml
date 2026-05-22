@@ -1,33 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mastodon on Arch Linux CZ</title><link>https://arch-linux.cz/tags/mastodon/</link><description>Recent content in Mastodon on Arch Linux CZ</description><generator>Hugo -- gohugo.io</generator><language>cs</language><copyright>© 2026 Arch Linux CZ</copyright><lastBuildDate>Fri, 25 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arch-linux.cz/tags/mastodon/index.xml" rel="self" type="application/rss+xml"/><item><title>Jak povolit dvoufaktorovou autentizaci na Mastodon</title><link>https://arch-linux.cz/jak-povolit-dvoufaktorovou-autentizaci-na-mastodon/</link><pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate><guid>https://arch-linux.cz/jak-povolit-dvoufaktorovou-autentizaci-na-mastodon/</guid><description>&lt;p&gt;Dvoufaktorové ověření nabízí přidaný stupeň ochrany přístupu k vašemu Mastodon účtu. Kromě samotného hesla k účtu je při přístupu vyžadován také ověřovací klíč, který je zasílán na Vaše mobilní zařízení. Dvoufaktorové ověření zabraňuje neoprávněným uživatelům a zařízením v přístupu k vašemu účtu.&lt;/p&gt;
-&lt;p&gt;Chcete-li povolit 2FA na Mastodon, oficiální metoda je:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Nastavení &amp;gt; Nastavení účtu &amp;gt; Dvoufaktorové ověření &amp;gt; Nastavit&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;figure&gt;&lt;img
- class="my-0 rounded-md"
- loading="lazy"
- decoding="async"
- fetchpriority="low"
- alt=""
- src="https://arch-linux.cz/wp-content/uploads/2022/11/Snimek-obrazovky-z-2022-11-25-19-23-18-1024x481.png"
- &gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;Nyní vám bude nabídnut QR kód, který můžete naskenovat pomocí aplikace &lt;a href="https://googleauthenticator.net/" target="_blank" rel="noreferrer"&gt;Google Authenticator&lt;/a&gt; nebo třeba pomocí u nás spravovaného správce hesel &lt;a href="https://bitwarden.archoslinux.cz/#/login" target="_blank" rel="noreferrer"&gt;Bitwarden&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Mastodon má oficiální aplikaci pro Android</title><link>https://arch-linux.cz/mastodon-m%C3%A1-ofici%C3%A1ln%C3%AD-aplikaci-pro-android/</link><pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate><guid>https://arch-linux.cz/mastodon-m%C3%A1-ofici%C3%A1ln%C3%AD-aplikaci-pro-android/</guid><description>&lt;p&gt;&lt;figure&gt;&lt;img
- class="my-0 rounded-md"
- loading="lazy"
- decoding="async"
- fetchpriority="low"
- alt=""
- src="https://arch-linux.cz/wp-content/uploads/2022/04/external-content.duckduckgo.com_-2.jpg"
- &gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;Mastodon, populární alternativa k mikroblogovací platformě Twitter, má nyní oficiálně aplikaci pro &lt;a href="https://play.google.com/store/apps/details?id=org.joinmastodon.android" target="_blank" rel="noreferrer"&gt;Android&lt;/a&gt;. Aplikace pro &lt;a href="https://apps.apple.com/us/app/mastodon-for-iphone/id1571998974" target="_blank" rel="noreferrer"&gt;iOS&lt;/a&gt; byla spuštěna v červenci loňského roku.&lt;/p&gt;
-
-&lt;h3 class="relative group"&gt;Co je Mastodon
- &lt;div id="co-je-mastodon" class="anchor"&gt;&lt;/div&gt;
- 
- &lt;span
- class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
- &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#co-je-mastodon" aria-label="Kotva"&gt;#&lt;/a&gt;
- &lt;/span&gt;
- 
-&lt;/h3&gt;
-&lt;p&gt;**Mastodon **je decentralizovaná, open-source sociální síť s více než dvěma miliony uživatelů, pro zveřejňování krátkého textu o délce až 500 znaků. Má &lt;a href="https://en.wikipedia.org/wiki/Microblogging" target="_blank" rel="noreferrer"&gt;mikroblogovací &lt;/a&gt;funkce podobné jako &lt;a href="https://en.wikipedia.org/wiki/Twitter" target="_blank" rel="noreferrer"&gt;Twitter &lt;/a&gt;, které nabízí velké množství nezávisle provozovaných uzlů (známých jako „instance“), z nichž každá instance má svůj vlastní kodex chování , podmínky služby , možnosti ochrany osobních údajů a moderování .&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mastodon on Arch Linux CZ</title>
+    <link>https://arch-linux.cz/tags/mastodon/</link>
+    <description>Recent content in Mastodon on Arch Linux CZ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cs</language>
+    <copyright>© 2026 Arch Linux CZ</copyright>
+    <lastBuildDate>Fri, 25 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arch-linux.cz/tags/mastodon/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Jak povolit dvoufaktorovou autentizaci na Mastodon</title>
+      <link>https://arch-linux.cz/jak-povolit-dvoufaktorovou-autentizaci-na-mastodon/</link>
+      <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arch-linux.cz/jak-povolit-dvoufaktorovou-autentizaci-na-mastodon/</guid>
+      <description>&lt;p&gt;Dvoufaktorové ověření nabízí přidaný stupeň ochrany přístupu k vašemu Mastodon účtu. Kromě samotného hesla  k účtu je při přístupu vyžadován také ověřovací klíč, který je zasílán na Vaše mobilní zařízení. Dvoufaktorové ověření zabraňuje neoprávněným uživatelům a zařízením v přístupu k vašemu účtu.&lt;/p&gt;&#xA;&lt;p&gt;Chcete-li povolit 2FA na Mastodon, oficiální metoda je:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Nastavení &amp;gt; Nastavení účtu &amp;gt; Dvoufaktorové ověření &amp;gt; Nastavit&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;low&#34;&#xA;    alt=&#34;&#34;&#xA;    src=&#34;https://arch-linux.cz/wp-content/uploads/2022/11/Snimek-obrazovky-z-2022-11-25-19-23-18-1024x481.png&#34;&#xA;    &gt;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Nyní vám bude nabídnut QR kód, který můžete naskenovat pomocí aplikace &lt;a href=&#34;https://googleauthenticator.net/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Google Authenticator&lt;/a&gt; nebo třeba pomocí u nás spravovaného správce hesel &lt;a href=&#34;https://bitwarden.archoslinux.cz/#/login&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Bitwarden&lt;/a&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Mastodon má oficiální aplikaci pro Android</title>
+      <link>https://arch-linux.cz/mastodon-m%C3%A1-ofici%C3%A1ln%C3%AD-aplikaci-pro-android/</link>
+      <pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arch-linux.cz/mastodon-m%C3%A1-ofici%C3%A1ln%C3%AD-aplikaci-pro-android/</guid>
+      <description>&lt;p&gt;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;low&#34;&#xA;    alt=&#34;&#34;&#xA;    src=&#34;https://arch-linux.cz/wp-content/uploads/2022/04/external-content.duckduckgo.com_-2.jpg&#34;&#xA;    &gt;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Mastodon, populární alternativa k mikroblogovací platformě Twitter, má nyní oficiálně aplikaci pro &lt;a href=&#34;https://play.google.com/store/apps/details?id=org.joinmastodon.android&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Android&lt;/a&gt;. Aplikace pro &lt;a href=&#34;https://apps.apple.com/us/app/mastodon-for-iphone/id1571998974&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;iOS&lt;/a&gt; byla spuštěna  v červenci loňského roku.&lt;/p&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Co je Mastodon&#xA;    &lt;div id=&#34;co-je-mastodon&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#co-je-mastodon&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;**Mastodon **je decentralizovaná, open-source sociální síť s více než dvěma miliony uživatelů, pro zveřejňování krátkého textu o délce až 500 znaků.  Má &lt;a href=&#34;https://en.wikipedia.org/wiki/Microblogging&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;mikroblogovací &lt;/a&gt;funkce podobné jako &lt;a href=&#34;https://en.wikipedia.org/wiki/Twitter&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Twitter &lt;/a&gt;, které nabízí velké množství nezávisle provozovaných uzlů (známých jako „instance“), z nichž každá instance má svůj vlastní kodex chování , podmínky služby , možnosti ochrany osobních údajů a moderování .&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

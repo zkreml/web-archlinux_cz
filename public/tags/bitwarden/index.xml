@@ -1,10 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bitwarden on Arch Linux CZ</title><link>https://arch-linux.cz/tags/bitwarden/</link><description>Recent content in Bitwarden on Arch Linux CZ</description><generator>Hugo -- gohugo.io</generator><language>cs</language><copyright>© 2026 Arch Linux CZ</copyright><lastBuildDate>Fri, 02 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arch-linux.cz/tags/bitwarden/index.xml" rel="self" type="application/rss+xml"/><item><title>Správce hesel Bitwarden</title><link>https://arch-linux.cz/spr%C3%A1vce-hesel-bitwarden/</link><pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate><guid>https://arch-linux.cz/spr%C3%A1vce-hesel-bitwarden/</guid><description>&lt;h3 class="relative group"&gt;Co je Bitwarden
- &lt;div id="co-je-bitwarden" class="anchor"&gt;&lt;/div&gt;
- 
- &lt;span
- class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
- &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#co-je-bitwarden" aria-label="Kotva"&gt;#&lt;/a&gt;
- &lt;/span&gt;
- 
-&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://bitwarden.archoslinux.cz/#/login" target="_blank" rel="noreferrer"&gt;Bitwarden&lt;/a&gt; je všestranný správce hesel s otevřeným zdrojovým kódem, který může být použit nejen jednotlivci k ukládání jejich kritických a důležitých informací, ale také jej mohou nasadit podniky na všech úrovních. &lt;a href="https://bitwarden.archoslinux.cz/#/login" target="_blank" rel="noreferrer"&gt;Bitwarden&lt;/a&gt; lze stáhnout na mobilní telefony se systémem iOS i Android a poskytuje spoustu rozšíření prohlížeče pro automatické vyplňování hesel. Je to jeden z nejlepších open source správců hesel.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bitwarden on Arch Linux CZ</title>
+    <link>https://arch-linux.cz/tags/bitwarden/</link>
+    <description>Recent content in Bitwarden on Arch Linux CZ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cs</language>
+    <copyright>© 2026 Arch Linux CZ</copyright>
+    <lastBuildDate>Fri, 02 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arch-linux.cz/tags/bitwarden/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Správce hesel Bitwarden</title>
+      <link>https://arch-linux.cz/spr%C3%A1vce-hesel-bitwarden/</link>
+      <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arch-linux.cz/spr%C3%A1vce-hesel-bitwarden/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;Co je Bitwarden&#xA;    &lt;div id=&#34;co-je-bitwarden&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#co-je-bitwarden&#34; aria-label=&#34;Kotva&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://bitwarden.archoslinux.cz/#/login&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Bitwarden&lt;/a&gt; je všestranný správce hesel s otevřeným zdrojovým kódem, který může být použit nejen jednotlivci k ukládání jejich kritických a důležitých informací, ale také jej mohou nasadit podniky na všech úrovních. &lt;a href=&#34;https://bitwarden.archoslinux.cz/#/login&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Bitwarden&lt;/a&gt; lze stáhnout na mobilní telefony se systémem iOS i Android a poskytuje spoustu rozšíření prohlížeče pro automatické vyplňování hesel. Je to jeden z nejlepších open source správců hesel.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
