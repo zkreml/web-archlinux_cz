@@ -239,10 +239,10 @@
       "name": "Arch Linux CZ"
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-05-22T00:00:00\u002b00:00",
-    "datePublished": "2026-05-22T00:00:00\u002b00:00",
+    "dateCreated": "2026-05-25T00:00:00\u002b00:00",
+    "datePublished": "2026-05-25T00:00:00\u002b00:00",
     
-    "dateModified": "2026-05-22T00:00:00\u002b00:00",
+    "dateModified": "2026-05-25T00:00:00\u002b00:00",
     
     
     
@@ -959,6 +959,222 @@
     <header class="items-center text-start text-xl font-semibold">
       <a
         
+          href="/arch-news-varnish-se-p%C5%99ejmenoval-na-vinyl-cache/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          Arch News: Varnish se přejmenoval na Vinyl Cache
+          
+        </h2>
+      </a>
+      
+      
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-05-25T00:00:00&#43;00:00">25. května 2026</time><span class="px-2 text-primary-500">&middot;</span><span>197 slov</span><span class="px-2 text-primary-500">&middot;</span><span title="Doba čtení">1 min</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/news/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    News
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/varnish/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Varnish
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/migrace/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Migrace
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
+    </div>
+    
+      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
+         Pokud na svém systému provozuješ reverzní proxy nebo HTTP cache postavenou na Varnishi, pozor — upstream projekt se přejmenoval na Vinyl Cache a Arch ho následoval. Balíček varnish byl odstraněn z repozitáře [extra] a nahrazen novým balíčkem vinyl-cache.
+Změna není jen kosmetická. Přejmenovaly se binárky, adresáře, systemd jednotky i systémoví uživatelé. Po upgradu je nutná ruční migrace.
+Co se změnilo # Staré Nové /etc/varnish /etc/vinyl-cache /var/lib/varnish /var/lib/vinyl-cache varnish.service vinyl-cache.service varnishncsa.service vinylncsa.service uživatel varnish uživatel vinyl skupina varnish skupina vinyl uživatel varnishlog uživatel vinyllog uživatel vcache beze změny Postup migrace # # 1. nainstaluj nový balíček sudo pacman -Syu vinyl-cache # 2. přejmenuj adresáře sudo mv /etc/varnish /etc/vinyl-cache sudo mv /var/lib/varnish /var/lib/vinyl-cache # 3. oprav vlastnictví souborů sudo chown -R vinyl:vinyl /var/lib/vinyl-cache # 4. vypni staré systemd jednotky, zapni nové sudo systemctl disable --now varnish.service varnishncsa.service sudo systemctl enable --now vinyl-cache.service vinylncsa.service # 5. zkontroluj stav systemctl status vinyl-cache.service journalctl -u vinyl-cache.service -n 30 Poznámky # Arch momentálně neplánuje udržovat balíček varnish jako samostatný fork — jedinou podporovanou cestou je přechod na vinyl-cache. Pokud máš v konfiguraci reference na staré cesty nebo názvy uživatelů, je potřeba je ručně opravit. Detailní přehled breaking changes najdeš v oficiálních release notes. 
+      </div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+            
+              
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+  
+  
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+    
+  
+
+
+
+<article class="article-link--simple flex flex-col md:flex-row relative overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
+  
+  <div class=" p-4">
+    <header class="items-center text-start text-xl font-semibold">
+      <a
+        
           href="/endeavouros-podrobn%C3%BD-pr%C5%AFvodce-distribuc%C3%AD-postavenou-na-arch-linuxu/"
         
         class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
@@ -1076,7 +1292,7 @@
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Arch-Linux
+    Arch Linux
   </span>
 </span>
 
@@ -1342,7 +1558,7 @@ Co je EndeavourOS? # EndeavourOS je komunitní rolling-release distribuce založ
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Arch-Linux
+    Arch Linux
   </span>
 </span>
 
@@ -2818,227 +3034,6 @@ Minimalistické a rychlé prostředí. Plně přizpůsobitelné. Podpora pro ví
     
       <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
         HedgeDoc na OSCloud # HedgeDoc je otevřená platforma pro týmovou spolupráci, která umožňuje uživatelům společně vytvářet, sdílet a editovat dokumenty v reálném čase. Tento nástroj je založený na Markdownu, jednoduchém jazyku pro formátování textu, který je vhodný jak pro začátečníky, tak pro pokročilé uživatele. HedgeDoc je ideální pro psaní poznámek, vytváření dokumentace nebo sdílení nápadů a poznatků v rámci týmu.
-
-      </div>
-    
-  </div>
-  <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-            
-              
-
-
-
-
-
-
-
-
-  
-  
-  
-
-
-
-
-
-
-
-
-  
-  
-    
-
-    
-    
-      
-      
-        
-      
-        
-      
-        
-      
-    
-
-    
-    
-      
-      
-    
-
-    
-    
-      
-    
-  
-
-
-
-<article class="article-link--simple flex flex-col md:flex-row relative overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
-  
-  <div class=" p-4">
-    <header class="items-center text-start text-xl font-semibold">
-      <a
-        
-          href="/cryptpad-bezpe%C4%8Dn%C3%A1-a-soukrom%C3%A1-spolupr%C3%A1ce-na-dokumentech/"
-        
-        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
-        <h2>
-          CryptPad: Bezpečná a soukromá spolupráce na dokumentech
-          
-        </h2>
-      </a>
-      
-      
-    </header>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2024-10-27T00:00:00&#43;00:00">27. října 2024</time><span class="px-2 text-primary-500">&middot;</span><span>362 slov</span><span class="px-2 text-primary-500">&middot;</span><span title="Doba čtení">2 min</span>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/categories/aplikace/">
-                  
-                  <span class="flex cursor-pointer">
-  
-  
-  
-    
-    
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Aplikace
-  </span>
-</span>
-
-                </a>
-              
-            
-            
-              
-            
-          
-        
-      
-        
-          
-            
-              
-            
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/cryptpad/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Cryptpad
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-            
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/opensource/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Opensource
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-        
-      
-    </div>
-  
-
-
-    </div>
-    
-      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
-        CryptPad: Bezpečná a soukromá spolupráce na dokumentech # CryptPad je open-source platforma pro online spolupráci, která klade důraz na soukromí a zabezpečení dat. Na rozdíl od jiných cloudových nástrojů pro spolupráci nabízí CryptPad end-to-end šifrování, což znamená, že data jsou šifrována na straně uživatele a poskytovatel služby (v tomto případě OSCloud) k nim nemá přístup.
 
       </div>
     

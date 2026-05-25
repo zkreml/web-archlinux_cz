@@ -2,11 +2,11 @@
 title: "Arch News: Varnish se přejmenoval na Vinyl Cache"
 date: 2026-05-25
 draft: false
-cover: "varnish-cache.jpg"
 tags: ["news", "varnish", "migrace"]
+image: "varnish-cache.jpg"
 ---
 
-# Arch News: Varnish se přejmenoval na Vinyl Cache
+{{< figure src="varnish-cache.jpg" alt="Varnish Cache" >}}
 
 Pokud na svém systému provozuješ reverzní proxy nebo HTTP cache postavenou na Varnishi, pozor — upstream projekt se přejmenoval na **Vinyl Cache** a Arch ho následoval. Balíček `varnish` byl odstraněn z repozitáře `[extra]` a nahrazen novým balíčkem `vinyl-cache`.
 
@@ -57,8 +57,4 @@ journalctl -u vinyl-cache.service -n 30
 
 - Arch momentálně neplánuje udržovat balíček `varnish` jako samostatný fork — jedinou podporovanou cestou je přechod na `vinyl-cache`.
 - Pokud máš v konfiguraci reference na staré cesty nebo názvy uživatelů, je potřeba je ručně opravit.
-- Detailní přehled breaking changes najdeš v [oficiálních release notes][0].
-
-[0]: https://github.com/varnishcache/varnish-cache/releases
-
----
+- Detailní přehled breaking changes najdeš v [oficiálních release notes](https://lists.archlinux.org/archives/list/arch-announce@lists.archlinux.org/thread/4BSRLLGJ5552NASTYKCDZ3Q6DIMW2J4J/).
