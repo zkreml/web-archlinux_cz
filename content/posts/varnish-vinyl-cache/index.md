@@ -57,4 +57,4 @@ journalctl -u vinyl-cache.service -n 30
 
 - Arch momentálně neplánuje udržovat balíček `varnish` jako samostatný fork — jedinou podporovanou cestou je přechod na `vinyl-cache`.
 - Pokud máš v konfiguraci reference na staré cesty nebo názvy uživatelů, je potřeba je ručně opravit.
-- Detailní přehled breaking changes najdeš v [oficiálních release notes](https://lists.archlinux.org/archives/list/arch-announce@lists.archlinux.org/thread/4BSRLLGJ5552NASTYKCDZ3Q6DIMW2J4J/).
+- Detailní přehled breaking changes najdeš v [arch-announce mailing listu.](https://lists.archlinux.org/archives/list/arch-announce@lists.archlinux.org/thread/4BSRLLGJ5552NASTYKCDZ3Q6DIMW2J4J/).
