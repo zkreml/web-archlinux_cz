@@ -5,7 +5,7 @@
   class="scroll-smooth"
   data-default-appearance="dark"
   data-auto-appearance="true"><head>
-	<meta name="generator" content="Hugo 0.161.1">
+	<meta name="generator" content="Hugo 0.163.0">
   <meta charset="utf-8">
   
     <meta http-equiv="content-language" content="cs">
@@ -68,16 +68,16 @@
 
   
   <meta property="og:url" content="https://arch-linux.cz/">
-  <meta property="og:site_name" content="Arch Linux CZ">
-  <meta property="og:title" content="Arch Linux CZ">
-  <meta property="og:description" content="Česká komunita Arch Linuxu">
-  <meta property="og:locale" content="cs">
-  <meta property="og:type" content="website">
+	<meta property="og:site_name" content="Arch Linux CZ">
+	<meta property="og:title" content="Arch Linux CZ">
+	<meta property="og:description" content="Česká komunita Arch Linuxu">
+	<meta property="og:locale" content="cs">
+	<meta property="og:type" content="website">
 
   
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Arch Linux CZ">
-  <meta name="twitter:description" content="Česká komunita Arch Linuxu">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Arch Linux CZ">
+	<meta name="twitter:description" content="Česká komunita Arch Linuxu">
 
   
   
@@ -944,6 +944,206 @@
 
 
 <section class="space-y-10 w-full">
+  
+    
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+  
+  
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+    
+  
+
+
+
+<article class="article-link--simple flex flex-col md:flex-row relative overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
+  
+  <div class=" p-4">
+    <header class="items-center text-start text-xl font-semibold">
+      <a
+        
+          href="/virtualbox-arch-linux-nastaven%C3%AD/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          Virtualbox Arch Linux nastavení
+          
+        </h2>
+      </a>
+      
+      
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2022-01-16T00:00:00&#43;00:00">16. ledna 2022</time><span class="px-2 text-primary-500">&middot;</span><span>186 slov</span><span class="px-2 text-primary-500">&middot;</span><span title="Doba čtení">1 min</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/categories/n%C3%A1vody/">
+                  
+                  <span class="flex cursor-pointer">
+  
+  
+  
+    
+    
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Návody
+  </span>
+</span>
+
+                </a>
+              
+            
+            
+              
+            
+          
+        
+      
+        
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/virtualbox/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Virtualbox
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
+    </div>
+    
+      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
+        Další díl od raven2cz pojednává o nastavení konzolového rozlišení a fontu. Dále pak nastavení Virtualbox Services pro dynamickou změnu rozlišení, sdílenou schránku a sdílení souborové složky. Doplňuje některé důležité body z minulého dílu. Po tomto díle budete mít Virtualbox Arch Image zcela připraven pro všechny ostatní další práce s Arch Linuxem.
+Nastavení TTY rozlišení a fontu # # Nastavení rozlišení pro TTY framebuffer # sudo nvim /etc/default/grub (zkontrolujte a změňte následující řádky) GRUB_GFXMODE=1920x1080x32,auto GRUB_GFXPAYLOAD_LINUX=keep přegenerovat grub default do /boot/grub/grub.cfg příkazem z instalace: sudo grub-mkconfig -o /boot/grub/grub.cfg poweroff (znovu spusťte virtualbox arch image) Nyní máme již v pořádku nastaven framebuffer na fullhd, ale font je příliš malý (pokud máte velké rozlišení obrazovky).
+
+      </div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
   
     
 

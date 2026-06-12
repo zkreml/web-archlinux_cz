@@ -7,7 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>cs</language>
     <copyright>© 2026 Arch Linux CZ</copyright>
-    <lastBuildDate>Mon, 25 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://arch-linux.cz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://arch-linux.cz/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Arch Linux</title>
+      <link>https://arch-linux.cz/tags/arch-linux/</link>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://arch-linux.cz/tags/arch-linux/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>AUR</title>
+      <link>https://arch-linux.cz/tags/aur/</link>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://arch-linux.cz/tags/aur/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Bezpečnost</title>
+      <link>https://arch-linux.cz/tags/bezpe%C4%8Dnost/</link>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://arch-linux.cz/tags/bezpe%C4%8Dnost/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Migrace</title>
@@ -35,16 +65,6 @@
       <pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
       
       <guid>https://arch-linux.cz/tags/varnish/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Arch Linux</title>
-      <link>https://arch-linux.cz/tags/arch-linux/</link>
-      <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://arch-linux.cz/tags/arch-linux/</guid>
       <description></description>
       
     </item>
@@ -445,16 +465,6 @@
       <pubDate>Thu, 03 Mar 2022 00:00:00 +0000</pubDate>
       
       <guid>https://arch-linux.cz/tags/komunita/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>AUR</title>
-      <link>https://arch-linux.cz/tags/aur/</link>
-      <pubDate>Sat, 19 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arch-linux.cz/tags/aur/</guid>
       <description></description>
       
     </item>
