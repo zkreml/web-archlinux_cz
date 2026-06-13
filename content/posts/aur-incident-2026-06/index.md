@@ -2,7 +2,7 @@
 title: "Bezpečnostní incident: škodlivé balíčky v AUR"
 date: 2026-06-12
 draft: false
-tags: ["aur", "bezpečnost", "arch linux"]
+tags: ["aur", "bezpečnost", "arch linux", "zprávy"]
 categories: ["Zprávy"]
 summary: "Arch Linux tým oznámil aktivní bezpečnostní incident v AUR. Bylo detekováno velké množství škodlivých adoptací a aktualizací balíčků."
 ---
