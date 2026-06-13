@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AUR on Arch Linux CZ</title>
+    <title>Aur on Arch Linux CZ</title>
     <link>https://arch-linux.cz/tags/aur/</link>
-    <description>Recent content in AUR on Arch Linux CZ</description>
+    <description>Recent content in Aur on Arch Linux CZ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cs</language>
     <copyright>© 2026 Arch Linux CZ</copyright>
