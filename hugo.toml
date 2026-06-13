@@ -132,3 +132,4 @@ theme = "blowfish"
 
 [permalinks]
   posts = "/:slug/"
+
