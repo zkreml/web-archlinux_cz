@@ -76,7 +76,7 @@ theme = "blowfish"
 
 [[menu.main]]
   name = "Zprávy"
-  url = "/categories/zrpávy/"
+  url = "/categories/zprávy/"
   weight = 3
 
 [[menu.main]]
