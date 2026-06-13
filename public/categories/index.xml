@@ -7,22 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>cs</language>
     <copyright>© 2026 Arch Linux CZ</copyright>
-    <lastBuildDate>Fri, 22 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://arch-linux.cz/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Distribuce</title>
-      <link>https://arch-linux.cz/categories/distribuce/</link>
-      <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://arch-linux.cz/categories/distribuce/</guid>
-      <description></description>
-      
-    </item>
+    <lastBuildDate>Fri, 12 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://arch-linux.cz/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Zprávy</title>
       <link>https://arch-linux.cz/categories/zpr%C3%A1vy/</link>
-      <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
       
       <guid>https://arch-linux.cz/categories/zpr%C3%A1vy/</guid>
       <description></description>
@@ -30,11 +20,11 @@
     </item>
     
     <item>
-      <title>Zrpávy</title>
-      <link>https://arch-linux.cz/categories/zrp%C3%A1vy/</link>
-      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <title>Distribuce</title>
+      <link>https://arch-linux.cz/categories/distribuce/</link>
+      <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://arch-linux.cz/categories/zrp%C3%A1vy/</guid>
+      <guid>https://arch-linux.cz/categories/distribuce/</guid>
       <description></description>
       
     </item>

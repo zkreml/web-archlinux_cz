@@ -3,7 +3,7 @@ title: "Archinstall 4.2 – novinky v instalátoru Arch Linuxu"
 date: 2026-04-20
 author: "archos"
 draft: false
-categories: ['zrpávy']
+categories: ['Zprávy']
 tags: ['archinstall']
 ---
 

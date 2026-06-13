@@ -3,7 +3,7 @@ title: "XFCE 4.20: Nová kapitola pro oblíbené desktopové prostředí v Arch 
 date: 2024-12-24
 author: "archos"
 draft: false
-categories: ['zrpávy']
+categories: ['Zprávy']
 ---
 
 XFCE, známé svým lehkým a stabilním provedením, přichází s verzí 4.20, která je nyní dostupná v repozitářích Arch Linuxu. Tato aktualizace přináší důležité novinky, lepší výkon a přizpůsobitelnost, díky nimž zůstává XFCE jedním z nejpopulárnějších prostředí pro Linux.

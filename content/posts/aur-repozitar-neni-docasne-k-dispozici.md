@@ -3,7 +3,7 @@ title: "AUR repozitář není dočasně k dispozici"
 date: 2023-05-05
 author: "archos"
 draft: false
-categories: ['zrpávy']
+categories: ['Zprávy']
 tags: ['zprávy']
 ---
 

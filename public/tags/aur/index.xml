@@ -15,7 +15,7 @@
       <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
       
       <guid>https://arch-linux.cz/bezpe%C4%8Dnostn%C3%AD-incident-%C5%A1kodliv%C3%A9-bal%C3%AD%C4%8Dky-v-aur/</guid>
-      <description>&lt;p&gt;Arch Linux tým dnes oznámil aktivní bezpečnostní incident v AUR (Arch User Repository).&lt;/p&gt;&#xA;&lt;p&gt;V repozitáři bylo detekováno velké množství škodlivých adoptací a aktualizací balíčků.&#xA;Tým aktivně pracuje na jejich identifikaci a zamezení dalších škodlivých commitů.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Co to znamená pro tebe:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Dočasně mohou být omezeny: registrace nových účtů, push aktualizací, adopce balíčků&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Před každou aktualizací AUR balíčku pečlivě zkontroluj PKGBUILD a install skripty&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Pokud narazíš na podezřelý commit, nahlásit ho můžeš na mailing listu &lt;code&gt;aur-general&lt;/code&gt;.&lt;/p&gt;</description>
+      <description>Arch Linux tým oznámil aktivní bezpečnostní incident v AUR. Bylo detekováno velké množství škodlivých adoptací a aktualizací balíčků.</description>
       
     </item>
     
