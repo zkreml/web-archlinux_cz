@@ -24,3 +24,29 @@ Dočasně mohou být omezeny tyto funkce AUR:
 Pokud narazíš na podezřelý commit, nahlásit ho můžeš na mailing listu `aur-general`.
 
 Zdroj: [archlinux.org](https://archlinux.org/news/active-aur-malicious-packages-incident/)
+
+## Aktualizace 13. 6. 2026
+
+Arch tým zveřejnil [seznam podezřelých balíčků](https://md.archlinux.org/s/SxbqukK6IA) – obsahuje tisíce položek (mnoho z nich jsou opuštěné nebo dlouhodobě neudržované balíčky, ne nutně škodlivé).
+
+### Jak zkontrolovat svůj systém
+
+Stáhni si seznam a porovnej s nainstalovanými AUR balíčky:
+
+```bash
+curl -s https://md.archlinux.org/SxbqukK6IA/download > /tmp/aur-bad.txt
+pacman -Qm | awk '{print $1}' | grep -Fxf /tmp/aur-bad.txt
+```
+
+Pokud nic nevypíše, jsi v bezpečí. Pokud něco vypíše, doporučuji balíček odebrat:
+
+```bash
+yay -Rns nazev-balicku
+```
+
+Pro důkladnou kontrolu systému můžeš použít:
+
+```bash
+sudo pacman -S chkrootkit
+sudo chkrootkit
+```
