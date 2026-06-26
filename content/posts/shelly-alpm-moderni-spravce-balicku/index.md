@@ -1,10 +1,16 @@
-# Shelly-ALPM – Moderní správce balíčků pro Arch Linux
-
-*Alternativa k pacmanu, která mluví lidsky*
-
+---
+title: "Shelly-ALPM – Moderní správce balíčků pro Arch Linux"
+date: 2026-06-26
+draft: false
+description: "Alternativa k pacmanu, která mluví lidsky"
+categories: ["Návody"]
+tags: ["Arch Linux", "pacman", "Shelly"]
+author: "archos"
 ---
 
 ## 1. Co je Shelly?
+
+![Shelly-ALPM](shelly_banner.png)
 
 Shelly je grafický i příkazový správce balíčků pro Arch Linux. Na rozdíl od většiny alternativ (octopi, pamac) **není wrapper nad pacmanem** – komunikuje přímo s knihovnou `libalpm`, tedy se stejným jádrem, které používá samotný pacman.
 
@@ -251,3 +257,4 @@ Pro zkušené uživatele, kteří mají pacman v krvi a nepotřebují GUI, je Sh
 - GitHub: [github.com/Seafoam-Labs/Shelly-ALPM](https://github.com/Seafoam-Labs/Shelly-ALPM)
 - Web: [shellyalpm.com](https://shellyalpm.com)
 - Licence: GPL-3.0
+- Aktuální verze: v2.0.5
